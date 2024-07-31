@@ -1,0 +1,28 @@
+﻿body{
+padding: 0;
+padding-left:85px;
+margin:  0px  50px 50px 50px;
+background-color:#def3f3;
+}
+
+ fieldset  
+ {
+ 	border:1px solid #258d8e ; 
+ 	padding: 10px;
+ 	}
+
+legend {
+          padding: 0.2em 0.5em;
+          border:1px solid #258d8e;
+          color:gray;
+          font-size:90%;
+          text-align:right;
+}
+label {
+          float:left;
+          width:25%;
+          margin-right:0.5em;
+          padding-top:0.2em;
+          text-align:right;
+          font-weight:bold;
+}

@@ -1,0 +1,97 @@
+18.06.2011 19:28:42: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+18.06.2011 19:28:42: Generate folders
+18.06.2011 19:28:46: Get page list
+18.06.2011 19:28:46: AML/BD/Accueil_fr.html
+18.06.2011 19:28:46: AML/BD/Azael_fr.html
+18.06.2011 19:28:47: AML/BD/LectureAzael_fr.html
+18.06.2011 19:28:49: AML/BD/GalerieAzael_fr.html
+18.06.2011 19:28:50: AML/BD/OrbeSacre_fr.html
+18.06.2011 19:28:50: AML/BD/LectureOrbe_fr.html
+18.06.2011 19:30:59: ERROR 
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at Samcreation.DataLayer.Page.GenerateHtmlFile(String destinationFolder, Int64 idLanguage, Boolean isForPreview, IUtilitiesApplicationContext context) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 832
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1078
+
+18.06.2011 19:30:59: ERROR 
+System.Exception: System.Threading.ThreadAbortException: Thread was being aborted.
+   at Samcreation.DataLayer.Page.GenerateHtmlFile(String destinationFolder, Int64 idLanguage, Boolean isForPreview, IUtilitiesApplicationContext context) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 832
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1078
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1163
+   at Samcreation.CMSPage.GenerateWebsiteForPreview() in D:\WebSites\Samcreation\Samcreation\App_LocalResources\Code\CMSPage.vb:line 1292
+
+18.06.2011 19:31:12: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+18.06.2011 19:31:12: Generate folders
+18.06.2011 19:31:12: Get page list
+18.06.2011 19:31:12: AML/BD/Accueil_fr.html
+18.06.2011 19:31:13: AML/BD/Azael_fr.html
+18.06.2011 19:31:13: AML/BD/LectureAzael_fr.html
+18.06.2011 19:31:16: AML/BD/GalerieAzael_fr.html
+18.06.2011 19:31:16: AML/BD/OrbeSacre_fr.html
+18.06.2011 19:31:17: AML/BD/LectureOrbe_fr.html
+18.06.2011 19:34:10: AML/BD/GalerieOrbe_fr.html
+18.06.2011 19:34:11: AML/Autres travaux/AutreTravaux_fr.html
+18.06.2011 19:34:12: AML/Autres travaux/Croquis_fr.html
+18.06.2011 19:34:13: AML/Autres travaux/Acquarelle_fr.html
+18.06.2011 19:34:14: AML/Autres travaux/Feutre_fr.html
+18.06.2011 19:34:14: AML/Autres travaux/Pastel_fr.html
+18.06.2011 19:34:15: AML/Autres travaux/ColorisationInfo_fr.html
+18.06.2011 19:34:15: AML/RSSFeeds/RSSFeeds_fr.html
+18.06.2011 19:34:15: AML/BD/LectureOrbeT2_fr.html
+18.06.2011 19:34:18: AML/BD/LectureOrbeAcheter_fr.html
+18.06.2011 19:34:19: AML/BD/GalerieOrbe_T1_fr.html
+18.06.2011 19:34:20: AML/News/LivreDor_fr.html
+18.06.2011 19:34:20: AML/BD/PersoAzael_fr.html
+18.06.2011 19:34:21: AML/BD/PersonNadine_fr.html
+18.06.2011 19:34:21: AML/BD/PersoFegemor_fr.html
+18.06.2011 19:34:21: AML/BD/PersoInaki_fr.html
+18.06.2011 19:34:22: AML/BD/PersoZaro_fr.html
+18.06.2011 19:34:22: AML/BD/PersoYlline_fr.html
+18.06.2011 19:34:23: AML/BD/PersoNola_fr.html
+18.06.2011 19:34:23: AML/BD/PersoFallou_fr.html
+18.06.2011 19:34:23: AML/BD/PersoGlobusCruciger_fr.html
+18.06.2011 19:34:24: AML/BD/PaysNobat_fr.html
+18.06.2011 19:34:24: AML/BD/PaysZart_fr.html
+18.06.2011 19:34:24: AML/BD/PaysBaoLumina_fr.html
+18.06.2011 19:34:25: AML/BD/PaysArcan_fr.html
+18.06.2011 19:34:25: AML/BD/PaysDuNord_fr.html
+18.06.2011 19:34:26: AML/BD/PersoNoltz_fr.html
+18.06.2011 19:34:26: Generation is over
+
+18.06.2011 20:51:44: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+18.06.2011 20:51:44: Generate folders
+18.06.2011 20:51:50: Get page list
+18.06.2011 20:51:50: AML/BD/Accueil_fr.html
+18.06.2011 20:51:50: AML/BD/Azael_fr.html
+18.06.2011 20:51:51: AML/BD/LectureAzael_fr.html
+18.06.2011 20:51:53: AML/BD/GalerieAzael_fr.html
+18.06.2011 20:51:54: AML/BD/OrbeSacre_fr.html
+18.06.2011 20:51:54: AML/BD/LectureOrbe_fr.html
+18.06.2011 20:54:58: AML/BD/GalerieOrbe_fr.html
+18.06.2011 20:55:00: AML/Autres travaux/AutreTravaux_fr.html
+18.06.2011 20:55:00: AML/Autres travaux/Croquis_fr.html
+18.06.2011 20:55:01: AML/Autres travaux/Acquarelle_fr.html
+18.06.2011 20:55:03: AML/Autres travaux/Feutre_fr.html
+18.06.2011 20:55:03: AML/Autres travaux/Pastel_fr.html
+18.06.2011 20:55:04: AML/Autres travaux/ColorisationInfo_fr.html
+18.06.2011 20:55:04: AML/RSSFeeds/RSSFeeds_fr.html
+18.06.2011 20:55:04: AML/BD/LectureOrbeT2_fr.html
+18.06.2011 20:55:07: AML/BD/LectureOrbeAcheter_fr.html
+18.06.2011 20:55:08: AML/BD/GalerieOrbe_T1_fr.html
+18.06.2011 20:55:10: AML/News/LivreDor_fr.html
+18.06.2011 20:55:10: AML/BD/PersoAzael_fr.html
+18.06.2011 20:55:10: AML/BD/PersonNadine_fr.html
+18.06.2011 20:55:10: AML/BD/PersoFegemor_fr.html
+18.06.2011 20:55:11: AML/BD/PersoInaki_fr.html
+18.06.2011 20:55:11: AML/BD/PersoZaro_fr.html
+18.06.2011 20:55:12: AML/BD/PersoYlline_fr.html
+18.06.2011 20:55:12: AML/BD/PersoNola_fr.html
+18.06.2011 20:55:12: AML/BD/PersoFallou_fr.html
+18.06.2011 20:55:13: AML/BD/PersoGlobusCruciger_fr.html
+18.06.2011 20:55:13: AML/BD/PaysNobat_fr.html
+18.06.2011 20:55:13: AML/BD/PaysZart_fr.html
+18.06.2011 20:55:14: AML/BD/PaysBaoLumina_fr.html
+18.06.2011 20:55:14: AML/BD/PaysArcan_fr.html
+18.06.2011 20:55:15: AML/BD/PaysDuNord_fr.html
+18.06.2011 20:55:15: AML/BD/PersoNoltz_fr.html
+18.06.2011 20:55:15: Generation is over
+

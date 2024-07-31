@@ -1,0 +1,50 @@
+12.12.2011 19:44:48: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+12.12.2011 19:44:48: Generate folders
+12.12.2011 19:44:56: Get page list
+12.12.2011 19:44:56: AML/BD/Accueil_fr.html
+12.12.2011 19:44:56: AML/BD/Azael_fr.html
+12.12.2011 19:44:57: AML/BD/LectureAzael_fr.html
+12.12.2011 19:44:59: AML/BD/GalerieAzael_fr.html
+12.12.2011 19:45:00: AML/BD/OrbeSacre_fr.html
+12.12.2011 19:45:00: AML/BD/LectureOrbe_fr.html
+12.12.2011 19:47:52: AML/BD/GalerieOrbe_fr.html
+12.12.2011 19:47:53: AML/Autres travaux/AutreTravaux_fr.html
+12.12.2011 19:47:54: AML/Autres travaux/Croquis_fr.html
+12.12.2011 19:47:55: AML/Autres travaux/Acquarelle_fr.html
+12.12.2011 19:47:56: AML/Autres travaux/Feutre_fr.html
+12.12.2011 19:47:57: AML/Autres travaux/Pastel_fr.html
+12.12.2011 19:47:57: AML/Autres travaux/ColorisationInfo_fr.html
+12.12.2011 19:47:58: AML/BD/LectureOrbeT2_fr.html
+12.12.2011 19:48:20: AML/BD/LectureOrbeAcheter_fr.html
+12.12.2011 19:48:21: AML/BD/GalerieOrbe_T1_fr.html
+12.12.2011 19:48:22: AML/News/LivreDor_fr.html
+12.12.2011 19:48:22: AML/EnfantLivre/BalMasque_fr.html
+12.12.2011 19:48:35: AML/BD/PersoAzael_fr.html
+12.12.2011 19:48:35: AML/BD/PersonNadine_fr.html
+12.12.2011 19:48:36: AML/BD/PersoFegemor_fr.html
+12.12.2011 19:48:36: AML/BD/PersoInaki_fr.html
+12.12.2011 19:48:36: AML/BD/PersoZaro_fr.html
+12.12.2011 19:48:37: AML/BD/PersoYlline_fr.html
+12.12.2011 19:48:37: AML/BD/PersoNola_fr.html
+12.12.2011 19:48:38: AML/BD/PersoFallou_fr.html
+12.12.2011 19:48:38: AML/BD/PersoGlobusCruciger_fr.html
+12.12.2011 19:48:38: AML/BD/PaysNobat_fr.html
+12.12.2011 19:48:39: AML/BD/PaysZart_fr.html
+12.12.2011 19:48:39: AML/BD/PaysBaoLumina_fr.html
+12.12.2011 19:48:40: AML/BD/PaysArcan_fr.html
+12.12.2011 19:48:40: AML/BD/PaysDuNord_fr.html
+12.12.2011 19:48:40: AML/BD/PersoNoltz_fr.html
+12.12.2011 19:48:41: ERROR 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Samcreation.DataLayer.Page.GetNavigationZone(IUtilitiesApplicationContext context) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 436
+   at Samcreation.DataLayer.Page.get_GetUrl(Language language, IUtilitiesApplicationContext context, Int64 idRegionForVirtualPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 644
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1085
+
+12.12.2011 19:48:41: ERROR 
+System.Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Samcreation.DataLayer.Page.GetNavigationZone(IUtilitiesApplicationContext context) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 436
+   at Samcreation.DataLayer.Page.get_GetUrl(Language language, IUtilitiesApplicationContext context, Int64 idRegionForVirtualPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 644
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1085
+   at Samcreation.DataLayer.Page.GenerateWebsiteOnDisk(String destinationFolder, Boolean isForPreview, Boolean withFileCopy, IUtilitiesApplicationContext context, StreamWriter fileStream, IManualResponse manualResponse, CMSPage manualResponseTargetPage) in D:\WebSites\Samcreation\Samcreation\App_LocalResources\_DataLayer\Page.vb:line 1172
+   at Samcreation.CMSPage.GenerateWebsiteForPreview() in D:\WebSites\Samcreation\Samcreation\App_LocalResources\Code\CMSPage.vb:line 1293
+

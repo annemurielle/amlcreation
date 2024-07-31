@@ -1,0 +1,495 @@
+﻿html,body{margin:0;padding:0;
+font-family: verdana, Arial, Sans-serif;
+	font-size:11pt;font-weight:normal;
+	background-color:black;
+	color:#000;
+	overflow-y:scroll;}
+div#header{position:relative}
+
+div#header a{position:absolute;right:0;top:23px}
+div#maincontent p{line-height:1.4; margin:15px;
+font-family: verdana, Arial, Sans-serif;
+	font-size:11pt;
+}
+div#extra{}
+div#footer{}
+div#footer p{margin:0;padding:5px 10px}
+div#footer a{display:inline;padding:0;color:#ac1d00;}
+
+div#htmlCommentsBox{}
+div#htmlCommentsBox p{margin:0;padding:5px 10px}
+div#htmlCommentsBox a{display:inline;padding:0;color:#ac1d00;}
+
+div#wrapper{float:left;width:100%}
+
+div#menunavigation{float:left;width:20%;margin-left:-100%}
+div#footer{
+clear:left;
+width:100%;
+padding:5px 5px 5px 5px;
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+}
+div#infobox
+{
+background:black url(../Upload/Menus/news.png) ;
+background-repeat:no-repeat;
+background-position:top left;
+width:920px;
+height:30px;
+position:relative;
+margin:0 auto;
+padding-top:5px;
+padding-left:20px;
+overflow:hidden;
+text-align:center;
+vertical-align:middle;
+font-size:11pt;
+color:White;
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+
+    }
+    
+  #fade { /*--Masque opaque noir de fond--*/
+	display: none; /*--masqué par défaut--*/
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .80;
+	z-index: 9999;
+}
+.popup_block{
+	display: none; /*--masqué par défaut--*/
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ffb6dc;
+	float: left;
+	font-size: 11pt;
+	color:Black;
+	text-align:justify;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	/*--Les différentes définitions de Box Shadow en CSS3--*/
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	/*--Coins arrondis en CSS3--*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+img.btn_close {
+	float: right;
+	margin: -55px -55px 0 0;
+}
+/*--Gérer la position fixed pour IE6--*/
+*html #fade {
+position: absolute;
+}
+*html .popup_block {
+position: absolute;
+}
+
+div#container
+{
+background:#e8ddd9 url(../Upload/Menus/logo.png) ;
+background-repeat:no-repeat;
+background-position:top right;
+width:920px;
+position:relative;
+margin:0 auto;
+overflow:hidden;
+padding:10px;
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+    }
+
+/* breadcrumb style*/
+.breadcrumb{
+background: url(../Upload/Breadcrumbs/breadcru.png) repeat-x;
+color: white;
+font-size:10pt;
+line-height: 180%;
+padding: 0 10px 0 10px;
+float: left;
+margin-bottom: 10px;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(100, 93, 93)),to(rgb(0, 0, 0)));
+    background-image: -webkit-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -moz-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -o-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -ms-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#727a86', EndColorStr='#505864');
+border-bottom: 1px solid #33373d;
+-webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
+-moz-box-shadow: inset 0px 1px 0px 0px #878e98;
+box-shadow: inset 0px 1px 0px 0px #878e98;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+}
+.arrowbread{
+background: url(../Upload/Breadcrumbs/right-ch.png) -1px 50% no-repeat;
+margin: 0 7px;
+width: 17px;
+height: 22px;
+float: left;
+}
+
+
+.breadcrumblink{
+float: left;
+}
+.breadcrumblink > a:hover 
+{
+
+		}
+.breadcrumbcurrent{float:left; font-size:11px; font-weight:bolder;} 
+
+
+.breadcrumb h1 {  font-size: 13px; font-weight:bold;  line-height: inherit;
+padding:  inherit;
+float:  inherit;
+margin-bottom: inherit; margin-top:inherit ; font-family:inherit;}
+
+/* end breadcrumb style*/
+
+
+#pcm{display:none;}
+
+/* Vertical Menu*/
+#wrapperMenu { 
+    width: 220px;
+    margin: 100px auto;
+}
+
+    .FacebookGooglePlus  
+{
+    vertical-align:middle;
+   width:920px;
+position:relative;
+margin:0 auto;
+overflow:hidden;
+padding:10px;
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+	}
+.FacebookButton
+{
+    vertical-align:top;
+    position:relative;
+    background: white url(../Upload/Menus/facebook-button-oval.gif) center no-repeat;
+    background-position: 0px 50%; /* x-pos y-pos */
+    padding-left:23px;
+    margin:0 auto;
+
+  
+    }
+    
+.NameaButton
+{
+    vertical-align:top;
+    position:relative;
+    background: white ;
+    background-position: 0px 50%; /* x-pos y-pos */
+    padding-left:20px;
+    margin:0 auto;
+
+  
+    }    
+.HaudryaneButton
+{
+    vertical-align:top;
+    position:relative;
+    background: white;
+   background-position: 0px 50%; /* x-pos y-pos */
+    padding-left:20px;
+margin:0 auto;
+
+  
+    }    
+    
+.menu {
+    width: auto;
+    height: auto;
+	-moz-box-shadow:1px 1px 5px #000;
+	-webkit-box-shadow:1px 1px 5px #000;
+	box-shadow:1px 1px 5px #000;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px 4px 4px 4px;
+}
+.menu > li > a {
+    background-color: #616975;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(100, 93, 93)),to(rgb(0, 0, 0)));
+    background-image: -webkit-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -moz-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -o-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: -ms-linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    background-image: linear-gradient(top, rgb(100, 93, 93), rgb(0, 0, 0));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#727a86', EndColorStr='#505864');
+    border-bottom: 1px solid #33373d;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
+    -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
+    box-shadow: inset 0px 1px 0px 0px #878e98;
+    width: 100%;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-indent: 1em;
+    display: block;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,.5);
+}
+
+.menu ul li a {
+    background: #fff;
+    border-bottom: 1px solid #efeff0;
+    width: 100%;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-indent: 2.75em;
+    display: block;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.923em;
+    font-weight: 400;
+    color: #878d95;
+}
+.menu ul li:last-child a {
+    border-bottom: 1px solid #33373d;
+}
+
+.menu > li > a:hover,
+.menu > li > a.active {
+    background-color: #616975;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)),to(rgb(100, 93, 93)));
+    background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(100, 93, 93));
+    background-image: -moz-linear-gradient(top, rgb(0, 0, 0),rgb(100, 93, 93));
+    background-image: -o-linear-gradient(top, rgb(0, 0, 0), rgb(100, 93, 93));
+    background-image: -ms-linear-gradient(top, rgb(0, 0, 0), rgb(100, 93, 93));
+    background-image: linear-gradient(top, rgb(0, 0, 0), rgb(100, 93, 93));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#727a86', EndColorStr='#505864');
+    border-bottom: 1px solid white;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
+    -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
+    box-shadow: inset 0px 1px 0px 0px #878e98;
+    width: 100%;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-indent: 1em;
+    display: block;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,.5);
+}
+
+
+/*
+.menu > li > a:before {
+    content: '';
+    background-image: url(Upload/Breadcrumbs/sprite.png);
+    background-repeat: no-repeat;
+    font-size: 36px;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: -.5em 0 0 0;
+}
+.item1 > a:before {
+    background-position: 0 0;
+}
+.item2 > a:before {
+    background-position: -38px 0;
+}
+.item3 > a:before {
+    background-position: 0 -38px;
+}
+.item4 > a:before {
+    background-position: -38px -38px;
+}
+.item5 > a:before {
+    background-position: -76px 0;
+}
+*/
+.menu > li > a span {
+    font-size: 0.857em;
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    background: #48515c;
+    line-height: 1em;
+    height: 1em;
+    padding: .4em .6em;
+    margin: -.8em 0 0 0;
+    color: #fff;
+    text-indent: 0;
+    text-align: center;
+    -webkit-border-radius: .769em;
+    -moz-border-radius: .769em;
+    border-radius: .769em;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(0, 0, 0, .15);
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(0, 0, 0, .15);
+    text-shadow: 0px 1px 0px rgba(0,0,0,.5);
+    font-weight: 500;
+}
+.menu > li > a:hover span, .menu > li a.active span {
+    background: #2173a1;
+}
+
+.menu ul > li > a span {
+    font-size: 0.857em;
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 50%; /
+    background: #fff;
+    border: 1px solid #d0d0d3;
+    line-height: 1em;
+    height: 1em;
+    padding: .4em .7em;
+    margin: -.9em 0 0 0;
+    color: #878d95;
+    text-indent: 0;
+    text-align: center;
+    -webkit-border-radius: .769em;
+    -moz-border-radius: 769em;
+    border-radius: 769em;
+    text-shadow: 0px 0px 0px rgba(255,255,255,.01));
+}
+.menu > li > ul li a:before {
+    content: '▶';
+    font-size: 8px;
+    color: #bcbcbf;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 0;
+    left: -2.7em;
+}
+ 
+.menu > li > ul li:hover a,
+.menu > li > ul li:hover a span,
+.menu > li > ul li:hover a:before {
+    color: #32373D;
+}
+
+
+#cloudcarousel 
+{
+	
+	-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px; 
+}
+
+a:link {color:#745b3f;}      /* unvisited link */
+a:visited {color:#745b3f;}  /* visited link */
+a:hover {color:#b5aca3;}  /* mouse over link */
+a:active {color:#b5aca3;}  /* selected link */ 
+
+
+
+
+/* CSS For Text */
+
+.alert {
+background: white url(../Upload/Menus/alert.png) center no-repeat;
+background-position: 15px 50%; /* x-pos y-pos */
+text-align: left;
+padding: 5px 20px 5px 150px;
+border-top: 1px solid gray;
+border-bottom: 1px solid gray;
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+
+ 
+    color:black; 
+
+   
+}
+
+div.wrapper{
+
+    float:left; /* important */ 
+
+    position:relative; /* important(so we can absolutely position the description div */ 
+margin:  8px ;
+
+-moz-box-shadow:1px 1px 5px #000;
+-webkit-box-shadow:1px 1px 5px #000;
+box-shadow:1px 1px 5px #000;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+border-radius:4px 4px 4px 4px;
+
+} 
+
+div.description{ 
+
+    position:absolute; /* absolute position (so we can position it where we want)*/ 
+
+    bottom:0px; /* position will be on bottom */ 
+
+    left:0px; 
+
+    width:100%; 
+
+    /* styling bellow */ 
+
+    background-color:black; 
+
+    color:white; 
+
+    opacity:0.6; /* transparency */ 
+
+    filter:alpha(opacity=60); /* IE transparency */ 
+
+} 
+
+p.description_content{ 
+ padding:5px;  
+   width:100%;
+    margin:0px; 
+
+}  
+
+div.description p {
+padding:5px;  
+   width:100%;
+    margin:0px; 
+}
+

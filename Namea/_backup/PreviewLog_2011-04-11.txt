@@ -1,0 +1,39 @@
+11.04.2011 15:10:04: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+11.04.2011 15:10:04: Generate folders
+11.04.2011 15:10:08: Get page list
+11.04.2011 15:10:08: AML/BD/Accueil_fr.html
+11.04.2011 15:10:09: AML/BD/Azael_fr.html
+11.04.2011 15:10:09: AML/BD/LectureAzael_fr.html
+11.04.2011 15:10:12: AML/BD/GalerieAzael_fr.html
+11.04.2011 15:10:12: AML/BD/OrbeSacre_fr.html
+11.04.2011 15:10:13: AML/BD/LectureOrbe_fr.html
+11.04.2011 15:13:02: AML/BD/GalerieOrbe_fr.html
+11.04.2011 15:13:04: AML/Autres travaux/AutreTravaux_fr.html
+11.04.2011 15:13:04: AML/Autres travaux/Croquis_fr.html
+11.04.2011 15:13:05: AML/Autres travaux/Acquarelle_fr.html
+11.04.2011 15:13:06: AML/Autres travaux/Feutre_fr.html
+11.04.2011 15:13:07: AML/Autres travaux/Pastel_fr.html
+11.04.2011 15:13:07: AML/Autres travaux/ColorisationInfo_fr.html
+11.04.2011 15:13:07: AML/News/News_fr.html
+11.04.2011 15:13:08: AML/RSSFeeds/RSSFeeds_fr.html
+11.04.2011 15:13:08: AML/BD/LaCeremonieDete_fr.html
+11.04.2011 15:13:09: AML/BD/LectureOrbeT2_fr.html
+11.04.2011 15:13:09: AML/BD/LectureOrbeAcheter_fr.html
+11.04.2011 15:13:09: AML/BD/PersoAzael_fr.html
+11.04.2011 15:13:10: AML/BD/PersonNadine_fr.html
+11.04.2011 15:13:10: AML/BD/PersoFegemor_fr.html
+11.04.2011 15:13:10: AML/BD/PersoInaki_fr.html
+11.04.2011 15:13:11: AML/BD/PersoZaro_fr.html
+11.04.2011 15:13:11: AML/BD/PersoYlline_fr.html
+11.04.2011 15:13:11: AML/BD/PersoNola_fr.html
+11.04.2011 15:13:12: AML/BD/PersoFallou_fr.html
+11.04.2011 15:13:12: AML/BD/PersoGlobusCruciger_fr.html
+11.04.2011 15:13:13: AML/BD/PaysNobat_fr.html
+11.04.2011 15:13:13: AML/BD/PaysZart_fr.html
+11.04.2011 15:13:13: AML/BD/PaysBaoLumina_fr.html
+11.04.2011 15:13:14: AML/BD/PaysArcan_fr.html
+11.04.2011 15:13:14: AML/BD/PaysDuNord_fr.html
+11.04.2011 15:13:14: AML/BD/PersoNoltz_fr.html
+11.04.2011 15:13:15: AML/BD/GalerieGC2_fr.html
+11.04.2011 15:13:16: Generation is over
+

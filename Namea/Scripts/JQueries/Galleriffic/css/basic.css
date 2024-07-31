@@ -1,0 +1,9 @@
+
+a{
+	color: #27D;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	text-decoration: underline;
+}
+

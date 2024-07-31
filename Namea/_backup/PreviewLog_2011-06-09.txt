@@ -1,0 +1,77 @@
+09.06.2011 20:34:31: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+09.06.2011 20:34:31: Generate folders
+09.06.2011 20:34:36: Get page list
+09.06.2011 20:34:37: AML/BD/Accueil_fr.html
+09.06.2011 20:34:37: AML/BD/Azael_fr.html
+09.06.2011 20:34:38: AML/BD/LectureAzael_fr.html
+09.06.2011 20:34:40: AML/BD/GalerieAzael_fr.html
+09.06.2011 20:34:41: AML/BD/OrbeSacre_fr.html
+09.06.2011 20:34:41: AML/BD/LectureOrbe_fr.html
+09.06.2011 20:37:27: AML/BD/GalerieOrbe_fr.html
+09.06.2011 20:37:29: AML/Autres travaux/AutreTravaux_fr.html
+09.06.2011 20:37:29: AML/Autres travaux/Croquis_fr.html
+09.06.2011 20:37:30: AML/Autres travaux/Acquarelle_fr.html
+09.06.2011 20:37:32: AML/Autres travaux/Feutre_fr.html
+09.06.2011 20:37:32: AML/Autres travaux/Pastel_fr.html
+09.06.2011 20:37:32: AML/Autres travaux/ColorisationInfo_fr.html
+09.06.2011 20:37:33: AML/News/News_fr.html
+09.06.2011 20:37:33: AML/RSSFeeds/RSSFeeds_fr.html
+09.06.2011 20:37:33: AML/BD/LectureOrbeT2_fr.html
+09.06.2011 20:37:36: AML/BD/LectureOrbeAcheter_fr.html
+09.06.2011 20:37:37: AML/BD/PersoAzael_fr.html
+09.06.2011 20:37:37: AML/BD/PersonNadine_fr.html
+09.06.2011 20:37:37: AML/BD/PersoFegemor_fr.html
+09.06.2011 20:37:37: AML/BD/PersoInaki_fr.html
+09.06.2011 20:37:38: AML/BD/PersoZaro_fr.html
+09.06.2011 20:37:38: AML/BD/PersoYlline_fr.html
+09.06.2011 20:37:38: AML/BD/PersoNola_fr.html
+09.06.2011 20:37:39: AML/BD/PersoFallou_fr.html
+09.06.2011 20:37:39: AML/BD/PersoGlobusCruciger_fr.html
+09.06.2011 20:37:39: AML/BD/PaysNobat_fr.html
+09.06.2011 20:37:40: AML/BD/PaysZart_fr.html
+09.06.2011 20:37:40: AML/BD/PaysBaoLumina_fr.html
+09.06.2011 20:37:40: AML/BD/PaysArcan_fr.html
+09.06.2011 20:37:41: AML/BD/PaysDuNord_fr.html
+09.06.2011 20:37:41: AML/BD/PersoNoltz_fr.html
+09.06.2011 20:37:41: AML/BD/GalerieGC2_fr.html
+09.06.2011 20:37:42: Generation is over
+
+09.06.2011 22:27:42: Start publication in C:\inetpub\wwwroot\CMSNamea\Preview/
+09.06.2011 22:27:42: Generate folders
+09.06.2011 22:27:42: Get page list
+09.06.2011 22:27:42: AML/BD/Accueil_fr.html
+09.06.2011 22:27:43: AML/BD/Azael_fr.html
+09.06.2011 22:27:43: AML/BD/LectureAzael_fr.html
+09.06.2011 22:27:45: AML/BD/GalerieAzael_fr.html
+09.06.2011 22:27:46: AML/BD/OrbeSacre_fr.html
+09.06.2011 22:27:46: AML/BD/LectureOrbe_fr.html
+09.06.2011 22:30:35: AML/BD/GalerieOrbe_fr.html
+09.06.2011 22:30:36: AML/Autres travaux/AutreTravaux_fr.html
+09.06.2011 22:30:36: AML/Autres travaux/Croquis_fr.html
+09.06.2011 22:30:38: AML/Autres travaux/Acquarelle_fr.html
+09.06.2011 22:30:39: AML/Autres travaux/Feutre_fr.html
+09.06.2011 22:30:39: AML/Autres travaux/Pastel_fr.html
+09.06.2011 22:30:40: AML/Autres travaux/ColorisationInfo_fr.html
+09.06.2011 22:30:40: AML/News/News_fr.html
+09.06.2011 22:30:40: AML/RSSFeeds/RSSFeeds_fr.html
+09.06.2011 22:30:40: AML/BD/LectureOrbeT2_fr.html
+09.06.2011 22:30:43: AML/BD/LectureOrbeAcheter_fr.html
+09.06.2011 22:30:44: AML/BD/GalerieOrbe_T1_fr.html
+09.06.2011 22:30:45: AML/BD/PersoAzael_fr.html
+09.06.2011 22:30:46: AML/BD/PersonNadine_fr.html
+09.06.2011 22:30:46: AML/BD/PersoFegemor_fr.html
+09.06.2011 22:30:46: AML/BD/PersoInaki_fr.html
+09.06.2011 22:30:46: AML/BD/PersoZaro_fr.html
+09.06.2011 22:30:47: AML/BD/PersoYlline_fr.html
+09.06.2011 22:30:47: AML/BD/PersoNola_fr.html
+09.06.2011 22:30:47: AML/BD/PersoFallou_fr.html
+09.06.2011 22:30:48: AML/BD/PersoGlobusCruciger_fr.html
+09.06.2011 22:30:48: AML/BD/PaysNobat_fr.html
+09.06.2011 22:30:49: AML/BD/PaysZart_fr.html
+09.06.2011 22:30:49: AML/BD/PaysBaoLumina_fr.html
+09.06.2011 22:30:49: AML/BD/PaysArcan_fr.html
+09.06.2011 22:30:50: AML/BD/PaysDuNord_fr.html
+09.06.2011 22:30:50: AML/BD/PersoNoltz_fr.html
+09.06.2011 22:30:50: AML/BD/GalerieGC2_fr.html
+09.06.2011 22:30:51: Generation is over
+
