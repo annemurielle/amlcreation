@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox · Sons relaxants pour sommeil, concentration et acouphènes</title>
+  <title>Somnifox · Uyku, odaklanma ve kulak çınlaması için rahatlatıcı sesler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox est un mixeur de sons simple et élégant pour s'endormir, se concentrer, se détendre et mieux vivre avec les acouphènes. Aucun compte, aucune publicité. Fonctionne entièrement hors ligne. La version gratuite inclut les fonctions essentielles, Premium débloque tous les sons, ambiances et thèmes." />
+  <meta name="description" content="Somnifox, uykuya dalmak, rahatlamak, odaklanmak ve kulak çınlamasıyla yaşamak için basit ve şık bir ses karıştırıcıdır. Hesap gerekmez, reklam yok. Uygulama tamamen çevrimdışı çalışır. Temel özellikler ücretsizdir, Premium tüm sesleri, ortamları ve temaları açar." />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox · Sons relaxants pour sommeil, concentration et acouphènes" />
-  <meta property="og:description" content="Créez des ambiances apaisantes, masquez vos acouphènes et restez concentré avec un mixeur de sons personnalisable. Aucune publicité. Fonctionne entièrement hors ligne. Essai gratuit." />
+  <meta property="og:title" content="Somnifox · Uyku, odaklanma ve kulak çınlaması için rahatlatıcı sesler" />
+  <meta property="og:description" content="Yağmur, dalga ve doğa sesleriyle kendi sakin ortamınızı oluşturun, kulak çınlamasını daha az fark edilir hale getirin ve odaklanın. Reklam yok. Tamamen çevrimdışı. Ücretsiz deneyin." />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@
 
     *{ box-sizing:border-box; }
 
-    /* fond léger sur toute la page */
+    /* hafif arka plan görseli */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +75,7 @@
       padding:24px;
     }
 
-    /* en-tête */
+    /* üst kısım */
     header{
       display:flex;
       align-items:center;
@@ -132,7 +132,7 @@
       box-shadow:0 8px 24px rgba(46,207,122,0.4);
     }
 
-    /* sélecteur de langue dans le header */
+    /* dil seçici */
     .lang-select-wrap{
       position:relative;
     }
@@ -276,7 +276,7 @@
       color:var(--ink);
     }
 
-    /* sections cartes */
+    /* kart/sayfa düzeni */
     section{
       margin-top:28px;
     }
@@ -319,7 +319,7 @@
       margin:6px 0;
     }
 
-    /* captures d'écran */
+    /* ekran görüntüleri */
     .shots{
       display:grid;
       gap:16px;
@@ -349,7 +349,7 @@
       }
     }
 
-    /* pied de page */
+    /* alt kısım */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -366,21 +366,21 @@
 
 <body>
   <div class="container">
-    <!-- en-tête -->
+    <!-- üst kısım -->
     <header>
       <a class="brand" href="#">
-        <img src="logo.png" alt="Logo de l'application Somnifox" />
+        <img src="logo.png" alt="Somnifox uygulamasının logosu" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="support_fr.html">Support</a>
+        <a href="support_tr.html">Destek</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+          <select id="lang-switcher" class="lang-select" aria-label="Dili değiştir">
             <option value="en">English</option>
-            <option value="tr">Türkçe</option>
+            <option value="tr" selected>Türkçe</option>
             <option value="es">Español</option>
-            <option value="fr" selected>Français</option>
+            <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="de">Deutsch</option>
             <option value="hi">हिन्दी</option>
@@ -395,113 +395,111 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Télécharger sur l’App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">App Store’dan indir</a>
       </nav>
     </header>
 
     <!-- hero -->
-  <article class="hero">
-  <div class="hero-copy">
-    <h1>Sommeil, concentration et acouphènes avec un mixeur de sons personnalisable</h1>
-    <p class="lead">
-      Mélangez pluie, vagues, bruits de forêt, feu de cheminée, bruit blanc ou brun et bien plus encore. 
-      Placez chaque son dans l’espace, ajustez sa tonalité et programmez un minuteur de sommeil.
-      Aucune publicité. Application entièrement hors ligne, sans compte. 
-      Les fonctions essentielles sont gratuites, l’option Premium débloque tout le contenu.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Obtenir Somnifox</a>
-      <a class="btn" href="support_fr.html">Support</a>
-      <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Confidentialité</a>
-    </div>
-    <p class="hero-mini">Disponible sur iPhone et iPad.</p>
-  </div>
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>Uyku, odaklanma ve kulak çınlaması için kişiselleştirilebilir ses karıştırıcı</h1>
+        <p class="lead">
+          Yağmur, okyanus dalgaları, orman sesleri, şömine, beyaz veya kahverengi gürültü ve çok daha fazlasını karıştırın.
+          Her sesi uzayda konumlandırın, tonunu ayarlayın ve bir uyku zamanlayıcısı kurun.
+          Reklam yok. Tamamen çevrimdışı, hesap gerekmez. Temel özellikler ücretsizdir, Premium tüm içeriği açar.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Somnifox’u edinin</a>
+          <a class="btn" href="support_tr.html">Destek</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Gizlilik</a>
+        </div>
+        <p class="hero-mini">iPhone ve iPad’de kullanılabilir.</p>
+      </div>
 
-  <div class="hero-phone">
-    <div class="phone-frame">
-      <!-- grande image verticale, commune à toutes les langues -->
-      <img src="hero.jpg" alt="Renard Somnifox illustré sur un fond violet apaisant." />
-    </div>
-    <p class="hero-caption">
-      Créez votre propre ambiance de pluie, bruits de forêt, vagues et bien plus encore.
-    </p>
-  </div>
-</article>
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <!-- tüm dillerde ortak büyük görsel -->
+          <img src="hero.jpg" alt="Mor, sakinleştirici bir arka plan üzerinde Somnifox tilki illüstrasyonu." />
+        </div>
+        <p class="hero-caption">
+          Yağmur, orman sesleri, dalgalar ve daha fazlasıyla kendi ortamınızı oluşturun.
+        </p>
+      </div>
+    </article>
 
-
-    <!-- fonctionnalités et tarif -->
+    <!-- özellikler ve fiyatlandırma -->
     <section class="grid cols-2">
       <div class="card">
-        <h2>Pourquoi Somnifox</h2>
+        <h2>Neden Somnifox?</h2>
         <ul class="clean">
-          <li>Pensée pour le sommeil, la détente, la concentration et les acouphènes</li>
-          <li>Interface claire avec lecture ou pause instantanée et minuteur de sommeil</li>
-          <li>Mélangez jusqu’à <strong>6</strong> sons par ambiance (3 dans la version gratuite)</li>
-          <li>Placement spatial des sons pour les déplacer à gauche, à droite, près ou loin</li>
-          <li>Contrôle fin par son&nbsp;: volume, panoramique, hauteur et filtre</li>
-          <li><strong>Mélange avec d’autres apps audio</strong> pour garder votre musique ou vos podcasts</li>
-          <li>Fonctionne entièrement hors ligne, dès le premier lancement</li>
-          <li>Aucune publicité</li>
+          <li>Uyku, rahatlama, odaklanma ve kulak çınlaması için tasarlandı</li>
+          <li>Anında oynat/duraklat ve uyku zamanlayıcılı sade arayüz</li>
+          <li>Her ortamda <strong>6</strong> sese kadar karışım (ücretsiz sürümde 3 ses)</li>
+          <li>Sesi sola, sağa, yakına veya uzağa taşıyabileceğiniz konumsal yerleşim</li>
+          <li>Her ses için ayrıntılı kontrol: ses seviyesi, panorama, perde ve filtre</li>
+          <li><strong>Diğer müzik/podcast uygulamalarıyla birlikte çalışır</strong></li>
+          <li>İlk açılıştan itibaren tamamen çevrimdışı çalışır</li>
+          <li>Reklam içermez</li>
         </ul>
         <p style="color:var(--sub); margin-top:10px; font-size:14px;">
-          Somnifox a été créé par Anne, qui vit avec des acouphènes. Pour elle, écouter des sons doux, comme un mélange de ronronnement de chat, bruit de douche et train lointain, rend le sifflement moins présent et plus facile à ignorer. Somnifox vous permet de composer vos propres ambiances pour trouver ce qui vous convient le mieux.
+          Somnifox, kulak çınlamasıyla yaşayan Anne tarafından geliştirildi. Onun için, kedi mırıltısı, duş sesi ve uzaktaki bir trenin karışımı gibi yumuşak sesler, çınlamayı daha az fark edilir ve görmezden gelmesi daha kolay hale getiriyor. Somnifox, size en rahat geleni bulmanız için kendi ortamlarınızı oluşturmanıza imkan verir.
         </p>
       </div>
 
       <div class="card">
-        <h2>Gratuit ou Premium</h2>
+        <h2>Ücretsiz ve Premium</h2>
         <div class="grid cols-2" style="gap:12px; margin-top:6px;">
           <div class="card" style="padding:14px;">
-            <h3 style="margin-top:0;">Gratuit</h3>
+            <h3 style="margin-top:0;">Ücretsiz</h3>
             <ul class="clean">
-              <li>1 ambiance enregistrée</li>
-              <li>3 sons par ambiance</li>
-              <li>Minuteur de sommeil de 30 minutes</li>
-              <li>3 sessions de réglages avancés par jour</li>
-              <li>2 thèmes d’interface</li>
+              <li>1 kayıtlı ortam</li>
+              <li>Her ortamda 3 ses</li>
+              <li>30 dakikalık uyku zamanlayıcısı</li>
+              <li>Günde 3 ayrıntılı ayar oturumu</li>
+              <li>2 arayüz teması</li>
             </ul>
           </div>
           <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
             <h3 style="margin-top:0;">Premium</h3>
             <ul class="clean">
-              <li>Ambiances enregistrées en nombre illimité</li>
-              <li>Jusqu’à 6 sons par ambiance</li>
-              <li>Minuteur de sommeil sans limite</li>
-              <li>Sessions de réglages avancés illimitées</li>
-              <li>Tous les thèmes et habillages disponibles</li>
+              <li>Sınırsız sayıda kayıtlı ortam</li>
+              <li>Her ortamda 6 sese kadar karışım</li>
+              <li>Sınırsız uyku zamanlayıcısı</li>
+              <li>Sınırsız ayrıntılı ayar oturumu</li>
+              <li>Kullanılabilir tüm temalar ve görünümler</li>
             </ul>
           </div>
         </div>
         <p style="color:var(--sub); margin-top:10px;">
-          Achats intégrés&nbsp;: Somnifox Premium mensuel, annuel et achat unique.
+          Uygulama içi satın alımlar: Somnifox Premium Aylık, Yıllık ve tek seferlik satın alma.
         </p>
         <p style="color:var(--sub); margin-top:4px; font-size:14px;">
-          Vous pouvez utiliser toutes les fonctions essentielles sans abonnement ni achat intégré. La version gratuite limite simplement le nombre d’ambiances, le nombre de sons disponibles et les thèmes.
+          Tüm temel özellikleri abonelik veya uygulama içi satın alım olmadan kullanabilirsiniz. Ücretsiz sürüm yalnızca ortam sayısını, mevcut sesleri ve temaları sınırlar.
         </p>
       </div>
     </section>
 
-    <!-- captures d’écran -->
+    <!-- ekran görüntüleri -->
     <section class="card">
-      <h2 style="margin-top:0;">Aperçu de l’app</h2>
+      <h2 style="margin-top:0;">Uygulama önizlemesi</h2>
       <div class="shots">
-        <img src="Images/FR/screen0.jpg" alt="Écran d’accueil de Somnifox avec un renard sur un nuage et le texte « A moment of calm, just for you »." />
-        <img src="Images/FR/screen1.jpg" alt="Écran principal affichant une liste d’ambiances apaisantes comme Stormy Sea, Campfire et Background Noise." />
-        <img src="Images/FR/screen2.jpg" alt="Vue du mixeur avec plusieurs sons, un bouton lecture et une illustration de renard endormi." />
-        <img src="Images/FR/screen3.jpg" alt="Écran Balance & volume où chaque son est placé dans l’espace à l’intérieur d’un cercle." />
-        <img src="Images/FR/screen4.jpg" alt="Réglages d’apparence et de disposition avec plusieurs thèmes colorés et une illustration de renard." />
-        <img src="Images/FR/screen5.jpg" alt="Écran de lecture et de réglages avec des options comme lecture au lancement, lecture en arrière-plan et garder l’écran allumé." />
+        <img src="Images/TR/screen0.jpg" alt="Somnifox karşılama ekranı, bir bulut üzerinde dinlenen tilki ve « A moment of calm, just for you » metni." />
+        <img src="Images/TR/screen1.jpg" alt="Stormy Sea, Campfire ve Background Noise gibi rahatlatıcı ortamların listelendiği ana ekran." />
+        <img src="Images/TR/screen2.jpg" alt="Birden fazla ses, oynat düğmesi ve uyuyan tilki illüstrasyonu bulunan karıştırıcı görünümü." />
+        <img src="Images/TR/screen3.jpg" alt="Her sesin daire içinde uzayda konumlandırıldığı denge ve ses seviyesi ekranı." />
+        <img src="Images/TR/screen4.jpg" alt="Birden fazla renkli temayla görünüm ve düzen ayarlarını gösteren ekran." />
+        <img src="Images/TR/screen5.jpg" alt="Uygulama açıldığında oynat, arka planda çalmaya devam et ve ekranı açık tut gibi seçeneklerle oynatma ve ayarlar ekranı." />
       </div>
     </section>
 
-    <!-- pied de page -->
+    <!-- alt kısım -->
     <footer>
       <p>
-        Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
-        <a href="support_fr.html">Aide et contact</a>
+        Destek: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_tr.html">Yardım ve iletişim</a>
       </p>
       <p style="margin-top:6px;">
-        © Somnifox. Somnifox n’est pas un dispositif médical et ne remplace pas un avis professionnel.
+        © Somnifox. Somnifox bir tıbbi cihaz değildir ve profesyonel tavsiyenin yerini almaz.
       </p>
     </footer>
   </div>
@@ -529,7 +527,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      var currentLang = (document.documentElement.lang || "tr").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

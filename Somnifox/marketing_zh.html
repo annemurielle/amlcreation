@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="zh">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox · Sons relaxants pour sommeil, concentration et acouphènes</title>
+  <title>Somnifox · 助眠、专注与耳鸣放松的舒缓声音应用</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox est un mixeur de sons simple et élégant pour s'endormir, se concentrer, se détendre et mieux vivre avec les acouphènes. Aucun compte, aucune publicité. Fonctionne entièrement hors ligne. La version gratuite inclut les fonctions essentielles, Premium débloque tous les sons, ambiances et thèmes." />
+  <meta name="description" content="Somnifox 是一款简单优雅的声音混合应用，用于帮助睡眠、放松、专注，以及与耳鸣和平相处。无需账户，无广告，完全离线运行。核心功能永久免费，升级 Premium 可解锁全部声音、环境与主题。" />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox · Sons relaxants pour sommeil, concentration et acouphènes" />
-  <meta property="og:description" content="Créez des ambiances apaisantes, masquez vos acouphènes et restez concentré avec un mixeur de sons personnalisable. Aucune publicité. Fonctionne entièrement hors ligne. Essai gratuit." />
+  <meta property="og:title" content="Somnifox · 助眠、专注与耳鸣放松的舒缓声音应用" />
+  <meta property="og:description" content="混合雨声、海浪、自然与壁炉等舒缓声音，营造放松氛围，减轻对耳鸣的注意力并保持专注。无广告，完全离线，免费下载体验。" />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@
 
     *{ box-sizing:border-box; }
 
-    /* fond léger sur toute la page */
+    /* 淡淡的整页背景图 */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +75,7 @@
       padding:24px;
     }
 
-    /* en-tête */
+    /* 头部 */
     header{
       display:flex;
       align-items:center;
@@ -132,7 +132,7 @@
       box-shadow:0 8px 24px rgba(46,207,122,0.4);
     }
 
-    /* sélecteur de langue dans le header */
+    /* 语言选择 */
     .lang-select-wrap{
       position:relative;
     }
@@ -159,7 +159,7 @@
       pointer-events:none;
     }
 
-    /* hero */
+    /* hero 区域 */
     .hero{
       margin-top:10px;
       border-radius:var(--radius);
@@ -276,7 +276,7 @@
       color:var(--ink);
     }
 
-    /* sections cartes */
+    /* 内容卡片布局 */
     section{
       margin-top:28px;
     }
@@ -319,7 +319,7 @@
       margin:6px 0;
     }
 
-    /* captures d'écran */
+    /* 截图网格 */
     .shots{
       display:grid;
       gap:16px;
@@ -349,7 +349,7 @@
       }
     }
 
-    /* pied de page */
+    /* 页脚 */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -366,26 +366,26 @@
 
 <body>
   <div class="container">
-    <!-- en-tête -->
+    <!-- 头部 -->
     <header>
       <a class="brand" href="#">
-        <img src="logo.png" alt="Logo de l'application Somnifox" />
+        <img src="logo.png" alt="Somnifox 应用图标" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="support_fr.html">Support</a>
+        <a href="support_zh.html">支持</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+          <select id="lang-switcher" class="lang-select" aria-label="切换语言">
             <option value="en">English</option>
             <option value="tr">Türkçe</option>
             <option value="es">Español</option>
-            <option value="fr" selected>Français</option>
+            <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="de">Deutsch</option>
             <option value="hi">हिन्दी</option>
             <option value="nl">Nederlands</option>
-            <option value="zh">简体中文</option>
+            <option value="zh" selected>简体中文</option>
             <option value="pt">Português</option>
             <option value="ru">Русский</option>
             <option value="it">Italiano</option>
@@ -395,113 +395,110 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Télécharger sur l’App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">在 App Store 下载</a>
       </nav>
     </header>
 
-    <!-- hero -->
-  <article class="hero">
-  <div class="hero-copy">
-    <h1>Sommeil, concentration et acouphènes avec un mixeur de sons personnalisable</h1>
-    <p class="lead">
-      Mélangez pluie, vagues, bruits de forêt, feu de cheminée, bruit blanc ou brun et bien plus encore. 
-      Placez chaque son dans l’espace, ajustez sa tonalité et programmez un minuteur de sommeil.
-      Aucune publicité. Application entièrement hors ligne, sans compte. 
-      Les fonctions essentielles sont gratuites, l’option Premium débloque tout le contenu.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Obtenir Somnifox</a>
-      <a class="btn" href="support_fr.html">Support</a>
-      <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Confidentialité</a>
-    </div>
-    <p class="hero-mini">Disponible sur iPhone et iPad.</p>
-  </div>
+    <!-- hero 区 -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>为睡眠、专注和耳鸣打造的个性化声音混合器</h1>
+        <p class="lead">
+          混合雨声、海浪声、森林自然声、壁炉声、白噪声或棕噪声等多种声音，将每个声音放置在空间中的不同位置，细致调节音色，再设置睡眠定时器。
+          无广告，从首次启动起即可完全离线运行，无需账户。核心功能永久免费，升级 Premium 后可解锁全部内容。
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">获取 Somnifox</a>
+          <a class="btn" href="support_zh.html">支持</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">隐私政策</a>
+        </div>
+        <p class="hero-mini">适用于 iPhone 和 iPad。</p>
+      </div>
 
-  <div class="hero-phone">
-    <div class="phone-frame">
-      <!-- grande image verticale, commune à toutes les langues -->
-      <img src="hero.jpg" alt="Renard Somnifox illustré sur un fond violet apaisant." />
-    </div>
-    <p class="hero-caption">
-      Créez votre propre ambiance de pluie, bruits de forêt, vagues et bien plus encore.
-    </p>
-  </div>
-</article>
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <!-- 所有语言共用的大尺寸竖版插图 -->
+          <img src="hero.jpg" alt="紫色宁静背景上的 Somnifox 小狐狸插图。" />
+        </div>
+        <p class="hero-caption">
+          打造属于你的雨声、森林声、海浪声等舒缓氛围。
+        </p>
+      </div>
+    </article>
 
-
-    <!-- fonctionnalités et tarif -->
+    <!-- 功能与方案 -->
     <section class="grid cols-2">
       <div class="card">
-        <h2>Pourquoi Somnifox</h2>
+        <h2>为什么选择 Somnifox？</h2>
         <ul class="clean">
-          <li>Pensée pour le sommeil, la détente, la concentration et les acouphènes</li>
-          <li>Interface claire avec lecture ou pause instantanée et minuteur de sommeil</li>
-          <li>Mélangez jusqu’à <strong>6</strong> sons par ambiance (3 dans la version gratuite)</li>
-          <li>Placement spatial des sons pour les déplacer à gauche, à droite, près ou loin</li>
-          <li>Contrôle fin par son&nbsp;: volume, panoramique, hauteur et filtre</li>
-          <li><strong>Mélange avec d’autres apps audio</strong> pour garder votre musique ou vos podcasts</li>
-          <li>Fonctionne entièrement hors ligne, dès le premier lancement</li>
-          <li>Aucune publicité</li>
+          <li>专为睡眠、放松、专注以及与耳鸣和平共处而设计</li>
+          <li>简洁界面，一键播放或暂停，并支持睡眠定时器</li>
+          <li>每个环境最多可混合 <strong>6</strong> 种声音（免费版为 3 种）</li>
+          <li>空间定位，可将声音移到左、右、远处或靠近耳边</li>
+          <li>单独控制每个声音的音量、声像、音高和滤波</li>
+          <li><strong>可与其他音频应用同时播放</strong>，一边听音乐或播客一边叠加环境声</li>
+          <li>从第一次打开起即可完全离线使用，无需网络连接</li>
+          <li>无广告打扰</li>
         </ul>
         <p style="color:var(--sub); margin-top:10px; font-size:14px;">
-          Somnifox a été créé par Anne, qui vit avec des acouphènes. Pour elle, écouter des sons doux, comme un mélange de ronronnement de chat, bruit de douche et train lointain, rend le sifflement moins présent et plus facile à ignorer. Somnifox vous permet de composer vos propres ambiances pour trouver ce qui vous convient le mieux.
+          Somnifox 由 Anne 开发，她本人也有耳鸣。对她来说，将猫咪呼噜声、淋浴水声和远处列车声混合在一起，可以让耳中的鸣响变得不那么明显，也更容易忽略。Somnifox 让你可以自由组合各种声音，找到最适合自己的舒缓氛围。
         </p>
       </div>
 
       <div class="card">
-        <h2>Gratuit ou Premium</h2>
+        <h2>免费版与 Premium</h2>
         <div class="grid cols-2" style="gap:12px; margin-top:6px;">
           <div class="card" style="padding:14px;">
-            <h3 style="margin-top:0;">Gratuit</h3>
+            <h3 style="margin-top:0;">免费版</h3>
             <ul class="clean">
-              <li>1 ambiance enregistrée</li>
-              <li>3 sons par ambiance</li>
-              <li>Minuteur de sommeil de 30 minutes</li>
-              <li>3 sessions de réglages avancés par jour</li>
-              <li>2 thèmes d’interface</li>
+              <li>1 个已保存环境</li>
+              <li>每个环境 3 种声音</li>
+              <li>30 分钟睡眠定时器</li>
+              <li>每天 3 次细致调节会话</li>
+              <li>2 套界面主题</li>
             </ul>
           </div>
           <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
             <h3 style="margin-top:0;">Premium</h3>
             <ul class="clean">
-              <li>Ambiances enregistrées en nombre illimité</li>
-              <li>Jusqu’à 6 sons par ambiance</li>
-              <li>Minuteur de sommeil sans limite</li>
-              <li>Sessions de réglages avancés illimitées</li>
-              <li>Tous les thèmes et habillages disponibles</li>
+              <li>无限数量的已保存环境</li>
+              <li>每个环境最多 6 种声音</li>
+              <li>无限时长睡眠定时器</li>
+              <li>不限次数的细致调节会话</li>
+              <li>解锁所有主题与外观选项</li>
             </ul>
           </div>
         </div>
         <p style="color:var(--sub); margin-top:10px;">
-          Achats intégrés&nbsp;: Somnifox Premium mensuel, annuel et achat unique.
+          应用内购买选项：Somnifox Premium 月订阅、年订阅以及一次性买断。
         </p>
         <p style="color:var(--sub); margin-top:4px; font-size:14px;">
-          Vous pouvez utiliser toutes les fonctions essentielles sans abonnement ni achat intégré. La version gratuite limite simplement le nombre d’ambiances, le nombre de sons disponibles et les thèmes.
+          无需订阅或应用内购买，你就可以使用所有核心功能。免费版只限制环境数量、可用声音以及可选主题的数量。
         </p>
       </div>
     </section>
 
-    <!-- captures d’écran -->
+    <!-- 应用预览 -->
     <section class="card">
-      <h2 style="margin-top:0;">Aperçu de l’app</h2>
+      <h2 style="margin-top:0;">应用预览</h2>
       <div class="shots">
-        <img src="Images/FR/screen0.jpg" alt="Écran d’accueil de Somnifox avec un renard sur un nuage et le texte « A moment of calm, just for you »." />
-        <img src="Images/FR/screen1.jpg" alt="Écran principal affichant une liste d’ambiances apaisantes comme Stormy Sea, Campfire et Background Noise." />
-        <img src="Images/FR/screen2.jpg" alt="Vue du mixeur avec plusieurs sons, un bouton lecture et une illustration de renard endormi." />
-        <img src="Images/FR/screen3.jpg" alt="Écran Balance & volume où chaque son est placé dans l’espace à l’intérieur d’un cercle." />
-        <img src="Images/FR/screen4.jpg" alt="Réglages d’apparence et de disposition avec plusieurs thèmes colorés et une illustration de renard." />
-        <img src="Images/FR/screen5.jpg" alt="Écran de lecture et de réglages avec des options comme lecture au lancement, lecture en arrière-plan et garder l’écran allumé." />
+        <img src="Images/ZH/screen0.jpg" alt="Somnifox 欢迎界面，一只小狐狸躺在云朵上，以及文字 'A moment of calm, just for you'。" />
+        <img src="Images/ZH/screen1.jpg" alt="主界面，展示 Stormy Sea、Campfire、Background Noise 等多个放松环境列表。" />
+        <img src="Images/ZH/screen2.jpg" alt="混音界面，多个声音轨道叠放，配有播放按钮与正在熟睡的小狐狸插图。" />
+        <img src="Images/ZH/screen3.jpg" alt="平衡与音量调节界面，每个声音以气泡形式分布在圆形空间中。" />
+        <img src="Images/ZH/screen4.jpg" alt="外观与布局设置界面，包含多种彩色主题和小狐狸插图。" />
+        <img src="Images/ZH/screen5.jpg" alt="播放与设置界面，提供启动即播放、后台持续播放以及保持屏幕常亮等选项。" />
       </div>
     </section>
 
-    <!-- pied de page -->
+    <!-- 页脚 -->
     <footer>
       <p>
-        Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
-        <a href="support_fr.html">Aide et contact</a>
+        支持邮箱: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_zh.html">帮助与联系</a>
       </p>
       <p style="margin-top:6px;">
-        © Somnifox. Somnifox n’est pas un dispositif médical et ne remplace pas un avis professionnel.
+        © Somnifox。Somnifox 不是医疗器械，不能替代专业医疗建议。
       </p>
     </footer>
   </div>
@@ -529,7 +526,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      var currentLang = (document.documentElement.lang || "zh").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox · Sons relaxants pour sommeil, concentration et acouphènes</title>
+  <title>Somnifox · Sonidos relajantes para dormir, concentrarse y acúfenos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox est un mixeur de sons simple et élégant pour s'endormir, se concentrer, se détendre et mieux vivre avec les acouphènes. Aucun compte, aucune publicité. Fonctionne entièrement hors ligne. La version gratuite inclut les fonctions essentielles, Premium débloque tous les sons, ambiances et thèmes." />
+  <meta name="description" content="Somnifox es un mezclador de sonidos simple y elegante para dormir, relajarse, concentrarse y convivir con los acúfenos. Sin cuenta, sin anuncios. Funciona completamente sin conexión. Las funciones esenciales son gratuitas y Premium desbloquea todos los sonidos, ambientes y temas." />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox · Sons relaxants pour sommeil, concentration et acouphènes" />
-  <meta property="og:description" content="Créez des ambiances apaisantes, masquez vos acouphènes et restez concentré avec un mixeur de sons personnalisable. Aucune publicité. Fonctionne entièrement hors ligne. Essai gratuit." />
+  <meta property="og:title" content="Somnifox · Sonidos relajantes para dormir, concentrarse y acúfenos" />
+  <meta property="og:description" content="Crea ambientes relajantes, disimula tus acúfenos y mantente concentrado con un mezclador de sonidos personalizable. Sin anuncios. Funciona completamente sin conexión. Pruébalo gratis." />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,6 @@
 
     *{ box-sizing:border-box; }
 
-    /* fond léger sur toute la page */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +74,6 @@
       padding:24px;
     }
 
-    /* en-tête */
     header{
       display:flex;
       align-items:center;
@@ -132,7 +130,6 @@
       box-shadow:0 8px 24px rgba(46,207,122,0.4);
     }
 
-    /* sélecteur de langue dans le header */
     .lang-select-wrap{
       position:relative;
     }
@@ -159,7 +156,6 @@
       pointer-events:none;
     }
 
-    /* hero */
     .hero{
       margin-top:10px;
       border-radius:var(--radius);
@@ -276,7 +272,6 @@
       color:var(--ink);
     }
 
-    /* sections cartes */
     section{
       margin-top:28px;
     }
@@ -319,7 +314,6 @@
       margin:6px 0;
     }
 
-    /* captures d'écran */
     .shots{
       display:grid;
       gap:16px;
@@ -349,7 +343,6 @@
       }
     }
 
-    /* pied de page */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -366,21 +359,20 @@
 
 <body>
   <div class="container">
-    <!-- en-tête -->
     <header>
       <a class="brand" href="#">
-        <img src="logo.png" alt="Logo de l'application Somnifox" />
+        <img src="logo.png" alt="Logotipo de la aplicación Somnifox" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="support_fr.html">Support</a>
+        <a href="support_es.html">Soporte</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+          <select id="lang-switcher" class="lang-select" aria-label="Cambiar idioma">
             <option value="en">English</option>
             <option value="tr">Türkçe</option>
-            <option value="es">Español</option>
-            <option value="fr" selected>Français</option>
+            <option value="es" selected>Español</option>
+            <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="de">Deutsch</option>
             <option value="hi">हिन्दी</option>
@@ -395,113 +387,105 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Télécharger sur l’App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">Descargar en el App Store</a>
       </nav>
     </header>
 
-    <!-- hero -->
-  <article class="hero">
-  <div class="hero-copy">
-    <h1>Sommeil, concentration et acouphènes avec un mixeur de sons personnalisable</h1>
-    <p class="lead">
-      Mélangez pluie, vagues, bruits de forêt, feu de cheminée, bruit blanc ou brun et bien plus encore. 
-      Placez chaque son dans l’espace, ajustez sa tonalité et programmez un minuteur de sommeil.
-      Aucune publicité. Application entièrement hors ligne, sans compte. 
-      Les fonctions essentielles sont gratuites, l’option Premium débloque tout le contenu.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Obtenir Somnifox</a>
-      <a class="btn" href="support_fr.html">Support</a>
-      <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Confidentialité</a>
-    </div>
-    <p class="hero-mini">Disponible sur iPhone et iPad.</p>
-  </div>
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>Sonidos relajantes para dormir, concentrarse y convivir con los acúfenos</h1>
+        <p class="lead">
+          Mezcla lluvia, olas del mar, sonidos de bosque, chimenea, ruido blanco o marrón y mucho más. Coloca cada sonido en el espacio, ajusta su tono y programa un temporizador de sueño.
+          Sin anuncios. Funciona completamente sin conexión y sin cuenta. Las funciones esenciales son gratuitas y la opción Premium desbloquea todo el contenido.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Obtener Somnifox</a>
+          <a class="btn" href="support_es.html">Soporte</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Privacidad</a>
+        </div>
+        <p class="hero-mini">Disponible en iPhone y iPad.</p>
+      </div>
 
-  <div class="hero-phone">
-    <div class="phone-frame">
-      <!-- grande image verticale, commune à toutes les langues -->
-      <img src="hero.jpg" alt="Renard Somnifox illustré sur un fond violet apaisant." />
-    </div>
-    <p class="hero-caption">
-      Créez votre propre ambiance de pluie, bruits de forêt, vagues et bien plus encore.
-    </p>
-  </div>
-</article>
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <img src="hero.jpg" alt="Ilustración del zorro Somnifox sobre un fondo violeta relajante." />
+        </div>
+        <p class="hero-caption">
+          Crea tu propia ambientación de lluvia, sonidos de bosque, olas y mucho más.
+        </p>
+      </div>
+    </article>
 
-
-    <!-- fonctionnalités et tarif -->
     <section class="grid cols-2">
       <div class="card">
-        <h2>Pourquoi Somnifox</h2>
+        <h2>Por qué Somnifox</h2>
         <ul class="clean">
-          <li>Pensée pour le sommeil, la détente, la concentration et les acouphènes</li>
-          <li>Interface claire avec lecture ou pause instantanée et minuteur de sommeil</li>
-          <li>Mélangez jusqu’à <strong>6</strong> sons par ambiance (3 dans la version gratuite)</li>
-          <li>Placement spatial des sons pour les déplacer à gauche, à droite, près ou loin</li>
-          <li>Contrôle fin par son&nbsp;: volume, panoramique, hauteur et filtre</li>
-          <li><strong>Mélange avec d’autres apps audio</strong> pour garder votre musique ou vos podcasts</li>
-          <li>Fonctionne entièrement hors ligne, dès le premier lancement</li>
-          <li>Aucune publicité</li>
+          <li>Diseñada para dormir, relajarse, concentrarse y convivir con los acúfenos</li>
+          <li>Interfaz clara con reproducción o pausa instantánea y temporizador de sueño</li>
+          <li>Mezcla hasta <strong>6</strong> sonidos por ambiente (3 en la versión gratuita)</li>
+          <li>Posicionamiento espacial para mover los sonidos a izquierda, derecha, cerca o lejos</li>
+          <li>Control detallado por sonido: volumen, panorámica, tono y filtro</li>
+          <li><strong>Mezcla con otras apps de audio</strong> para seguir escuchando tu música o tus pódcasts</li>
+          <li>Funciona completamente sin conexión desde el primer inicio</li>
+          <li>Sin anuncios</li>
         </ul>
         <p style="color:var(--sub); margin-top:10px; font-size:14px;">
-          Somnifox a été créé par Anne, qui vit avec des acouphènes. Pour elle, écouter des sons doux, comme un mélange de ronronnement de chat, bruit de douche et train lointain, rend le sifflement moins présent et plus facile à ignorer. Somnifox vous permet de composer vos propres ambiances pour trouver ce qui vous convient le mieux.
+          Somnifox fue creada por Anne, que convive con acúfenos. Para ella, escuchar sonidos suaves, como una combinación de ronroneo de gato, ruido de ducha y un tren lejano, hace que el pitido sea menos presente y más fácil de ignorar. Somnifox te permite crear tus propios ambientes para encontrar lo que te resulte más cómodo.
         </p>
       </div>
 
       <div class="card">
-        <h2>Gratuit ou Premium</h2>
+        <h2>Gratis o Premium</h2>
         <div class="grid cols-2" style="gap:12px; margin-top:6px;">
           <div class="card" style="padding:14px;">
-            <h3 style="margin-top:0;">Gratuit</h3>
+            <h3 style="margin-top:0;">Gratis</h3>
             <ul class="clean">
-              <li>1 ambiance enregistrée</li>
-              <li>3 sons par ambiance</li>
-              <li>Minuteur de sommeil de 30 minutes</li>
-              <li>3 sessions de réglages avancés par jour</li>
-              <li>2 thèmes d’interface</li>
+              <li>1 ambiente guardado</li>
+              <li>3 sonidos por ambiente</li>
+              <li>Temporizador de sueño de 30 minutos</li>
+              <li>3 sesiones de controles avanzados al día</li>
+              <li>2 temas de interfaz</li>
             </ul>
           </div>
           <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
             <h3 style="margin-top:0;">Premium</h3>
             <ul class="clean">
-              <li>Ambiances enregistrées en nombre illimité</li>
-              <li>Jusqu’à 6 sons par ambiance</li>
-              <li>Minuteur de sommeil sans limite</li>
-              <li>Sessions de réglages avancés illimitées</li>
-              <li>Tous les thèmes et habillages disponibles</li>
+              <li>Ambientes guardados ilimitados</li>
+              <li>Hasta 6 sonidos por ambiente</li>
+              <li>Temporizador de sueño sin límite</li>
+              <li>Sesiones de controles avanzados ilimitadas</li>
+              <li>Todos los temas y estilos disponibles</li>
             </ul>
           </div>
         </div>
         <p style="color:var(--sub); margin-top:10px;">
-          Achats intégrés&nbsp;: Somnifox Premium mensuel, annuel et achat unique.
+          Compras integradas: Somnifox Premium mensual, anual y de pago único.
         </p>
         <p style="color:var(--sub); margin-top:4px; font-size:14px;">
-          Vous pouvez utiliser toutes les fonctions essentielles sans abonnement ni achat intégré. La version gratuite limite simplement le nombre d’ambiances, le nombre de sons disponibles et les thèmes.
+          Puedes usar todas las funciones esenciales sin suscripción ni compras integradas. La versión gratuita solo limita el número de ambientes, de sonidos disponibles y de temas.
         </p>
       </div>
     </section>
 
-    <!-- captures d’écran -->
     <section class="card">
-      <h2 style="margin-top:0;">Aperçu de l’app</h2>
+      <h2 style="margin-top:0;">Vista previa de la app</h2>
       <div class="shots">
-        <img src="Images/FR/screen0.jpg" alt="Écran d’accueil de Somnifox avec un renard sur un nuage et le texte « A moment of calm, just for you »." />
-        <img src="Images/FR/screen1.jpg" alt="Écran principal affichant une liste d’ambiances apaisantes comme Stormy Sea, Campfire et Background Noise." />
-        <img src="Images/FR/screen2.jpg" alt="Vue du mixeur avec plusieurs sons, un bouton lecture et une illustration de renard endormi." />
-        <img src="Images/FR/screen3.jpg" alt="Écran Balance & volume où chaque son est placé dans l’espace à l’intérieur d’un cercle." />
-        <img src="Images/FR/screen4.jpg" alt="Réglages d’apparence et de disposition avec plusieurs thèmes colorés et une illustration de renard." />
-        <img src="Images/FR/screen5.jpg" alt="Écran de lecture et de réglages avec des options comme lecture au lancement, lecture en arrière-plan et garder l’écran allumé." />
+        <img src="Images/ES/screen0.jpg" alt="Pantalla de bienvenida de Somnifox con un zorro sobre una nube y el texto « A moment of calm, just for you »." />
+        <img src="Images/ES/screen1.jpg" alt="Pantalla principal con una lista de ambientes relajantes como Stormy Sea, Campfire y Background Noise." />
+        <img src="Images/ES/screen2.jpg" alt="Vista del mezclador con varios sonidos apilados, un botón de reproducción y una ilustración de zorro durmiendo." />
+        <img src="Images/ES/screen3.jpg" alt="Pantalla de balance y volumen donde cada sonido se coloca en el espacio dentro de un círculo." />
+        <img src="Images/ES/screen4.jpg" alt="Ajustes de apariencia y diseño con varios temas de colores y una ilustración de zorro." />
+        <img src="Images/ES/screen5.jpg" alt="Pantalla de reproducción y ajustes con opciones como reproducir al iniciar, seguir en segundo plano y mantener la pantalla encendida." />
       </div>
     </section>
 
-    <!-- pied de page -->
     <footer>
       <p>
-        Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
-        <a href="support_fr.html">Aide et contact</a>
+        Soporte: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_es.html">Ayuda y contacto</a>
       </p>
       <p style="margin-top:6px;">
-        © Somnifox. Somnifox n’est pas un dispositif médical et ne remplace pas un avis professionnel.
+        © Somnifox. Somnifox no es un dispositivo médico y no sustituye el consejo de un profesional.
       </p>
     </footer>
   </div>
@@ -529,7 +513,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      var currentLang = (document.documentElement.lang || "es").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

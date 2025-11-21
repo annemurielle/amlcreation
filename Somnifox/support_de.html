@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox Support – Help, FAQ & Troubleshooting</title>
+  <title>Somnifox Support – Hilfe, FAQ & Fehlerbehebung</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox support center: quick start tips, how to restore purchases, manage subscriptions, and troubleshoot common issues. No account, no ads, fully offline." />
+  <meta name="description" content="Somnifox Support Center: Schnellstart, Käufe wiederherstellen, Abonnements verwalten und häufige Probleme lösen. Kein Konto, keine Werbung, vollständig offline." />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox Support – Help, FAQ & Troubleshooting" />
-  <meta property="og:description" content="Get help with Somnifox: quick start guide, restore purchases, manage subscriptions and troubleshoot common issues." />
+  <meta property="og:title" content="Somnifox Support – Hilfe, FAQ & Fehlerbehebung" />
+  <meta property="og:description" content="Hilfe für Somnifox: Schnellstart, Käufe wiederherstellen, Abos verwalten und häufige Probleme beheben." />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@
 
     *{ box-sizing:border-box; }
 
-    /* faint page background */
+    /* dezenter Seitenhintergrund */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +75,7 @@
       padding:24px;
     }
 
-    /* header */
+    /* Header */
     header{
       display:flex;
       align-items:center;
@@ -139,7 +139,7 @@
       font-weight:600;
     }
 
-    /* language select in nav */
+    /* Sprachwahl */
     .lang-select-wrap{
       position:relative;
     }
@@ -166,7 +166,7 @@
       pointer-events:none;
     }
 
-    /* hero (support) */
+    /* Hero (Support) */
     .hero{
       margin-top:10px;
       border-radius:var(--radius);
@@ -283,7 +283,7 @@
       color:var(--ink);
     }
 
-    /* sections & cards */
+    /* Hauptinhalt / Karten */
     main{
       margin-top:26px;
       display:grid;
@@ -337,7 +337,7 @@
       }
     }
 
-    /* footer */
+    /* Footer */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -354,25 +354,25 @@
 
 <body>
   <div class="container">
-    <!-- header -->
+    <!-- Header -->
     <header>
-      <a class="brand" href="marketing_en.html">
-        <img src="logo.png" alt="Somnifox logo" />
+      <a class="brand" href="marketing_de.html">
+        <img src="logo.png" alt="Somnifox App Logo" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="marketing_en.html">App</a>
+        <a href="marketing_de.html">App</a>
 
-        <a href="support_en.html" class="current">Support</a>
+        <a href="support_de.html" class="current">Support</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Change language">
-            <option value="en" selected>English</option>
+          <select id="lang-switcher" class="lang-select" aria-label="Sprache ändern">
+            <option value="en">English</option>
             <option value="tr">Türkçe</option>
             <option value="es">Español</option>
             <option value="fr">Français</option>
             <option value="ko">한국어</option>
-            <option value="de">Deutsch</option>
+            <option value="de" selected>Deutsch</option>
             <option value="hi">हिन्दी</option>
             <option value="nl">Nederlands</option>
             <option value="zh">简体中文</option>
@@ -385,172 +385,175 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Download on the App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">Im App Store laden</a>
       </nav>
     </header>
 
-    <!-- hero -->
+    <!-- Hero -->
     <article class="hero">
       <div class="hero-copy">
-        <h1>Somnifox support & help</h1>
+        <h1>Somnifox Support und Hilfe</h1>
         <p class="lead">
-          Find quick start tips, restore purchases, manage your subscription and fix common issues. If you still need help after checking this page, you can email support directly from here.
+          Hier findest du den Schnellstart, erfährst, wie du Käufe wiederherstellst, dein Abo verwaltest und häufige Probleme löst.
+          Wenn du nach diesen Schritten noch Fragen hast, kannst du den Support direkt von dieser Seite aus per E-Mail kontaktieren.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Download app</a>
-          <a class="btn" href="mailto:sonocalmrelax@gmail.com">Email support</a>
-          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Privacy policy</a>
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">App herunterladen</a>
+          <a class="btn" href="mailto:sonocalmrelax@gmail.com">Support per E-Mail</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Datenschutzrichtlinie</a>
         </div>
-        <p class="hero-mini">Please include your device model and iOS version when you contact us.</p>
+        <p class="hero-mini">
+          Bitte nenne in deiner Nachricht dein Gerätemodell und die Version von iOS oder iPadOS.
+        </p>
       </div>
 
       <div class="hero-phone">
         <div class="phone-frame">
-          <img src="hero.jpg" alt="Somnifox fox illustration on a calming purple background." />
+          <img src="hero.jpg" alt="Somnifox Fuchs Illustration auf einem beruhigenden violetten Hintergrund." />
         </div>
         <p class="hero-caption">
-          Somnifox works fully offline, with no ads and no account, on iPhone and iPad.
+          Somnifox funktioniert auf iPhone und iPad komplett offline, ohne Werbung und ohne Benutzerkonto.
         </p>
       </div>
     </article>
 
-    <!-- main support content -->
+    <!-- Haupt Support-Inhalt -->
     <main>
       <section class="two-column">
         <div class="card">
-          <h2>Quick start</h2>
+          <h2>Schnellstart</h2>
           <ol>
-            <li>Tap <strong>+</strong> to add a sound (rain, waves, forest, fireplace, white/brown noise, etc.).</li>
-            <li>Drag each bubble to adjust <em>volume</em> (up/down) and <em>balance</em> (left/right).</li>
-            <li>Tap the play button to start and set a sleep timer if you want.</li>
-            <li>Optional: enable <strong>Allow other apps’ audio</strong> in Settings to mix with your music or podcast app.</li>
+            <li>Tippe auf die Schaltfläche <strong>+</strong>, um einen Klang hinzuzufügen (Regen, Wellen, Wald, Kaminfeuer, weißes/braunes Rauschen usw.).</li>
+            <li>Ziehe jede Blase, um <em>Lautstärke</em> (hoch/runter) und <em>Stereobalance</em> (links/rechts) einzustellen.</li>
+            <li>Tippe auf die Wiedergabetaste, um zu starten, und stelle bei Bedarf einen Schlaf-Timer ein.</li>
+            <li>Optional: Aktiviere in den Einstellungen <strong>Audio anderer Apps erlauben</strong>, um Somnifox mit deiner Musik- oder Podcast-App zu mischen.</li>
           </ol>
         </div>
 
         <div class="card">
-          <h2>Language in the app</h2>
+          <h2>Sprache in der App</h2>
           <ul>
-            <li>Open <strong>Settings → Interface → Language</strong> in Somnifox.</li>
-            <li>Choose your preferred language or keep “Follow device language”.</li>
-            <li>Changes apply to menus, labels and messages inside the app.</li>
+            <li>Öffne in Somnifox <strong>Einstellungen → Oberfläche → Sprache</strong>.</li>
+            <li>Wähle deine bevorzugte Sprache oder lasse "Systemsprache verwenden" aktiviert.</li>
+            <li>Diese Einstellung wirkt sich auf Menüs, Beschriftungen und Meldungen in der App aus.</li>
           </ul>
         </div>
       </section>
 
       <section class="two-column">
         <div class="card">
-          <h2>Restore purchases</h2>
+          <h2>Käufe wiederherstellen</h2>
           <ol>
-            <li>Open <strong>Somnifox → Settings</strong>.</li>
-            <li>Tap <strong>Restore purchases</strong>.</li>
-            <li>Make sure you are signed in with the same Apple ID you used to buy Premium.</li>
+            <li>Öffne <strong>Somnifox → Einstellungen</strong>.</li>
+            <li>Tippe auf <strong>Käufe wiederherstellen</strong>.</li>
+            <li>Stelle sicher, dass du mit derselben Apple-ID angemeldet bist, mit der du Premium gekauft hast.</li>
           </ol>
           <p style="margin-top:8px;">
-            If Premium is still not unlocked, please email support and include:
+            Wenn Premium danach noch nicht freigeschaltet ist, schreibe bitte den Support an und füge folgende Angaben hinzu:
           </p>
           <ul>
-            <li>Your device model (for example iPhone 13, iPad Air 5).</li>
-            <li>Your iOS / iPadOS version.</li>
-            <li>Whether you bought Monthly, Yearly or Lifetime.</li>
+            <li>Dein Gerätemodell (zum Beispiel iPhone 13, iPad Air 5).</li>
+            <li>Deine iOS- oder iPadOS-Version.</li>
+            <li>Welche Art von Kauf du getätigt hast (Monatlich, Jährlich oder Lebenslang).</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Manage or cancel subscription</h2>
+          <h2>Abonnement verwalten oder kündigen</h2>
           <p>
-            Subscriptions are managed by Apple. You can view, change or cancel your Somnifox subscription here:
+            Abonnements werden von Apple verwaltet. Du kannst dein Somnifox Abo hier einsehen, ändern oder kündigen:
           </p>
           <p>
-            <a href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</a>
+            <a href="https://apps.apple.com/account/subscriptions">Apple Abonnements verwalten</a>
           </p>
           <ul>
-            <li>Use the same Apple ID you used for the purchase.</li>
-            <li>Cancel at least 24 hours before renewal to avoid the next charge.</li>
+            <li>Verwende dieselbe Apple-ID, mit der du den Kauf durchgeführt hast.</li>
+            <li>Kündige mindestens 24 Stunden vor der Verlängerung, um die nächste Abbuchung zu vermeiden.</li>
           </ul>
         </div>
       </section>
 
       <section class="card">
-        <h2>Troubleshooting</h2>
+        <h2>Fehlerbehebung</h2>
 
-        <h3>No sound</h3>
+        <h3>Kein Ton</h3>
         <ul>
-          <li>Increase your device volume and make sure the Silent/Ring switch is not muted.</li>
-          <li>Check that headphones or speakers are properly connected.</li>
-          <li>In Somnifox Settings, make sure <strong>Allow other apps’ audio</strong> is on if you are mixing with music.</li>
+          <li>Erhöhe die Lautstärke deines Geräts und prüfe, ob der Stumm/Audio-Schalter nicht auf stumm steht.</li>
+          <li>Stelle sicher, dass Kopfhörer oder Lautsprecher korrekt verbunden sind.</li>
+          <li>Wenn du mit Musik mischst, prüfe in den Somnifox Einstellungen, ob <strong>Audio anderer Apps erlauben</strong> aktiviert ist.</li>
         </ul>
 
-        <h3>Timer stops earlier than expected</h3>
+        <h3>Timer stoppt früher als erwartet</h3>
         <ul>
-          <li>If <strong>Low Power Mode</strong> is on, try turning it off temporarily.</li>
-          <li>Keep Somnifox in the foreground if your device battery is very low.</li>
-          <li>Disable aggressive battery saving modes or Focus profiles that may pause audio.</li>
+          <li>Wenn der <strong>Energiesparmodus</strong> aktiviert ist, deaktiviere ihn testweise kurz.</li>
+          <li>Bei sehr niedrigem Akkustand hilft es, Somnifox im Vordergrund zu lassen.</li>
+          <li>Deaktiviere aggressive Energiesparmodi oder Fokus-Profile, die die Audiowiedergabe anhalten könnten.</li>
         </ul>
 
-        <h3>Premium not active after purchase</h3>
+        <h3>Premium ist nach dem Kauf nicht aktiv</h3>
         <ul>
-          <li>Check that the purchase was completed in your App Store account.</li>
-          <li>Try <strong>Restore purchases</strong> in Somnifox Settings.</li>
-          <li>If it still does not work, contact support with a screenshot of the purchase or Apple receipt.</li>
+          <li>Prüfe, ob der Kauf in deinem App Store Konto als abgeschlossen angezeigt wird.</li>
+          <li>Versuche erneut die Option <strong>Käufe wiederherstellen</strong> in den Somnifox Einstellungen.</li>
+          <li>Wenn es weiterhin nicht funktioniert, sende dem Support einen Screenshot der Apple-Rechnung oder des Kaufbildschirms.</li>
         </ul>
       </section>
 
       <section class="two-column">
         <div class="card">
-          <h2>About billing</h2>
+          <h2>Informationen zur Abrechnung</h2>
           <ul>
-            <li>Somnifox is free to download.</li>
-            <li>Premium is available as Monthly, Yearly or Lifetime (one-time purchase).</li>
-            <li>Payment is charged to your Apple ID at the time of purchase.</li>
-            <li>You can cancel or change your plan in App Store settings at any time.</li>
-            <li>The app also works without a subscription, with a limited number of ambiences, sounds and themes.</li>
+            <li>Somnifox kann kostenlos aus dem App Store geladen werden.</li>
+            <li>Premium ist als monatliches, jährliches oder lebenslanges (Einmalzahlung) Angebot verfügbar.</li>
+            <li>Die Zahlung wird beim Kauf deiner Apple-ID belastet.</li>
+            <li>Du kannst deinen Tarif jederzeit in den App Store Einstellungen ändern oder kündigen.</li>
+            <li>Die App funktioniert auch ohne Abo, mit einer begrenzten Anzahl von Stimmungen, Klängen und Themes.</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Privacy & terms</h2>
+          <h2>Datenschutz und Bedingungen</h2>
           <ul>
-            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Privacy Policy</a></li>
-            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard Terms of Use (EULA)</a></li>
+            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Datenschutzerklärung</a></li>
+            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard Nutzungsbedingungen (EULA)</a></li>
           </ul>
           <p style="margin-top:8px; font-size:14px; color:var(--sub);">
-            Somnifox is not a medical device and does not replace professional advice.
+            Somnifox ist kein Medizinprodukt und ersetzt keine professionelle Beratung.
           </p>
         </div>
       </section>
 
       <section class="card">
-        <h2>Contact & feedback</h2>
+        <h2>Kontakt und Feedback</h2>
         <p>
-          If you have questions, bug reports or suggestions, you can contact us by email:
+          Wenn du Fragen hast, einen Fehler melden oder Vorschläge schicken möchtest, kannst du uns per E-Mail erreichen:
         </p>
         <p>
           <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a>
         </p>
         <p>
-          You can also leave a review or update your rating on the App Store. It really helps other users discover Somnifox.
+          Eine Bewertung oder Rezension im App Store hilft anderen Nutzerinnen und Nutzern, Somnifox zu entdecken.
         </p>
         <ul>
-          <li>App Store page: <a href="https://apps.apple.com/app/id6753948909">apps.apple.com/app/id6753948909</a></li>
-          <li>Write a review: <a href="itms-apps://apps.apple.com/app/id6753948909?action=write-review">itms-apps://apps.apple.com/app/id6753948909?action=write-review</a></li>
+          <li>App Store Seite: <a href="https://apps.apple.com/app/id6753948909">apps.apple.com/app/id6753948909</a></li>
+          <li>Bewertung schreiben: <a href="itms-apps://apps.apple.com/app/id6753948909?action=write-review">itms-apps://apps.apple.com/app/id6753948909?action=write-review</a></li>
         </ul>
       </section>
     </main>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer>
       <p>Support: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a></p>
       <p style="margin-top:6px;">
-        © <span id="y"></span> Somnifox. All rights reserved.
+        © <span id="y"></span> Somnifox. Alle Rechte vorbehalten.
       </p>
     </footer>
   </div>
 
   <script>
-    // year in footer
+    // Jahr im Footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // language switcher for support pages
+    // Sprachumschalter für Support-Seiten
     (function(){
       var languagePages = {
         en: "support_en.html",
@@ -573,7 +576,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "en").toLowerCase();
+      var currentLang = (document.documentElement.lang || "de").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

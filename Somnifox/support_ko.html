@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox Support – Help, FAQ & Troubleshooting</title>
+  <title>Somnifox 지원 – 도움말, FAQ 및 문제 해결</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox support center: quick start tips, how to restore purchases, manage subscriptions, and troubleshoot common issues. No account, no ads, fully offline." />
+  <meta name="description" content="Somnifox 지원 센터: 빠른 시작 안내, 구매 복원, 구독 관리 및 자주 발생하는 문제 해결 방법을 한 곳에서 확인하세요. 계정 필요 없음, 광고 없음, 완전 오프라인으로 동작합니다." />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox Support – Help, FAQ & Troubleshooting" />
-  <meta property="og:description" content="Get help with Somnifox: quick start guide, restore purchases, manage subscriptions and troubleshoot common issues." />
+  <meta property="og:title" content="Somnifox 지원 – 도움말, FAQ 및 문제 해결" />
+  <meta property="og:description" content="Somnifox 사용을 위한 빠른 시작 가이드, 구매 복원, 구독 관리, 자주 발생하는 문제 해결 방법을 확인하세요." />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@
 
     *{ box-sizing:border-box; }
 
-    /* faint page background */
+    /* 페이지의 옅은 배경 이미지 */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +75,7 @@
       padding:24px;
     }
 
-    /* header */
+    /* 헤더 */
     header{
       display:flex;
       align-items:center;
@@ -139,7 +139,7 @@
       font-weight:600;
     }
 
-    /* language select in nav */
+    /* 언어 선택 셀렉터 */
     .lang-select-wrap{
       position:relative;
     }
@@ -166,7 +166,7 @@
       pointer-events:none;
     }
 
-    /* hero (support) */
+    /* hero (지원) */
     .hero{
       margin-top:10px;
       border-radius:var(--radius);
@@ -283,7 +283,7 @@
       color:var(--ink);
     }
 
-    /* sections & cards */
+    /* 메인 콘텐츠 / 카드 */
     main{
       margin-top:26px;
       display:grid;
@@ -337,7 +337,7 @@
       }
     }
 
-    /* footer */
+    /* 푸터 */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -354,24 +354,24 @@
 
 <body>
   <div class="container">
-    <!-- header -->
+    <!-- 헤더 -->
     <header>
-      <a class="brand" href="marketing_en.html">
-        <img src="logo.png" alt="Somnifox logo" />
+      <a class="brand" href="marketing_ko.html">
+        <img src="logo.png" alt="Somnifox 앱 아이콘" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="marketing_en.html">App</a>
+        <a href="marketing_ko.html">앱</a>
 
-        <a href="support_en.html" class="current">Support</a>
+        <a href="support_ko.html" class="current">지원</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Change language">
-            <option value="en" selected>English</option>
+          <select id="lang-switcher" class="lang-select" aria-label="언어 변경">
+            <option value="en">English</option>
             <option value="tr">Türkçe</option>
             <option value="es">Español</option>
             <option value="fr">Français</option>
-            <option value="ko">한국어</option>
+            <option value="ko" selected>한국어</option>
             <option value="de">Deutsch</option>
             <option value="hi">हिन्दी</option>
             <option value="nl">Nederlands</option>
@@ -385,161 +385,164 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Download on the App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">App Store에서 다운로드</a>
       </nav>
     </header>
 
     <!-- hero -->
     <article class="hero">
       <div class="hero-copy">
-        <h1>Somnifox support & help</h1>
+        <h1>Somnifox 지원 및 도움말</h1>
         <p class="lead">
-          Find quick start tips, restore purchases, manage your subscription and fix common issues. If you still need help after checking this page, you can email support directly from here.
+          이 페이지에서 빠른 시작 가이드, 구매 복원 방법, 구독 관리, 자주 발생하는 문제 해결 방법을 확인하실 수 있습니다.
+          아래 안내를 모두 시도했는데도 여전히 도움이 필요하시다면, 이 페이지에서 바로 지원팀에 이메일을 보내실 수 있습니다.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Download app</a>
-          <a class="btn" href="mailto:sonocalmrelax@gmail.com">Email support</a>
-          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Privacy policy</a>
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">앱 다운로드하기</a>
+          <a class="btn" href="mailto:sonocalmrelax@gmail.com">지원팀에 이메일 보내기</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">개인정보 처리방침</a>
         </div>
-        <p class="hero-mini">Please include your device model and iOS version when you contact us.</p>
+        <p class="hero-mini">
+          문의 시 사용 중인 기기 모델과 iOS 또는 iPadOS 버전을 함께 적어 주시면 더욱 빠르게 도와드릴 수 있습니다.
+        </p>
       </div>
 
       <div class="hero-phone">
         <div class="phone-frame">
-          <img src="hero.jpg" alt="Somnifox fox illustration on a calming purple background." />
+          <img src="hero.jpg" alt="차분한 보라색 배경 위에 쉬고 있는 Somnifox 여우 일러스트." />
         </div>
         <p class="hero-caption">
-          Somnifox works fully offline, with no ads and no account, on iPhone and iPad.
+          Somnifox는 iPhone과 iPad에서 광고 없이, 계정 없이, 완전 오프라인으로 동작합니다.
         </p>
       </div>
     </article>
 
-    <!-- main support content -->
+    <!-- 메인 지원 콘텐츠 -->
     <main>
       <section class="two-column">
         <div class="card">
-          <h2>Quick start</h2>
+          <h2>빠른 시작</h2>
           <ol>
-            <li>Tap <strong>+</strong> to add a sound (rain, waves, forest, fireplace, white/brown noise, etc.).</li>
-            <li>Drag each bubble to adjust <em>volume</em> (up/down) and <em>balance</em> (left/right).</li>
-            <li>Tap the play button to start and set a sleep timer if you want.</li>
-            <li>Optional: enable <strong>Allow other apps’ audio</strong> in Settings to mix with your music or podcast app.</li>
+            <li><strong>+</strong> 버튼을 눌러 소리를 추가하세요 (빗소리, 파도, 숲, 벽난로, 화이트/브라운 노이즈 등).</li>
+            <li>각 버블을 드래그해 <em>볼륨</em>(위/아래)과 <em>좌우 균형</em>(왼쪽/오른쪽)을 조절하세요.</li>
+            <li>재생 버튼을 눌러 시작하고, 필요하다면 수면 타이머를 설정하세요.</li>
+            <li>선택사항: 음악이나 팟캐스트 앱과 함께 사용하려면 Somnifox 설정에서 <strong>다른 앱 오디오 허용</strong>을 켜 주세요.</li>
           </ol>
         </div>
 
         <div class="card">
-          <h2>Language in the app</h2>
+          <h2>앱 언어 설정</h2>
           <ul>
-            <li>Open <strong>Settings → Interface → Language</strong> in Somnifox.</li>
-            <li>Choose your preferred language or keep “Follow device language”.</li>
-            <li>Changes apply to menus, labels and messages inside the app.</li>
+            <li>Somnifox에서 <strong>설정 → 인터페이스 → 언어</strong>로 이동합니다.</li>
+            <li>사용하고 싶은 언어를 선택하거나, “기기 언어와 동일하게” 옵션을 유지할 수 있습니다.</li>
+            <li>이 설정은 앱 내부의 메뉴, 라벨, 메시지에 적용됩니다.</li>
           </ul>
         </div>
       </section>
 
       <section class="two-column">
         <div class="card">
-          <h2>Restore purchases</h2>
+          <h2>구매 복원</h2>
           <ol>
-            <li>Open <strong>Somnifox → Settings</strong>.</li>
-            <li>Tap <strong>Restore purchases</strong>.</li>
-            <li>Make sure you are signed in with the same Apple ID you used to buy Premium.</li>
+            <li><strong>Somnifox → 설정</strong>을 엽니다.</li>
+            <li><strong>구매 항목 복원</strong> 버튼을 탭합니다.</li>
+            <li>Premium을 구입했을 때 사용한 것과 같은 Apple ID로 로그인되어 있는지 확인합니다.</li>
           </ol>
           <p style="margin-top:8px;">
-            If Premium is still not unlocked, please email support and include:
+            위 단계를 진행한 후에도 Premium이 활성화되지 않는다면, 아래 정보를 함께 적어 이메일로 문의해 주세요:
           </p>
           <ul>
-            <li>Your device model (for example iPhone 13, iPad Air 5).</li>
-            <li>Your iOS / iPadOS version.</li>
-            <li>Whether you bought Monthly, Yearly or Lifetime.</li>
+            <li>사용 중인 기기 모델 (예: iPhone 13, iPad Air 5).</li>
+            <li>사용 중인 iOS / iPadOS 버전.</li>
+            <li>구입한 상품 종류 (월간, 연간 또는 평생 이용권).</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Manage or cancel subscription</h2>
+          <h2>구독 관리 및 해지</h2>
           <p>
-            Subscriptions are managed by Apple. You can view, change or cancel your Somnifox subscription here:
+            구독은 Apple에서 관리합니다. Somnifox 구독을 확인, 변경 또는 취소하려면 다음 링크를 사용하세요:
           </p>
           <p>
-            <a href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</a>
+            <a href="https://apps.apple.com/account/subscriptions">Apple 구독 관리</a>
           </p>
           <ul>
-            <li>Use the same Apple ID you used for the purchase.</li>
-            <li>Cancel at least 24 hours before renewal to avoid the next charge.</li>
+            <li>구입 시 사용한 것과 동일한 Apple ID로 로그인했는지 확인하세요.</li>
+            <li>다음 결제를 피하려면 갱신 예정일 최소 24시간 전에 구독을 해지해야 합니다.</li>
           </ul>
         </div>
       </section>
 
       <section class="card">
-        <h2>Troubleshooting</h2>
+        <h2>문제 해결</h2>
 
-        <h3>No sound</h3>
+        <h3>소리가 나지 않아요</h3>
         <ul>
-          <li>Increase your device volume and make sure the Silent/Ring switch is not muted.</li>
-          <li>Check that headphones or speakers are properly connected.</li>
-          <li>In Somnifox Settings, make sure <strong>Allow other apps’ audio</strong> is on if you are mixing with music.</li>
+          <li>기기 볼륨을 올리고, 무음/벨 스위치가 무음으로 되어 있지 않은지 확인하세요.</li>
+          <li>이어폰이나 스피커가 제대로 연결되어 있는지 확인하세요.</li>
+          <li>음악과 함께 사용 중이라면, Somnifox 설정에서 <strong>다른 앱 오디오 허용</strong> 옵션이 켜져 있는지 확인하세요.</li>
         </ul>
 
-        <h3>Timer stops earlier than expected</h3>
+        <h3>타이머가 예상보다 일찍 멈춰요</h3>
         <ul>
-          <li>If <strong>Low Power Mode</strong> is on, try turning it off temporarily.</li>
-          <li>Keep Somnifox in the foreground if your device battery is very low.</li>
-          <li>Disable aggressive battery saving modes or Focus profiles that may pause audio.</li>
+          <li><strong>저전력 모드</strong>가 활성화되어 있다면, 잠시 꺼 두고 다시 시도해 보세요.</li>
+          <li>배터리가 매우 낮은 경우, Somnifox를 전경(화면 켠 상태)에서 실행해 보세요.</li>
+          <li>오디오 재생을 중단할 수 있는 강력한 배터리 절약 모드나 집중 모드는 꺼 두는 것이 좋습니다.</li>
         </ul>
 
-        <h3>Premium not active after purchase</h3>
+        <h3>구매 후에도 Premium이 활성화되지 않아요</h3>
         <ul>
-          <li>Check that the purchase was completed in your App Store account.</li>
-          <li>Try <strong>Restore purchases</strong> in Somnifox Settings.</li>
-          <li>If it still does not work, contact support with a screenshot of the purchase or Apple receipt.</li>
+          <li>App Store 계정에서 결제가 정상적으로 완료되었는지 확인하세요.</li>
+          <li>Somnifox 설정에서 <strong>구매 항목 복원</strong>을 다시 시도해 보세요.</li>
+          <li>그래도 해결되지 않으면, Apple 영수증 또는 앱 내 구매 화면의 스크린샷을 첨부해 지원팀에 이메일을 보내 주세요.</li>
         </ul>
       </section>
 
       <section class="two-column">
         <div class="card">
-          <h2>About billing</h2>
+          <h2>결제 관련 안내</h2>
           <ul>
-            <li>Somnifox is free to download.</li>
-            <li>Premium is available as Monthly, Yearly or Lifetime (one-time purchase).</li>
-            <li>Payment is charged to your Apple ID at the time of purchase.</li>
-            <li>You can cancel or change your plan in App Store settings at any time.</li>
-            <li>The app also works without a subscription, with a limited number of ambiences, sounds and themes.</li>
+            <li>Somnifox는 무료로 다운로드할 수 있습니다.</li>
+            <li>Premium은 월간, 연간 구독 또는 한 번 구입하는 평생 이용권으로 제공됩니다.</li>
+            <li>결제 금액은 구매 시 사용자의 Apple ID로 청구됩니다.</li>
+            <li>언제든지 App Store 설정에서 요금제를 변경하거나 구독을 취소할 수 있습니다.</li>
+            <li>구독 없이도 앱을 사용할 수 있지만, 저장 가능한 분위기(앰비언스) 수, 이용 가능한 소리와 테마의 종류는 제한됩니다.</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Privacy & terms</h2>
+          <h2>개인정보 및 이용 약관</h2>
           <ul>
-            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Privacy Policy</a></li>
-            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard Terms of Use (EULA)</a></li>
+            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">개인정보 처리방침</a></li>
+            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 표준 이용 약관 (EULA)</a></li>
           </ul>
           <p style="margin-top:8px; font-size:14px; color:var(--sub);">
-            Somnifox is not a medical device and does not replace professional advice.
+            Somnifox는 의료 기기가 아니며, 전문 의료인의 조언을 대신할 수 없습니다.
           </p>
         </div>
       </section>
 
       <section class="card">
-        <h2>Contact & feedback</h2>
+        <h2>문의 및 피드백</h2>
         <p>
-          If you have questions, bug reports or suggestions, you can contact us by email:
+          질문, 버그 제보 또는 기능 제안이 있다면 아래 이메일 주소로 언제든지 연락해 주세요.
         </p>
         <p>
           <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a>
         </p>
         <p>
-          You can also leave a review or update your rating on the App Store. It really helps other users discover Somnifox.
+          App Store에서 평가를 남기거나 리뷰를 작성해 주시면, 다른 분들이 Somnifox를 발견하는 데 큰 도움이 됩니다.
         </p>
         <ul>
-          <li>App Store page: <a href="https://apps.apple.com/app/id6753948909">apps.apple.com/app/id6753948909</a></li>
-          <li>Write a review: <a href="itms-apps://apps.apple.com/app/id6753948909?action=write-review">itms-apps://apps.apple.com/app/id6753948909?action=write-review</a></li>
+          <li>App Store 페이지: <a href="https://apps.apple.com/app/id6753948909">apps.apple.com/app/id6753948909</a></li>
+          <li>리뷰 작성: <a href="itms-apps://apps.apple.com/app/id6753948909?action=write-review">itms-apps://apps.apple.com/app/id6753948909?action=write-review</a></li>
         </ul>
       </section>
     </main>
 
-    <!-- footer -->
+    <!-- 푸터 -->
     <footer>
-      <p>Support: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a></p>
+      <p>지원: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a></p>
       <p style="margin-top:6px;">
         © <span id="y"></span> Somnifox. All rights reserved.
       </p>
@@ -547,10 +550,10 @@
   </div>
 
   <script>
-    // year in footer
+    // 푸터의 연도 표시
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // language switcher for support pages
+    // 지원 페이지용 언어 선택 스위처
     (function(){
       var languagePages = {
         en: "support_en.html",
@@ -573,7 +576,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "en").toLowerCase();
+      var currentLang = (document.documentElement.lang || "ko").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

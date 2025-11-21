@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>Somnifox · Sons relaxants pour sommeil, concentration et acouphènes</title>
+  <title>Somnifox · 睡眠・集中・耳鳴りと付き合うためのリラックスサウンド</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Somnifox est un mixeur de sons simple et élégant pour s'endormir, se concentrer, se détendre et mieux vivre avec les acouphènes. Aucun compte, aucune publicité. Fonctionne entièrement hors ligne. La version gratuite inclut les fonctions essentielles, Premium débloque tous les sons, ambiances et thèmes." />
+  <meta name="description" content="Somnifox は、睡眠やリラックス、集中、そして耳鳴りと付き合う日常をサポートするために設計された、シンプルで洗練されたサウンドミキサーアプリです。アカウント登録や広告は一切不要。アプリは完全オフラインで動作します。基本機能は無料で使え、Premium にアップグレードするとすべての音・環境・テーマが解放されます。" />
   <meta name="theme-color" content="#5b5be8" />
 
   <!-- Favicons -->
@@ -13,8 +13,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Somnifox · Sons relaxants pour sommeil, concentration et acouphènes" />
-  <meta property="og:description" content="Créez des ambiances apaisantes, masquez vos acouphènes et restez concentré avec un mixeur de sons personnalisable. Aucune publicité. Fonctionne entièrement hors ligne. Essai gratuit." />
+  <meta property="og:title" content="Somnifox · 睡眠・集中・耳鳴りと付き合うためのリラックスサウンド" />
+  <meta property="og:description" content="雨音や波音、自然音や暖炉の音などを組み合わせて、自分だけの落ち着く環境音を作れます。耳鳴りから意識をそらし、集中したいときにも。広告なし・完全オフライン・基本機能は無料で利用できます。" />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@
 
     *{ box-sizing:border-box; }
 
-    /* fond léger sur toute la page */
+    /* うっすらとした背景画像 */
     body::before{
       content:"";
       position:fixed;
@@ -75,7 +75,7 @@
       padding:24px;
     }
 
-    /* en-tête */
+    /* ヘッダー */
     header{
       display:flex;
       align-items:center;
@@ -132,7 +132,7 @@
       box-shadow:0 8px 24px rgba(46,207,122,0.4);
     }
 
-    /* sélecteur de langue dans le header */
+    /* 言語セレクター */
     .lang-select-wrap{
       position:relative;
     }
@@ -159,7 +159,7 @@
       pointer-events:none;
     }
 
-    /* hero */
+    /* ヒーローセクション */
     .hero{
       margin-top:10px;
       border-radius:var(--radius);
@@ -276,7 +276,7 @@
       color:var(--ink);
     }
 
-    /* sections cartes */
+    /* セクション / カード */
     section{
       margin-top:28px;
     }
@@ -319,7 +319,7 @@
       margin:6px 0;
     }
 
-    /* captures d'écran */
+    /* スクリーンショット */
     .shots{
       display:grid;
       gap:16px;
@@ -349,7 +349,7 @@
       }
     }
 
-    /* pied de page */
+    /* フッター */
     footer{
       color:var(--sub);
       font-size:14px;
@@ -366,21 +366,21 @@
 
 <body>
   <div class="container">
-    <!-- en-tête -->
+    <!-- ヘッダー -->
     <header>
       <a class="brand" href="#">
-        <img src="logo.png" alt="Logo de l'application Somnifox" />
+        <img src="logo.png" alt="Somnifox アプリアイコン" />
         <span>Somnifox</span>
       </a>
       <nav>
-        <a href="support_fr.html">Support</a>
+        <a href="support_ja.html">サポート</a>
 
         <div class="lang-select-wrap">
-          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+          <select id="lang-switcher" class="lang-select" aria-label="言語を変更">
             <option value="en">English</option>
             <option value="tr">Türkçe</option>
             <option value="es">Español</option>
-            <option value="fr" selected>Français</option>
+            <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="de">Deutsch</option>
             <option value="hi">हिन्दी</option>
@@ -389,119 +389,117 @@
             <option value="pt">Português</option>
             <option value="ru">Русский</option>
             <option value="it">Italiano</option>
-            <option value="ja">日本語</option>
+            <option value="ja" selected>日本語</option>
             <option value="no">Norsk</option>
             <option value="sv">Svenska</option>
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Télécharger sur l’App Store</a>
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">App Store で入手</a>
       </nav>
     </header>
 
-    <!-- hero -->
-  <article class="hero">
-  <div class="hero-copy">
-    <h1>Sommeil, concentration et acouphènes avec un mixeur de sons personnalisable</h1>
-    <p class="lead">
-      Mélangez pluie, vagues, bruits de forêt, feu de cheminée, bruit blanc ou brun et bien plus encore. 
-      Placez chaque son dans l’espace, ajustez sa tonalité et programmez un minuteur de sommeil.
-      Aucune publicité. Application entièrement hors ligne, sans compte. 
-      Les fonctions essentielles sont gratuites, l’option Premium débloque tout le contenu.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Obtenir Somnifox</a>
-      <a class="btn" href="support_fr.html">Support</a>
-      <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Confidentialité</a>
-    </div>
-    <p class="hero-mini">Disponible sur iPhone et iPad.</p>
-  </div>
+    <!-- ヒーロー -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>睡眠・集中・耳鳴りと付き合うためのカスタマイズ可能なサウンドミキサー</h1>
+        <p class="lead">
+          雨音、波音、森の環境音、暖炉の音、ホワイトノイズやブラウンノイズなど、さまざまな音を組み合わせて使えます。
+          それぞれの音を空間の中で配置し、音量や音色を細かく調整して、スリープタイマーをセットすることもできます。
+          広告は一切なし。最初の起動から完全オフラインで動作し、アカウント登録も不要です。基本機能は無料で、Premium にアップグレードするとすべてのコンテンツが解放されます。
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Somnifox をダウンロード</a>
+          <a class="btn" href="support_ja.html">サポート</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">プライバシー</a>
+        </div>
+        <p class="hero-mini">iPhone と iPad に対応。</p>
+      </div>
 
-  <div class="hero-phone">
-    <div class="phone-frame">
-      <!-- grande image verticale, commune à toutes les langues -->
-      <img src="hero.jpg" alt="Renard Somnifox illustré sur un fond violet apaisant." />
-    </div>
-    <p class="hero-caption">
-      Créez votre propre ambiance de pluie, bruits de forêt, vagues et bien plus encore.
-    </p>
-  </div>
-</article>
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <!-- すべての言語で共通の縦長ヒーロー画像 -->
+          <img src="hero.jpg" alt="落ち着いた紫色の背景に、雲の上で休む Somnifox のキツネのイラスト。" />
+        </div>
+        <p class="hero-caption">
+          雨音や森の環境音、波音などを組み合わせて、自分だけのリラックスできる雰囲気を作りましょう。
+        </p>
+      </div>
+    </article>
 
-
-    <!-- fonctionnalités et tarif -->
+    <!-- 機能とプラン -->
     <section class="grid cols-2">
       <div class="card">
-        <h2>Pourquoi Somnifox</h2>
+        <h2>Somnifox の特長</h2>
         <ul class="clean">
-          <li>Pensée pour le sommeil, la détente, la concentration et les acouphènes</li>
-          <li>Interface claire avec lecture ou pause instantanée et minuteur de sommeil</li>
-          <li>Mélangez jusqu’à <strong>6</strong> sons par ambiance (3 dans la version gratuite)</li>
-          <li>Placement spatial des sons pour les déplacer à gauche, à droite, près ou loin</li>
-          <li>Contrôle fin par son&nbsp;: volume, panoramique, hauteur et filtre</li>
-          <li><strong>Mélange avec d’autres apps audio</strong> pour garder votre musique ou vos podcasts</li>
-          <li>Fonctionne entièrement hors ligne, dès le premier lancement</li>
-          <li>Aucune publicité</li>
+          <li>睡眠・リラックス・集中、そして耳鳴りと付き合う毎日のために設計</li>
+          <li>ワンタップで再生/一時停止できるシンプルな画面とスリープタイマー</li>
+          <li>1 つの環境（アンビエンス）に最大 <strong>6</strong> 個の音をミックス（無料版は 3 個まで）</li>
+          <li>空間配置機能で、音を左右や前後に動かして位置を調整</li>
+          <li>音ごとに音量・パン・ピッチ・フィルターを細かくコントロール</li>
+          <li><strong>他のオーディオアプリと同時再生</strong> に対応しているので、音楽やポッドキャストの上に環境音を重ねられます</li>
+          <li>初回起動時から完全オフラインで利用可能。インターネット接続は不要</li>
+          <li>アプリ内広告なし</li>
         </ul>
         <p style="color:var(--sub); margin-top:10px; font-size:14px;">
-          Somnifox a été créé par Anne, qui vit avec des acouphènes. Pour elle, écouter des sons doux, comme un mélange de ronronnement de chat, bruit de douche et train lointain, rend le sifflement moins présent et plus facile à ignorer. Somnifox vous permet de composer vos propres ambiances pour trouver ce qui vous convient le mieux.
+          Somnifox は、耳鳴りを抱える Anne によって作られました。彼女にとって、猫のゴロゴロ音やシャワーの音、遠くを走る電車の音をやさしく組み合わせたサウンドは、耳の中の鳴りを少し感じにくくし、意識から外しやすくしてくれる存在です。Somnifox なら、自分にとっていちばん心地よい音の組み合わせをじっくり見つけることができます。
         </p>
       </div>
 
       <div class="card">
-        <h2>Gratuit ou Premium</h2>
+        <h2>無料版と Premium</h2>
         <div class="grid cols-2" style="gap:12px; margin-top:6px;">
           <div class="card" style="padding:14px;">
-            <h3 style="margin-top:0;">Gratuit</h3>
+            <h3 style="margin-top:0;">無料版</h3>
             <ul class="clean">
-              <li>1 ambiance enregistrée</li>
-              <li>3 sons par ambiance</li>
-              <li>Minuteur de sommeil de 30 minutes</li>
-              <li>3 sessions de réglages avancés par jour</li>
-              <li>2 thèmes d’interface</li>
+              <li>保存できる環境は 1 つ</li>
+              <li>1 つの環境につき 3 個のサウンド</li>
+              <li>30 分までのスリープタイマー</li>
+              <li>1 日あたり 3 回までの詳細コントロールセッション</li>
+              <li>2 種類のテーマ（スキン）</li>
             </ul>
           </div>
           <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
             <h3 style="margin-top:0;">Premium</h3>
             <ul class="clean">
-              <li>Ambiances enregistrées en nombre illimité</li>
-              <li>Jusqu’à 6 sons par ambiance</li>
-              <li>Minuteur de sommeil sans limite</li>
-              <li>Sessions de réglages avancés illimitées</li>
-              <li>Tous les thèmes et habillages disponibles</li>
+              <li>環境の保存数は無制限</li>
+              <li>1 つの環境につき最大 6 個のサウンド</li>
+              <li>スリープタイマーの時間制限なし</li>
+              <li>詳細コントロールセッションの回数制限なし</li>
+              <li>すべてのテーマとレイアウトを解放</li>
             </ul>
           </div>
         </div>
         <p style="color:var(--sub); margin-top:10px;">
-          Achats intégrés&nbsp;: Somnifox Premium mensuel, annuel et achat unique.
+          アプリ内課金: Somnifox Premium（月額・年額・買い切り）。
         </p>
         <p style="color:var(--sub); margin-top:4px; font-size:14px;">
-          Vous pouvez utiliser toutes les fonctions essentielles sans abonnement ni achat intégré. La version gratuite limite simplement le nombre d’ambiances, le nombre de sons disponibles et les thèmes.
+          サブスクリプションやアプリ内課金をしなくても、基本的な機能はすべて利用できます。無料版では、保存できる環境の数や使えるサウンド、テーマの種類のみ制限されます。
         </p>
       </div>
     </section>
 
-    <!-- captures d’écran -->
+    <!-- アプリプレビュー -->
     <section class="card">
-      <h2 style="margin-top:0;">Aperçu de l’app</h2>
+      <h2 style="margin-top:0;">アプリのプレビュー</h2>
       <div class="shots">
-        <img src="Images/FR/screen0.jpg" alt="Écran d’accueil de Somnifox avec un renard sur un nuage et le texte « A moment of calm, just for you »." />
-        <img src="Images/FR/screen1.jpg" alt="Écran principal affichant une liste d’ambiances apaisantes comme Stormy Sea, Campfire et Background Noise." />
-        <img src="Images/FR/screen2.jpg" alt="Vue du mixeur avec plusieurs sons, un bouton lecture et une illustration de renard endormi." />
-        <img src="Images/FR/screen3.jpg" alt="Écran Balance & volume où chaque son est placé dans l’espace à l’intérieur d’un cercle." />
-        <img src="Images/FR/screen4.jpg" alt="Réglages d’apparence et de disposition avec plusieurs thèmes colorés et une illustration de renard." />
-        <img src="Images/FR/screen5.jpg" alt="Écran de lecture et de réglages avec des options comme lecture au lancement, lecture en arrière-plan et garder l’écran allumé." />
+        <img src="Images/JA/screen0.jpg" alt="Somnifox のウェルカム画面。雲の上で休むキツネと「A moment of calm, just for you」というメッセージが表示されています。" />
+        <img src="Images/JA/screen1.jpg" alt="Stormy Sea や Campfire、Background Noise などの落ち着く環境リストが並ぶホーム画面。" />
+        <img src="Images/JA/screen2.jpg" alt="複数のサウンドトラックと再生ボタン、眠っているキツネのイラストが表示されたミキサー画面。" />
+        <img src="Images/JA/screen3.jpg" alt="円形のスペース内にそれぞれの音が配置された、バランスと音量の調整画面。" />
+        <img src="Images/JA/screen4.jpg" alt="カラフルなテーマとキツネのイラストが並ぶ、見た目とレイアウトの設定画面。" />
+        <img src="Images/JA/screen5.jpg" alt="起動時に自動再生するか、バックグラウンド再生、画面をオンのままにするかなどを選べる再生・設定画面。" />
       </div>
     </section>
 
-    <!-- pied de page -->
+    <!-- フッター -->
     <footer>
       <p>
-        Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
-        <a href="support_fr.html">Aide et contact</a>
+        サポート: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_ja.html">ヘルプ &amp; お問い合わせ</a>
       </p>
       <p style="margin-top:6px;">
-        © Somnifox. Somnifox n’est pas un dispositif médical et ne remplace pas un avis professionnel.
+        © Somnifox. Somnifox は医療機器ではなく、専門家による助言の代わりにはなりません。
       </p>
     </footer>
   </div>
@@ -529,7 +527,7 @@
       var select = document.getElementById("lang-switcher");
       if (!select) return;
 
-      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      var currentLang = (document.documentElement.lang || "ja").toLowerCase();
       if (languagePages[currentLang]) {
         select.value = currentLang;
       }

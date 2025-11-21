@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <title>Somnifox · नींद, एकाग्रता और टिनिटस के लिए सुकून देने वाली आवाज़ें</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Somnifox एक सरल और आकर्षक साउंड मिक्सर है, जो नींद, आराम, एकाग्रता और कानों में बजने वाली आवाज़ (टिनिटस) के साथ जीने में मदद के लिए बनाया गया है। कोई खाता नहीं, कोई विज्ञापन नहीं. ऐप पूरी तरह ऑफ़लाइन काम करता है. मुख्य सुविधाएँ मुफ़्त हैं, Premium से सभी ध्वनियाँ, माहौल और थीम अनलॉक हो जाते हैं." />
+  <meta name="theme-color" content="#5b5be8" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Somnifox · नींद, एकाग्रता और टिनिटस के लिए सुकून देने वाली आवाज़ें" />
+  <meta property="og:description" content="बारिश, लहरें और प्रकृति की आवाज़ों से अपना शांत माहौल बनाएँ, टिनिटस की आवाज़ से ध्यान हटाएँ और बेहतर फ़ोकस करें. कोई विज्ञापन नहीं, पूरी तरह ऑफ़लाइन. मुफ़्त में आज़माएँ." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --ink:#0f1222;
+      --sub:#60657a;
+      --bg:#0f0f1a;
+      --card:#ffffff10;
+      --accent:#2ECF7A;
+      --accent-ink:#0c3a26;
+      --ring:#ffffff24;
+      --maxw:1080px;
+      --radius:16px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --ink:#101321;
+        --sub:#5a5e72;
+        --bg:#f7f8fb;
+        --card:#ffffff;
+        --ring:#10132115;
+      }
+      body{
+        background:linear-gradient(180deg,#eef0ff 0%,#f7f8fb 40%,#ffffff 100%) fixed;
+      }
+    }
+
+    *{ box-sizing:border-box; }
+
+    /* हल्की पृष्ठभूमि छवि */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:url(hero.jpg) center/cover no-repeat;
+      opacity:0.08;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #3b38a6 0%, transparent 55%),
+        radial-gradient(900px 500px at 110% 10%, #8a5de6 0%, transparent 45%),
+        #0d0d18;
+    }
+
+    a{ color:inherit; }
+
+    .container{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      padding:24px;
+    }
+
+    /* हेडर */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:8px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+
+    .brand img{
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.35);
+    }
+
+    .brand span{
+      font-weight:700;
+      font-size:17px;
+      letter-spacing:.2px;
+      color:#f5f7ff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:#f5f7ff;
+      border:1px solid rgba(255,255,255,0.18);
+      background:#ffffff10;
+      backdrop-filter:blur(8px);
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#04140c;
+      font-weight:700;
+      border-color:transparent;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    /* भाषा चयन */
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:999px;
+      padding:8px 28px 8px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* हीरो सेक्शन */
+    .hero{
+      margin-top:10px;
+      border-radius:var(--radius);
+      backdrop-filter:saturate(140%) blur(10px);
+      background:var(--card);
+      box-shadow:0 10px 30px rgba(0,0,0,0.25), inset 0 0 0 1px var(--ring);
+      padding:24px 26px;
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      gap:24px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0% 0%, #5b5be8 0%, transparent 55%),
+        radial-gradient(circle at 100% 100%, #2ecf7a 0%, transparent 55%);
+      opacity:0.45;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .hero-copy{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(26px,3.4vw,40px);
+      line-height:1.15;
+    }
+
+    .hero p.lead{
+      margin:0;
+      color:var(--sub);
+      font-size:clamp(15px,2.1vw,18px);
+    }
+
+    .hero-mini{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .hero-phone{
+      justify-self:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .phone-frame{
+      background:#000000e0;
+      padding:10px;
+      border-radius:32px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      max-width:260px;
+    }
+
+    .phone-frame img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:24px;
+    }
+
+    .hero-caption{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--sub);
+      text-align:center;
+      max-width:260px;
+      line-height:1.4;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      white-space:nowrap;
+      background:#ffffff;
+      color:var(--ink);
+      border:1px solid var(--ring);
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#04140c;
+      border-color:transparent;
+      font-weight:700;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--ink);
+    }
+
+    /* सेक्शन / कार्ड लेआउट */
+    section{
+      margin-top:28px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.18), inset 0 0 0 1px var(--ring);
+    }
+
+    .grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .grid.cols-2{
+      grid-template-columns:1fr 1fr;
+    }
+
+    @media (max-width:840px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:20px;
+      }
+      .hero-phone{
+        order:-1;
+      }
+      .grid.cols-2{
+        grid-template-columns:1fr;
+      }
+    }
+
+    ul.clean{
+      margin:12px 0 0;
+      padding-left:20px;
+    }
+
+    ul.clean li{
+      margin:6px 0;
+    }
+
+    /* स्क्रीनशॉट */
+    .shots{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      margin-top:10px;
+    }
+
+    .shots img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.18);
+      border:1px solid var(--ring);
+      background:#00000020;
+    }
+
+    @media (max-width:900px){
+      .shots{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width:560px){
+      .shots{
+        grid-template-columns:1fr;
+      }
+    }
+
+    /* फ़ूटर */
+    footer{
+      color:var(--sub);
+      font-size:14px;
+      text-align:center;
+      margin:36px 0 18px;
+    }
+
+    footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- हेडर -->
+    <header>
+      <a class="brand" href="#">
+        <img src="logo.png" alt="Somnifox ऐप का लोगो" />
+        <span>Somnifox</span>
+      </a>
+      <nav>
+        <a href="support_hi.html">सपोर्ट</a>
+
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="भाषा बदलें">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="hi" selected>हिन्दी</option>
+            <option value="nl">Nederlands</option>
+            <option value="zh">简体中文</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="no">Norsk</option>
+            <option value="sv">Svenska</option>
+          </select>
+        </div>
+
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">App Store से डाउनलोड करें</a>
+      </nav>
+    </header>
+
+    <!-- हीरो सेक्शन -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>नींद, एकाग्रता और टिनिटस के लिए व्यक्तिगत साउंड मिक्सर</h1>
+        <p class="lead">
+          बारिश, समुद्री लहरें, जंगल की आवाज़ें, फायरप्लेस, व्हाइट नॉइज़ और ब्राउन नॉइज़ जैसी ध्वनियों को मिलाएँ.
+          हर ध्वनि को स्पेस में रखें, टोन को बारीकी से समायोजित करें और स्लीप टाइमर सेट करें.
+          कोई विज्ञापन नहीं, ऐप शुरू से ही पूरी तरह ऑफ़लाइन काम करता है और किसी खाते की ज़रूरत नहीं. मुख्य सुविधाएँ मुफ़्त हैं, Premium प्लान से पूरा कंटेंट अनलॉक होता है.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">Somnifox डाउनलोड करें</a>
+          <a class="btn" href="support_hi.html">सपोर्ट</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">प्राइवेसी</a>
+        </div>
+        <p class="hero-mini">iPhone और iPad पर उपलब्ध.</p>
+      </div>
+
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <!-- सभी भाषाओं में समान बड़ा वर्टिकल चित्र -->
+          <img src="hero.jpg" alt="बैंगनी शांत पृष्ठभूमि पर Somnifox लोमड़ी की चित्रकारी." />
+        </div>
+        <p class="hero-caption">
+          बारिश, जंगल की आवाज़ें, लहरें और बहुत कुछ मिलाकर अपना आरामदायक माहौल बनाएँ.
+        </p>
+      </div>
+    </article>
+
+    <!-- फ़ीचर्स और प्लान -->
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>Somnifox क्यों?</h2>
+        <ul class="clean">
+          <li>नींद, आराम, एकाग्रता और टिनिटस के साथ जीने में मदद के लिए डिज़ाइन किया गया</li>
+          <li>तुरंत प्ले/पॉज़ और स्लीप टाइमर के साथ साफ़ और सरल इंटरफ़ेस</li>
+          <li>हर माहौल में अधिकतम <strong>6</strong> ध्वनियाँ (मुफ़्त संस्करण में 3 ध्वनियाँ)</li>
+          <li>स्पैशियल प्लेसमेंट ताकि ध्वनियों को बाएँ, दाएँ, पास या दूर रखा जा सके</li>
+          <li>हर ध्वनि के लिए फाइन कंट्रोल: वॉल्यूम, पैन, पिच और फ़िल्टर</li>
+          <li><strong>अन्य ऑडियो ऐप्स के साथ मिक्स</strong> ताकि आप अपनी म्यूज़िक या पॉडकास्ट को चालू रख सकें</li>
+          <li>पहली बार खोलने से ही पूरी तरह ऑफ़लाइन, इंटरनेट की ज़रूरत नहीं</li>
+          <li>कोई विज्ञापन नहीं</li>
+        </ul>
+        <p style="color:var(--sub); margin-top:10px; font-size:14px;">
+          Somnifox को Anne ने बनाया है, जो खुद टिनिटस के साथ रहती हैं. उनके लिए बिल्ली के गुर्राने, शॉवर की आवाज़ और दूर से आती ट्रेन जैसी मुलायम ध्वनियों का मिश्रण, कान में बजने वाली आवाज़ को कम महसूस कराता है और उसे नज़रअंदाज़ करना आसान बनाता है. Somnifox के साथ आप अपने लिए भी वही माहौल बना सकते हैं जो आपको सबसे ज़्यादा आराम देता है.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>मुफ़्त या Premium</h2>
+        <div class="grid cols-2" style="gap:12px; margin-top:6px;">
+          <div class="card" style="padding:14px;">
+            <h3 style="margin-top:0;">मुफ़्त</h3>
+            <ul class="clean">
+              <li>1 सेव किया हुआ माहौल</li>
+              <li>हर माहौल में 3 ध्वनियाँ</li>
+              <li>30 मिनट का स्लीप टाइमर</li>
+              <li>दिन में 3 बार फाइन कंट्रोल सत्र</li>
+              <li>2 इंटरफ़ेस थीम</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
+            <h3 style="margin-top:0;">Premium</h3>
+            <ul class="clean">
+              <li>अनलिमिटेड सेव किए गए माहौल</li>
+              <li>हर माहौल में 6 ध्वनियों तक</li>
+              <li>अनलिमिटेड स्लीप टाइमर</li>
+              <li>फाइन कंट्रोल सत्रों की कोई सीमा नहीं</li>
+              <li>सभी थीम और लेआउट अनलॉक</li>
+            </ul>
+          </div>
+        </div>
+        <p style="color:var(--sub); margin-top:10px;">
+          इन-ऐप परचेज: Somnifox Premium मासिक, वार्षिक और एकमुश्त ख़रीद विकल्प.
+        </p>
+        <p style="color:var(--sub); margin-top:4px; font-size:14px;">
+          आप बिना किसी सब्सक्रिप्शन या इन-ऐप परचेज के सभी मुख्य सुविधाओं का उपयोग कर सकते हैं. मुफ़्त संस्करण केवल सेव किए गए माहौल की संख्या, उपलब्ध ध्वनियों और थीम की संख्या को सीमित करता है.
+        </p>
+      </div>
+    </section>
+
+    <!-- ऐप प्रीव्यू -->
+    <section class="card">
+      <h2 style="margin-top:0;">ऐप प्रीव्यू</h2>
+      <div class="shots">
+        <img src="Images/HI/screen0.jpg" alt="Somnifox का वेलकम स्क्रीन, एक बादल पर आराम करता हुआ लोमड़ी का चित्र और 'A moment of calm, just for you' टेक्स्ट." />
+        <img src="Images/HI/screen1.jpg" alt="Stormy Sea, Campfire और Background Noise जैसे शांत माहौल की सूची दिखाने वाला होम स्क्रीन." />
+        <img src="Images/HI/screen2.jpg" alt="कई साउंड ट्रैक, प्ले बटन और सोती हुई लोमड़ी की चित्रकारी वाला मिक्सर व्यू." />
+        <img src="Images/HI/screen3.jpg" alt="हर ध्वनि को एक सर्कल के अंदर अलग-अलग जगह रखने वाला बैलेंस और वॉल्यूम स्क्रीन." />
+        <img src="Images/HI/screen4.jpg" alt="कई रंगीन थीम और लोमड़ी की चित्रकारी के साथ अपीयरेंस और लेआउट सेटिंग्स स्क्रीन." />
+        <img src="Images/HI/screen5.jpg" alt="ऐप लॉन्च पर प्ले, बैकग्राउंड में चलते रहना और स्क्रीन को ऑन रखने जैसे विकल्पों वाला प्लेबैक और सेटिंग्स स्क्रीन." />
+      </div>
+    </section>
+
+    <!-- फ़ूटर -->
+    <footer>
+      <p>
+        सपोर्ट: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_hi.html">हेल्प और संपर्क</a>
+      </p>
+      <p style="margin-top:6px;">
+        © Somnifox. Somnifox कोई मेडिकल डिवाइस नहीं है और किसी पेशेवर सलाह का विकल्प नहीं है.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      var languagePages = {
+        en: "marketing_en.html",
+        tr: "marketing_tr.html",
+        es: "marketing_es.html",
+        fr: "marketing_fr.html",
+        ko: "marketing_ko.html",
+        de: "marketing_de.html",
+        hi: "marketing_hi.html",
+        nl: "marketing_nl.html",
+        zh: "marketing_zh.html",
+        pt: "marketing_pt.html",
+        ru: "marketing_ru.html",
+        it: "marketing_it.html",
+        ja: "marketing_ja.html",
+        no: "marketing_no.html",
+        sv: "marketing_sv.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "hi").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function(){
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

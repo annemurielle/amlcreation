@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <title>Somnifox सहायता – मदद, सामान्य प्रश्न और समस्या निवारण</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Somnifox सहायता केंद्र: त्वरित शुरूआत, खरीद पुनर्स्थापित करना, सदस्यता प्रबंधन और सामान्य समस्याओं का समाधान। कोई खाता नहीं, कोई विज्ञापन नहीं, ऐप पूरी तरह ऑफ़लाइन काम करती है।" />
+  <meta name="theme-color" content="#5b5be8" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Somnifox सहायता – मदद, सामान्य प्रश्न और समस्या निवारण" />
+  <meta property="og:description" content="Somnifox के लिए मदद प्राप्त करें: त्वरित शुरूआत, खरीद पुनर्स्थापित करना, सदस्यता प्रबंधन और सामान्य समस्याओं का समाधान।" />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --ink:#0f1222;
+      --sub:#60657a;
+      --bg:#0f0f1a;
+      --card:#ffffff10;
+      --accent:#2ECF7A;
+      --accent-ink:#0c3a26;
+      --ring:#ffffff24;
+      --maxw:1080px;
+      --radius:16px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --ink:#101321;
+        --sub:#5a5e72;
+        --bg:#f7f8fb;
+        --card:#ffffff;
+        --ring:#10132115;
+      }
+      body{
+        background:linear-gradient(180deg,#eef0ff 0%,#f7f8fb 40%,#ffffff 100%) fixed;
+      }
+    }
+
+    *{ box-sizing:border-box; }
+
+    /* हल्का पेज बैकग्राउंड */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:url(hero.jpg) center/cover no-repeat;
+      opacity:0.08;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #3b38a6 0%, transparent 55%),
+        radial-gradient(900px 500px at 110% 10%, #8a5de6 0%, transparent 45%),
+        #0d0d18;
+    }
+
+    a{ color:inherit; }
+
+    .container{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      padding:24px;
+    }
+
+    /* हेडर */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+
+    .brand img{
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.35);
+    }
+
+    .brand span{
+      font-weight:700;
+      font-size:17px;
+      letter-spacing:.2px;
+      color:#f5f7ff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:#f5f7ff;
+      border:1px solid rgba(255,255,255,0.18);
+      background:#ffffff10;
+      backdrop-filter:blur(8px);
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#04140c;
+      font-weight:700;
+      border-color:transparent;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    nav a.current{
+      background:#ffffff;
+      color:var(--ink);
+      border-color:transparent;
+      font-weight:600;
+    }
+
+    /* भाषा चयन */
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:999px;
+      padding:8px 28px 8px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* हीरो (सहायता) */
+    .hero{
+      margin-top:10px;
+      border-radius:var(--radius);
+      backdrop-filter:saturate(140%) blur(10px);
+      background:var(--card);
+      box-shadow:0 10px 30px rgba(0,0,0,0.25), inset 0 0 0 1px var(--ring);
+      padding:24px 26px;
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      gap:24px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0% 0%, #5b5be8 0%, transparent 55%),
+        radial-gradient(circle at 100% 100%, #2ecf7a 0%, transparent 55%);
+      opacity:0.45;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .hero-copy{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(26px,3.4vw,36px);
+      line-height:1.15;
+    }
+
+    .hero p.lead{
+      margin:0;
+      color:var(--sub);
+      font-size:clamp(15px,2.1vw,18px);
+    }
+
+    .hero-mini{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .hero-phone{
+      justify-self:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .phone-frame{
+      background:#000000e0;
+      padding:10px;
+      border-radius:32px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      max-width:260px;
+    }
+
+    .phone-frame img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:24px;
+    }
+
+    .hero-caption{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--sub);
+      text-align:center;
+      max-width:260px;
+      line-height:1.4;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      white-space:nowrap;
+      background:#ffffff;
+      color:var(--ink);
+      border:1px solid var(--ring);
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#04140c;
+      border-color:transparent;
+      font-weight:700;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--ink);
+    }
+
+    /* मुख्य सामग्री / कार्ड */
+    main{
+      margin-top:26px;
+      display:grid;
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.18), inset 0 0 0 1px var(--ring);
+    }
+
+    .card h2{
+      margin-top:0;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .card h3{
+      margin-top:14px;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+
+    ol, ul{
+      margin:8px 0 0;
+      padding-left:22px;
+    }
+
+    li+li{
+      margin-top:4px;
+    }
+
+    .two-column{
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      gap:18px;
+    }
+
+    @media (max-width:840px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:20px;
+      }
+      .hero-phone{
+        order:-1;
+      }
+      .two-column{
+        grid-template-columns:1fr;
+      }
+    }
+
+    /* फ़ुटर */
+    footer{
+      color:var(--sub);
+      font-size:14px;
+      text-align:center;
+      margin:32px 0 18px;
+    }
+
+    footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- हेडर -->
+    <header>
+      <a class="brand" href="marketing_hi.html">
+        <img src="logo.png" alt="Somnifox ऐप लोगो" />
+        <span>Somnifox</span>
+      </a>
+      <nav>
+        <a href="marketing_hi.html">ऐप</a>
+
+        <a href="support_hi.html" class="current">सहायता</a>
+
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="भाषा बदलें">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="hi" selected>हिन्दी</option>
+            <option value="nl">Nederlands</option>
+            <option value="zh">简体中文</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="no">Norsk</option>
+            <option value="sv">Svenska</option>
+          </select>
+        </div>
+
+        <a class="cta" href="https://apps.apple.com/app/id6753948909">App Store से डाउनलोड करें</a>
+      </nav>
+    </header>
+
+    <!-- हीरो -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>Somnifox सहायता और मदद</h1>
+        <p class="lead">
+          इस पेज पर आप त्वरित शुरूआत, खरीद को दोबारा सक्रिय करने, सदस्यता प्रबंधन और आम समस्याओं के समाधान के बारे में जानकारी पा सकते हैं।
+          यदि इन चरणों के बाद भी आपको मदद की आवश्यकता हो, तो आप यहीं से सीधे सहायता टीम को ईमेल भेज सकती हैं।
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/id6753948909">ऐप डाउनलोड करें</a>
+          <a class="btn" href="mailto:sonocalmrelax@gmail.com">सपोर्ट को ईमेल भेजें</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">गोपनीयता नीति</a>
+        </div>
+        <p class="hero-mini">
+          जब आप हमसे संपर्क करें, तो कृपया अपने डिवाइस का मॉडल और iOS या iPadOS संस्करण भी लिखें ताकि हम जल्दी मदद कर सकें।
+        </p>
+      </div>
+
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <img src="hero.jpg" alt="शांत बैंगनी पृष्ठभूमि पर आराम करते Somnifox लोमड़ी की चित्रकारी।" />
+        </div>
+        <p class="hero-caption">
+          Somnifox iPhone और iPad पर बिना विज्ञापन, बिना खाते और पूरी तरह ऑफ़लाइन काम करती है।
+        </p>
+      </div>
+    </article>
+
+    <!-- मुख्य सहायता सामग्री -->
+    <main>
+      <section class="two-column">
+        <div class="card">
+          <h2>त्वरित शुरूआत</h2>
+          <ol>
+            <li><strong>+</strong> बटन दबाकर कोई ध्वनि जोड़ें (बारिश, लहरें, जंगल, चिमनी, सफेद/भूरा नॉइज़ आदि)।</li>
+            <li>हर बबल को खींचकर <em>वॉल्यूम</em> (ऊपर/नीचे) और <em>बैलेंस</em> (बाएँ/दाएँ) समायोजित करें।</li>
+            <li>प्ले बटन दबाकर मिक्स शुरू करें और चाहें तो स्लीप टाइमर सेट करें।</li>
+            <li>वैकल्पिक: यदि आप संगीत या पॉडकास्ट के साथ सुनना चाहती हैं, तो Somnifox सेटिंग्स में <strong>अन्य ऐप्स का ऑडियो अनुमति दें</strong> विकल्प चालू करें।</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h2>ऐप की भाषा</h2>
+          <ul>
+            <li>Somnifox में <strong>Settings → Interface → Language</strong> खोलें।</li>
+            <li>अपनी पसंदीदा भाषा चुनें या “Follow device language” विकल्प रहने दें।</li>
+            <li>यह सेटिंग ऐप के मेनू, लेबल और संदेशों पर लागू होती है।</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="two-column">
+        <div class="card">
+          <h2>खरीद को पुनर्स्थापित करना</h2>
+          <ol>
+            <li><strong>Somnifox → Settings</strong> खोलें।</li>
+            <li><strong>Restore purchases</strong> बटन पर टैप करें।</li>
+            <li>सुनिश्चित करें कि आप उसी Apple ID से लॉग इन हैं जिससे आपने Premium खरीदा था।</li>
+          </ol>
+          <p style="margin-top:8px;">
+            यदि इसके बाद भी Premium अनलॉक नहीं होता, तो कृपया सहायता टीम को ईमेल करते समय ये जानकारी जोड़ें:
+          </p>
+          <ul>
+            <li>आपका डिवाइस मॉडल (जैसे iPhone 13, iPad Air 5)।</li>
+            <li>आपका iOS / iPadOS संस्करण।</li>
+            <li>आपने कौन-सा प्लान खरीदा (Monthly, Yearly या Lifetime)।</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>सदस्यता प्रबंधित या रद्द करना</h2>
+          <p>
+            सदस्यताएँ Apple द्वारा प्रबंधित होती हैं। आप अपनी Somnifox सदस्यता यहाँ देख, बदल या रद्द कर सकती हैं:
+          </p>
+          <p>
+            <a href="https://apps.apple.com/account/subscriptions">Apple subscriptions प्रबंधित करें</a>
+          </p>
+          <ul>
+            <li>उसी Apple ID से लॉग इन रहें जिससे आपने खरीदारी की थी।</li>
+            <li>अगली बिलिंग से बचने के लिए नवीनीकरण की तारीख से कम से कम 24 घंटे पहले रद्द करना ज़रूरी है।</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>समस्या निवारण</h2>
+
+        <h3>आवाज़ सुनाई नहीं दे रही</h3>
+        <ul>
+          <li>डिवाइस की वॉल्यूम बढ़ाएँ और जाँचें कि साइलेंट/रिंग स्विच साइलेंट पर न हो।</li>
+          <li>हेडफोन या स्पीकर सही तरह से जुड़े हैं या नहीं, यह जाँचें।</li>
+          <li>यदि आप संगीत के साथ मिक्स कर रही हैं, तो Somnifox सेटिंग्स में <strong>अन्य ऐप्स का ऑडियो अनुमति दें</strong> चालू है या नहीं, यह देखें।</li>
+        </ul>
+
+        <h3>टाइमर अपेक्षा से पहले बंद हो जाता है</h3>
+        <ul>
+          <li>यदि <strong>Low Power Mode</strong> चालू है, तो अस्थायी रूप से उसे बंद करके दोबारा प्रयास करें।</li>
+          <li>यदि बैटरी बहुत कम है, तो Somnifox को सामने (फोरग्राउंड) में खुला रखने से मदद मिल सकती है।</li>
+          <li>ऐसी बैटरी–सेवर या Focus प्रोफाइल बंद करें जो ऑडियो प्लेबैक रोक सकती हैं।</li>
+        </ul>
+
+        <h3>खरीद के बाद भी Premium सक्रिय नहीं है</h3>
+        <ul>
+          <li>देखें कि App Store खाते में खरीद सफलतापूर्वक पूरी दिख रही है या नहीं।</li>
+          <li>Somnifox सेटिंग्स में <strong>Restore purchases</strong> विकल्प एक बार फिर आज़माएँ।</li>
+          <li>यदि फिर भी समस्या बनी रहे, तो Apple रसीद या इन–ऐप खरीद स्क्रीन का स्क्रीनशॉट जोड़कर हमें ईमेल भेजें।</li>
+        </ul>
+      </section>
+
+      <section class="two-column">
+        <div class="card">
+          <h2>बिलिंग के बारे में</h2>
+          <ul>
+            <li>Somnifox को App Store से निःशुल्क डाउनलोड किया जा सकता है।</li>
+            <li>Premium मासिक, वार्षिक या Lifetime (एक बार की खरीद) के रूप में उपलब्ध है।</li>
+            <li>खरीद के समय भुगतान आपकी Apple ID से लिया जाता है।</li>
+            <li>आप किसी भी समय App Store सेटिंग्स में अपना प्लान बदल या सदस्यता रद्द कर सकती हैं।</li>
+            <li>बिना सदस्यता के भी ऐप काम करती है, लेकिन उपलब्ध एम्बिएंस, ध्वनियों और थीम की संख्या सीमित रहती है।</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>गोपनीयता और शर्तें</h2>
+          <ul>
+            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">गोपनीयता नीति</a></li>
+            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard Terms of Use (EULA)</a></li>
+          </ul>
+          <p style="margin-top:8px; font-size:14px; color:var(--sub);">
+            Somnifox कोई चिकित्सीय उपकरण नहीं है और किसी भी प्रकार की पेशेवर सलाह का स्थान नहीं लेती।
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>संपर्क और प्रतिक्रिया</h2>
+        <p>
+          यदि आपके पास प्रश्न हैं, कोई बग रिपोर्ट करना चाहती हैं या सुझाव भेजना चाहती हैं, तो आप हमें ईमेल के माध्यम से लिख सकती हैं:
+        </p>
+        <p>
+          <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a>
+        </p>
+        <p>
+          App Store पर रेटिंग देना या समीक्षा लिखना अन्य उपयोगकर्ताओं को Somnifox तक पहुँचने में बहुत मदद करता है।
+        </p>
+        <ul>
+          <li>App Store पेज: <a href="https://apps.apple.com/app/id6753948909">apps.apple.com/app/id6753948909</a></li>
+          <li>समीक्षा लिखें: <a href="itms-apps://apps.apple.com/app/id6753948909?action=write-review">itms-apps://apps.apple.com/app/id6753948909?action=write-review</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- फ़ुटर -->
+    <footer>
+      <p>सपोर्ट: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a></p>
+      <p style="margin-top:6px;">
+        © <span id="y"></span> Somnifox. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // फ़ुटर में वर्ष दिखाएँ
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // सहायता पेजों के लिए भाषा स्विचर
+    (function(){
+      var languagePages = {
+        en: "support_en.html",
+        tr: "support_tr.html",
+        es: "support_es.html",
+        fr: "support_fr.html",
+        ko: "support_ko.html",
+        de: "support_de.html",
+        hi: "support_hi.html",
+        nl: "support_nl.html",
+        zh: "support_zh.html",
+        pt: "support_pt.html",
+        ru: "support_ru.html",
+        it: "support_it.html",
+        ja: "support_ja.html",
+        no: "support_no.html",
+        sv: "support_sv.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "hi").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function(){
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
