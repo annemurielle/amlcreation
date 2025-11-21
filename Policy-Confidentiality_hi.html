@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <title>गोपनीयता नीति - AML Creation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AML Creation ऐप्स और सेवाओं के लिए गोपनीयता नीति। जानें कि जब आप हमारे उत्पादों का उपयोग करते हैं या हमसे संपर्क करते हैं, तो आपके डेटा को कैसे संसाधित किया जाता है।" />
+  <meta name="theme-color" content="#2b3260" />
+
+  <style>
+    :root{
+      --bg: #050618;
+      --bg-soft: #10132b;
+      --card: #ffffff;
+      --ink: #151524;
+      --sub: #555a70;
+      --accent: #2ECF7A;
+      --accent-ink:#05311f;
+      --ring:#00000014;
+      --radius:16px;
+      --maxw:960px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 0% 0%, #3b38a6 0%, transparent 55%),
+        radial-gradient(800px 500px at 100% 100%, #8a5de6 0%, transparent 45%),
+        var(--bg);
+    }
+
+    a{ color:inherit; }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      padding:24px;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      width:100%;
+    }
+
+    /* header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:20px;
+      color:#f5f7ff;
+    }
+
+    .brand{
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:14px;
+    }
+
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:999px;
+      padding:6px 26px 6px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+      backdrop-filter:blur(8px);
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:9px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* main card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px 26px 22px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.35), inset 0 0 0 1px var(--ring);
+    }
+
+    h1{
+      margin-top:0;
+      margin-bottom:12px;
+      font-size:26px;
+    }
+
+    h2{
+      margin-top:26px;
+      margin-bottom:6px;
+      font-size:18px;
+    }
+
+    p{
+      margin:8px 0;
+      color:var(--ink);
+    }
+
+    .muted{
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    /* social links */
+    .social{
+      margin-top:26px;
+      border-top:1px solid #e4e6f0;
+      padding-top:18px;
+    }
+
+    .social-title{
+      font-weight:600;
+      margin-bottom:8px;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .social-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .social-list a{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid #dde0ee;
+      font-size:14px;
+      text-decoration:none;
+      color:#3b3f58;
+      background:#f7f8ff;
+      transition:background .2s, color .2s, border-color .2s;
+    }
+
+    .social-list a:hover{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:var(--accent-ink);
+    }
+
+    /* footer */
+    footer{
+      margin-top:18px;
+      text-align:center;
+      color:#c7c9e0;
+      font-size:13px;
+    }
+
+    @media (max-width:640px){
+      .card{ padding:20px 18px 18px; }
+      .page{ padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="wrap">
+      <header>
+        <div class="brand">AML Creation</div>
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="भाषा बदलें">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="hi" selected>हिन्दी</option>
+            <option value="nl">Nederlands</option>
+            <option value="zh">简体中文</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="no">Norsk</option>
+            <option value="sv">Svenska</option>
+          </select>
+        </div>
+      </header>
+
+      <main class="card">
+        <h1>गोपनीयता नीति</h1>
+        <p class="muted">
+          यह गोपनीयता नीति बताती है कि AML Creation अपनी ऐप्स और संबंधित सेवाओं में व्यक्तिगत डेटा को कैसे संभालता है।
+        </p>
+
+        <h2>1. परिचय</h2>
+        <p>
+          AML Creation मोबाइल और डेस्कटॉप ऐप्स तथा उनसे जुड़े ऑनलाइन सामग्री विकसित करता है।
+          हम गोपनीयता को गंभीरता से लेते हैं और अपनी ऐप्स को इस तरह डिज़ाइन करते हैं कि आम तौर पर उन्हें
+          खाता बनाए बिना या व्यक्तिगत विवरण साझा किए बिना उपयोग किया जा सके, जब तक कि किसी विशेष सेवा के लिए
+          अलग से स्पष्ट रूप से कुछ और न बताया गया हो।
+        </p>
+
+        <h2>2. इस नीति का उद्देश्य</h2>
+        <p>
+          इस गोपनीयता नीति का उद्देश्य उपयोगकर्ताओं को यह सूचित करना है कि AML Creation को प्रदान किए गए
+          व्यक्तिगत डेटा को कैसे एकत्रित, उपयोग और सुरक्षित किया जाता है, और इन डेटा के संबंध में उपयोगकर्ताओं
+          के क्या अधिकार हैं।
+        </p>
+
+        <h2>3. डेटा का संग्रह और उपयोग</h2>
+        <p>
+          सामान्य रूप से, AML Creation के ऐप्स इंस्टॉल करते समय या सामान्य उपयोग के दौरान व्यक्तिगत डेटा एकत्र नहीं करते।
+          हमारी ऐप्स आपका नाम, डाक पता, फ़ोन नंबर या अन्य ऐसी जानकारी नहीं मांगतीं जो आपको सीधे पहचान सके।
+        </p>
+        <p>
+          वे मुख्य स्थितियाँ जिनमें व्यक्तिगत जानकारी संसाधित की जा सकती है, इस प्रकार हैं:
+        </p>
+        <ul>
+          <li>
+            जब आप हमें सीधे संपर्क करते हैं (जैसे ईमेल या सोशल मीडिया के माध्यम से),
+            तो आप जो जानकारी स्वेच्छा से भेजते हैं और आपको उत्तर देने के लिए आवश्यक आपका संपर्क पता
+            हमें प्राप्त होता है।
+          </li>
+          <li>
+            जब Apple App Store, Google Play, Steam या YouTube जैसी स्टोर या प्लेटफ़ॉर्म
+            अनाम आँकड़े और बिक्री रिपोर्ट प्रदान करते हैं। ये रिपोर्ट समेकित (aggregated) रूप में होती हैं
+            और हमें व्यक्तिगत उपयोगकर्ताओं की पहचान करने की अनुमति नहीं देतीं।
+          </li>
+        </ul>
+
+        <h2>4. डेटा का भंडारण और हटाना</h2>
+        <p>
+          हम सहायता (support) ईमेल और इसी तरह की संचार को केवल उतने समय तक रखते हैं जितना आपकी
+          अनुरोध का उत्तर देने और बार-बार होने वाली समस्याओं का रिकॉर्ड रखने के लिए आवश्यक हो।
+          यदि आप चाहते हैं कि ऐसे संदेश हटा दिए जाएँ, तो आप हमसे संपर्क कर सकते हैं और हम उन्हें
+          तकनीकी रूप से संभव सीमा तक हटा देंगे।
+        </p>
+        <p>
+          आपने हमें जो जानकारी भेजी है उसे हटाने के लिए, कृपया इस पते पर लिखें:
+          <a href="mailto:amlcreation.adventuregames@gmail.com">amlcreation.adventuregames@gmail.com</a>.
+        </p>
+
+        <h2>5. बच्चों की गोपनीयता</h2>
+        <p>
+          AML Creation की कुछ ऐप्स बच्चों और परिवारों के लिए उपयुक्त हैं। इन ऐप्स को इस तरह से डिज़ाइन किया गया है
+          कि वे व्यक्तिगत डेटा दर्ज किए बिना भी उपयोग की जा सकें। यदि आपको लगता है कि किसी बच्चे ने गलती से
+          हमें व्यक्तिगत जानकारी भेज दी है, तो कृपया हमसे संपर्क करें; हम तकनीकी रूप से संभव सीमा के भीतर
+          इन जानकारियों को हटा देंगे।
+        </p>
+
+        <h2>6. तृतीय-पक्ष सेवाएँ</h2>
+        <p>
+          हमारी ऐप्स में बाहरी सेवाओं के लिंक हो सकते हैं, जैसे ऐप स्टोर, सोशल नेटवर्क, वीडियो प्लेटफ़ॉर्म
+          या वेबसाइटें। इन सेवाओं की अपनी अलग गोपनीयता नीतियाँ होती हैं, जो इस नीति से भिन्न हो सकती हैं।
+          हम अनुशंसा करते हैं कि आप जिन भी तृतीय-पक्ष सेवाओं का उपयोग करते हैं, उनकी गोपनीयता नीति अवश्य पढ़ें।
+        </p>
+
+        <h2>7. इस नीति में परिवर्तन</h2>
+        <p>
+          इस गोपनीयता नीति को अंतिम बार 21 नवंबर 2025 को अद्यतन किया गया था।
+          यदि कानून, नियमों या हमारे उत्पादों में परिवर्तन होता है, तो AML Creation इस दस्तावेज़ को अद्यतन कर सकता है।
+          इस पृष्ठ पर हमेशा सबसे हाल का संस्करण उपलब्ध रहेगा।
+        </p>
+
+        <h2>8. संपर्क</h2>
+        <p>
+          यदि आपको इस गोपनीयता नीति या AML Creation द्वारा डेटा संसाधन के तरीकों के बारे में कोई प्रश्न हों,
+          तो आप हमसे इस पते पर संपर्क कर सकते हैं:
+          <a href="mailto:amlcreation.adventuregames@gmail.com">amlcreation.adventuregames@gmail.com</a>.
+        </p>
+
+        <section class="social">
+          <div class="social-title">ऑनलाइन AML Creation</div>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com/lesptitboutchoux/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://twitter.com/amlCreation" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target="_blank" rel="noopener">Steam</a></li>
+            <li><a href="https://apps.apple.com/developer/anne-murielle-larger/id842112590" target="_blank" rel="noopener">iOS गेम्स</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=AML+Creation" target="_blank" rel="noopener">Google Play गेम्स</a></li>
+            <li><a href="https://www.instagram.com/annemu_games" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="http://bit.ly/2Z4Ckyh" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:amlcreation.adventuregames@gmail.com">हमसे संपर्क करें</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        © AML Creation. यह गोपनीयता नीति AML Creation ऐप्स और संबंधित सेवाओं पर लागू होती है
+        और Apple, Google, Steam या सोशल नेटवर्क जैसी बाहरी प्लेटफ़ॉर्म की गोपनीयता नीतियों का स्थान नहीं लेती।
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // भाषा कोड → संबंधित गोपनीयता-नीति फ़ाइल
+      var languagePages = {
+        en: "Policy-Confidentiality_en.html",
+        tr: "Policy-Confidentiality_tr.html",
+        es: "Policy-Confidentiality_es.html",
+        fr: "Policy-Confidentiality_fr.html",
+        ko: "Policy-Confidentiality_ko.html",
+        de: "Policy-Confidentiality_de.html",
+        hi: "Policy-Confidentiality_hi.html",
+        nl: "Policy-Confidentiality_nl.html",
+        zh: "Policy-Confidentiality_zh.html",
+        pt: "Policy-Confidentiality_pt.html",
+        ru: "Policy-Confidentiality_ru.html",
+        it: "Policy-Confidentiality_it.html",
+        ja: "Policy-Confidentiality_ja.html",
+        no: "Policy-Confidentiality_no.html",
+        sv: "Policy-Confidentiality_sv.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "hi").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function () {
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

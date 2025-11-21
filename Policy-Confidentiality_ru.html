@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Политика конфиденциальности - AML Creation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Политика конфиденциальности приложений и сервисов AML Creation. Узнайте, как обрабатываются ваши данные при использовании наших продуктов или обращении в службу поддержки." />
+  <meta name="theme-color" content="#2b3260" />
+
+  <style>
+    :root{
+      --bg: #050618;
+      --bg-soft: #10132b;
+      --card: #ffffff;
+      --ink: #151524;
+      --sub: #555a70;
+      --accent: #2ECF7A;
+      --accent-ink:#05311f;
+      --ring:#00000014;
+      --radius:16px;
+      --maxw:960px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 0% 0%, #3b38a6 0%, transparent 55%),
+        radial-gradient(800px 500px at 100% 100%, #8a5de6 0%, transparent 45%),
+        var(--bg);
+    }
+
+    a{ color:inherit; }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      padding:24px;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      width:100%;
+    }
+
+    /* header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:20px;
+      color:#f5f7ff;
+    }
+
+    .brand{
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:14px;
+    }
+
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:999px;
+      padding:6px 26px 6px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+      backdrop-filter:blur(8px);
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:9px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* main card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px 26px 22px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.35), inset 0 0 0 1px var(--ring);
+    }
+
+    h1{
+      margin-top:0;
+      margin-bottom:12px;
+      font-size:26px;
+    }
+
+    h2{
+      margin-top:26px;
+      margin-bottom:6px;
+      font-size:18px;
+    }
+
+    p{
+      margin:8px 0;
+      color:var(--ink);
+    }
+
+    .muted{
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    /* social links */
+    .social{
+      margin-top:26px;
+      border-top:1px solid #e4e6f0;
+      padding-top:18px;
+    }
+
+    .social-title{
+      font-weight:600;
+      margin-bottom:8px;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .social-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .social-list a{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid #dde0ee;
+      font-size:14px;
+      text-decoration:none;
+      color:#3b3f58;
+      background:#f7f8ff;
+      transition:background .2s, color .2s, border-color .2s;
+    }
+
+    .social-list a:hover{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:var(--accent-ink);
+    }
+
+    /* footer */
+    footer{
+      margin-top:18px;
+      text-align:center;
+      color:#c7c9e0;
+      font-size:13px;
+    }
+
+    @media (max-width:640px){
+      .card{ padding:20px 18px 18px; }
+      .page{ padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="wrap">
+      <header>
+        <div class="brand">AML Creation</div>
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Изменить язык">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="de">Deutsch</option>
+            <option value="hi">हिन्दी</option>
+            <option value="nl">Nederlands</option>
+            <option value="zh">简体中文</option>
+            <option value="pt">Português</option>
+            <option value="ru" selected>Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="no">Norsk</option>
+            <option value="sv">Svenska</option>
+          </select>
+        </div>
+      </header>
+
+      <main class="card">
+        <h1>Политика конфиденциальности</h1>
+        <p class="muted">
+          Эта политика конфиденциальности объясняет, как AML Creation обрабатывает персональные данные в своих приложениях и связанных сервисах.
+        </p>
+
+        <h2>1. Введение</h2>
+        <p>
+          AML Creation разрабатывает мобильные и настольные приложения, а также связанный с ними онлайн контент.
+          Мы серьезно относимся к защите данных и стараемся сделать так, чтобы наши приложения в большинстве случаев
+          можно было использовать без создания учетной записи и указания персональных данных, если только для конкретного сервиса
+          явно не указано иное.
+        </p>
+
+        <h2>2. Цель этой политики</h2>
+        <p>
+          Цель данной политики конфиденциальности состоит в том, чтобы проинформировать пользователей о том,
+          как персональные данные, предоставленные AML Creation, собираются, используются и защищаются,
+          а также какие права имеют пользователи в отношении этих данных.
+        </p>
+
+        <h2>3. Сбор и использование данных</h2>
+        <p>
+          В целом приложения AML Creation не собирают персональные данные во время установки и при обычном использовании.
+          Наши приложения не запрашивают ваше имя, почтовый адрес, номер телефона или другие сведения,
+          которые позволяют напрямую идентифицировать вас.
+        </p>
+        <p>
+          Персональная информация может обрабатываться в основном в следующих ситуациях:
+        </p>
+        <ul>
+          <li>
+            Когда вы напрямую связываетесь с нами (например, по электронной почте или через социальные сети),
+            мы получаем информацию, которую вы добровольно нам отправляете, а также ваш адрес для обратной связи,
+            чтобы иметь возможность ответить.
+          </li>
+          <li>
+            Когда магазины или платформы (такие как Apple App Store, Google Play, Steam или YouTube)
+            предоставляют нам анонимную статистику и отчеты о продажах. Эти отчеты носят агрегированный характер
+            и не позволяют идентифицировать конкретного пользователя.
+          </li>
+        </ul>
+
+        <h2>4. Хранение и удаление данных</h2>
+        <p>
+          Мы храним письма в службу поддержки и подобную переписку только в течение времени, необходимого
+          для ответа на ваш запрос и анализа повторяющихся проблем.
+          Если вы хотите, чтобы такие сообщения были удалены, вы можете связаться с нами, и мы удалим их
+          в той мере, в какой это технически возможно.
+        </p>
+        <p>
+          Чтобы запросить удаление информации, которую вы ранее нам предоставили, напишите по адресу:
+          <a href="mailto:amlcreation.adventuregames@gmail.com">amlcreation.adventuregames@gmail.com</a>.
+        </p>
+
+        <h2>5. Конфиденциальность детей</h2>
+        <p>
+          Некоторые приложения AML Creation подходят для детей и семей. Эти приложения разработаны таким образом,
+          чтобы их можно было использовать без ввода персональных данных.
+          Если вы считаете, что ребенок по ошибке сообщил нам персональную информацию, свяжитесь с нами,
+          и мы удалим такие данные в пределах технических возможностей.
+        </p>
+
+        <h2>6. Сторонние сервисы</h2>
+        <p>
+          Наши приложения могут содержать ссылки на сторонние сервисы, такие как магазины приложений, социальные сети,
+          видеоплатформы или веб-сайты. У этих сервисов есть собственные политики конфиденциальности,
+          которые могут отличаться от данной политики. Мы рекомендуем внимательно ознакомиться
+          с политикой конфиденциальности каждого стороннего сервиса, которым вы пользуетесь.
+        </p>
+
+        <h2>7. Изменения в этой политике</h2>
+        <p>
+          Эта политика конфиденциальности была в последний раз обновлена 21 ноября 2025 года.
+          AML Creation может обновлять данный документ при изменении законодательства, нормативных требований
+          или наших продуктов. Самая актуальная версия всегда доступна на этой странице.
+        </p>
+
+        <h2>8. Контакты</h2>
+        <p>
+          Если у вас есть вопросы по поводу этой политики конфиденциальности или того,
+          как AML Creation обрабатывает данные, вы можете связаться с нами по адресу:
+          <a href="mailto:amlcreation.adventuregames@gmail.com">amlcreation.adventuregames@gmail.com</a>.
+        </p>
+
+        <section class="social">
+          <div class="social-title">AML Creation в интернете</div>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com/lesptitboutchoux/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://twitter.com/amlCreation" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target="_blank" rel="noopener">Steam</a></li>
+            <li><a href="https://apps.apple.com/developer/anne-murielle-larger/id842112590" target="_blank" rel="noopener">Игры для iOS</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=AML+Creation" target="_blank" rel="noopener">Игры в Google Play</a></li>
+            <li><a href="https://www.instagram.com/annemu_games" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="http://bit.ly/2Z4Ckyh" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:amlcreation.adventuregames@gmail.com">Связаться с нами</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        © AML Creation. Эта политика конфиденциальности применяется к приложениям и сервисам AML Creation
+        и не заменяет политики конфиденциальности внешних платформ, таких как Apple, Google, Steam и социальные сети.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // Соответствие кода языка файлу политики конфиденциальности
+      var languagePages = {
+        en: "Policy-Confidentiality_en.html",
+        tr: "Policy-Confidentiality_tr.html",
+        es: "Policy-Confidentiality_es.html",
+        fr: "Policy-Confidentiality_fr.html",
+        ko: "Policy-Confidentiality_ko.html",
+        de: "Policy-Confidentiality_de.html",
+        hi: "Policy-Confidentiality_hi.html",
+        nl: "Policy-Confidentiality_nl.html",
+        zh: "Policy-Confidentiality_zh.html",
+        pt: "Policy-Confidentiality_pt.html",
+        ru: "Policy-Confidentiality_ru.html",
+        it: "Policy-Confidentiality_it.html",
+        ja: "Policy-Confidentiality_ja.html",
+        no: "Policy-Confidentiality_no.html",
+        sv: "Policy-Confidentiality_sv.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "ru").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function () {
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
