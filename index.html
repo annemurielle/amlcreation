@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AML Creation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AML Creation develops calming apps, indie games, and illustrated stories such as Somnifox, Annemu's Games, and Samcreation." />
+
+  <style>
+    :root{
+      --bg: #050618;
+      --card: #ffffff;
+      --ink: #151524;
+      --sub: #555a70;
+      --accent: #2ECF7A;
+      --accent-ink:#05311f;
+      --ring:#00000018;
+      --radius:18px;
+      --maxw:680px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 0% 0%, #3b38a6 0%, transparent 55%),
+        radial-gradient(800px 500px at 100% 100%, #8a5de6 0%, transparent 45%),
+        var(--bg);
+    }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px 26px 24px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.35), inset 0 0 0 1px var(--ring);
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:26px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .tagline{
+      margin:0 0 20px;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .links{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    @media (min-width:640px){
+      .links{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .link-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-size:15px;
+      font-weight:600;
+      border:1px solid #dde0ee;
+      background:#f6f7ff;
+      color:#272842;
+      box-shadow:0 6px 16px rgba(0,0,0,0.06);
+      transition:background .18s, transform .18s, box-shadow .18s, border-color .18s;
+      text-align:center;
+      min-height:46px;
+    }
+
+    .link-btn.primary{
+      background:var(--accent);
+      color:var(--accent-ink);
+      border-color:var(--accent);
+      box-shadow:0 10px 26px rgba(0,0,0,0.16);
+    }
+
+    .link-btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 24px rgba(0,0,0,0.16);
+      background:#eef0ff;
+    }
+
+    .link-btn.primary:hover{
+      background:#28c56f;
+      border-color:#28c56f;
+    }
+
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      font-size:13px;
+      color:var(--sub);
+    }
+
+    .footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="card">
+      <h1>AML Creation</h1>
+      <p class="tagline">
+        Calming apps, indie games, and illustrated stories crafted by Sandrine and Anne Murielle.
+      </p>
+
+      <section class="links" aria-label="Projects">
+        <a class="link-btn primary" href="Somnifox/marketing_en.html">
+          Somnifox · Sleep and focus sound mixer
+        </a>
+        <a class="link-btn" href="Games/index.html">
+          Annemu&#39;s Games · Indie games
+        </a>
+        <a class="link-btn" href="https://annemurielle.github.io/Samcreation/">
+          Samcreation · Comics, manga and art
+        </a>
+      </section>
+
+      <div class="footer">
+        <span>&copy; AML Creation</span>
+        &middot;
+        <a href="Policy-Confidentiality_en.html">Privacy policy</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
