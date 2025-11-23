@@ -1,256 +1,324 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
+  <meta charset="utf-8" />
+  <title>AnneMu's Games · Jeux d’aventure point & click et jeux kawaii sur mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Découvrez les jeux AnneMu's Games par AML Creation : aventures point & click, jeux kawaii et puzzles relaxants. Explorez Celestwald, Fantasiant, Tiny Story, Cats in the Box et d’autres jeux paisibles sur iOS, Android, Steam, Windows et Mac." />
+  <meta name="author" content="Anne-Murielle Larger" />
+  <meta name="theme-color" content="#2b3260" />
+  <meta name="robots" content="index,follow" />
+  <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8642125-16"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-8642125-16');
-    </script>
-
-    <meta charset="UTF-8" />
-
-    <title>Aventures pointer-cliquer sur mobile</title>
-    <meta name="Title" content="Aventures pointer-cliquer sur mobile - Samcreation">
-    <meta name="Description" content="Des jeux d'aventure pour mobile et tablette en français! Jouez à nos jeux d'aventures et d'énigmes sur IOS ou Android pendant des heures. Jeux uniques, distrayants, originaux et sans violence dans un univers fantastique doux et rêveur.
-Nos jeux d'aventure pointer-cliquer: Tiny Story 1 (2016), Tiny Story 2 (2017), Cats in the box (2018), Celestwald (2019) et Fantasiant (2020).">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="pragma" content="no-cache" />
-
-    <meta http-equiv="expires" content="43200" />
-
-    <meta name="Author" content="Anne-Murielle Larger - Ptitboutchoux" />
-
-    <meta name="Copyright" content="2013 Anne-Murielle Larger Creation - Ptitboutchoux" />
-
-    <meta name="Identifier-URL" content="www.samcreation.ch/ptitboutchoux" />
-
-    <meta name="robots" content="ALL" />
-
-    <meta name="revisit-after" content="1 days" />
-
-    <link rel="shortcut icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/x-icon" />
-
-    <link rel="icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/gif" />
-
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" />
-<![endif]-->
-
-
-    <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
-
-
+  <link rel="stylesheet" href="aml-base.css">
 </head>
-<body class="homepage">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=589060384535833";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+<body>
+  <div class="page">
+    <div class="wrap">
+      <header class="site-header">
+        <h1 class="site-title">AnneMu's Games</h1>
+        <p class="site-tagline">
+          Jeux d’aventure point &amp; click, jeux kawaii et puzzles relaxants créés par AML Creation.
+        </p>
 
+        <!-- Navigation principale -->
+        <nav class="site-nav" aria-label="Jeux principaux">
+          <a class="nav-link" href="fantasiant-adventure-puzzle-game-fr.html">Fantasiant</a>
+          <a class="nav-link" href="Celestwald-fr.html">Celestwald</a>
+          <a class="nav-link" href="Celestwald2-fr.html">Celestwald 2</a>
+          <a class="nav-link" href="Application-Point-and-Click-TinyStory-games.html">Tiny Story</a>
+          <a class="nav-link" href="cats-in-the-box-fr.html">Cats in the Box</a>
+          <!-- Sélecteur de langue compact à droite -->
+          <div class="lang-wrap inline-lang">
+            <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+              <option value="en">English</option>
+              <option value="fr" selected>Français</option>
+            </select>
+          </div>
+        </nav>
 
-        function secret(secretId) {
-            if (document.getElementById) {
-                secret = document.getElementById(secretId);
-                if (secret.style.display == "none") {
-                    secret.style.display = "";
-                }
-                else {
-                    secret.style.display = "none";
-                }
-            }
-        }
-    </script>
-
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <!-- Logo -->
-                <h1 id="logo"><a href="index.html" class="titleSite">AnneMu's games</a></h1>
-                <p >Explore a Sweet and Dreamy Universe of Unique and Entertaining Games</p>
-
-                <ul id="menuSocial">
-                    <li><a href='https://www.facebook.com/lesptitboutchoux/' target='_blank' class="icon fa fa-facebook" title='facebook'></a></li>
-                    <li>|</li>
-                     <li><a class="icon-x" href='https://twitter.com/amlCreation' target='_blank' title='X'></a></li>
-                    <li>|</li>
-                    <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target='_blank' title="Steam" class="icon fa-steam"><span class="label">Steam</span></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-apple" href='https://apps.apple.com/developer/anne-murielle-larger/id842112590' target='_blank' title='Annemu Games on AppStore'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-android" href='https://play.google.com/store/apps/dev?id=6866405066736735761' target='_blank' title='Annemu Games on Google Play'></a></li>
-                    <li>|</li>
-                    <li><a href='https://www.instagram.com/annemu_games' target='_blank' class="icon fa-instagram" title='Annemu Games on Instagram'></a></li>
-                    <li>|</li>
-                    <li><a href='http://bit.ly/2Z4Ckyh' target='_blank' class="icon fa-youtube" title='Annemu Games on Youtube'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-envelope-o" href='mailto:amlcreation.adventuregames@gmail.com' title='Contact us'></a></li>
-                </ul>
-
-                <nav id="nav">
-                    <ul>
-                        <li style="white-space: nowrap;"><a href="fantasiant-adventure-puzzle-game-en.html" class="icon fa-gamepad" title="Fantasiant"><span>Fantasiant</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald-en.html" class="icon fa-gamepad" title="Celestwald"><span>Cel1</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald2-en.html" class="icon fa-gamepad" title="Celestwald2"><span>Cel2</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Application-Point-and-Click-TinyStory-games.html" class="icon fa-gamepad" title="Tiny Story games"><span>Tiny Story games</span></a></li>
-                        <li style="white-space: nowrap;"><a href="cats-in-the-box-en.html" class="icon fa-gamepad" title="Cats in the box"><span>Cats</span></a></li>
-                    </ul>
-                </nav>
-            </div>
+        <!-- Ligne sociale -->
+        <div class="social-bar">
+          <ul class="social-links" aria-label="Réseaux sociaux">
+            <li><a href="https://www.facebook.com/lesptitboutchoux/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="https://twitter.com/amlCreation" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target="_blank" rel="noopener">Steam</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="https://apps.apple.com/developer/anne-murielle-larger/id842112590" target="_blank" rel="noopener">App Store</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="https://play.google.com/store/apps/dev?id=6866405066736735761" target="_blank" rel="noopener">Google Play</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="https://www.instagram.com/annemu_games" target="_blank" rel="noopener">Instagram</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="http://bit.ly/2Z4Ckyh" target="_blank" rel="noopener">YouTube</a></li>
+            <li><span class="sep">·</span></li>
+            <li><a href="mailto:amlcreation.adventuregames@gmail.com">Contact</a></li>
+          </ul>
         </div>
+      </header>
 
-        <div id="wrapper">
-            <div id="content">
+      <main>
+        <!-- Aventures narratives -->
+        <section class="card">
+          <h2 class="section-title">Jeux d’aventure point &amp; click</h2>
+          <p class="section-sub">
+            Des mondes dessinés à la main, des petits mystères et des énigmes douces sans stress ni minuterie. Explorez à votre rythme.
+          </p>
 
-            <div id="features-wrapper">
-    <section id="features" class="container"> <header> <h2>Aventures pointer-cliquer sur mobile  </h2> </header>
-     <div> <em>Jouez à nos jeux d'aventures et d'énigmes sur IOS ou Android pendant des heures. Jeux uniques, originaux et sans violence dans un univers fantastique doux et rêveur. Nos jeux d'aventure pointer-cliquer: Tiny Story 1 (2016), Tiny Story 2 (2017), Cats in the box (2018), Celestwald (2019),&nbsp;Fantasiant (2020),&nbsp;Tiny Story 3 (Janvier&nbsp;2021) et Tiny Story 4 (Juin 2021).</em></div></section>
-<div class="row">
-<div class="2u 12u(mobile)"></div>
- <div class="8u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Tiny Story 4: Mimy et la sorcière aux fleurs</h3> </header>
-                    <p>Trouvez la sorcière aux fleurs, résolvez de nombreuses&nbsp;quêtes... </p><p><em></em></p><a href="Application-Point-and-Click-TinyStory4.html">
-<iframe src="https://www.youtube.com/embed/qoCCuHbB3Oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></a>   <ul class="actions">
-                        <li><a href="Application-Point-and-Click-TinyStory4.html" class="button icon fa-file">Découvrir</a></li></ul>  
-</section>
-            </div>
-<div class="2u 12u(mobile)"></div>
-  </div>
-        <div class="row">
-<div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Tiny Story 3: Wolfy et la mer disparue</h3> </header>
-                    <p>Résolvez le mystère et de nombreuses&nbsp;quêtes... </p><p><em></em></p><a href="Application-Point-and-Click-TinyStory3.html"><iframe src="https://www.youtube.com/embed/riBbdGqEeVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></a>   <ul class="actions">
-                        <li><a href="Application-Point-and-Click-TinyStory3.html" class="button icon fa-file">Découvrir</a></li></ul>  
-</section>
-            </div>
-<div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Fantasiant</h3> </header>
-                    <p>De nombreux niveaux à compléter, dans cette incroyable aventure de jeu pointez-cliquez!</p><a href="fantasiant-adventure-puzzle-game-fr.html"> <iframe width="560" height="315" src="https://www.youtube.com/embed/7qIEociqJ1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></a>  <ul class="actions">
-                        <li><a href="fantasiant-adventure-puzzle-game-fr.html" class="button icon fa-file">Découvrir</a></li></ul><ul class="actions">
-                    </ul>
-</section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Celestwald</h3> </header>
-                    <p>Un jeu interactif et captivant alternant aventure, exploration et énigmes dans un style unique.&nbsp;</p><a href="Celestwald-fr.html"> <p><iframe src="https://www.youtube.com/embed/XVn76sixBnY?controls=0&amp;start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></p></a> <ul class="actions">
-                        <li><a href="Celestwald-fr.html" class="button icon fa-file">Découvrir</a></li></ul><ul class="actions">
-                    </ul>
-</section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Tiny Story 1 aventure</h3></header><a href="Application-Point-and-Click-TinyStory.html" class="image featured"><img src="Upload/appTinyStory/img0.png"></a> 
-                    <ul class="actions">
-                        <li><a href="Application-Point-and-Click-TinyStory.html" class="button icon fa-file">Découvrir</a></li>
-                    </ul> </section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Tiny Story 2 aventure</h3></header><a href="Application-Point-and-Click-TinyStory2.html" class="image featured"><img src="Upload/appTinyStory2/img0.png"></a> 
-                    <ul class="actions">
-                        <li><a href="Application-Point-and-Click-TinyStory2.html" class="button icon fa-file">Découvrir</a></li>
-                    </ul> </section>
-            </div>
- <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Cats in the box</h3></header><a href="cats-in-the-box-fr.html" class="image featured"><img src="Upload/appCatsInTheBox/icons2.png"></a> 
-                    <ul class="actions">
-                        <li><a href="cats-in-the-box-fr.html" class="button icon fa-file">Découvrir</a></li>
-                    </ul> </section>
-            </div>
-        </div>
-     <p>&nbsp;</p><p><br></p>
- <h2>Autres jeux</h2>
-        <div class="row">
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Mochi Plush Kawaii</h3> </header>
-                    <p>Un jeu gratuit d'habillage et de décoration adorable.</p>
-<iframe class="image featured" src="https://www.youtube.com/embed/KgWtGHfRlu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><ul class="actions">
-                                                              <li><a href="https://itunes.apple.com/app/id1463998446" class="button icon fa-apple">Télécharger IOS</a></li>
-                              </ul> 
-<ul class="actions">
-                                                              <li><a href="https://play.google.com/store/apps/details?id=com.amlcreation.plushKid" class="button icon fa-android">Télécharger Android</a></li>
-                              </ul> </section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Lili bedroom</h3> </header>
-                    <p>Jeu d'habillage et de décoration&nbsp;pour les princesses&nbsp;</p><img class="image featured" src="Upload/appDollAndDoudou/02.png">
-<ul class="actions">
-                                                              <li><a href="https://itunes.apple.com/app/id888100530" class="button icon fa-apple">Télécharger IOS</a></li>
-                              </ul> </section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section><header> <h3>Bestiolis 2048</h3> </header>
-                    <p>Un jeu 2048 visuel comme vous n'en avez jamais vu!&nbsp;</p><img class="image featured" src="Upload/appBestioli/1fr.png"> 
-                   <ul class="actions">
-                                                              <li><a href="https://itunes.apple.com/app/id961338039" class="button icon fa-apple">Installer</a></li>
-                              </ul></section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section> <header> <h3>Free puzzles Mix</h3> </header>
-                    <p>Un jeu de puzzles avec de nombreuses photos et dessins&nbsp;</p><img class="image featured" src="Upload/appPuzzles/puzzleMix/03.png"> 
-                   <ul class="actions">
-                                                              <li><a href="https://itunes.apple.com/app/id852309712" class="button icon fa-apple">Installer</a></li>
-                              </ul> </section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section><header> <h3>Puzzles de Bretagne</h3> </header> <p>Jouez avec de magnifiques photos de Bretagne!</p><img class="image featured" src="Upload/appBrittany/02.png"> 
-                      <ul class="actions">
-                                                              <li><a href="https://itunes.apple.com/app/id987139244" class="button icon fa-apple">Installer</a></li>
-                              </ul> </section>
-            </div>
-            <div class="4u 12u(mobile)">
-                <!-- Feature --> <section><header> <h3>Petit démineur</h3> </header>
-                    <p>Jouer au démineur dans un univers original!&nbsp;</p><img class="image featured" src="Upload/appMinesweeper/02.jpg"> 
-                    <ul class="actions">
-                                                             <li><a href="https://itunes.apple.com/app/id1048458452" class="button icon fa-apple">Installer</a></li>
-                              </ul> </section>
-            </div>
-        </div>
-        <ul class="actions">
-            <li><a href="privay-policy-amlcreation-application.html" class="button icon fa-key">Afficher la politique de confidentialité</a></li>
-        </ul></div> 
-         </div>
-        </div>
+          <div class="games-grid">
+            <article class="game">
+              <h3>Celestwald 2&nbsp;: The Seeds of Happiness</h3>
+              <p>
+                Retournez dans la forêt enchantée de Celestwald pour un nouveau chapitre.
+                Rencontrez de nouveaux personnages, aidez-les dans leurs petites quêtes
+                et découvrez ce qui se cache entre les arbres lumineux.
+              </p>
+              <p>
+                Celestwald 2 est une aventure paisible&nbsp;: pas de combat, pas de stress, seulement
+                de l’exploration, des dialogues et des énigmes légères dans un monde de fantaisie douce.
+              </p>
+              <p>Voir la bande-annonce&nbsp;:</p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/eQ6_phYwAtI?si=_AkdBy7cTHUMAN8d"
+                  title="Bande-annonce Celestwald 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn primary" href="Celestwald2-fr.html">Page du jeu</a>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <div id="copyright" class="container">
-                    <ul>
-                        <li class="icon fa-copyright"> Anne. Tous droits réservés. <br />
- Template de html5 up</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- Tiny Story + Celestwald 1 -->
+        <section class="card">
+          <h2 class="section-title">Aventures cosy et mondes à explorer</h2>
+          <p class="section-sub">
+            De petites histoires pleines de secrets, de personnages attachants et d’énigmes accessibles. Parfaites pour jouer le soir avec une tasse de thé.
+          </p>
+
+          <div class="games-grid games-grid--two">
+            <article class="game">
+              <h3>La saga Tiny Story</h3>
+              <p>
+                Tiny Story est une série de petites aventures point &amp; click.
+                Chaque jeu offre un lieu à explorer, des personnages à rencontrer
+                et de petits secrets à découvrir.
+              </p>
+              <p>
+                Des jeux courts, mignons et sans violence. L’accent est mis sur
+                l’observation, la curiosité et les petits détails cachés à l’écran.
+              </p>
+              <p>Bande-annonce&nbsp;:</p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/2cC6mm3wcgA"
+                  title="Bande-annonce Tiny Story"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn primary" href="Application-Point-and-Click-TinyStory-games.html">
+                  Découvrir Tiny Story 5 Jeux
+                </a>
+              </div>
+            </article>
+
+            <article class="game">
+              <h3>Celestwald Adventure</h3>
+              <p>
+                Le premier voyage dans l’univers de Celestwald.
+                Explorez une forêt lumineuse, rencontrez ses habitants et
+                résolvez des énigmes à l’aide des objets trouvés.
+              </p>
+              <p>
+                Un hommage aux classiques du point &amp; click, avec un style doux et coloré
+                pour celles et ceux qui recherchent la tranquillité.
+              </p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/MaQV4zhlPwY"
+                  title="Bande-annonce Celestwald"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn primary" href="Celestwald-fr.html">Page du jeu</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Fantasiant + Cats in the Box -->
+        <section class="card">
+          <h2 class="section-title">Fantaisie poétique et chats malicieux</h2>
+          <p class="section-sub">
+            Un monde surréaliste d’un côté, une boîte pleine de chatons joueurs de l’autre.
+          </p>
+
+          <div class="games-grid games-grid--two">
+            <article class="game">
+              <h3>Fantasiant</h3>
+              <p>
+                Fantasiant est un jeu d’aventure un peu étrange, situé dans un monde de rêve.
+                Vous explorez des lieux surréalistes et résolvez des énigmes subtiles.
+              </p>
+              <p>
+                Conçu pour celles et ceux qui aiment se perdre dans une atmosphère
+                et prendre le temps d’admirer chaque détail.
+              </p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/-vekJUK-j1s?si=koBPMFs6soOPfJHl"
+                  title="Bande-annonce Fantasiant"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn primary" href="fantasiant-adventure-puzzle-game-fr.html">Page du jeu</a>
+              </div>
+            </article>
+
+            <article class="game">
+              <h3>Cats in the Box</h3>
+              <p>
+                Cats in the Box réunit six mini-jeux remplis de chatons adorables.
+                Rapide, coloré et plein de chaos félin rigolo.
+              </p>
+              <p>
+                Touchez, réagissez et profitez des animations sans menus compliqués
+                ni textes lourds. Facile à prendre en main pour tous les âges.
+              </p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/p2FGlxaPG1k"
+                  title="Aperçu Cats in the Box"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn primary" href="cats-in-the-box-fr.html">Page du jeu</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Jeux kawaii -->
+        <section class="card">
+          <h2 class="section-title">Jeux kawaii d’habillage et de décoration</h2>
+          <p class="section-sub">
+            Des jeux mignons centrés sur la créativité, les tenues, les peluches et les chambres de rêve.
+          </p>
+
+          <div class="games-grid games-grid--two">
+            <article class="game">
+              <h3>Mochi Plush Kawaii</h3>
+              <p>
+                Dans Mochi Plush Kawaii, créez votre propre peluche mochi&nbsp;:
+                choisissez la couleur, la tenue, les accessoires et le fond.
+              </p>
+              <p>
+                Un jeu simple et relaxant pour tous ceux qui aiment les couleurs pastel,
+                les personnages dodus et l’ambiance cosy.
+              </p>
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/KgWtGHfRlu8"
+                  title="Aperçu Mochi Plush Kawaii"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+              </div>
+              <div class="btn-row">
+                <a class="btn" href="https://itunes.apple.com/app/id1463998446" target="_blank" rel="noopener">Télécharger sur iOS</a>
+                <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.plushKid" target="_blank" rel="noopener">Télécharger sur Android</a>
+              </div>
+            </article>
+
+            <article class="game">
+              <h3>Lili Bedroom</h3>
+              <p>
+                Lili Bedroom vous permet de décorer une chambre de rêve avec meubles,
+                couleurs, jouets et détails mignons.
+              </p>
+              <p>
+                Idéal pour celles et ceux qui aiment la déco intérieure,
+                les palettes douces et les chambres de style princesse.
+              </p>
+              <img class="image-featured" src="Upload/appDollAndDoudou/02.png" alt="Capture Lili Bedroom" />
+              <div class="btn-row">
+                <a class="btn" href="https://itunes.apple.com/app/id888100530" target="_blank" rel="noopener">Télécharger sur iOS</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Puzzles -->
+        <section class="card">
+          <h2 class="section-title">Puzzles relaxants et un classique revisité</h2>
+          <p class="section-sub">
+            Faites une pause avec des puzzles simples et une version plus douce du Démineur.
+          </p>
+
+          <div class="games-grid games-grid--two">
+            <article class="game">
+              <h3>Free Puzzles Mix</h3>
+              <p>
+                Free Puzzles Mix combine puzzles classiques et puzzles carrés
+                avec des images colorées. Idéal pour un moment de détente.
+              </p>
+              <p>
+                Convient à tous les âges, seul ou en famille.
+              </p>
+              <img class="image-featured" src="Upload/appPuzzles/03.png" alt="Capture Free Puzzles Mix" />
+              <div class="btn-row">
+                <a class="btn" href="https://itunes.apple.com/app/id852309712" target="_blank" rel="noopener">Télécharger sur iOS</a>
+              </div>
+            </article>
+
+            <article class="game">
+              <h3>Little Minesweeper</h3>
+              <p>
+                Little Minesweeper est une version mignonne du jeu classique Démineur&nbsp;:
+                même logique, mais dans un univers plus doux et coloré.
+              </p>
+              <p>
+                Parfait si vous aimez réfléchir sans plonger dans un jeu trop intense.
+              </p>
+              <img class="image-featured" src="Upload/appMinesweeper/02.jpg" alt="Capture Little Minesweeper" />
+              <div class="btn-row">
+                <a class="btn" href="https://itunes.apple.com/app/id1048458452" target="_blank" rel="noopener">Télécharger sur iOS</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="privacy-link">
+            <a href="../Policy-Confidentiality_fr.html">Consulter la politique de confidentialité des apps</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        © AnneMu's Games / AML Creation. Tous droits réservés.
+      </footer>
     </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/skel-viewport.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+  <!-- Sélecteur de langue -->
+  <script>
+    document.getElementById("lang-switcher")?.addEventListener("change", function(){
+      if (this.value === "en") {
+        window.location.href = "games-IOS-android.html";
+      } else {
+        window.location.href = "jeux-IOS-android.html";
+      }
+    });
+  </script>
 </body>
 </html>

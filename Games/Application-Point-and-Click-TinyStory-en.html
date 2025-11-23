@@ -1,250 +1,164 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <title>Tiny Story 1 – Point-and-click Adventure Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tiny Story 1 is a cute point-and-click adventure game. Choose your animal hero, explore the city of Tiny, solve clever puzzles and find your way back home. Available on iOS, Android, PC, Mac and Linux." />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8642125-16"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-8642125-16');
-    </script>
-
-    <meta charset="UTF-8" />
-
-    <title>Tiny Story 1 Point-and-click Adventure</title>
-    <meta name="Title" content="Tiny Story 1 Point-and-click Adventure - Samcreation">
-    <meta name="Description" content="Embark on a fun and entertaining journey with Tiny Story, the point-and-click adventure game with cute graphics and intricate puzzles. Choose your animal hero, travel around the city of Tiny, and solve the mystery of finding your way back home. Perfectly designed for touch devices, navigate the story with ease and without frustration.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="pragma" content="no-cache" />
-
-    <meta http-equiv="expires" content="43200" />
-
-    <meta name="Author" content="Anne-Murielle Larger - Ptitboutchoux" />
-
-    <meta name="Copyright" content="2013 Anne-Murielle Larger Creation - Ptitboutchoux" />
-
-    <meta name="Identifier-URL" content="www.samcreation.ch/ptitboutchoux" />
-
-    <meta name="robots" content="ALL" />
-
-    <meta name="revisit-after" content="1 days" />
-
-    <link rel="shortcut icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/x-icon" />
-
-    <link rel="icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/gif" />
-
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" />
-<![endif]-->
-
-
-    <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
-
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="aml-base.css">
 </head>
-<body class="homepage">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=589060384535833";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+<body>
+  <div class="page">
 
+    <!-- HEADER -->
+    <header class="top">
+      <div class="brand">
+        <div class="brand-title">Annemu’s Games</div>
+        <div class="brand-sub">Sweet, dreamy point-and-click adventures</div>
+      </div>
 
-        function secret(secretId) {
-            if (document.getElementById) {
-                secret = document.getElementById(secretId);
-                if (secret.style.display == "none") {
-                    secret.style.display = "";
-                }
-                else {
-                    secret.style.display = "none";
-                }
-            }
-        }
-    </script>
+      <nav class="top-nav">
+        <a class="chip" href="games-IOS-android.html">All games</a>
+        <a class="chip" href="../Policy-Confidentiality_en.html">Privacy policy</a>
 
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <!-- Logo -->
-                <h1 id="logo"><a href="index.html" class="titleSite">AnneMu's games</a></h1>
-                <p >Explore a Sweet and Dreamy Universe of Unique and Entertaining Games</p>
+        <div class="lang-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Change language">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+      </nav>
+    </header>
 
-                <ul id="menuSocial">
-                    <li><a href='https://www.facebook.com/lesptitboutchoux/' target='_blank' class="icon fa fa-facebook" title='facebook'></a></li>
-                    <li>|</li>
-                     <li><a class="icon-x" href='https://twitter.com/amlCreation' target='_blank' title='X'></a></li>
-                    <li>|</li>
-                    <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target='_blank' title="Steam" class="icon fa-steam"><span class="label">Steam</span></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-apple" href='https://apps.apple.com/developer/anne-murielle-larger/id842112590' target='_blank' title='Annemu Games on AppStore'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-android" href='https://play.google.com/store/apps/dev?id=6866405066736735761' target='_blank' title='Annemu Games on Google Play'></a></li>
-                    <li>|</li>
-                    <li><a href='https://www.instagram.com/annemu_games' target='_blank' class="icon fa-instagram" title='Annemu Games on Instagram'></a></li>
-                    <li>|</li>
-                    <li><a href='http://bit.ly/2Z4Ckyh' target='_blank' class="icon fa-youtube" title='Annemu Games on Youtube'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-envelope-o" href='mailto:amlcreation.adventuregames@gmail.com' title='Contact us'></a></li>
-                </ul>
+    <!-- MAIN -->
+    <main class="layout">
 
-                <nav id="nav">
-                    <ul>
-                        <li style="white-space: nowrap;"><a href="fantasiant-adventure-puzzle-game-en.html" class="icon fa-gamepad" title="Fantasiant"><span>Fantasiant</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald-en.html" class="icon fa-gamepad" title="Celestwald"><span>Cel1</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald2-en.html" class="icon fa-gamepad" title="Celestwald2"><span>Cel2</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Application-Point-and-Click-TinyStory-games.html" class="icon fa-gamepad" title="Tiny Story games"><span>Tiny Story games</span></a></li>
-                        <li style="white-space: nowrap;"><a href="cats-in-the-box-en.html" class="icon fa-gamepad" title="Cats in the box"><span>Cats</span></a></li>
-                    </ul>
-                </nav>
-            </div>
+      <!-- MAIN CARD -->
+      <article class="card">
+
+         <!-- BACK BUTTON -->
+        <a href="Application-Point-and-Click-TinyStory-games-en.html" class="btn" style="margin-bottom:12px;">← Back to Tiny Story collection</a>
+
+        <header class="game-header">
+          <div class="badge"><span>Adventure · Puzzle</span> Tiny Story 1</div>
+
+          <h1>Tiny Story 1 – Point-and-click adventure</h1>
+
+          <p class="meta-line">
+            Choose your animal hero, explore the city of Tiny and solve clever puzzles to find your way back home.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn primary" href="https://itunes.apple.com/app/tiny-story-adventure/id1187225740" target="_blank" rel="noopener">
+               Download on iOS
+            </a>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory" target="_blank" rel="noopener">
+              🤖 Download on Android
+            </a>
+            <a class="btn" href="https://amlcreation.itch.io/tiny-story-1-adventure" target="_blank" rel="noopener">
+              💻 Get it for PC / Mac / Linux
+            </a>
+          </div>
+
+          <p class="meta-line">
+            Also available as a free demo on both iOS and Android.
+          </p>
+        </header>
+
+        <!-- TRAILER -->
+        <div class="video-wrap">
+          <div class="video-inner">
+            <iframe src="https://www.youtube.com/embed/R7dMLuz4W78"
+                    title="Tiny Story 1 – Official trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
         </div>
 
-        <div id="wrapper">
-            <div id="content">
+        <!-- DESCRIPTION -->
+        <section class="game-copy">
+          <p><strong>Immerse yourself in the charming world of Tiny Story.</strong> Travel through the little town of Tiny, talk to quirky characters and collect objects that will help you on your way.</p>
 
-            <div id="main-wrapper">
-         <div id="main" class="container">
-            <div class="row">
-               <!-- Content -->
-               <div id="content" class="8u 12u(mobile)">
-                  <!-- Post --> 
-                  <article class="box post">
-                     <header>
-                        <h2><a class="icon fa-arrow-left" href="Application-Point-and-Click-TinyStory-games.html" title="Applications">&nbsp;</a>&nbsp;Tiny Story 1 adventure <br>point and click</h2>
-                        <p style="text-align:center">
-                           <a class="icon fa-download" href="https://itunes.apple.com/app/tiny-story-adventure/id1187225740" style="color:#9370db">&nbsp;Download on IOS</a><span style="color:#9370db">&nbsp;|&nbsp;
-                           </span><a class="icon fa-download" href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory" style="color:#9370db">&nbsp;Download on Android</a>
-                        </p>
-                     </header>
-                     <p><iframe src="https://www.youtube.com/embed/R7dMLuz4W78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></p>
-                     <h4>Immerse yourself in the charming world of Tiny Story, where you'll embark on an exciting adventure filled with intriguing puzzles and quests.</h4>
-                     <h4> Choose your hero, explore the city of Tiny, and find your way back home. </h4>
-                     <h4>With delightful graphics and an intuitive touch interface, Tiny Story is the perfect point-and-click adventure game for hours of fun and entertainment. Download Tiny Story now on iOS and Android!</h4>
-                     <div class="row">
-                        <div class="8u 12u(mobile)">
-                           <!-- Feature --> 
-                           <section>
-                              <header>
-                                 <h3>Funny</h3>
-                              </header>
-                              <p>Get ready for an adventure packed with thrilling quests and mind-boggling puzzles that will keep you engaged and entertained throughout the game.</p>
-                              <a class="image featured"><img src="Upload/appTinyStory/img3.png" title="Tiny Story" alt="Tiny Story"></a>
-                           </section>
-                        </div>
-                        <div class="8u 12u(mobile)">
-                           <!-- Feature --> 
-                           <section>
-                              <header>
-                                 <h3>Simple</h3>
-                              </header>
-                              <p>Get ready to touch, use and collect various objects to solve puzzles and progress in the game.</p>
-                              <a class="image featured"><img src="Upload/appTinyStory/img5.png"></a> 
-                           </section>
-                        </div>
-                        <div class="8u 12u(mobile)">
-                           <!-- Feature --> 
-                           <section>
-                              <header>
-                                 <h3>Stucked?</h3>
-                              </header>
-                              <p>Unlock the secrets of Tiny Story with ease! Our helpful walkthrough videos will guide you every step of the way.  </p>
-                              <a class="image featured"><img src="Upload/appTinyStory/img4.png" title="Tiny Story" alt="Tiny Story"></a> 
-                           </section>
-                        </div>
-                     </div>
-                  </article>
-               </div>
-               <!-- Sidebar -->
-               <div id="sidebar" class="4u 12u(mobile)">
-                  <!-- Highlights --> 
-                  <section>
-                     <ul class="divided">
-                        <li>
-                           <!-- Highlight --> 
-                           <article class="box highlight">
-                              <header>
-                                 <h4>Available on:</h4>
-                              </header>
-                              <ul class="actions">
-                                 <li><a href="https://itunes.apple.com/app/tiny-story-adventure-free/id1187225790" class="button icon fa-apple" target="_blank">Get the demo for IOS</a></li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a href="https://itunes.apple.com/app/tiny-story-adventure/id1187225740" class="button icon fa-apple">Get the full version for IOS</a></li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStoryDemo" class="button icon fa-android">Get the demo for Android</a></li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory" class="button icon fa-android">Get the full version for Android</a></li></ul>
-                              <ul class="actions">
-                                 <li><a href="https://amlcreation.itch.io/tiny-story-1-adventure" class="button icon fa-laptop">Get it for PC / iMac / Linux</a></li>
-                              </ul>
-                              <ul>
-                                 <li>
-                                    <h4>More:</h4>
-                                 </li>
-                              </ul>
-                              <ul class="actions">
-                                 <li>
-                                    Read the review on <a href="https://www.appslikethese.com/tiny-story-1-app-review/" class="button icon fa fa-info-circle" target="_blank">www.appslikethese.com</a>
-                                 </li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a href="tinyStory-help.html" class="button icon fa fa-info-circle">Need help?</a></li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a target="_blank" href="https://youtu.be/QoX5-KCEOg4" class="button icon fa fa-youtube">Watch our Walkthrough Video [Part 1]</a></li>
-                              </ul>
-                              <ul class="actions">
-                                 <li><a target="_blank" href="https://youtu.be/FOT3j4goNGo" class="button icon fa fa-youtube">Watch our Walkthrough Video [Part 2]</a></li>
-                              </ul>
-                           </article>
-                        </li>
-                     </ul>
-                  </section>
-               </div>
-            </div>
-         </div>
-      </div> 
-         </div>
-        </div>
+          <p>Pick your favourite animal hero, wander through cosy streets, hidden paths and mysterious rooms, and piece together what happened so you can finally get back home.</p>
 
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <div id="copyright" class="container">
-                    <ul>
-                        <li class="icon fa-copyright"> Anne. Tous droits réservés. <br />
- Template de html5 up</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+          <p>Everything is built for touch: simple taps let you move, interact, use or combine items. No tiny hotspots, no random pixel-hunting – just a smooth, comfortable point-and-click experience on mobile.</p>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/skel-viewport.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+          <p>Whether you love classic adventure games or you’re discovering the genre for the first time, Tiny Story 1 offers hours of relaxing, brain-teasing fun for all ages.</p>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="feature-grid">
+          <article class="feature">
+            <h3>Funny & heart-warming</h3>
+            <p>Meet adorable characters, read light-hearted dialogues and solve quests that are cute rather than scary.</p>
+            <img src="Upload/appTinyStory/img3.png" alt="Tiny Story 1 screenshot with cute characters." />
+          </article>
+
+          <article class="feature">
+            <h3>Touch-friendly puzzles</h3>
+            <p>Tap to collect, use and combine objects. Every interaction is designed for phones and tablets.</p>
+            <img src="Upload/appTinyStory/img5.png" alt="Tiny Story 1 puzzle and inventory scene." />
+          </article>
+
+          <article class="feature">
+            <h3>Stuck? Get gentle help</h3>
+            <p>If you’re unsure what to do next, follow free walkthrough videos that guide you step by step.</p>
+            <img src="Upload/appTinyStory/img4.png" alt="Tiny Story 1 puzzle screenshot." />
+          </article>
+        </section>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="card sidebar">
+        <h2>Where to play</h2>
+
+        <h3>iOS</h3>
+        <a class="btn" href="https://itunes.apple.com/app/tiny-story-adventure-free/id1187225790" target="_blank"> Get the demo for iOS</a>
+        <a class="btn" href="https://itunes.apple.com/app/tiny-story-adventure/id1187225740" target="_blank"> Get the full version for iOS</a>
+
+        <h3>Android</h3>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStoryDemo" target="_blank">🤖 Get the demo for Android</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory" target="_blank">🤖 Get the full version for Android</a>
+
+        <h3>Desktop</h3>
+        <a class="btn" href="https://amlcreation.itch.io/tiny-story-1-adventure" target="_blank">💻 Get it for PC / Mac / Linux</a>
+
+        <h3>More about the game</h3>
+        <ul>
+          <li>Review:
+            <a class="text-link" href="https://www.appslikethese.com/tiny-story-1-app-review/" target="_blank">appslikethese.com</a>
+          </li>
+          <li><a class="text-link" href="https://youtu.be/QoX5-KCEOg4" target="_blank">Walkthrough – Part 1</a></li>
+          <li><a class="text-link" href="https://youtu.be/FOT3j4goNGo" target="_blank">Walkthrough – Part 2</a></li>
+          <li><a class="text-link" href="Application-Point-and-Click-TinyStory-games.html">Back to all Tiny Story games</a></li>
+        </ul>
+              <h3>Need help?</h3>
+<a class="btn" href="tinyStory-help.html">
+  ❓ Tiny Story 1 help page
+</a>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      © Anne-Murielle Larger (Annemu’s Games). All rights reserved.
+    </footer>
+
+  </div>
+
+  <!-- LANGUAGE SWITCH -->
+  <script>
+    document.getElementById("lang-switcher")?.addEventListener("change", function(){
+      if (this.value === "fr") {
+        window.location.href = "Application-Point-and-Click-TinyStory.html";
+      } else {
+        window.location.href = "Application-Point-and-Click-TinyStory-en.html";
+      }
+    });
+  </script>
 </body>
 </html>

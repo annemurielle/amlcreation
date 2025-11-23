@@ -1,203 +1,203 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
+  <meta charset="utf-8" />
+  <title>Fantasiant · Jeu d’aventure et de casse-tête pixelisé</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jouez à Fantasiant, un jeu d’aventure et de casse-tête en pixel art. Rassemblez tous les fragments du cristal du Héros, évitez les pièges et sauvez le royaume de l’énergie magique instable sur iOS, Android, PC, Mac et Linux." />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8642125-16"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-8642125-16');
-    </script>
-
-    <meta charset="UTF-8" />
-
-    <title>Fantasiant</title>
-    <meta name="Title" content="Fantasiant - Samcreation">
-    <meta name="Description" content="Drôle et fun jeu d'aventure pointez et cliquez pour mobile IOS et Android">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="pragma" content="no-cache" />
-
-    <meta http-equiv="expires" content="43200" />
-
-    <meta name="Author" content="Anne-Murielle Larger - Ptitboutchoux" />
-
-    <meta name="Copyright" content="2013 Anne-Murielle Larger Creation - Ptitboutchoux" />
-
-    <meta name="Identifier-URL" content="www.samcreation.ch/ptitboutchoux" />
-
-    <meta name="robots" content="ALL" />
-
-    <meta name="revisit-after" content="1 days" />
-
-    <link rel="shortcut icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/x-icon" />
-
-    <link rel="icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/gif" />
-
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" />
-<![endif]-->
-
-
-    <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
-
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="aml-base.css">
 </head>
-<body class="homepage">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=589060384535833";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+<body>
+  <div class="page">
 
+    <!-- HEADER -->
+    <header class="top">
+      <div class="brand">
+        <div class="brand-title">Annemu’s Games</div>
+        <div class="brand-sub">Aventures point-and-click douces et poétiques</div>
+      </div>
 
-        function secret(secretId) {
-            if (document.getElementById) {
-                secret = document.getElementById(secretId);
-                if (secret.style.display == "none") {
-                    secret.style.display = "";
-                }
-                else {
-                    secret.style.display = "none";
-                }
-            }
-        }
-    </script>
+      <nav class="top-nav">
+        <a class="chip" href="jeux-IOS-android.html">Tous les jeux</a>
+        <a class="chip" href="../Policy-Confidentiality_fr.html">Politique de confidentialité</a>
 
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <!-- Logo -->
-                <h1 id="logo"><a href="index.html" class="titleSite">AnneMu's games</a></h1>
-                <p >Explore a Sweet and Dreamy Universe of Unique and Entertaining Games</p>
-
-                <ul id="menuSocial">
-                    <li><a href='https://www.facebook.com/lesptitboutchoux/' target='_blank' class="icon fa fa-facebook" title='facebook'></a></li>
-                    <li>|</li>
-                     <li><a class="icon-x" href='https://twitter.com/amlCreation' target='_blank' title='X'></a></li>
-                    <li>|</li>
-                    <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target='_blank' title="Steam" class="icon fa-steam"><span class="label">Steam</span></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-apple" href='https://apps.apple.com/developer/anne-murielle-larger/id842112590' target='_blank' title='Annemu Games on AppStore'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-android" href='https://play.google.com/store/apps/dev?id=6866405066736735761' target='_blank' title='Annemu Games on Google Play'></a></li>
-                    <li>|</li>
-                    <li><a href='https://www.instagram.com/annemu_games' target='_blank' class="icon fa-instagram" title='Annemu Games on Instagram'></a></li>
-                    <li>|</li>
-                    <li><a href='http://bit.ly/2Z4Ckyh' target='_blank' class="icon fa-youtube" title='Annemu Games on Youtube'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-envelope-o" href='mailto:amlcreation.adventuregames@gmail.com' title='Contact us'></a></li>
-                </ul>
-
-                <nav id="nav">
-                    <ul>
-                        <li style="white-space: nowrap;"><a href="fantasiant-adventure-puzzle-game-en.html" class="icon fa-gamepad" title="Fantasiant"><span>Fantasiant</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald-en.html" class="icon fa-gamepad" title="Celestwald"><span>Cel1</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald2-en.html" class="icon fa-gamepad" title="Celestwald2"><span>Cel2</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Application-Point-and-Click-TinyStory-games.html" class="icon fa-gamepad" title="Tiny Story games"><span>Tiny Story games</span></a></li>
-                        <li style="white-space: nowrap;"><a href="cats-in-the-box-en.html" class="icon fa-gamepad" title="Cats in the box"><span>Cats</span></a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="lang-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+            <option value="en">English</option>
+            <option value="fr" selected>Français</option>
+          </select>
         </div>
+      </nav>
+    </header>
 
-        <div id="wrapper">
-            <div id="content">
+    <!-- MAIN -->
+    <main class="layout">
 
-            <div id="main-wrapper">
-                    <div id="main" class="container">
-                        <div class="row">
-                            <!-- Content -->
-                            <div id="content" class="8u 12u(mobile)">
-                                <!-- Post --> <article class="box post">
-<header>
-<h2><a class="icon fa-arrow-left" href="jeux-IOS-android.html" title="Jeux">&nbsp;</a></h2><a class="icon fa-arrow-left" href="jeux-IOS-android.html" title="Jeux">
-                    </a><p style="text-align:center"><a class="icon fa-arrow-left" href="jeux-IOS-android.html" title="Jeux">
-</a><a class="icon fa-download" href="https://itunes.apple.com/app/fantasiant/id1492451515" style="color:#9370db">&nbsp;IOS</a><span style="color:#9370db">&nbsp;|&nbsp;
-</span><a class="icon fa-download" href="https://play.google.com/store/apps/details?id=com.amlcreation.broken" style="color:#9370db">&nbsp;Android</a>
-</p><h4>Vous êtes le héros qui sauvera Fantasiant! </h4>
-                                    <h4>Euh ... en fait, les habitants de Fantasiant ne vous ont pas donné le choix ... alors faites de votre mieux!</h4><br><p> 
-                               <a class="image featured">     <img src="Upload/appFantasiant/img0.jpg"></a></p>
-                    <div class="row">
-                        <div class="12u 12u(mobile)">
-                            <p>Le cristal du héros a été détruit et ses fragements dispersés sur Fantasiant déverse une magie instable et dangeureuse.</p>
-                            <p><span style="color:#ffffff">Un </span><span class="auto-style2" style="color:#ff0000"><strike>grand</strike></span> <span class="auto-style2" style="color:#ff0000"> <strike>héros</strike></span><span class="auto-style1" style="color:#66ff33"> truc minuscule, rose et pixelisé</span><span style="color:#ffffff"> a été invoqué à l'aide d'une incantation </span><span class="auto-style2" style="color:#ff0000"><strike>légendaire</strike></span> <span class="auto-style1" style="color:#66ff33">râtée</span>. <span style="color:#ffffff">Ce beau héros</span> <span class="auto-style1" style="color:#66ff33">(quoi??)</span>, c'est vous! Êtes-vous prêt à collecter tous les fragments du cristal?</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-vekJUK-j1s?si=koBPMFs6soOPfJHl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-                        <div class="row">
-                            <div class="12u 12u(mobile)">
-                                 <h3>le jeu ne contient aucune publicité et peut être joué hors-ligne.<br> 
-                        </h3></div>
-                    </div>
-                    <div class="row">
-                        <div class="4u 12u(mobile)">
-                            <section> <a class="image featured"><img src="Upload/appFantasiant/image4.png"></a> <header> <h3>collectionner les fragments</h3> </header>
-                                <p>Résolvez des énigmes drôles et intéressantes pour trouver les fragments.</p> </section>
-                        </div>
-                        <div class="4u 12u(mobile)">
-                            <section> <a class="image featured"><img src="Upload/appFantasiant/image2.png"></a> <header> <h3>trouver des objets</h3> </header>
-                                <p>De nombreux objets vous aideront lors de votre quête.</p> </section>
-                        </div>
-                        <div class="4u 12u(mobile)">
-                            <section> <a class="image featured"><img src="Upload/appFantasiant/image3.png"></a> <header> <h3>ne mourrez pas!</h3><p>Vous êtes vraiment un petit héros rose et pixelisé... méfiez-vous, le danger vous attend!</p></header></section>
-                        </div>
-                    </div>
-                   </div></header></article>
-                            </div>
-                        <div class="4u 12u(mobile)">
-                            <section> <ul class="divided">
-                        <li>
-                              <article class="box highlight"> <header> <h4><a href="fantasiant-adventure-puzzle-game-en.html#">Disponible sur</a>:</h4> </header>
-  <ul class="actions">
-                                    <li><a class="button icon fa-apple" href="https://itunes.apple.com/app/fantasiant/id1492451515">IOS</a></li></ul>
-<ul><li><a class="button icon fa-android" href="https://play.google.com/store/apps/details?id=com.amlcreation.broken">Android</a></li>
-                                </ul>
-<ul class="actions">
-                        <li><a href="https://www.youtube.com/playlist?list=PLJTpL2XGpSLXUr-zvZe8R3Wn-dXYn7QHU" target="_blank" class="button icon fa-file">Solution des niveaux</a></li>
-                                      </ul>
-</article>
-                        </li>
-                    </ul> </section>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-         </div>
-        </div>
+      <!-- MAIN CARD -->
+      <article class="card">
 
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <div id="copyright" class="container">
-                    <ul>
-                        <li class="icon fa-copyright"> Anne. Tous droits réservés. <br />
- Template de html5 up</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+     
+        <header class="game-header">
+          <div class="badge"><span>Aventure · Puzzle</span> Fantasiant</div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/skel-viewport.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+          <h1>Fantasiant</h1>
+
+          <p class="meta-line">
+            Un minuscule héros en pixels, un cristal brisé et un monde en danger.
+            Rassemblez chaque fragment du Cristal du Héros et ramenez l’équilibre à Fantasiant.
+          </p>
+
+          <p>
+            Vous avez été appelé·e en tant que petit héros rose pixélisé pour sauver Fantasiant
+            de l’énergie magique instable et dangereuse libérée lorsque le Cristal du Héros s’est brisé.
+            Explorez, résolvez des énigmes et restez en vie dans cette aventure mignonne mais périlleuse.
+          </p>
+
+          <!-- HERO IMAGE -->
+          <figure class="hero-media">
+            <img src="Upload/appFantasiant/img0.jpg"
+                 alt="Héros pixelisé de Fantasiant dans un monde fantastique"
+                 style="max-width:100%; height:auto; border-radius:12px; display:block; margin:0 auto;">
+          </figure>
+
+          <!-- TRAILER -->
+          <div class="video-wrap" style="margin-top: 1rem;">
+            <iframe
+              src="https://www.youtube.com/embed/-vekJUK-j1s?si=blr-_-MwWUA2zubR"
+              title="Fantasiant – Bande-annonce"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+
+          <p style="margin-top: 1rem;">
+            Profitez d’une expérience <strong>fluide et sans interruption</strong> :
+            pas de publicité, pas besoin de connexion internet pour jouer.
+          </p>
+        </header>
+
+        <!-- FEATURES -->
+        <section class="game-copy">
+          <h2>Gameplay</h2>
+
+          <div class="feature-grid">
+            <article class="feature">
+              <h3>Rassemblez les éclats du cristal</h3>
+              <p>
+                Mettez vos talents de résolution d’énigmes à l’épreuve et
+                collectez tous les éclats dispersés du Cristal du Héros.
+                Chaque niveau apporte de nouvelles situations, de petits moments d’histoire
+                et des rebondissements amusants.
+              </p>
+              <figure class="screenshot">
+                <img src="Upload/appFantasiant/image4.png"
+                     alt="Capture d’écran de Fantasiant avec les éclats du cristal"
+                     style="max-width:100%; height:auto; border-radius:12px;">
+              </figure>
+            </article>
+
+            <article class="feature">
+              <h3>Trouvez des objets & résolvez des énigmes</h3>
+              <p>
+                Fouillez chaque recoin, trouvez des objets utiles et combinez-les pour avancer.
+                Résolvez des énigmes amusantes, interagissez avec le décor et découvrez
+                des secrets cachés dans cette aventure inspirée du point-and-click.
+              </p>
+              <figure class="screenshot">
+                <img src="Upload/appFantasiant/image2.png"
+                     alt="Énigme avec objets à trouver dans Fantasiant"
+                     style="max-width:100%; height:auto; border-radius:12px;">
+              </figure>
+            </article>
+
+            <article class="feature">
+              <h3>Ne laissez pas le danger vous arrêter</h3>
+              <p>
+                Vous êtes un tout petit héros rose… mais le danger est partout&nbsp;!
+                Évitez les pièges mortels, timez bien vos mouvements et utilisez votre cerveau
+                si vous voulez voir la fin de votre quête.
+              </p>
+              <figure class="screenshot">
+                <img src="Upload/appFantasiant/image3.png"
+                     alt="Héros de Fantasiant face aux pièges et dangers"
+                     style="max-width:100%; height:auto; border-radius:12px;">
+              </figure>
+            </article>
+          </div>
+        </section>
+
+        <!-- HELP / WALKTHROUGH -->
+        <section class="game-copy">
+          <h2>Besoin d’aide&nbsp;?</h2>
+          <p>
+            Bloqué·e sur un niveau&nbsp;? Vous pouvez regarder
+            la
+            <a class="text-link"
+               href="https://www.youtube.com/playlist?list=PLJTpL2XGpSLXUr-zvZe8R3Wn-dXYn7QHU"
+               target="_blank">
+              playlist des solutions de niveaux de Fantasiant sur YouTube
+            </a>.
+          </p>
+        </section>
+
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="card sidebar">
+        <h2>Où jouer&nbsp;?</h2>
+
+        <h3>iOS</h3>
+        <a class="btn"
+           href="https://itunes.apple.com/app/fantasiant/id1492451515"
+           target="_blank">
+           Télécharger sur iOS
+        </a>
+
+        <h3>Android</h3>
+        <a class="btn"
+           href="https://play.google.com/store/apps/details?id=com.amlcreation.broken"
+           target="_blank">
+          🤖 Télécharger sur Android
+        </a>
+
+        <h3>PC / Mac / Linux</h3>
+        <a class="btn"
+           href="https://amlcreation.itch.io/fantasiant"
+           target="_blank">
+          💻 Jouer sur itch.io
+        </a>
+
+        <h3>Solutions des niveaux</h3>
+        <a class="btn"
+           href="https://www.youtube.com/playlist?list=PLJTpL2XGpSLXUr-zvZe8R3Wn-dXYn7QHU"
+           target="_blank">
+          🎥 Voir les solutions
+        </a>
+      </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      © Anne-Murielle Larger (Annemu’s Games). Tous droits réservés.
+    </footer>
+
+  </div>
+
+  <!-- LANGUAGE SWITCH -->
+  <script>
+    document.getElementById("lang-switcher")?.addEventListener("change", function(){
+      if (this.value === "fr") {
+        window.location.href = "fantasiant-adventure-puzzle-game-fr.html";
+      } else {
+        window.location.href = "fantasiant-adventure-puzzle-game-en.html";
+      }
+    });
+  </script>
+
 </body>
 </html>

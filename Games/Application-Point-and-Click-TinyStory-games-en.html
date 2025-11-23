@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tiny Story – Adventure Game Collection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover the full Tiny Story collection: cute, cozy point-and-click adventures with animal heroes, gentle puzzles and zero stress. Explore all Tiny Story games here." />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="aml-base.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="top">
+      <div class="brand">
+        <div class="brand-title">Annemu’s Games</div>
+        <div class="brand-sub">Sweet, dreamy point-and-click adventures</div>
+      </div>
+
+      <nav class="top-nav">
+        <a class="chip" href="games-IOS-android.html">All games</a>
+        <a class="chip" href="../Policy-Confidentiality_en.html">Privacy policy</a>
+
+        <div class="lang-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Change language">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="card">
+        <h1 class="section-title">Tiny Story – Adventure Game Collection</h1>
+        <p class="section-sub">
+          Explore the full series of cute, cozy and stress-free point-and-click adventures.  
+          Choose your animal hero, solve gentle puzzles and discover colorful worlds filled with tiny mysteries.
+        </p>
+
+        <!-- BUTTONS: Game 1–5 -->
+        <div class="btn-row" style="margin-top:14px;">
+          <a class="btn primary" href="Application-Point-and-Click-TinyStory-en.html">Tiny Story 1</a>
+          <a class="btn primary" href="Application-Point-and-Click-TinyStory2-en.html">Tiny Story 2</a>
+          <a class="btn primary" href="Application-Point-and-Click-TinyStory3-en.html">Tiny Story 3</a>
+          <a class="btn primary" href="Application-Point-and-Click-TinyStory4-en.html">Tiny Story 4</a>
+          <a class="btn primary" href="Application-Point-and-Click-TinyStory5-en.html">Tiny Story 5</a>
+        </div>
+
+        <p style="margin-top:16px; font-size:15px; color:var(--accent-soft);">
+          All Tiny Story games are peaceful, ad-free and playable offline.  
+          Perfect for kids, families and anyone who enjoys light exploration and cozy puzzles.
+        </p>
+      </section>
+
+      <!-- HERO CHARACTERS -->
+      <section class="card">
+        <h2 class="section-title">Meet the Tiny Story Heroes</h2>
+        <p class="section-sub">
+          Barry, Lizzy, Charry, Mimy and Wolfy are waiting for you.  
+          Each adventure brings new locations, puzzles and friends to rescue.
+        </p>
+
+        <img class="image-featured" src="Upload/appTinyStoryAll/character.png" alt="Tiny Story main characters" />
+      </section>
+
+      <!-- SCREENSHOT -->
+      <section class="card">
+        <h2 class="section-title">A Colorful and Intuitive Adventure World</h2>
+        <p class="section-sub">
+          Every Tiny Story game offers charming hand-drawn locations designed for smooth mobile gameplay.
+        </p>
+
+        <img class="image-featured" src="Upload/appTinyStoryAll/screenShoot.jpg" alt="Tiny Story game screenshots" />
+      </section>
+
+    </main>
+
+    <footer>
+      © Anne-Murielle Larger (Annemu’s Games). All rights reserved.
+    </footer>
+
+  </div>
+
+  <!-- LANG SWITCH -->
+  <script>
+    document.getElementById("lang-switcher")?.addEventListener("change", function(){
+      if (this.value === "fr") {
+        window.location.href = "Application-Point-and-Click-TinyStory-games.html";
+      } else {
+        window.location.href = "Application-Point-and-Click-TinyStory-games-en.html";
+      }
+    });
+  </script>
+</body>
+</html>

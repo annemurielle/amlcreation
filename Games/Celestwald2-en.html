@@ -1,254 +1,152 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <title>Celestwald 2 – Point-and-click Fantasy Adventure</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8642125-16"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-8642125-16');
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Celestwald 2 is the magical sequel to the original puzzle adventure. Explore new areas of the enchanted forest, solve fresh puzzles and uncover mysterious secrets in a hand-drawn fantasy world." />
 
-    <meta charset="UTF-8" />
-
-    <title>Celestwald 2 point-and-click Adventure on mobile</title>
-    <meta name="Title" content="Celestwald 2 point-and-click Adventure on mobile - Samcreation">
-    <meta name="Description" content="Celestwald 2 is a sequel to the popular puzzle adventure game Celestwald. In this game, players return to the enchanted forest of Celestwald to explore a new world, solve new puzzles, and uncover new secrets. The game features a beautiful and immersive world, challenging and rewarding puzzles, and a heartwarming story about friendship and discovery.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="pragma" content="no-cache" />
-
-    <meta http-equiv="expires" content="43200" />
-
-    <meta name="Author" content="Anne-Murielle Larger - Ptitboutchoux" />
-
-    <meta name="Copyright" content="2013 Anne-Murielle Larger Creation - Ptitboutchoux" />
-
-    <meta name="Identifier-URL" content="www.samcreation.ch/ptitboutchoux" />
-
-    <meta name="robots" content="ALL" />
-
-    <meta name="revisit-after" content="1 days" />
-
-    <link rel="shortcut icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/x-icon" />
-
-    <link rel="icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/gif" />
-
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" />
-<![endif]-->
-
-
-    <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
-
-
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="aml-base.css" />
 </head>
-<body class="homepage">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=589060384535833";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+<body>
+<div class="page">
 
-
-        function secret(secretId) {
-            if (document.getElementById) {
-                secret = document.getElementById(secretId);
-                if (secret.style.display == "none") {
-                    secret.style.display = "";
-                }
-                else {
-                    secret.style.display = "none";
-                }
-            }
-        }
-    </script>
-
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <!-- Logo -->
-                <h1 id="logo"><a href="index.html" class="titleSite">AnneMu's games</a></h1>
-                <p >Explore a Sweet and Dreamy Universe of Unique and Entertaining Games</p>
-
-                <ul id="menuSocial">
-                    <li><a href='https://www.facebook.com/lesptitboutchoux/' target='_blank' class="icon fa fa-facebook" title='facebook'></a></li>
-                    <li>|</li>
-                     <li><a class="icon-x" href='https://twitter.com/amlCreation' target='_blank' title='X'></a></li>
-                    <li>|</li>
-                    <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target='_blank' title="Steam" class="icon fa-steam"><span class="label">Steam</span></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-apple" href='https://apps.apple.com/developer/anne-murielle-larger/id842112590' target='_blank' title='Annemu Games on AppStore'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-android" href='https://play.google.com/store/apps/dev?id=6866405066736735761' target='_blank' title='Annemu Games on Google Play'></a></li>
-                    <li>|</li>
-                    <li><a href='https://www.instagram.com/annemu_games' target='_blank' class="icon fa-instagram" title='Annemu Games on Instagram'></a></li>
-                    <li>|</li>
-                    <li><a href='http://bit.ly/2Z4Ckyh' target='_blank' class="icon fa-youtube" title='Annemu Games on Youtube'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-envelope-o" href='mailto:amlcreation.adventuregames@gmail.com' title='Contact us'></a></li>
-                </ul>
-
-                <nav id="nav">
-                    <ul>
-                        <li style="white-space: nowrap;"><a href="fantasiant-adventure-puzzle-game-en.html" class="icon fa-gamepad" title="Fantasiant"><span>Fantasiant</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald-en.html" class="icon fa-gamepad" title="Celestwald"><span>Cel1</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald2-en.html" class="icon fa-gamepad" title="Celestwald2"><span>Cel2</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Application-Point-and-Click-TinyStory-games.html" class="icon fa-gamepad" title="Tiny Story games"><span>Tiny Story games</span></a></li>
-                        <li style="white-space: nowrap;"><a href="cats-in-the-box-en.html" class="icon fa-gamepad" title="Cats in the box"><span>Cats</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div id="wrapper">
-            <div id="content">
-
-            <div id="main-wrapper">
-  <div id="main" class="container">
-    <div class="row">
-      <div id="content" class="8u 12u(mobile)">
-        <article class="box post">
-          <header>
-            <h2>
-              <a class="icon fa-arrow-left" href="games-IOS-android.html" title="Games">&nbsp;</a>Celestwald 2 Adventure
-            </h2>
-            <p style="text-align:center">
-              <a class="icon fa-download" href="https://apps.apple.com/app/celestwald-2/id6450318342" style="color:#9370db">Download on&nbsp;IOS</a>
-              <span style="color:#9370db">&nbsp;|&nbsp;</span>
-              <a class="icon fa-download" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo2" style="color:#9370db">&nbsp;Download on&nbsp;Android</a>
-            </p>
-            <h4>
-              Immerse yourself in the enchanting sequel to Celestwald, where a new adventure awaits you in the magical forest.
-            </h4>
-            <br>
-            <p>
-             <iframe src="https://www.youtube.com/embed/eQ6_phYwAtI?si=i3QkJi8u3-Fr_TY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></p>
-            <div class="row">
-              <div class="12u 12u(mobile)">
-                <p>
-                  Return to Celestwald and embark on a new journey filled with puzzles, secrets, and heartwarming encounters.
-                </p>
-                <p>
-                  Join the alchemist apprentice once again as they explore the depths of the forest and uncover the mysteries that lie hidden within.
-                </p>
-              </div>
-              <div class="row">
-                <div class="12u 12u(mobile)">
-                  <h3>
-                    Enjoy an ad-free experience and play the game without the need for an internet connection.
-                  </h3>
-                </div>
-              </div>
-              <div class="row">
-                <div class="8u 12u(mobile)">
-                  <section>
-                    <header>
-                      <h3>Intriguing Puzzles</h3>
-                    </header>
-                    <p>
-                      Challenge your mind with a variety of puzzles that will test your logic, observation, and problem-solving skills.
-                    </p>
-                    <a class="image featured">
-                      <img src="Upload/appCelestwald2/IMG_2305.PNG" title="Puzzling" alt="Puzzling"></a>
-                  </section>
-                </div>
-                <div class="8u 12u(mobile)">
-                  <section>
-                    <header>
-                      <h3>Enchanting Artwork</h3>
-                    </header>
-                    <p>
-                      Immerse yourself in the beautifully crafted world of Celestwald, brought to life with stunning hand-drawn illustrations.
-                    </p>
-                    <a class="image featured">
-                      <img src="Upload/appCelestwald2/IMG_2302.PNG" title="Stunning arts" alt="Stunning arts"></a>
-                  </section>
-                </div>
-                <div class="8u 12u(mobile)">
-                  <section>
-                    <header>
-                      <h3>Helpful Walkthroughs</h3>
-                      <p>
-                        If you get stuck, our helpful walkthrough videos will guide you through any challenging puzzles.
-                      </p>
-                    </header>
-                    <a class="image featured">
-                      <img src="Upload/appCelestwald2/IMG_2300.PNG" title="Walkthrough" alt="Walkthrough">
-                    </a>
-                  </section>
-                </div>
-              </div>
-            </div></header></article>
-                            </div>
-                        <div class="4u 12u(mobile)">
-                            <section>
-<ul class="divided">
-                        <li>
-                            <article class="box highlight"> <header> <h4><a href="#">Available on</a>:</h4> </header>
-  <ul class="actions">
-   <li><a class="button icon fa-apple" href="https://apps.apple.com/app/celestwald-2/id6450318342" title="Celestwald 2 IOS">Get it for IOS</a></li></ul>
-<ul class="actions"><li><a class="button icon fa-android" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo2">Get it for Android</a></li></ul>
-<ul><li><h4>More:</h4></li></ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-facebook" href="https://www.facebook.com/Celestwald" title="Celestwald on facebook">facebook</a></li>
-                                </ul>
-<ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/FEhQCn1evsw" title="Intro">Watch the intro</a></li>
-                                </ul>
-<ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/j1zBE833cxc" title="Walkthrough video chapter 1">Watch our walkthrough part [PART 1]</a></li>
-                                </ul>
-<ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/1brYW1v9lm0" title="Walkthrough video part 2">Watch our walkthrough video [PART 2]</a></li>
-                                </ul>
-<ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/QZrxJi4wk0Q" title="Walkthrough video part 3">Watch our walkthrough video [PART 3]</a></li>
-                                </ul>
-</article>
-                        </li>
-                    </ul> </section>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-         </div>
-        </div>
-
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <div id="copyright" class="container">
-                    <ul>
-                        <li class="icon fa-copyright"> Anne. Tous droits réservés. <br />
- Template de html5 up</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <!-- HEADER -->
+  <header class="top">
+    <div class="brand">
+      <div class="brand-title">Annemu’s Games</div>
+      <div class="brand-sub">Soft, poetic point-and-click adventures</div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/skel-viewport.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <nav class="top-nav">
+      <a class="chip" href="games-IOS-android.html">All games</a>
+      <a class="chip" href="../Policy-Confidentiality_en.html">Privacy Policy</a>
+
+      <div class="lang-wrap">
+        <select id="lang-switcher" class="lang-select" aria-label="Change language">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="layout">
+
+    <!-- MAIN CARD -->
+    <article class="card">
+
+      <header class="game-header">
+        <div class="badge"><span>Adventure · Puzzle</span> Celestwald 2</div>
+
+        <h1>Celestwald 2 – The Enchanted Journey Continues</h1>
+
+        <p class="meta-line">
+          Return to the magical forest of Celestwald and join the young alchemist apprentice on a brand-new journey full of mysteries and warm encounters.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn primary" href="https://apps.apple.com/app/celestwald-2/id6450318342" target="_blank"> Download for iOS</a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo2" target="_blank">🤖 Download for Android</a>
+        </div>
+
+        <p class="meta-line">
+          Completely offline, no ads and suitable for players who enjoy calm storytelling and gentle puzzle solving.
+        </p>
+      </header>
+
+      <!-- TRAILER -->
+      <div class="video-wrap">
+        <div class="video-inner">
+          <iframe src="https://www.youtube.com/embed/eQ6_phYwAtI?si=i3QkJi8u3-Fr_TY2"
+                  title="Celestwald 2 Trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <section class="game-copy">
+        <p>
+          After the events of the first game, the alchemist apprentice discovers that the forest hides even deeper secrets. Strange creatures, ancient ingredients and forgotten pathways await you.
+        </p>
+
+        <p>
+          Each area introduces new puzzles designed to challenge your observation and creativity, while maintaining a relaxing and heartwarming tone.
+        </p>
+
+        <p>
+          The entire world is hand-drawn with love, creating a cozy and enchanting atmosphere perfect for quiet exploration.
+        </p>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="feature-grid">
+
+        <article class="feature">
+          <h3>Intriguing puzzles</h3>
+          <p>Solve new handcrafted puzzles that test logic, observation and experimentation.</p>
+          <img src="Upload/appCelestwald2/IMG_2305.PNG" alt="Celestwald 2 puzzle" />
+        </article>
+
+        <article class="feature">
+          <h3>Beautiful artwork</h3>
+          <p>Enjoy detailed hand-drawn illustrations bringing the fantasy forest to life.</p>
+          <img src="Upload/appCelestwald2/IMG_2302.PNG" alt="Celestwald 2 artwork" />
+        </article>
+
+        <article class="feature">
+          <h3>Helpful walkthroughs</h3>
+          <p>If you ever get stuck, complete video guides are available so you can continue the adventure peacefully.</p>
+          <img src="Upload/appCelestwald2/IMG_2300.PNG" alt="Celestwald 2 help" />
+        </article>
+
+      </section>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="card sidebar">
+
+      <h2>Where to play?</h2>
+
+      <h3>iOS</h3>
+      <a class="btn" href="https://apps.apple.com/app/celestwald-2/id6450318342"> Download for iOS</a>
+
+      <h3>Android</h3>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo2">🤖 Download for Android</a>
+
+      <h3>More</h3>
+      <ul>
+        <li><a class="text-link" href="https://www.facebook.com/Celestwald" target="_blank">Facebook page</a></li>
+        <li><a class="text-link" href="https://youtu.be/FEhQCn1evsw" target="_blank">Intro video</a></li>
+        <li><a class="text-link" href="https://youtu.be/j1zBE833cxc" target="_blank">Walkthrough – Part 1</a></li>
+        <li><a class="text-link" href="https://youtu.be/1brYW1v9lm0" target="_blank">Walkthrough – Part 2</a></li>
+        <li><a class="text-link" href="https://youtu.be/QZrxJi4wk0Q" target="_blank">Walkthrough – Part 3</a></li>
+      </ul>
+
+    </aside>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © Anne-Murielle Larger (Annemu’s Games). All rights reserved.
+  </footer>
+
+</div>
+
+<!-- LANGUAGE SWITCH -->
+<script>
+document.getElementById("lang-switcher")?.addEventListener("change", function(){
+  if (this.value === "fr") window.location.href = "Celestwald2-fr.html";
+  else window.location.href = "Celestwald2-en.html";
+});
+</script>
+
 </body>
 </html>

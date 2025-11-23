@@ -1,284 +1,185 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="de">
 <head>
+  <meta charset="utf-8" />
+  <title>Celestwald – Point-and-Click-Abenteuer</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8642125-16"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-8642125-16');
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Celestwald ist ein sanftes und magisches Point-and-Click-Abenteuer. Erkunde den Zauberwald, löse Rätsel und entdecke seine Geheimnisse. Verfügbar für iOS, Android, Steam und itch.io." />
 
-    <meta charset="UTF-8" />
-
-    <title>Celestwald Point-and-Click-Abenteuer auf Mobilgeräten auf PC/MacOs</title>
-    <meta name="Title" content="Celestwald Point-and-Click-Abenteuer auf Mobilgeräten auf PC/MacOs - Samcreation">
-    <meta name="Description" content="Tauchen Sie ein in ein bezauberndes Abenteuer in Celestwald, dem Point-and-Click-Spiel, das Sie in eine Welt voller Magie und Geheimnisse entführt. Lösen Sie anspruchsvolle Rätsel und erkunden Sie atemberaubende Landschaften, während Sie die Geheimnisse dieser fesselnden Geschichte enthüllen. Celestwald, mit seiner wunderschönen Grafik und dem immersiven Gameplay, wird Sie stundenlang begeistern. Verfügbar für Mobilgeräte, PC und MacOs im Google Play Store, AppStore, Steam und itch.io.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="imagetoolbar" content="no" />
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="pragma" content="no-cache" />
-
-    <meta http-equiv="expires" content="43200" />
-
-    <meta name="Author" content="Anne-Murielle Larger - Ptitboutchoux" />
-
-    <meta name="Copyright" content="2013 Anne-Murielle Larger Creation - Ptitboutchoux" />
-
-    <meta name="Identifier-URL" content="www.samcreation.ch/ptitboutchoux" />
-
-    <meta name="robots" content="ALL" />
-
-    <meta name="revisit-after" content="1 days" />
-
-    <link rel="shortcut icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/x-icon" />
-
-    <link rel="icon" href="http://www.samcreation.ch/ptitboutchoux/Favicon.ico" type="image/gif" />
-
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" />
-<![endif]-->
-
-
-    <meta name="google-site-verification" content="zC-DH1JUwEvdM-IWktJD23aOXHv7pb05rZN3oqeLCLk" />
-
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="aml-base.css">
 </head>
-<body class="homepage">
 
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=589060384535833";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+<body>
+<div class="page">
 
-
-        function secret(secretId) {
-            if (document.getElementById) {
-                secret = document.getElementById(secretId);
-                if (secret.style.display == "none") {
-                    secret.style.display = "";
-                }
-                else {
-                    secret.style.display = "none";
-                }
-            }
-        }
-    </script>
-
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <!-- Logo -->
-                <h1 id="logo"><a href="index.html" class="titleSite">AnneMu's games</a></h1>
-                <p >Explore a Sweet and Dreamy Universe of Unique and Entertaining Games</p>
-
-                <ul id="menuSocial">
-                    <li><a href='https://www.facebook.com/lesptitboutchoux/' target='_blank' class="icon fa fa-facebook" title='facebook'></a></li>
-                    <li>|</li>
-                     <li><a class="icon-x" href='https://twitter.com/amlCreation' target='_blank' title='X'></a></li>
-                    <li>|</li>
-                    <li><a href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target='_blank' title="Steam" class="icon fa-steam"><span class="label">Steam</span></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-apple" href='https://apps.apple.com/developer/anne-murielle-larger/id842112590' target='_blank' title='Annemu Games on AppStore'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-android" href='https://play.google.com/store/apps/dev?id=6866405066736735761' target='_blank' title='Annemu Games on Google Play'></a></li>
-                    <li>|</li>
-                    <li><a href='https://www.instagram.com/annemu_games' target='_blank' class="icon fa-instagram" title='Annemu Games on Instagram'></a></li>
-                    <li>|</li>
-                    <li><a href='http://bit.ly/2Z4Ckyh' target='_blank' class="icon fa-youtube" title='Annemu Games on Youtube'></a></li>
-                    <li>|</li>
-                    <li><a class="icon fa-envelope-o" href='mailto:amlcreation.adventuregames@gmail.com' title='Contact us'></a></li>
-                </ul>
-
-                <nav id="nav">
-                    <ul>
-                        <li style="white-space: nowrap;"><a href="fantasiant-adventure-puzzle-game-en.html" class="icon fa-gamepad" title="Fantasiant"><span>Fantasiant</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald-en.html" class="icon fa-gamepad" title="Celestwald"><span>Cel1</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Celestwald2-en.html" class="icon fa-gamepad" title="Celestwald2"><span>Cel2</span></a></li>
-                        <li style="white-space: nowrap;"><a href="Application-Point-and-Click-TinyStory-games.html" class="icon fa-gamepad" title="Tiny Story games"><span>Tiny Story games</span></a></li>
-                        <li style="white-space: nowrap;"><a href="cats-in-the-box-en.html" class="icon fa-gamepad" title="Cats in the box"><span>Cats</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div id="wrapper">
-            <div id="content">
-
-            <div id="main-wrapper">
-    <div id="main" class="container">
-        <div class="row">
-            <!-- Inhalt -->
-            <div id="content" class="8u 12u(mobile)">
-                <!-- Beitrag -->
-                <article class="box post">
-                    <header>
-                        <h2><a class="icon fa-arrow-left" href="games-IOS-android.html" title="Spiele">&nbsp;Celestwald</a></h2>
-                        <p style="text-align:center">
-                            <a class="icon fa-download" href="https://itunes.apple.com/app/celestwald/id1402637610" style="color:#9370db" title="Im AppStore herunterladen">AppStore</a>&nbsp;
-                            <span style="color:#9370db">&nbsp;|&nbsp;</span>
-                            <a class="icon fa-download" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo" style="color:#9370db" title="Im Google Play Store herunterladen">Google Play Store</a>&nbsp;
-                            <span style="color:#9370db">&nbsp;|&nbsp;</span>
-                            <a class="icon fa-download" href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" style="color:#9370db" title="Bei Steam herunterladen"><span style="color:#9370db">Steam&nbsp;</span></a>&nbsp;|&nbsp;&nbsp;
-                            <a href="https://amlcreation.itch.io/celestwal-adventure" target="_blank" style="color:#9370db" title="Celestwald auf itch.io">&nbsp;itch.io&nbsp;</a> 
-                        </p>
-                        <h4>Tauche ein in das fantastische und humorvolle Abenteuer eines Alchemistenlehrlings in Celestwald. Erkunde die zauberhafte Welt und enthülle ihre Geheimnisse. Vergiss nicht, dass auch <span style="color:#9370db" title="Celestwald"><a href="http://www.samcreation.ch/Ptitboutchoux/Celestwald2-en.html"> Celestwald 2</a></span> verfügbar ist!</h4>
-                        <p><iframe src="https://www.youtube.com/embed/MaQV4zhlPwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe></p>
-                        <div class="row">
-                            <div class="12u 12u(mobile)">
-                                <p>Lerne vom Großmeister-Alchemisten Theo und unterstütze ihn beim Ernten der magischen Samen der Celestwald-Frucht, dem Baum der Träume.</p>
-                                <p>Begleite den Alchemistenlehrling auf einer Reise, bei der Vorstellungskraft und Logik der Schlüssel zum Entschlüsseln der Geheimnisse von Celestwald sind.</p>
-                                <p>Die atemberaubende Kunst, mit Leidenschaft von Hand gezeichnet, und die bezaubernde Musik, die speziell für das Spiel von <a href="https://soundimage.org/" title="Eric Matyas - SoundImage" target="_blank" style="color:#66ff33">Eric Matyas</a> komponiert wurde, bringen Celestwald zum Leben.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="12u 12u(mobile)">
-                                <h3>Genieße eine Offline- und werbefreie Erfahrung und spiele das Spiel ohne Unterbrechungen.</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="8u 12u(mobile)">
-                                <section>
-                                    <header>
-                                        <h3>Rätsel</h3>
-                                    </header>
-                                    <p>Löse Rätsel und Enigmas, während du dich auf ein Abenteuer voller Spannung und Spaß begibst.</p>
-                                    <a class="image featured"><img src="Upload/appCelestwald/IMG_2300.PNG" title="Rätselhaft" alt="Rätselhaft"></a>
-                                </section>
-                            </div>
-                            <div class="8u 12u(mobile)">
-                                <section>
-                                    <header>
-                                        <h3>Atemberaubende Kunst</h3>
-                                    </header>
-                                    <p>Genieße die atemberaubende Kunst, die mit Leidenschaft erstellt wurde und das Spiel zum Leben erweckt.</p>
-                                    <a class="image featured"><img src="Upload/appCelestwald/IMG_2301.PNG" title="Atemberaubende Kunst" alt="Atemberaubende Kunst"></a>
-                                </section>
-                            </div>
-                            <div class="8u 12u(mobile)">
-                                <section>
-                                    <header>
-                                        <h3>Festgefahren?</h3>
-                                        <p>Wenn du feststeckst, können dir unsere hilfreichen Walkthrough-Videos durch jede herausfordernde Gegend helfen.</p>
-                                    </header>
-                                    <a class="image featured"><img src="Upload/appCelestwald/IMG_2299.PNG" title="Festgefahren?" alt="Festgefahren?"></a>
-                                </section>
-                            </div>
-                        </div>
-                    </header>
-                </article>
-            </div>
-            <div class="4u 12u(mobile)">
-                <section>
-                    <ul class="divided">
-                        <li>
-                            <article class="box highlight">
-                                <header>
-                                    <h4><a href="#" title="Verfügbar auf">Verfügbar auf</a>:</h4>
-                                </header>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-apple" href="https://itunes.apple.com/app/celestwald/id1402637610" style="width:250px" title="Im AppStore herunterladen">AppStore</a></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-android" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo" style="width:250px" title="Im Google Play Store herunterladen">Google Play</a></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-laptop" href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" style="width:250px" title="Bei Steam herunterladen">Steam</a></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-laptop" href="https://amlcreation.itch.io/celestwal-adventure" style="width:250px" title="Bei itch.io herunterladen">itch.io</a></li>
-                                </ul>
-                                <ul>
-                                    <li><h4>Mehr:</h4></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li>
-                                        Bewertung auf freeappsforme.com <br>
-                                        <a href="https://freeappsforme.com/celestwald-adventure-app-review/" title="Bewertung auf freeappsforme.com" class="button icon fa-book" target="_blank" style="width:250px">Bewertung</a>
-                                    </li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-info-circle" href="Celestwald-help.html" title="Brauchst du Hilfe?" style="width:250px">Brauchst du Hilfe?</a></li>
-                                </ul>
-                                <ul class="actions">
-                                    <li><a class="button icon fa-facebook" href="https://www.facebook.com/Celestwald" title="Celestwald auf Facebook" style="width:250px">Facebook</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/LbKaDZa4ikE" title="Lösung [PROLOG]" style="width:250px">Lösung [PROLOG]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/NLbLEtYX85E" title="Lösung [KAPITEL 1]" style="width:250px">Lösung [KAPITEL 1]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/ViZDZPvh8jE" title="Lösung [KAPITEL 2]" style="width:250px">Lösung [KAPITEL 2]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/eCS-DWIz84Q" title="Lösung [KAPITEL 3]" style="width:250px">Lösung [KAPITEL 3]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/S51ANehGNVU" title="Lösung [KAPITEL 4]" style="width:250px">Lösung [KAPITEL 4]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/szD6jcacbOs" title="Lösung [KAPITEL 5]" style="width:250px">Lösung [KAPITEL 5]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/kvCAWblwQ1o" title="Lösung [ENDKAPITEL]" style="width:250px">Lösung [ENDKAPITEL]</a></li>
-                                </ul>
-                                <!-- Zusätzliche Walkthrough-Videos -->
-                                <ul class="actions">
-                                    <li><a class="button icon fa-youtube" href="https://youtu.be/XVh-YBEOzrQ" title="Lösung [BESONDERER SCHATZ]" style="width:250px">Lösung [BESONDERER SCHATZ]</a></li>
-                                </ul>
-                            </article>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </div>
-</div> 
-         </div>
-        </div>
-
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <div id="copyright" class="container">
-                    <ul>
-                        <li class="icon fa-copyright"> Anne. Tous droits réservés. <br />
- Template de html5 up</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <!-- HEADER -->
+  <header class="top">
+    <div class="brand">
+      <div class="brand-title">Annemu’s Games</div>
+      <div class="brand-sub">Zarte und poetische Point-and-Click-Abenteuer</div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/skel-viewport.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <nav class="top-nav">
+      <a class="chip" href="games-IOS-android.html">Alle Spiele</a>
+      <a class="chip" href="../Policy-Confidentiality_de.html">Datenschutz</a>
+
+      <div class="lang-wrap">
+        <select id="lang-switcher" class="lang-select" aria-label="Sprache ändern">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="de" selected>Deutsch</option>
+          <option value="pt">Português</option>
+          <option value="ru">Русский</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="layout">
+
+    <!-- MAIN CARD -->
+    <article class="card">
+
+      <header class="game-header">
+        <div class="badge"><span>Abenteuer · Puzzle</span> Celestwald</div>
+
+        <h1>Celestwald – Das erste Abenteuer</h1>
+
+        <p class="meta-line">
+          Begleite einen jungen Alchemisten-Lehrling auf seiner Reise durch einen geheimnisvollen, magischen Wald.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn primary" href="https://itunes.apple.com/app/celestwald/id1402637610" target="_blank" rel="noopener">
+             Für iOS herunterladen
+          </a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo" target="_blank" rel="noopener">
+            🤖 Für Android herunterladen
+          </a>
+          <a class="btn" href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target="_blank" rel="noopener">
+            💻 Steam-Version
+          </a>
+          <a class="btn" href="https://amlcreation.itch.io/celestwal-adventure" target="_blank" rel="noopener">
+            🧩 itch.io-Version
+          </a>
+        </div>
+
+        <p class="meta-line">
+          Werbefrei und komplett offline spielbar — ideal zum Entspannen.
+        </p>
+      </header>
+
+      <!-- TRAILER -->
+      <div class="video-wrap">
+        <div class="video-inner">
+          <iframe src="https://www.youtube.com/embed/MaQV4zhlPwY"
+                  title="Celestwald – Trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <section class="game-copy">
+        <p><strong>Hilf dem jungen Alchemisten-Lehrling</strong>, der sich aufmacht, die magischen Samen des „Traumbaums“ zu sammeln – einer wunderbaren Pflanze, die tief im Wald wächst.</p>
+
+        <p>
+          Gemeinsam mit Großmeister Theo entdeckst du neue Orte, sammelst seltsame Objekte und löst liebevoll gestaltete Rätsel.
+          Beobachtung, Logik und Neugier sind deine besten Verbündeten.
+        </p>
+
+        <p>
+          Die handgezeichneten Illustrationen und die atmosphärische Musik, komponiert von  
+          <a href="https://soundimage.org/" target="_blank" rel="noopener">Eric Matyas</a>, erwecken Celestwald zum Leben.
+        </p>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="feature-grid">
+
+        <article class="feature">
+          <h3>Puzzles & Rätsel</h3>
+          <p>Löse originelle Rätsel, um im geheimnisvollen Wald weiterzukommen.</p>
+          <img src="Upload/appCelestwald/IMG_2300.PNG" alt="Celestwald – Rätsel" />
+        </article>
+
+        <article class="feature">
+          <h3>Wunderschöne Illustrationen</h3>
+          <p>Jede Szene wurde liebevoll von Hand gezeichnet — stimmungsvoll und einzigartig.</p>
+          <img src="Upload/appCelestwald/IMG_2301.PNG" alt="Celestwald – Illustrationen" />
+        </article>
+
+        <article class="feature">
+          <h3>Brauchst du Hilfe?</h3>
+          <p>Offizielle Komplettlösungs-Videos helfen dir bei schwierigen Stellen.</p>
+          <img src="Upload/appCelestwald/IMG_2299.PNG" alt="Celestwald – Hilfe" />
+        </article>
+
+      </section>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="card sidebar">
+      <h2>Wo spielen?</h2>
+
+      <h3>iOS</h3>
+      <a class="btn" href="https://itunes.apple.com/app/celestwald/id1402637610" target="_blank"> Für iOS herunterladen</a>
+
+      <h3>Android</h3>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.amlcreation.maxflo" target="_blank">🤖 Für Android herunterladen</a>
+
+      <h3>PC / Mac</h3>
+      <a class="btn" href="https://store.steampowered.com/app/2795670/Celestwald_adventure/" target="_blank">💻 Steam-Version</a>
+      <a class="btn" href="https://amlcreation.itch.io/celestwal-adventure" target="_blank">🧩 itch.io-Version</a>
+
+      <h3>Komplettlösungen</h3>
+      <ul>
+        <li><a class="text-link" href="https://youtu.be/LbKaDZa4ikE" target="_blank">Prolog</a></li>
+        <li><a class="text-link" href="https://youtu.be/NLbLEtYX85E" target="_blank">Kapitel 1</a></li>
+        <li><a class="text-link" href="https://youtu.be/ViZDZPvh8jE" target="_blank">Kapitel 2</a></li>
+        <li><a class="text-link" href="https://youtu.be/eCS-DWIz84Q" target="_blank">Kapitel 3</a></li>
+        <li><a class="text-link" href="https://youtu.be/S51ANehGNVU" target="_blank">Kapitel 4</a></li>
+        <li><a class="text-link" href="https://youtu.be/szD6jcacbOs" target="_blank">Kapitel 5</a></li>
+        <li><a class="text-link" href="https://youtu.be/kvCAWblwQ1o" target="_blank">Finales Kapitel</a></li>
+        <li><a class="text-link" href="https://youtu.be/XVh-YBEOzrQ" target="_blank">Spezialschatz</a></li>
+      </ul>
+      <h3>Need help?</h3>
+<a class="btn" href="Celestwald-help.html">
+  ❓ Celestwald help page
+</a>
+
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © Anne-Murielle Larger (Annemu’s Games). Alle Rechte vorbehalten.
+  </footer>
+
+</div>
+
+<!-- LANGUAGE SWITCH -->
+<script>
+document.getElementById("lang-switcher")?.addEventListener("change", function(){
+  switch (this.value) {
+    case "en": window.location.href = "Celestwald-en.html"; break;
+    case "fr": window.location.href = "Celestwald-fr.html"; break;
+    case "es": window.location.href = "Celestwald-es.html"; break;
+    case "it": window.location.href = "Celestwald-it.html"; break;
+    case "de": window.location.href = "Celestwald-de.html"; break;
+    case "pt": window.location.href = "Celestwald-pt.html"; break;
+    case "ru": window.location.href = "Celestwald-ru.html"; break;
+    case "ja": window.location.href = "Celestwald-ja.html"; break;
+  }
+});
+</script>
+
 </body>
 </html>
