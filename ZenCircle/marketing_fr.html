@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Zen Circle · Jeu de rythme zen avec mondes illustrés apaisants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zen Circle est un petit jeu de rythme zen : appuyez quand la balle entre dans l’arc lumineux pour garder un combo calme, débloquer des décors illustrés et enregistrer vos fonds en galerie. Mode Zen ou Rapide, aucune publicité, achat unique pour débloquer tous les mondes." />
+  <meta name="theme-color" content="#6b6de8" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zen Circle · Jeu de rythme zen avec mondes illustrés apaisants" />
+  <meta property="og:description" content="Tapotez en rythme dans des mondes illustrés relaxants, débloquez des décors évolutifs et enregistrez vos fonds préférés. Mode Zen ou Rapide, aucune publicité, achat unique pour tout débloquer." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --ink:#0f1222;
+      --sub:#60657a;
+      --bg:#0f0f1a;
+      --card:#ffffff10;
+      --accent:#2ECF7A;
+      --accent-ink:#0c3a26;
+      --ring:#ffffff24;
+      --maxw:1080px;
+      --radius:16px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --ink:#101321;
+        --sub:#5a5e72;
+        --bg:#f7f8fb;
+        --card:#ffffff;
+        --ring:#10132115;
+      }
+      body{
+        background:linear-gradient(180deg,#ecefff 0%,#f7f8fb 40%,#ffffff 100%) fixed;
+      }
+    }
+
+    *{ box-sizing:border-box; }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:url(hero.jpg) center/cover no-repeat;
+      opacity:0.10;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #7368e6 0%, transparent 55%),
+        radial-gradient(900px 500px at 110% 10%, #ee8bdc 0%, transparent 45%),
+        #0d0d18;
+    }
+
+    a{ color:inherit; }
+
+    .container{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:8px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+
+    .brand img{
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.35);
+    }
+
+    .brand span{
+      font-weight:700;
+      font-size:17px;
+      letter-spacing:.2px;
+      color:#f5f7ff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:#f5f7ff;
+      border:1px solid rgba(255,255,255,0.18);
+      background:#ffffff10;
+      backdrop-filter:blur(8px);
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#04140c;
+      font-weight:700;
+      border-color:transparent;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    /* sélecteur de langue */
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:999px;
+      padding:8px 28px 8px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+      backdrop-filter:blur(8px);
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* hero */
+    .hero{
+      margin-top:10px;
+      border-radius:var(--radius);
+      backdrop-filter:saturate(140%) blur(10px);
+      background:var(--card);
+      box-shadow:0 10px 30px rgba(0,0,0,0.25), inset 0 0 0 1px var(--ring);
+      padding:24px 26px;
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      gap:24px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0% 0%, #7d7df3 0%, transparent 55%),
+        radial-gradient(circle at 100% 100%, #2ecf7a 0%, transparent 55%);
+      opacity:0.45;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .hero-copy{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(26px,3.4vw,40px);
+      line-height:1.15;
+    }
+
+    .hero p.lead{
+      margin:0;
+      color:var(--sub);
+      font-size:clamp(15px,2.1vw,18px);
+    }
+
+    .hero-mini{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .hero-phone{
+      justify-self:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .phone-frame{
+      background:#000000e0;
+      padding:10px;
+      border-radius:32px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      max-width:260px;
+    }
+
+    .phone-frame img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:24px;
+    }
+
+    .hero-caption{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--sub);
+      text-align:center;
+      max-width:260px;
+      line-height:1.4;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      white-space:nowrap;
+      background:#ffffff;
+      color:var(--ink);
+      border:1px solid var(--ring);
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#04140c;
+      border-color:transparent;
+      font-weight:700;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--ink);
+    }
+
+    section{
+      margin-top:28px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.18), inset 0 0 0 1px var(--ring);
+    }
+
+    .grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .grid.cols-2{
+      grid-template-columns:1fr 1fr;
+    }
+
+    @media (max-width:840px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:20px;
+      }
+      .hero-phone{
+        order:-1;
+      }
+      .grid.cols-2{
+        grid-template-columns:1fr;
+      }
+    }
+
+    ul.clean{
+      margin:12px 0 0;
+      padding-left:20px;
+    }
+
+    ul.clean li{
+      margin:6px 0;
+    }
+
+    .shots{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      margin-top:10px;
+    }
+
+    .shots img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.18);
+      border:1px solid var(--ring);
+      background:#00000020;
+    }
+
+    @media (max-width:900px){
+      .shots{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width:560px){
+      .shots{
+        grid-template-columns:1fr;
+      }
+    }
+
+    footer{
+      color:var(--sub);
+      font-size:14px;
+      text-align:center;
+      margin:36px 0 18px;
+    }
+
+    footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- en-tête -->
+    <header>
+      <a class="brand" href="#">
+        <img src="logo.png" alt="Logo de l’application Zen Circle" />
+        <span>Zen Circle</span>
+      </a>
+      <nav>
+        <a href="support_fr.html">Support</a>
+
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="fr" selected>Français</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+
+        <a class="cta" href="https://apps.apple.com/app/6756264679">Télécharger sur l’App Store</a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>Un petit jeu de rythme zen dans des mondes illustrés apaisants</h1>
+        <p class="lead">
+          Appuyez quand la balle entre dans l’arc lumineux pour garder un combo calme, débloquer de nouveaux décors
+          et faire évoluer chaque monde. Jouez en mode Zen pour un rythme doux, ou passez en mode Rapide pour un défi
+          plus intense. Aucune publicité. Jeu jouable hors ligne, avec un achat unique pour débloquer tous les mondes.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/6756264679">Obtenir Zen Circle</a>
+          <a class="btn" href="support_fr.html">Support</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Confidentialité</a>
+        </div>
+        <p class="hero-mini">Disponible sur iPhone. Aucune connexion, aucun compte.</p>
+      </div>
+
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <img src="hero.jpg" alt="Écran de jeu de Zen Circle avec un cercle lumineux et un loup d’hiver illustré." />
+        </div>
+        <p class="hero-caption">
+          Tapotez en rythme, faites monter votre combo et débloquez des fonds d’écran illustrés pour chaque monde.
+        </p>
+      </div>
+    </article>
+
+    <!-- fonctionnalités -->
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>Pourquoi Zen Circle&nbsp;?</h2>
+        <ul class="clean">
+          <li>Un jeu de rythme minimaliste, facile à prendre en main</li>
+          <li>Deux modes&nbsp;: <strong>Zen</strong> pour un rythme lent et indulgent, <strong>Rapide</strong> pour un cercle plus petit et des mouvements plus vifs</li>
+          <li>Illustrations faites à la main avec plusieurs décors évolutifs par monde</li>
+          <li>Une <strong>quête calme du jour</strong> avec un objectif de combo simple à atteindre</li>
+          <li>Interface claire, sans compte, sans publicité et jouable entièrement hors ligne</li>
+          <li>Galerie intégrée&nbsp;: enregistrez vos fonds débloqués dans votre photothèque</li>
+          <li>Vibrations, sons et halo visuel réglables dans les paramètres</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Gratuit & achat unique Premium</h2>
+        <div class="grid cols-2" style="gap:12px; margin-top:6px;">
+          <div class="card" style="padding:14px;">
+            <h3 style="margin-top:0;">Version gratuite</h3>
+            <ul class="clean">
+              <li>Monde <strong>Forêt</strong> jouable dès le départ</li>
+              <li>Mode Zen et mode Rapide</li>
+              <li>Quête calme du jour</li>
+              <li>Galerie avec les décors déjà débloqués</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:14px; border:1px solid #2ecf7a55;">
+            <h3 style="margin-top:0;">Premium (achat unique)</h3>
+            <ul class="clean">
+              <li>Débloque tous les mondes actuels&nbsp;: Montagne, Océan, Sakura…</li>
+              <li>Accès à tous leurs décors évolutifs et ambiances sonores</li>
+              <li>Effets visuels de combo supplémentaires</li>
+              <li>Aucun abonnement, paiement unique</li>
+            </ul>
+          </div>
+        </div>
+        <p style="color:var(--sub); margin-top:10px; font-size:14px;">
+          Vous pouvez profiter du jeu de base gratuitement. L’achat Premium ajoute simplement davantage de mondes,
+          de décors et d’effets visuels, sans changer le fonctionnement du jeu.
+        </p>
+      </div>
+    </section>
+
+    <!-- captures d’écran -->
+    <section class="card">
+      <h2 style="margin-top:0;">Aperçu du jeu</h2>
+      <div class="shots">
+        <img src="Images/FR/screen1.jpg" alt="Écran d’accueil de Zen Circle avec la liste des mondes illustrés et la quête calme du jour." />
+        <img src="Images/FR/screen2.jpg" alt="Écran de galerie montrant plusieurs fonds débloqués pour les mondes Forêt, Montagne, Océan et Sakura." />
+        <img src="Images/FR/screen3.jpg" alt="Partie en cours dans le monde hivernal, avec un cercle lumineux, un compteur de combo et des cartes de score." />
+        <img src="Images/FR/screen4.jpg" alt="Partie en mode Rapide dans le monde Sakura, avec un cercle plus petit et des effets lumineux renforcés." />
+      </div>
+    </section>
+
+    <!-- pied de page -->
+    <footer>
+      <p>
+        Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a> ·
+        <a href="support_fr.html">Aide et contact</a>
+      </p>
+      <p style="margin-top:6px;">
+        © Zen Circle / AML Creation. Zen Circle est un jeu de détente et ne remplace pas un avis médical ou professionnel.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      var languagePages = {
+        en: "marketing_en.html",
+        de: "marketing_de.html",
+        fr: "marketing_fr.html",
+        ja: "marketing_ja.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function(){
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

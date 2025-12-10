@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>AML Creation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AML Creation develops calming apps, indie games, and illustrated stories such as Somnifox, Annemu's Games, and Samcreation." />
+  <meta name="description" content="AML Creation develops calming apps, indie games, and illustrated stories such as Somnifox, Zen Circle, Annemu's Games, and Samcreation." />
 
   <style>
     :root{
@@ -67,9 +67,12 @@
       margin-top:10px;
     }
 
+    /* ➜ 2 colonnes sur écran large pour avoir
+       Somnifox + Zen Circle en haut,
+       Annemu’s Games + Samcreation en dessous */
     @media (min-width:640px){
       .links{
-        grid-template-columns:repeat(3, minmax(0, 1fr));
+        grid-template-columns:repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -132,9 +135,15 @@
       </p>
 
       <section class="links" aria-label="Projects">
+        <!-- Ligne du haut : les 2 apps -->
         <a class="link-btn primary" href="Somnifox/marketing_en.html">
           Somnifox · Sleep and focus sound mixer
         </a>
+        <a class="link-btn primary" href="ZenCircle/marketing_en.html">
+          Zen Circle · A tiny zen rhythm game
+        </a>
+
+        <!-- Ligne du bas : les autres projets -->
         <a class="link-btn" href="Games/index.html">
           Annemu&#39;s Games · Indie games
         </a>

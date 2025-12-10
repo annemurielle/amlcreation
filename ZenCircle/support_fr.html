@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Assistance Zen Circle - Aide, FAQ et dépannage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Centre d'assistance de Zen Circle : démarrage rapide, restauration de l'achat Premium, dépannage des problèmes courants (son, vibrations, progression) et contact support." />
+  <meta name="theme-color" content="#6b6de8" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Assistance Zen Circle - Aide, FAQ et dépannage" />
+  <meta property="og:description" content="Obtenez de l'aide pour Zen Circle : démarrage, restauration de l'achat Premium et résolution des problèmes les plus courants." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --ink:#0f1222;
+      --sub:#60657a;
+      --bg:#0f0f1a;
+      --card:#ffffff10;
+      --accent:#2ECF7A;
+      --accent-ink:#0c3a26;
+      --ring:#ffffff24;
+      --maxw:1080px;
+      --radius:16px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --ink:#101321;
+        --sub:#5a5e72;
+        --bg:#f7f8fb;
+        --card:#ffffff;
+        --ring:#10132115;
+      }
+      body{
+        background:linear-gradient(180deg,#ecefff 0%,#f7f8fb 40%,#ffffff 100%) fixed;
+      }
+    }
+
+    *{ box-sizing:border-box; }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:url(hero.jpg) center/cover no-repeat;
+      opacity:0.10;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #7368e6 0%, transparent 55%),
+        radial-gradient(900px 500px at 110% 10%, #ee8bdc 0%, transparent 45%),
+        #0d0d18;
+    }
+
+    a{ color:inherit; }
+
+    .container{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      padding:24px;
+    }
+
+    /* header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+
+    .brand img{
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.35);
+    }
+
+    .brand span{
+      font-weight:700;
+      font-size:17px;
+      letter-spacing:.2px;
+      color:#f5f7ff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:#f5f7ff;
+      border:1px solid rgba(255,255,255,0.18);
+      background:#ffffff10;
+      backdrop-filter:blur(8px);
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#04140c;
+      font-weight:700;
+      border-color:transparent;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    nav a.current{
+      background:#ffffff;
+      color:var(--ink);
+      border-color:transparent;
+      font-weight:600;
+    }
+
+    /* sélecteur de langue */
+    .lang-select-wrap{
+      position:relative;
+    }
+
+    .lang-select{
+      appearance:none;
+      background:#ffffff10;
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:999px;
+      padding:8px 28px 8px 12px;
+      color:#f5f7ff;
+      font-size:14px;
+      cursor:pointer;
+      backdrop-filter:blur(8px);
+    }
+
+    .lang-select-wrap::after{
+      content:"▾";
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#f5f7ff;
+      pointer-events:none;
+    }
+
+    /* hero */
+    .hero{
+      margin-top:10px;
+      border-radius:var(--radius);
+      backdrop-filter:saturate(140%) blur(10px);
+      background:var(--card);
+      box-shadow:0 10px 30px rgba(0,0,0,0.25), inset 0 0 0 1px var(--ring);
+      padding:24px 26px;
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      gap:24px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0% 0%, #7d7df3 0%, transparent 55%),
+        radial-gradient(circle at 100% 100%, #2ecf7a 0%, transparent 55%);
+      opacity:0.45;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .hero-copy{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(26px,3.4vw,36px);
+      line-height:1.15;
+    }
+
+    .hero p.lead{
+      margin:0;
+      color:var(--sub);
+      font-size:clamp(15px,2.1vw,18px);
+    }
+
+    .hero-mini{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .hero-phone{
+      justify-self:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .phone-frame{
+      background:#000000e0;
+      padding:10px;
+      border-radius:32px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      max-width:260px;
+    }
+
+    .phone-frame img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:24px;
+    }
+
+    .hero-caption{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--sub);
+      text-align:center;
+      max-width:260px;
+      line-height:1.4;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:11px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      white-space:nowrap;
+      background:#ffffff;
+      color:var(--ink);
+      border:1px solid var(--ring);
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#04140c;
+      border-color:transparent;
+      font-weight:700;
+      box-shadow:0 8px 24px rgba(46,207,122,0.4);
+    }
+
+    .btn.ghost{
+      background:transparent;
+      color:var(--ink);
+    }
+
+    /* contenu principal */
+    main{
+      margin-top:26px;
+      display:grid;
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.18), inset 0 0 0 1px var(--ring);
+    }
+
+    .card h2{
+      margin-top:0;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .card h3{
+      margin-top:14px;
+      margin-bottom:6px;
+      font-size:16px;
+    }
+
+    ol, ul{
+      margin:8px 0 0;
+      padding-left:22px;
+    }
+
+    li+li{
+      margin-top:4px;
+    }
+
+    .two-column{
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      gap:18px;
+    }
+
+    @media (max-width:840px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:20px;
+      }
+      .hero-phone{
+        order:-1;
+      }
+      .two-column{
+        grid-template-columns:1fr;
+      }
+    }
+
+    /* pied de page */
+    footer{
+      color:var(--sub);
+      font-size:14px;
+      text-align:center;
+      margin:32px 0 18px;
+    }
+
+    footer a{
+      color:inherit;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- en-tête -->
+    <header>
+      <a class="brand" href="marketing_fr.html">
+        <img src="logo.png" alt="Logo de l’app Zen Circle" />
+        <span>Zen Circle</span>
+      </a>
+      <nav>
+        <a href="marketing_fr.html">Application</a>
+
+        <a href="support_fr.html" class="current">Assistance</a>
+
+        <div class="lang-select-wrap">
+          <select id="lang-switcher" class="lang-select" aria-label="Changer de langue">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="fr" selected>Français</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+
+        <a class="cta" href="https://apps.apple.com/app/6756264679">Télécharger l’app</a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <article class="hero">
+      <div class="hero-copy">
+        <h1>Assistance et aide pour Zen Circle</h1>
+        <p class="lead">
+          Retrouvez ici le démarrage rapide, comment restaurer votre achat Premium et les solutions aux problèmes
+          les plus fréquents (son, vibrations, progression, achat non pris en compte).
+          Si vous avez encore besoin d'aide après ces étapes, vous pouvez nous écrire directement.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/app/6756264679">Télécharger le jeu</a>
+          <a class="btn" href="mailto:sonocalmrelax@gmail.com">Contacter le support</a>
+          <a class="btn ghost" href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Politique de confidentialité</a>
+        </div>
+        <p class="hero-mini">
+          Quand vous nous contactez, merci d’indiquer le modèle de votre iPhone et la version d’iOS, ainsi que la version de Zen Circle si possible.
+        </p>
+      </div>
+
+      <div class="hero-phone">
+        <div class="phone-frame">
+          <img src="hero.jpg" alt="Écran de jeu de Zen Circle avec un cercle lumineux et un décor illustré." />
+        </div>
+        <p class="hero-caption">
+          Zen Circle est un petit jeu de rythme zen, sans publicité, jouable hors ligne sur iPhone.
+        </p>
+      </div>
+    </article>
+
+    <!-- contenu principal -->
+    <main>
+      <section class="two-column">
+        <div class="card">
+          <h2>Démarrage rapide</h2>
+          <ol>
+            <li>Lancez une partie dans le monde <strong>Forêt</strong> ou un autre monde débloqué.</li>
+            <li>Surveillez la balle qui tourne autour du cercle.</li>
+            <li>Appuyez quand la balle entre dans l’<strong>arc lumineux</strong> pour augmenter votre combo.</li>
+            <li>Changez de mode avec le bouton <strong>Zen / Rapide</strong> en haut à droite du jeu.</li>
+            <li>En progressant, vous débloquez de nouveaux décors illustrés pour chaque monde.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h2>Langue dans le jeu</h2>
+          <ul>
+            <li>Zen Circle suit <strong>la langue de votre appareil</strong> iOS.</li>
+            <li>Pour changer la langue, ouvrez les <strong>Réglages iOS</strong> &rarr; <strong>Général</strong> &rarr; <strong>Langue &amp; région</strong> ou les réglages de langue par app.</li>
+            <li>Les textes (boutons, menus, messages) s’affichent automatiquement dans une langue prise en charge.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="two-column">
+        <div class="card">
+          <h2>Restaurer l’achat Premium</h2>
+          <ol>
+            <li>Ouvrez <strong>Zen Circle</strong>.</li>
+            <li>Allez dans le menu <strong>Réglages</strong> depuis l’écran principal.</li>
+            <li>Appuyez sur <strong>Restaurer l’achat</strong> (ou équivalent).</li>
+            <li>Assurez-vous d’être connecté·e avec le même identifiant Apple que celui utilisé pour l’achat initial.</li>
+          </ol>
+          <p style="margin-top:8px;">
+            Si Premium n’est toujours pas actif, écrivez au support en indiquant&nbsp;:
+          </p>
+          <ul>
+            <li>Le modèle de votre iPhone (ex. iPhone 13, iPhone 15 Pro).</li>
+            <li>La version d’iOS installée.</li>
+            <li>Le type d’achat (achat unique Premium).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>À propos de la facturation</h2>
+          <ul>
+            <li>Zen Circle est gratuit au téléchargement.</li>
+            <li>Le jeu propose un <strong>achat unique Premium</strong> pour débloquer tous les mondes et effets.</li>
+            <li>Le paiement est facturé sur votre identifiant Apple au moment de l’achat.</li>
+            <li>Vous pouvez réinstaller le jeu ou changer d’appareil et restaurer l’achat via le bouton <strong>Restaurer</strong>.</li>
+            <li>Il n’y a <strong>aucun abonnement</strong> récurrent pour Zen Circle.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Dépannage</h2>
+
+        <h3>Pas de son ou musique trop faible</h3>
+        <ul>
+          <li>Vérifiez le volume de l’iPhone et le mode Sonnerie/Silence.</li>
+          <li>Vérifiez que les écouteurs ou haut-parleurs sont bien connectés.</li>
+          <li>Dans les Réglages du jeu, vérifiez que les <strong>sons</strong> et la <strong>musique</strong> ne sont pas désactivés.</li>
+        </ul>
+
+        <h3>Vibrations ou retour haptique absents</h3>
+        <ul>
+          <li>Assurez-vous que les <strong>vibrations</strong> sont activées dans les Réglages de Zen Circle.</li>
+          <li>Vérifiez que les vibrations sont autorisées au niveau d’iOS (Réglages &rarr; Sons et vibrations).</li>
+        </ul>
+
+        <h3>La progression ou les décors semblent perdus</h3>
+        <ul>
+          <li>Vérifiez que vous jouez sur le même appareil ou profil.</li>
+          <li>Zen Circle stocke la progression localement, il n’y a pas de compte en ligne.</li>
+          <li>Si vous avez récemment supprimé et réinstallé l’app, la progression peut être réinitialisée.</li>
+        </ul>
+
+        <h3>Premium n’est pas actif après l’achat</h3>
+        <ul>
+          <li>Vérifiez que l’achat apparaît bien dans votre historique de facturation Apple.</li>
+          <li>Essayez à nouveau l’option <strong>Restaurer l’achat</strong> dans les Réglages de Zen Circle.</li>
+          <li>Si le problème persiste, contactez le support avec une capture d’écran de la page d’achat ou du reçu Apple.</li>
+        </ul>
+      </section>
+
+      <section class="two-column">
+        <div class="card">
+          <h2>Confidentialité et conditions</h2>
+          <ul>
+            <li><a href="https://annemurielle.github.io/amlcreation/Policy-Confidentiality.html">Politique de confidentialité</a></li>
+            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Conditions d’utilisation standard Apple (EULA)</a></li>
+          </ul>
+          <p style="margin-top:8px; font-size:14px; color:var(--sub);">
+            Zen Circle est un jeu de détente et ne remplace pas un avis médical ou professionnel.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Contact et avis</h2>
+          <p>
+            Pour toute question, rapport de bug ou suggestion, vous pouvez nous écrire par e-mail&nbsp;:
+          </p>
+          <p>
+            <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a>
+          </p>
+          <p>
+            Laisser un avis ou mettre à jour votre note sur l’App Store aide vraiment d’autres personnes à découvrir Zen Circle.
+          </p>
+          <ul>
+            <li>Page App Store&nbsp;: <a href="https://apps.apple.com/app/6756264679">apps.apple.com/app/6756264679</a></li>
+            <li>Laisser un avis&nbsp;: <a href="itms-apps://apps.apple.com/app/id6756264679?action=write-review">itms-apps://apps.apple.com/app/id6756264679?action=write-review</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- pied de page -->
+    <footer>
+      <p>Support&nbsp;: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a></p>
+      <p style="margin-top:6px;">
+        © <span id="y"></span> Zen Circle / AML Creation. Tous droits réservés.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // année footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // sélecteur de langue
+    (function(){
+      var languagePages = {
+        en: "support_en.html",
+        de: "support_de.html",
+        fr: "support_fr.html",
+        ja: "support_ja.html"
+      };
+
+      var select = document.getElementById("lang-switcher");
+      if (!select) return;
+
+      var currentLang = (document.documentElement.lang || "fr").toLowerCase();
+      if (languagePages[currentLang]) {
+        select.value = currentLang;
+      }
+
+      select.addEventListener("change", function(){
+        var lang = this.value;
+        var target = languagePages[lang];
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
