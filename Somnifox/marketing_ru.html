@@ -361,6 +361,31 @@
       color:inherit;
       text-decoration:underline;
     }
+    .nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:nowrap;          /* ne passe pas à la ligne */
+  overflow-x:auto;           /* si vraiment trop long: scroll horizontal */
+  -webkit-overflow-scrolling:touch;
+}
+
+.nav-actions .btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+
+/* Mobile: on cache le texte, on garde les icônes */
+@media (max-width:560px){
+  .nav-actions .btn{
+    padding:8px 10px;        /* plus compact */
+    font-size:14px;
+  }
+  .nav-actions .btn .txt{ display:none; }
+  .nav-actions .btn .ico{ font-size:18px; }
+  .nav-actions .btn.cta{ padding:8px 12px; }
+}
+
   </style>
 </head>
 
@@ -395,10 +420,23 @@
           </select>
         </div>
 
-        <a class="cta" href="https://apps.apple.com/app/id6753948909">Загрузить в App Store</a>
-        <a href="watch.html" target="_blank">Видео</a>
-<a href="https://www.youtube.com/channel/UCGXypunMB75x599kvbSAuqw" target="_blank">YouTube • sonocalming</a>
-<a href="https://apps.apple.com/us/developer/anne-murielle-larger/id842112590" target="_blank">Другие приложения</a>
+   <nav class="nav-actions">
+  <a class="btn cta" href="https://apps.apple.com/app/id6753948909" aria-label="App Store" title="App Store">
+    <span class="ico"></span><span class="txt">App Store</span>
+  </a>
+
+  <a class="btn" href="watch.html" target="_blank" aria-label="Video" title="Video">
+    <span class="ico">🎬</span><span class="txt">Video</span>
+  </a>
+
+  <a class="btn" href="https://www.youtube.com/channel/UCGXypunMB75x599kvbSAuqw" target="_blank" aria-label="YouTube" title="YouTube">
+    <span class="ico">▶️</span><span class="txt">YouTube</span>
+  </a>
+
+  <a class="btn" href="https://apps.apple.com/us/developer/anne-murielle-larger/id842112590" target="_blank" aria-label="More Apps" title="More Apps">
+    <span class="ico">🧩</span><span class="txt">Apps</span>
+  </a>
+</nav>
 
       </nav>
     </header>
