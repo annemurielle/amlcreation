@@ -7,8 +7,7 @@
 
 \f0\fs24 \cf0 <?xml version="1.0" encoding="UTF-8"?>\
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\
-\
-  <!-- Root -->\
+<!-- Root -->\
   <url><loc>https://www.amlcreation.ch/</loc></url>\
   <url><loc>https://www.amlcreation.ch/index.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/confidentiality-all.html</loc></url>\
@@ -30,7 +29,6 @@
   <url><loc>https://www.amlcreation.ch/Policy-Confidentiality_sv.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Policy-Confidentiality_tr.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Policy-Confidentiality_zh.html</loc></url>\
-\
   <!-- Games -->\
   <url><loc>https://www.amlcreation.ch/Games/index.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Games/Application-Point-and-Click-TinyStory-en.html</loc></url>\
@@ -68,7 +66,6 @@
   <url><loc>https://www.amlcreation.ch/Games/tinyStory-Aide.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Games/tinyStory-help.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Games/google098b19b5cc61b1f5.html</loc></url>\
-\
   <!-- Somnifox -->\
   <url><loc>https://www.amlcreation.ch/Somnifox/index.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Somnifox/marketing_de.html</loc></url>\
@@ -102,7 +99,6 @@
   <url><loc>https://www.amlcreation.ch/Somnifox/support_tr.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Somnifox/support_zh.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/Somnifox/watch.html</loc></url>\
-\
   <!-- ZenCircle -->\
   <url><loc>https://www.amlcreation.ch/ZenCircle/marketing_de.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/ZenCircle/marketing_en.html</loc></url>\
@@ -112,6 +108,4 @@
   <url><loc>https://www.amlcreation.ch/ZenCircle/support_en.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/ZenCircle/support_fr.html</loc></url>\
   <url><loc>https://www.amlcreation.ch/ZenCircle/support_ja.html</loc></url>\
-\
-</urlset>\
-}
+</urlset>}
