@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mahjong Castle, Cozy Fantasy Mahjong Solitaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mahjong Castle is a cozy fantasy Mahjong solitaire adventure with magical worlds, collectible rewards, tile skins, and a relaxing Classic mode." />
+  <meta name="theme-color" content="#59b86d" />
+
+  <meta property="og:title" content="Mahjong Castle, Cozy Fantasy Mahjong Solitaire" />
+  <meta property="og:description" content="Match free tiles, explore seven magical worlds, collect story rewards, and customize your tile set." />
+  <meta property="og:image" content="Images/hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --ink:#2d2a2b;
+      --sub:#6b6263;
+      --cream:#fffaf0;
+      --paper:#fffdf8;
+      --green:#55b96d;
+      --green-dark:#28713d;
+      --gold:#f6bd45;
+      --coral:#f47b72;
+      --sky:#71bfe8;
+      --purple:#a980d9;
+      --ring:#5b3b2518;
+      --shadow:0 15px 35px rgba(80,54,34,.17);
+      --radius:22px;
+      --maxw:1100px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    html{ scroll-behavior:smooth; }
+
+    body{
+      margin:0;
+      font:16px/1.58 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 520px at -5% -5%, #fff3a9 0%, transparent 60%),
+        radial-gradient(800px 500px at 105% 5%, #bfeaff 0%, transparent 58%),
+        linear-gradient(180deg,#f4fbeb 0%,#fff8e9 45%,#f9f0ff 100%);
+    }
+
+    a{ color:inherit; }
+
+    .container{
+      max-width:var(--maxw);
+      margin-inline:auto;
+      padding:22px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      text-decoration:none;
+      font-weight:800;
+      color:#47352c;
+    }
+
+    .brand img{
+      width:42px;
+      height:42px;
+      object-fit:cover;
+      border-radius:12px;
+      box-shadow:0 8px 18px rgba(70,45,26,.2);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:9px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      padding:9px 13px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:700;
+      background:#ffffffba;
+      border:1px solid #6d4b2b20;
+      box-shadow:0 5px 14px rgba(70,45,26,.08);
+    }
+
+    nav a:hover{
+      background:#fff;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+      gap:28px;
+      align-items:center;
+      padding:32px;
+      border-radius:30px;
+      background:
+        linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,250,224,.92));
+      box-shadow:var(--shadow);
+      border:1px solid #ffffff;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      right:-130px;
+      bottom:-190px;
+      border-radius:50%;
+      background:radial-gradient(circle,#ffcf5d 0%,#f47b7275 45%,transparent 70%);
+      pointer-events:none;
+    }
+
+    .hero-copy{
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:9px;
+      padding:6px 11px;
+      border-radius:999px;
+      color:#5d3514;
+      background:#ffe19a;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(34px,5vw,58px);
+      line-height:1.02;
+      color:#473026;
+    }
+
+    .lead{
+      margin:17px 0 0;
+      max-width:650px;
+      color:var(--sub);
+      font-size:clamp(16px,2vw,20px);
+    }
+
+    .store-note{
+      margin:16px 0 0;
+      color:var(--green-dark);
+      font-weight:750;
+    }
+
+    .hero-visual{
+      position:relative;
+      z-index:1;
+      min-height:360px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:24px;
+      background:
+        linear-gradient(160deg,#8fd687,#6bc2df 55%,#a986de);
+      box-shadow:inset 0 0 0 1px #ffffff80,0 15px 28px rgba(64,98,75,.2);
+      overflow:hidden;
+    }
+
+    .hero-visual img{
+      display:block;
+      width:100%;
+      height:100%;
+      min-height:360px;
+      object-fit:cover;
+    }
+
+    .hero-placeholder{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      text-align:center;
+      color:white;
+      font-weight:800;
+      font-size:20px;
+      text-shadow:0 2px 6px rgba(0,0,0,.25);
+    }
+
+    section{ margin-top:26px; }
+
+    .card{
+      background:rgba(255,255,255,.9);
+      border-radius:var(--radius);
+      padding:24px;
+      border:1px solid #ffffff;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2{
+      margin:0 0 12px;
+      color:#4a342b;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:15px;
+    }
+
+    .feature{
+      padding:20px;
+      border-radius:18px;
+      background:var(--paper);
+      border:1px solid var(--ring);
+    }
+
+    .feature:nth-child(1){ border-top:5px solid var(--green); }
+    .feature:nth-child(2){ border-top:5px solid var(--gold); }
+    .feature:nth-child(3){ border-top:5px solid var(--sky); }
+    .feature:nth-child(4){ border-top:5px solid var(--purple); }
+    .feature:nth-child(5){ border-top:5px solid var(--coral); }
+    .feature:nth-child(6){ border-top:5px solid #7bc8a4; }
+
+    .feature h3{
+      margin:0 0 7px;
+      font-size:17px;
+    }
+
+    .feature p{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .shots{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .shot{
+      position:relative;
+      overflow:hidden;
+      min-height:360px;
+      border-radius:20px;
+      background:linear-gradient(160deg,#8dd78d,#70bce8 55%,#b386dc);
+      border:1px solid #ffffff;
+      box-shadow:0 10px 24px rgba(70,45,26,.14);
+    }
+
+    .shot img{
+      display:block;
+      width:100%;
+      height:100%;
+      min-height:360px;
+      object-fit:cover;
+    }
+
+    .shot-label{
+      position:absolute;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      padding:9px 11px;
+      border-radius:13px;
+      background:rgba(47,34,28,.78);
+      color:white;
+      font-size:13px;
+      font-weight:700;
+      text-align:center;
+      backdrop-filter:blur(6px);
+    }
+
+    .legal-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+    }
+
+    .legal-link{
+      display:block;
+      padding:18px;
+      border-radius:18px;
+      text-decoration:none;
+      text-align:center;
+      font-weight:800;
+      background:#fff;
+      border:1px solid var(--ring);
+      box-shadow:0 8px 18px rgba(70,45,26,.09);
+    }
+
+    .legal-link:hover{
+      transform:translateY(-1px);
+    }
+
+    footer{
+      margin:34px 0 16px;
+      text-align:center;
+      color:var(--sub);
+      font-size:13px;
+    }
+
+    footer a{ text-decoration:underline; }
+
+    @media (max-width:850px){
+      .hero{ grid-template-columns:1fr; padding:24px; }
+      .hero-visual{ min-height:300px; }
+      .hero-visual img{ min-height:300px; }
+      .feature-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .shots{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+
+    @media (max-width:560px){
+      header{ align-items:flex-start; }
+      .brand span{ display:none; }
+      .feature-grid,.shots,.legal-row{ grid-template-columns:1fr; }
+      .shot{ min-height:520px; }
+      .shot img{ min-height:520px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="../index.html">
+        <img src="Images/logo.png" alt="Mahjong Castle logo" onerror="this.style.display='none'" />
+        <span>Mahjong Castle</span>
+      </a>
+
+      <nav>
+        <a href="../index.html">AML Creation</a>
+        <a href="support_en.html">Support</a>
+        <a href="privacy_en.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Cozy fantasy Mahjong solitaire</span>
+          <h1>Match tiles and restore a magical castle</h1>
+          <p class="lead">
+            Relax with classic tile matching, explore seven colorful worlds, collect story rewards,
+            unlock decorative tile skins, and watch the castle grow brighter as your adventure continues.
+          </p>
+          <p class="store-note">Coming to iPhone, iPad, and Android.</p>
+        </div>
+
+        <div class="hero-visual">
+           <img src="Images/hero.jpg" alt="Mahjong Castle fantasy world and tile matching gameplay." onerror="this.style.display='none'" />
+        </div>
+      </article>
+
+      <section class="card">
+        <h2>A calm adventure with plenty to discover</h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Adventure Mode</h3>
+            <p>Travel through Garden, Ice, Forest, Swamp, Ocean, Pirate, and Fire worlds.</p>
+          </article>
+          <article class="feature">
+            <h3>Classic Mode</h3>
+            <p>Enjoy straightforward Mahjong solitaire boards whenever you want a quiet game.</p>
+          </article>
+          <article class="feature">
+            <h3>Collection Book</h3>
+            <p>Find story objects, complete each world collection, and claim coin rewards.</p>
+          </article>
+          <article class="feature">
+            <h3>Tile Skins</h3>
+            <p>Customize the board with elegant, cozy, magical, and world themed tile designs.</p>
+          </article>
+          <article class="feature">
+            <h3>Helpful Boosters</h3>
+            <p>Use Hint, Shuffle, Remove Pair, and Undo when a board needs a gentle helping hand.</p>
+          </article>
+          <article class="feature">
+            <h3>No Account Required</h3>
+            <p>Your game progress and preferences are stored locally on your device.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>App preview</h2>
+        <div class="shots">
+          <figure class="shot">
+            <img src="Images/screen_home.jpg" alt="Mahjong Castle home screen." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">The castle home screen</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="Images/screen_garden.jpg" alt="Mahjong Castle tile matching board." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">Tile matching, Garden World</figcaption>
+          </figure>
+           <figure class="shot">
+            <img src="Images/screen_ice.jpg" alt="Mahjong Castle tile matching board." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">Tile matching, Ice World</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="Images/screen_collection.jpg" alt="Mahjong Castle collection book." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">World collections and rewards</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="Images/screen_shop.jpg" alt="Mahjong Castle tile skin shop." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">Decorative tile skins</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="Images/screen_story.jpg" alt="Mahjong Castle story screen." onerror="this.style.display='none'" />
+            <figcaption class="shot-label">Story discoveries</figcaption>
+          </figure>
+         
+        </div>
+      </section>
+
+      <section class="legal-row" aria-label="Help and legal information">
+        <a class="legal-link" href="support_en.html">Support and contact</a>
+        <a class="legal-link" href="privacy_en.html">Privacy policy</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Mahjong Castle is developed by AML Creation in Switzerland.
+        Optional purchases are processed by the Apple App Store or Google Play.
+      </p>
+      <p>
+        Contact: <a href="mailto:sonocalmrelax@gmail.com">sonocalmrelax@gmail.com</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

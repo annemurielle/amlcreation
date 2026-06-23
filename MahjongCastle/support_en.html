@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mahjong Castle Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Help, purchase restoration, troubleshooting, and contact information for Mahjong Castle." />
+  <meta name="theme-color" content="#59b86d" />
+
+  <style>
+    :root{
+      --ink:#302a28;
+      --sub:#675f5c;
+      --green:#55b96d;
+      --gold:#f4bd4b;
+      --sky:#79c7eb;
+      --cream:#fff9ec;
+      --ring:#5b3b2518;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font:16px/1.62 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(800px 430px at 0% 0%,#fff0a8 0%,transparent 62%),
+        radial-gradient(700px 450px at 100% 0%,#c9edff 0%,transparent 58%),
+        var(--cream);
+    }
+    .wrap{max-width:var(--maxw);margin:auto;padding:24px}
+    header,.card{
+      background:rgba(255,255,255,.94);
+      border:1px solid #fff;
+      border-radius:22px;
+      box-shadow:0 14px 32px rgba(75,50,34,.14);
+    }
+    header{padding:24px 26px}
+    h1{margin:0 0 6px;font-size:clamp(30px,5vw,44px)}
+    h2{margin-top:0;color:#365f3e}
+    p,li{color:var(--sub)}
+    a{color:#266d3a}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .nav a{
+      text-decoration:none;
+      font-weight:750;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#edf8ee;
+      border:1px solid #55b96d33;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .card{padding:22px}
+    .card:nth-child(1){border-top:5px solid var(--green)}
+    .card:nth-child(2){border-top:5px solid var(--gold)}
+    .card:nth-child(3){border-top:5px solid var(--sky)}
+    .card:nth-child(4){border-top:5px solid #a980d9}
+    .contact{
+      margin-top:18px;
+      text-align:center;
+      padding:25px;
+      background:linear-gradient(135deg,#eaf9ed,#fff4c9);
+    }
+    .mail{
+      display:inline-block;
+      margin-top:7px;
+      padding:11px 17px;
+      border-radius:999px;
+      background:var(--green);
+      color:#153c20;
+      text-decoration:none;
+      font-weight:850;
+    }
+    footer{text-align:center;color:var(--sub);font-size:13px;margin:24px 0}
+    @media(max-width:650px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Mahjong Castle Support</h1>
+      <p>Help with sound, progress, purchases, and gameplay.</p>
+      <div class="nav">
+        <a href="marketing_en.html">Mahjong Castle</a>
+        <a href="privacy_en.html">Privacy policy</a>
+        <a href="../index.html">AML Creation</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Sound or music is not playing</h2>
+        <ul>
+          <li>Open Settings from the Home screen.</li>
+          <li>Confirm that Music and Sound FX are enabled.</li>
+          <li>Increase the device media volume.</li>
+          <li>Check silent mode, Bluetooth audio, and connected headphones.</li>
+          <li>Close and reopen the game after changing external audio devices.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Restore purchases</h2>
+        <ul>
+          <li>Use the same Apple ID or Google account used for the original purchase.</li>
+          <li>Open Settings and tap Restore Purchases.</li>
+          <li>Make sure the device has an internet connection.</li>
+          <li>Consumable coin purchases cannot normally be restored after they have been delivered and spent.</li>
+          <li>Non consumable packs can be restored when the store confirms ownership.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Progress or settings were reset</h2>
+        <p>
+          Game progress is stored locally on the device. Removing the application, clearing app data, changing devices,
+          or restoring without compatible device backup data may remove local progress.
+        </p>
+        <p>
+          When contacting support, include your device model, operating system version, game version, and a description
+          of what happened.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>A board appears blocked</h2>
+        <ul>
+          <li>A free tile must have no tile covering it and at least one open side.</li>
+          <li>Try Hint to locate an available pair.</li>
+          <li>Use Shuffle when matching tiles remain but no free pair is available.</li>
+          <li>Remove Pair and Undo can help recover from difficult positions.</li>
+          <li>If the issue repeats on the same level, include the level number and a screenshot in your message.</li>
+        </ul>
+      </section>
+    </main>
+
+    <section class="card contact">
+      <h2>Contact AML Creation</h2>
+      <p>
+        Please write in English or French. Include the platform, device model, operating system version,
+        game version, and screenshots when relevant.
+      </p>
+      <a class="mail" href="mailto:sonocalmrelax@gmail.com?subject=Mahjong%20Castle%20Support">
+        sonocalmrelax@gmail.com
+      </a>
+    </section>
+
+    <footer>&copy; AML Creation, Switzerland</footer>
+  </div>
+</body>
+</html>
