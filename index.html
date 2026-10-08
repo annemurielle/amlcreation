@@ -1,171 +1,542 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>AML Creation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AML Creation develops calming apps, cozy indie games, and illustrated stories, including Mahjong Castle, Somnifox, Zen Circle, AnneMu's Games, and Samcreation." />
-  <meta name="theme-color" content="#171536" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AML Creation | Apps, Games, SonoCalming & Illustrated Projects</title>
+  <meta name="description" content="AML Creation creates calming apps, long-form sound projects, cozy indie games and illustrated projects, including Somnifox, SonoCalming, Mahjong Castle, Zen Circle and Samcreation.">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://www.amlcreation.ch/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AML Creation">
+  <meta property="og:title" content="AML Creation | Apps, Games, SonoCalming & Illustrated Projects">
+  <meta property="og:description" content="Calming apps, long-form sound projects, cozy indie games and illustrated projects from AML Creation.">
+  <meta property="og:url" content="https://www.amlcreation.ch/">
+  <meta property="og:image" content="https://www.amlcreation.ch/MahjongCastle/Images/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root{
-      --bg:#08091c;
-      --card:#ffffff;
-      --ink:#171728;
-      --sub:#5b6075;
-      --accent:#2ecf7a;
-      --accent-ink:#05311f;
-      --mahjong-a:#ffb23f;
-      --mahjong-b:#ff718c;
-      --ring:#00000018;
-      --radius:20px;
-      --maxw:760px;
+      --bg:#070b17;
+      --bg-soft:#0d1324;
+      --panel:#11192c;
+      --panel-2:#151f35;
+      --text:#f4f7fb;
+      --muted:#aab4c7;
+      --line:rgba(255,255,255,.09);
+      --cyan:#73dce5;
+      --green:#66dda1;
+      --violet:#a98df8;
+      --pink:#ff88aa;
+      --gold:#ffc35a;
+      --shadow:0 24px 70px rgba(0,0,0,.33);
+      --radius:28px;
+      --max:1180px;
     }
 
-    *{ box-sizing:border-box; }
-
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1000px 620px at 0% 0%, #3d3aa9 0%, transparent 58%),
-        radial-gradient(820px 520px at 100% 100%, #905ce8 0%, transparent 48%),
-        var(--bg);
-    }
-
-    .page{
       min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(93,108,255,.19), transparent 34rem),
+        radial-gradient(circle at 100% 25%, rgba(101,218,183,.10), transparent 28rem),
+        linear-gradient(180deg,#080b18 0%,#090f1c 55%,#070b15 100%);
+      font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .shell{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(7,11,23,.74);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      min-height:72px;
       display:flex;
       align-items:center;
-      justify-content:center;
-      padding:24px;
+      justify-content:space-between;
+      gap:24px;
     }
 
-    .card{
-      max-width:var(--maxw);
-      width:100%;
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:30px 28px 25px;
-      box-shadow:0 20px 46px rgba(0,0,0,.36), inset 0 0 0 1px var(--ring);
+    .brand{
+      text-decoration:none;
+      font-weight:850;
+      letter-spacing:.12em;
+      font-size:.92rem;
     }
 
-    h1{
-      margin:0 0 8px;
-      font-size:27px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    .tagline{
-      margin:0 0 22px;
-      color:var(--sub);
-      font-size:14px;
-    }
-
-    .links{
-      display:grid;
-      gap:11px;
-      margin-top:10px;
-    }
-
-    @media (min-width:680px){
-      .links{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-    }
-
-    .link-btn{
+    .nav{
       display:flex;
+      gap:22px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:.9rem;
+    }
+
+    .nav a:hover{color:var(--text)}
+
+    .hero{
+      padding:92px 0 64px;
+      text-align:center;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 13px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    .hero h1{
+      margin:22px auto 16px;
+      max-width:920px;
+      font-size:clamp(3rem,7vw,6.3rem);
+      line-height:.94;
+      letter-spacing:-.06em;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1.05rem,1.8vw,1.25rem);
+    }
+
+    .hero-links{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .button{
+      min-height:46px;
+      display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:14px;
-      min-height:50px;
+      padding:0 18px;
       border-radius:999px;
       text-decoration:none;
-      text-align:center;
-      font-size:15px;
-      font-weight:650;
-      border:1px solid #dde0ee;
-      background:#f6f7ff;
-      color:#272842;
-      box-shadow:0 7px 18px rgba(0,0,0,.07);
-      transition:transform .18s,box-shadow .18s,background .18s;
+      font-weight:750;
+      border:1px solid var(--line);
+      transition:.2s ease;
     }
 
-    .link-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 26px rgba(0,0,0,.14);
+    .button:hover{transform:translateY(-2px)}
+    .button.primary{background:var(--text);color:#0a1020;border-color:transparent}
+    .button.ghost{background:rgba(255,255,255,.035)}
+
+    .section{padding:68px 0}
+    .section + .section{border-top:1px solid var(--line)}
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:end;
+      margin-bottom:28px;
     }
 
-    .link-btn.primary{
-      background:var(--accent);
-      color:var(--accent-ink);
-      border-color:transparent;
+    .kicker{
+      margin:0 0 7px;
+      color:var(--cyan);
+      font-size:.75rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.14em;
     }
 
-    .link-btn.mahjong{
-      color:#431a12;
-      border-color:transparent;
-      background:linear-gradient(135deg,var(--mahjong-a),var(--mahjong-b));
-      box-shadow:0 10px 25px rgba(255,113,140,.28);
+    .section-head h2{
+      margin:0;
+      font-size:clamp(2rem,4vw,3.2rem);
+      line-height:1.05;
+      letter-spacing:-.045em;
     }
 
-    .link-btn.mahjong:hover{
-      background:linear-gradient(135deg,#ffc052,#ff8098);
+    .section-head p{
+      margin:0;
+      max-width:470px;
+      color:var(--muted);
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .project-card{
+      position:relative;
+      min-height:430px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--panel);
+      box-shadow:var(--shadow);
+      text-decoration:none;
+      isolation:isolate;
+    }
+
+    .project-card .image{
+      position:absolute;
+      inset:0;
+      z-index:-2;
+    }
+
+    .project-card .image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .project-card:hover .image img{transform:scale(1.035)}
+
+    .project-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(180deg,rgba(5,8,16,.05) 10%,rgba(5,8,16,.28) 48%,rgba(5,8,16,.94) 100%);
+    }
+
+    .project-card-content{
+      position:absolute;
+      inset:auto 0 0;
+      padding:28px;
+    }
+
+    .project-card h3{
+      margin:0 0 7px;
+      font-size:clamp(1.65rem,3vw,2.35rem);
+      letter-spacing:-.035em;
+    }
+
+    .project-card p{
+      margin:0;
+      color:#d5dce7;
+      max-width:590px;
+    }
+
+    .project-card .meta{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:13px;
+    }
+
+    .pill{
+      padding:6px 9px;
+      border-radius:999px;
+      background:rgba(10,14,25,.66);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(10px);
+      font-size:.75rem;
+      color:#eef3fa;
+    }
+
+    .somnifox .image img{object-position:center 35%}
+    .sonocalming .image img{object-position:center}
+
+    .games-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:18px;
+    }
+
+    .small-card{
+      min-height:360px;
+    }
+
+    .small-card .project-card-content{padding:22px}
+    .small-card h3{font-size:1.55rem}
+    .mahjong .image img{object-position:center}
+    .zen .image img{object-position:center 45%}
+
+    .more-games{
+      min-height:360px;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      text-decoration:none;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 10%,rgba(255,195,90,.18),transparent 15rem),
+        linear-gradient(160deg,#151d33,#0d1527);
+      box-shadow:var(--shadow);
+    }
+
+    .more-games:hover{border-color:rgba(255,195,90,.45)}
+
+    .more-games .icon{
+      width:64px;height:64px;border-radius:20px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      font-size:1.7rem;
+    }
+
+    .more-games h3{
+      margin:22px 0 8px;
+      font-size:1.7rem;
+      letter-spacing:-.035em;
+    }
+
+    .more-games p{margin:0;color:var(--muted)}
+
+    .arrow{
+      margin-top:24px;
+      font-weight:800;
+      color:var(--gold);
+    }
+
+    .art-card{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:30px;
+      align-items:center;
+      padding:34px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:
+        radial-gradient(circle at 90% 50%,rgba(255,136,170,.15),transparent 22rem),
+        radial-gradient(circle at 70% 20%,rgba(169,141,248,.15),transparent 22rem),
+        var(--panel);
+      box-shadow:var(--shadow);
+    }
+
+    .art-card h3{
+      margin:0 0 10px;
+      font-size:clamp(1.8rem,4vw,3rem);
+      letter-spacing:-.04em;
+    }
+
+    .art-card p{margin:0;color:var(--muted);max-width:680px}
+
+    .art-mark{
+      width:150px;
+      aspect-ratio:1;
+      border-radius:38px;
+      display:grid;
+      place-items:center;
+      font-size:4rem;
+      background:linear-gradient(145deg,rgba(255,136,170,.18),rgba(169,141,248,.16));
+      border:1px solid var(--line);
     }
 
     .footer{
-      margin-top:20px;
-      text-align:center;
-      font-size:13px;
-      color:var(--sub);
+      padding:38px 0 32px;
+      color:#7f8aa0;
+      font-size:.85rem;
     }
 
-    .footer a{
-      color:inherit;
-      text-decoration:underline;
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer a{color:inherit}
+    .footer a:hover{color:var(--text)}
+
+    @media(max-width:900px){
+      .featured-grid,.games-grid{grid-template-columns:1fr}
+      .small-card,.more-games{min-height:390px}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+    }
+
+    @media(max-width:650px){
+      .shell{width:min(var(--max),calc(100% - 26px))}
+      .hero{padding:70px 0 48px}
+      .nav{display:none}
+      .project-card{min-height:390px}
+      .art-card{grid-template-columns:1fr}
+      .art-mark{width:100px;border-radius:28px}
+      .section{padding:52px 0}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AML Creation",
+    "url":"https://www.amlcreation.ch/",
+    "description":"Independent apps, calm sound projects, cozy indie games and illustrated projects from Switzerland."
+  }
+  </script>
 </head>
 
 <body>
-  <div class="page">
-    <main class="card">
-      <h1>AML Creation</h1>
-      <p class="tagline">
-        Calming apps, cozy indie games, and illustrated stories crafted by Sandrine and Anne Murielle.
-      </p>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="/">AML CREATION</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#calm">Calm & Sound</a>
+        <a href="#games">Games</a>
+        <a href="#art">Art & Stories</a>
+      </nav>
+    </div>
+  </header>
 
-      <section class="links" aria-label="Projects">
-        <a class="link-btn mahjong" href="MahjongCastle/marketing_en.html">
-          Mahjong Castle · Cozy fantasy tile matching
-        </a>
-
-        <a class="link-btn primary" href="Somnifox/">
-          Somnifox · Sleep and focus sound mixer
-        </a>
-
-        <a class="link-btn primary" href="ZenCircle/marketing_en.html">
-          Zen Circle · A tiny zen rhythm game
-        </a>
-
-        <a class="link-btn" href="Games/index.html">
-          AnneMu&#39;s Games · Indie games
-        </a>
-
-        <a class="link-btn" href="https://annemurielle.github.io/samcreation">
-          Samcreation · Comics, manga and art
-        </a>
-      </section>
-
-      <div class="footer">
-        <span>&copy; AnneMu's Games</span>
-        &middot;
-        <a href="Policy-Confidentiality_en.html">General privacy policy</a>
+  <main>
+    <section class="hero shell">
+      <span class="hero-badge">Independent projects from Switzerland</span>
+      <h1>Apps, calm soundscapes, cozy games & illustrated worlds.</h1>
+      <p>AML Creation brings together independent digital projects, from peaceful sound experiences to fantasy games and illustrated stories.</p>
+      <div class="hero-links">
+        <a class="button primary" href="#calm">Explore projects</a>
+        <a class="button ghost" href="SonoCalming/">Discover SonoCalming</a>
       </div>
-    </main>
-  </div>
+    </section>
+
+    <section class="section" id="calm">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Calm & Sound</p>
+            <h2>Sound projects for quiet moments</h2>
+          </div>
+          <p>Two complementary projects, one for creating your own offline sound mixes, one for long-form rain and ambience on YouTube.</p>
+        </div>
+
+        <div class="featured-grid">
+          <a class="project-card somnifox" href="Somnifox/">
+            <div class="image">
+              <img src="Somnifox/hero.jpg" alt="Somnifox fox illustration on a calm purple background">
+            </div>
+            <div class="project-card-content">
+              <div class="meta">
+                <span class="pill">iPhone & iPad</span>
+                <span class="pill">Offline sound mixer</span>
+              </div>
+              <h3>Somnifox</h3>
+              <p>Create your own rain, ocean, forest, fireplace and noise mixes with a calm customizable sound mixer.</p>
+            </div>
+          </a>
+
+          <a class="project-card sonocalming" href="SonoCalming/">
+            <div class="image">
+              <img src="https://i.ytimg.com/vi/FTIH8JJWHMg/maxresdefault.jpg" alt="SonoCalming rain and relaxing piano video thumbnail">
+            </div>
+            <div class="project-card-content">
+              <div class="meta">
+                <span class="pill">YouTube</span>
+                <span class="pill">8–10 hour ambience</span>
+              </div>
+              <h3>SonoCalming</h3>
+              <p>Long rain sounds, Japanese bedroom rain, black screen ambience and relaxing piano for long listening.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Games</p>
+            <h2>Cozy worlds made to play at your own pace</h2>
+          </div>
+          <p>Fantasy tile matching, gentle rhythm gameplay and a wider collection of independent games.</p>
+        </div>
+
+        <div class="games-grid">
+          <a class="project-card small-card mahjong" href="MahjongCastle/marketing_en.html">
+            <div class="image">
+              <img src="MahjongCastle/Images/hero.jpg" alt="Mahjong Castle colorful fantasy castle world">
+            </div>
+            <div class="project-card-content">
+              <div class="meta"><span class="pill">Mahjong solitaire</span></div>
+              <h3>Mahjong Castle</h3>
+              <p>Match tiles, travel through colorful worlds and restore a magical castle.</p>
+            </div>
+          </a>
+
+          <a class="project-card small-card zen" href="ZenCircle/marketing_en.html">
+            <div class="image">
+              <img src="ZenCircle/hero.jpg" alt="Zen Circle winter illustration with a glowing deer">
+            </div>
+            <div class="project-card-content">
+              <div class="meta"><span class="pill">Rhythm game</span></div>
+              <h3>Zen Circle</h3>
+              <p>A calm rhythm game set in peaceful illustrated worlds.</p>
+            </div>
+          </a>
+
+          <a class="more-games" href="Games/index.html">
+            <div>
+              <div class="icon" aria-hidden="true">🎮</div>
+              <h3>AnneMu's Games</h3>
+              <p>Explore more indie games and older projects in the wider game collection.</p>
+            </div>
+            <span class="arrow">Browse all games →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="art">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Art & Stories</p>
+            <h2>A separate space for illustration</h2>
+          </div>
+          <p>Samcreation stays clearly separated from the apps and games, with its own visual identity and creative work.</p>
+        </div>
+
+        <div class="art-card">
+          <div>
+            <h3>Samcreation</h3>
+            <p>Comics, manga, illustrations and art projects. Open the dedicated Samcreation site to explore the creative work separately from AML Creation's apps and games.</p>
+            <div class="hero-links" style="justify-content:flex-start;margin-top:24px">
+              <a class="button ghost" href="https://annemurielle.github.io/samcreation" target="_blank" rel="noopener">Visit Samcreation</a>
+            </div>
+          </div>
+          <div class="art-mark" aria-hidden="true">🎨</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>© 2026 AML Creation</span>
+      <span><a href="Policy-Confidentiality_en.html">General privacy policy</a></span>
+    </div>
+  </footer>
 </body>
 </html>
