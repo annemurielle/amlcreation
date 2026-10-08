@@ -1,39 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.amlcreation.ch/SonoCalming/</loc>
-    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/rain-sounds.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/japanese-bedroom.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/black-screen.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/music-nature.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/rain-piano.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/music.html</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/SonoCalming/playlists.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.amlcreation.ch/SonoCalming/ADD_TO_AML_HOME.html</loc>
   </url>
   <url>
     <loc>https://www.amlcreation.ch/SonoCalming/about.html</loc>
-    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/black-screen.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/japanese-bedroom.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/music-nature.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/music.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/playlists.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/rain-piano.html</loc>
+  </url>
+  <url>
+    <loc>https://www.amlcreation.ch/SonoCalming/rain-sounds.html</loc>
   </url>
 </urlset>
