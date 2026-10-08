@@ -1,0 +1,9 @@
+To preview the site locally without YouTube error 153:
+
+cd "/Users/largeram/_amlCreationGitHub/amlcreation/SonoCalming"
+python3 -m http.server 8080
+
+Then open in your browser:
+http://localhost:8080/
+
+Stop the server with Ctrl+C.

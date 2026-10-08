@@ -1,0 +1,53 @@
+SONOCALMING V5 STRUCTURE
+========================
+
+MAIN NAVIGATION
+---------------
+Rain
+Black Screen
+Music + Nature
+Relaxing Music
+Playlists
+About
+
+WHY
+---
+Japanese Bedroom remains an indexed SEO page but is grouped under Rain in the visitor navigation.
+Rain + Piano remains an indexed SEO page but is grouped under Music + Nature.
+This reduces menu clutter while preserving focused landing pages for search.
+
+DIRECT PLAYLISTS WIRED INTO THE SITE
+------------------------------------
+Rain:
+https://www.youtube.com/playlist?list=PLmwaBBNoGCMko2mBgfHmuJj0TMJHuvIjR
+
+Black Screen:
+https://www.youtube.com/playlist?list=PLIAi4NigujQQ
+
+Music & Nature:
+https://www.youtube.com/playlist?list=PLmwaBBNoGCMn6to-qjYd6KC6TxBwGGt1j
+
+Relaxing Music:
+https://www.youtube.com/playlist?list=PLmwaBBNoGCMkH1iRvvvLNZwLKg_5In3wN
+
+Blue Room:
+https://www.youtube.com/playlist?list=PLmwaBBNoGCMnkHFBGY6le5UDn0SBe8aXF
+
+Exact URLs for some newer playlists, including Japanese Bedroom and Rain + Relaxing Piano,
+were not present in the supplied site source. Their cards therefore point to the channel's
+Playlists tab rather than using an invented ID.
+
+SITEMAPS
+--------
+Submit this in Google Search Console and Bing Webmaster Tools:
+https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
+
+It includes the normal page sitemap and video sitemap.
+
+PLAYER DESIGN
+-------------
+One click-to-play preview is used for each main family.
+The YouTube iframe is created only after the visitor clicks Play.
+This keeps the page lighter while still allowing playback on the site.
+
+The homepage keeps one real featured long-form player above the fold.

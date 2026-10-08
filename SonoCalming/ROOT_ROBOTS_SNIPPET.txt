@@ -1,0 +1,5 @@
+# Merge into https://www.amlcreation.ch/robots.txt
+User-agent: *
+Allow: /SonoCalming/
+
+Sitemap: https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
