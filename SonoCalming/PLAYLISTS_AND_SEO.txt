@@ -1,53 +1,31 @@
-SONOCALMING V5 STRUCTURE
-========================
+SONOCALMING SITE LINKS | 2026-10-09
+==================================
 
-MAIN NAVIGATION
----------------
-Rain
-Black Screen
-Music + Nature
-Relaxing Music
-Playlists
-About
+MAIN WEBSITE
+https://www.amlcreation.ch/SonoCalming/
 
-WHY
----
-Japanese Bedroom remains an indexed SEO page but is grouped under Rain in the visitor navigation.
-Rain + Piano remains an indexed SEO page but is grouped under Music + Nature.
-This reduces menu clutter while preserving focused landing pages for search.
+ALL VIDEOS
+https://www.amlcreation.ch/SonoCalming/videos.html
 
-DIRECT PLAYLISTS WIRED INTO THE SITE
-------------------------------------
-Rain:
-https://www.youtube.com/playlist?list=PLmwaBBNoGCMko2mBgfHmuJj0TMJHuvIjR
+KNOWN PLAYLIST URLS FROM THE ORIGINAL ZIP
+Rain Sounds: https://www.youtube.com/playlist?list=PLmwaBBNoGCMko2mBgfHmuJj0TMJHuvIjR
+Black Screen: https://www.youtube.com/playlist?list=PLIAi4NigujQQ
+Music + Nature: https://www.youtube.com/playlist?list=PLmwaBBNoGCMn6to-qjYd6KC6TxBwGGt1j
+Relaxing Music: https://www.youtube.com/playlist?list=PLmwaBBNoGCMkH1iRvvvLNZwLKg_5In3wN
+Blue Room: https://www.youtube.com/playlist?list=PLmwaBBNoGCMnkHFBGY6le5UDn0SBe8aXF
 
-Black Screen:
-https://www.youtube.com/playlist?list=PLIAi4NigujQQ
+For playlists without a verified direct ID, the site preserves a link to
+https://www.youtube.com/channel/UCGXypunMB75x599kvbSAuqw/playlists
 
-Music & Nature:
-https://www.youtube.com/playlist?list=PLmwaBBNoGCMn6to-qjYd6KC6TxBwGGt1j
-
-Relaxing Music:
-https://www.youtube.com/playlist?list=PLmwaBBNoGCMkH1iRvvvLNZwLKg_5In3wN
-
-Blue Room:
-https://www.youtube.com/playlist?list=PLmwaBBNoGCMnkHFBGY6le5UDn0SBe8aXF
-
-Exact URLs for some newer playlists, including Japanese Bedroom and Rain + Relaxing Piano,
-were not present in the supplied site source. Their cards therefore point to the channel's
-Playlists tab rather than using an invented ID.
-
-SITEMAPS
---------
-Submit this in Google Search Console and Bing Webmaster Tools:
+INDEXING
+Google Search Console / Bing Webmaster Tools:
 https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
 
-It includes the normal page sitemap and video sitemap.
+Individual video pages are in videos/VIDEO_ID.html, and all are discoverable
+via videos.html, contextual internal links, sitemap.xml and video-sitemap.xml.
+Avoid assuming all submitted pages will be indexed automatically.
 
-PLAYER DESIGN
--------------
-One click-to-play preview is used for each main family.
-The YouTube iframe is created only after the visitor clicks Play.
-This keeps the page lighter while still allowing playback on the site.
-
-The homepage keeps one real featured long-form player above the fold.
+SITE COPY
+SonoCalming is an English-language site for rain sounds, steady noise,
+calm ambience, and music by its respective artists.
+No unsupported medical promises or invented music ownership.

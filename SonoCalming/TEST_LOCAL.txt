@@ -1,9 +1,13 @@
-To preview the site locally without YouTube error 153:
+LOCAL WEBSITE TEST, macOS
+========================
 
 cd "/Users/largeram/_amlCreationGitHub/amlcreation/SonoCalming"
 python3 -m http.server 8080
 
-Then open in your browser:
+Then open:
 http://localhost:8080/
+http://localhost:8080/videos.html
+http://localhost:8080/videos/FTIH8JJWHMg.html
 
-Stop the server with Ctrl+C.
+The site needs HTTP/HTTPS for reliable YouTube embeds. Opening a local file
+with file:// may cause YouTube error 153.

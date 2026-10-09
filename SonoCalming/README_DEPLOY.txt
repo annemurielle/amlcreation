@@ -1,118 +1,77 @@
-SONOCALMING WEBSITE
-===================
-Target: https://www.amlcreation.ch/SonoCalming/
+SONOCALMING WEBSITE | COMPLETE VIDEO CATALOGUE
+Version 2026-10-09
+=============================================
 
-Copy the whole SonoCalming folder into:
+PUBLIC WEBSITE
+https://www.amlcreation.ch/SonoCalming/
+
+THIS VERSION INCLUDES
+- 321 real, public SonoCalming YouTube videos (metadata read from the channel on 2026-10-09)
+- One individual crawlable HTML watch page for every video: SonoCalming/videos/VIDEO_ID.html
+- Full HTML catalogue: https://www.amlcreation.ch/SonoCalming/videos.html
+- 321 click-to-play YouTube previews in the catalogue, searchable/filterable by title,
+  category, year and video/Shorts. Thumbnail images use lazy loading.
+- One genuine YouTube iframe on every dedicated video page, plus source link.
+- Unique title, description, canonical, Open Graph and Twitter preview on each page.
+- VideoObject and BreadcrumbList structured data on every individual video page.
+- Correct sitemap index with a 331-URL page sitemap and a 321-video sitemap.
+- 6 original main sound families in the existing navigation, plus All Videos.
+- Link paths checked within the SonoCalming folder.
+
+DEPLOY
+Copy/replace the ENTIRE SonoCalming directory in your existing local repository:
 /Users/largeram/_amlCreationGitHub/amlcreation/SonoCalming/
 
-This version intentionally uses a darker media-first design than Somnifox. Somnifox is an app/product page, while SonoCalming is designed to push visitors quickly into long YouTube videos and playlists. The AML Creation family link remains in the footer and Somnifox is cross-linked.
+After you have placed the files yourself, use Git as usual:
 
-SEO INCLUDED
-- Focused landing pages for Rain, Japanese Bedroom, Black Screen and Rain + Piano
-- Canonical URLs
-- Meta descriptions
-- Open Graph / Twitter previews
-- Mobile responsive design
-- Fast, dependency-free CSS/JS
-- Standard sitemap.xml
-- video-sitemap.xml for two verified recent videos
-- Search Console and Bing verification placeholders in every HTML head
-- No obsolete meta-keywords tag
-
-WATCH-TIME DESIGN
-- Featured 10-hour video above the fold
-- Latest uploads player uses the automatic YouTube uploads playlist: UUGXypunMB75x599kvbSAuqw
-- Black Screen page embeds the existing playlist: PLIAi4NigujQQ
-- rel=0 keeps YouTube related recommendations constrained to the same channel context
-- No autoplay, visitors choose to start playback
-
-IMPORTANT
-The Japanese Bedroom page currently uses video IDs xYtLErFwPuU and KgzJV9ef6_Y, because these were the two Japanese Bedroom videos present in the supplied channel analysis. If you want different episodes featured, replace only those IDs in japanese-bedroom.html and rain-sounds.html.
-
-SEARCH CONSOLE / BING
-Submit:
-https://www.amlcreation.ch/SonoCalming/sitemap.xml
-https://www.amlcreation.ch/SonoCalming/video-sitemap.xml
-
-robots.txt works only at the DOMAIN ROOT. Merge the content of ROOT_ROBOTS_SNIPPET.txt into https://www.amlcreation.ch/robots.txt, do not upload it as /SonoCalming/robots.txt.
-
-GIT AFTER COPYING
 cd "/Users/largeram/_amlCreationGitHub/amlcreation"
-git add -A
-git commit -m "Add SonoCalming website"
+git add SonoCalming
+git commit -m "Expand SonoCalming SEO library with 321 YouTube video pages"
 BRANCH=$(git branch --show-current)
 git pull --rebase origin "$BRANCH"
 git push origin "$BRANCH"
 
-LOCAL TESTING AND YOUTUBE ERROR 153
------------------------------------
-Do not judge YouTube embeds by double-clicking index.html as a file:// URL.
-YouTube error 153 means the player did not receive an HTTP Referer or equivalent client identity.
+BEWARE
+A link to ../Somnifox/hero.jpg is intentionally kept in the home page,
+matching the existing AML Creation repository. The file is located in the
+sibling Somnifox folder, not within the SonoCalming ZIP. The public image
+was checked at https://www.amlcreation.ch/Somnifox/hero.jpg.
 
-Test the site through a small local HTTP server instead:
+SITEMAPS
+Submit just this sitemap index in both Google Search Console and Bing:
+https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
 
+This index includes BOTH:
+https://www.amlcreation.ch/SonoCalming/sitemap.xml
+https://www.amlcreation.ch/SonoCalming/video-sitemap.xml
+
+robots.txt exists only at the website domain ROOT, not in SonoCalming.
+Merge ROOT_ROBOTS_SNIPPET.txt into the root robots.txt if it isn't already there.
+
+CONTENT & SEARCH GUIDANCE
+- Music is not attributed to the channel owner as composer.
+- A video sitemap must not have <video:duration> values above 28800 seconds;
+  those values are omitted for long uploads. Exact duration remains in VideoObject.
+- Videos are linked to their official YouTube upload IDs, not inferred IDs.
+- The video list is a snapshot, new future videos need to be added to videos.tsv.
+- On Google, discovery and indexing are not guaranteed: submit sitemap and
+  monitor Video Indexing and Pages reports after deployment.
+
+LOCALLY TEST
 cd "/Users/largeram/_amlCreationGitHub/amlcreation/SonoCalming"
 python3 -m http.server 8080
 
-Then open:
-http://localhost:8080/
+Open http://localhost:8080/ in a browser. YouTube embeds may report error 153
+when testing pages through file:// instead of an HTTP/HTTPS site.
 
-The deployed HTTPS site should provide a normal Referer automatically.
-The pages also declare strict-origin-when-cross-origin, the policy recommended by YouTube for embedded players.
+Future catalogue regeneration (optional)
+The _maintenance directory includes build_sonocalming.py and videos.tsv.
+For a new public video, add a TSV row with ID, date, ISO duration and title,
+then run: python3 _maintenance/build_sonocalming.py
+Python with beautifulsoup4 is required for this optional maintenance script.
 
-WATCH-TIME STRATEGY
--------------------
-The site cannot guarantee watch hours. It is designed to improve the chance of long sessions by:
-- putting a 10-hour video above the fold
-- prioritizing long-form videos instead of the automatic uploads feed
-- using rel=0 so related videos shown after playback come from SonoCalming
-- grouping visitors by strong intent pages: Rain, Japanese Bedroom, Black Screen, Rain + Piano
-- linking directly to the full YouTube videos and relevant playlists
-- keeping short art content out of the main long-form funnel
-
-SEO NOTE FOR 10-HOUR VIDEOS
-----------------------------
-Google's VideoObject structured data can use ISO 8601 duration such as PT10H.
-However, the optional <video:duration> field in a video sitemap accepts a maximum of 28,800 seconds (8 hours).
-For the 10-hour videos in video-sitemap.xml, the duration field is therefore intentionally omitted.
-
-
-V3 PLAYLIST + SEO UPDATE
-------------------------
-New public page:
-https://www.amlcreation.ch/SonoCalming/playlists.html
-
-New sitemap index:
-https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
-
-Recommended submission in Google Search Console AND Bing Webmaster Tools:
-https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
-
-The sitemap index references the normal page sitemap and the video sitemap.
-
-The homepage now links prominently to playlists, and category pages cross-link to the playlist directory.
-This is intended to send visitors into longer, related listening sessions rather than leaving them on a single isolated video.
-
-See PLAYLISTS_AND_SEO.txt for direct playlist IDs and the newer playlist IDs that still need exact URLs if you want every card to open a specific YouTube playlist.
-
-
-V5 NAVIGATION
--------------
-Rain | Black Screen | Music + Nature | Relaxing Music | Playlists | About
-
-New pages:
-https://www.amlcreation.ch/SonoCalming/music-nature.html
-https://www.amlcreation.ch/SonoCalming/music.html
-
-Japanese Bedroom and Rain + Piano remain indexable child pages but are no longer separate top-menu items.
-
-Submit:
-https://www.amlcreation.ch/SonoCalming/sitemap-index.xml
-
-V6 CONTENT CLEANUP
-------------------
-- Final menu: Rain | Black Screen | Music + Nature | Relaxing Music | Playlists | About
-- Visitor-facing copy no longer discusses site navigation, indexing or search-engine organization.
-- Each main family page uses one video preview only. Secondary playlists and subformats use text cards or buttons.
-- Music + Nature features the older Rain & Piano Relaxation video fDHU56MFMdo to avoid repeating the homepage Rain + Piano feature.
-- Homepage Somnifox cross-promotion now uses ../Somnifox/hero.jpg and links to both the App Store and the Somnifox website.
+EXTERNAL LINKS
+YouTube videos are taken from the channel's own public video listing.
+Known playlist URLs were retained from the previous version; not every playlist
+could be verified remotely here. Entries with unknown playlist IDs still send
+visitors to the channel's Playlists tab rather than inventing a URL.
