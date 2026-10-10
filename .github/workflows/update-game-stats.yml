@@ -1,0 +1,56 @@
+name: Update game store information
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 5 * * *'
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: aml-store-pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-publish:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh public store information
+        run: python scripts/update_game_store_data.py
+      - name: Save refreshed information
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Games/store-data.json Games/*.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public game store information'
+            git push
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare complete static site
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/aml-public-site"
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='Rapport_Games_Modern_SEO.md' --exclude='*.zip' ./ "$RUNNER_TEMP/aml-public-site/"
+      - name: Upload complete static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/aml-public-site
+      - name: Publish complete static site
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,98 @@
+{
+  "en": {
+    "store-title": "From the app stores",
+    "ratings": "store ratings",
+    "empty": "No public rating currently displayed.",
+    "threshold": "Public Android download threshold",
+    "checked": "Checked",
+    "region": "US storefront",
+    "store-link": "See the listing and reviews",
+    "store-note": "Ratings are shown separately by store and can vary by country and over time.",
+    "review-heading": "Google Play review excerpts",
+    "review-note": "These short excerpts are displayed publicly by Google Play and do not represent every review."
+  },
+  "fr": {
+    "store-title": "Notes et avis des boutiques",
+    "ratings": "notes publiées",
+    "empty": "Pas encore de note publique affichée.",
+    "threshold": "Seuil public de téléchargements Android",
+    "checked": "Vérifié le",
+    "region": "Boutique US",
+    "store-link": "Voir la fiche et les avis",
+    "store-note": "Notes affichées séparément par boutique. Elles peuvent varier selon le pays et évoluer.",
+    "review-heading": "Extraits d’avis Google Play",
+    "review-note": "Ces courts extraits sont affichés publiquement par Google Play et ne représentent pas tous les avis."
+  },
+  "de": {
+    "store-title": "Aus den App-Stores",
+    "ratings": "Store-Bewertungen",
+    "empty": "Derzeit keine öffentliche Bewertung angezeigt.",
+    "threshold": "Öffentliche Android-Downloadschwelle",
+    "checked": "Geprüft am",
+    "region": "US-Store",
+    "store-link": "Store-Seite und Rezensionen ansehen",
+    "store-note": "Bewertungen werden je Store getrennt angezeigt und können je nach Land und Zeitpunkt abweichen.",
+    "review-heading": "Auszüge aus Google-Play-Rezensionen",
+    "review-note": "Diese kurzen Auszüge werden öffentlich bei Google Play angezeigt und bilden nicht alle Rezensionen ab."
+  },
+  "it": {
+    "store-title": "Dagli app store",
+    "ratings": "valutazioni nello store",
+    "empty": "Nessuna valutazione pubblica attualmente disponibile.",
+    "threshold": "Soglia pubblica dei download Android",
+    "checked": "Verificato il",
+    "region": "Store USA",
+    "store-link": "Vedi la scheda e le recensioni",
+    "store-note": "Le valutazioni sono separate per store e possono variare secondo il paese e nel tempo.",
+    "review-heading": "Estratti di recensioni Google Play",
+    "review-note": "Questi brevi estratti sono pubblici su Google Play e non rappresentano tutte le recensioni."
+  },
+  "ja": {
+    "store-title": "ストアの評価",
+    "ratings": "件の評価",
+    "empty": "現在、公開されている評価はありません。",
+    "threshold": "Androidの公開ダウンロード数の目安",
+    "checked": "確認日",
+    "region": "米国のストア",
+    "store-link": "ストアのページとレビューを見る",
+    "store-note": "評価はストアごとに表示しています。国や時期によって異なる場合があります。",
+    "review-heading": "Google Playのレビュー抜粋",
+    "review-note": "Google Playで公開されている短い抜粋で、すべてのレビューを表すものではありません。"
+  },
+  "ru": {
+    "store-title": "Информация из магазинов",
+    "ratings": "оценок в магазине",
+    "empty": "Сейчас публичная оценка не отображается.",
+    "threshold": "Публичный порог скачиваний Android",
+    "checked": "Проверено",
+    "region": "Магазин США",
+    "store-link": "Открыть страницу и отзывы",
+    "store-note": "Оценки показаны отдельно для каждого магазина и могут различаться по странам и со временем.",
+    "review-heading": "Фрагменты отзывов Google Play",
+    "review-note": "Это короткие фрагменты публичных отзывов Google Play, они не представляют все отзывы."
+  },
+  "es": {
+    "store-title": "Información de las tiendas",
+    "ratings": "valoraciones en la tienda",
+    "empty": "Todavía no se muestra una valoración pública.",
+    "threshold": "Umbral público de descargas Android",
+    "checked": "Comprobado el",
+    "region": "Tienda de EE. UU.",
+    "store-link": "Ver la ficha y las reseñas",
+    "store-note": "Las valoraciones se muestran por separado para cada tienda y pueden variar según el país y con el tiempo.",
+    "review-heading": "Extractos de reseñas de Google Play",
+    "review-note": "Estos breves extractos son públicos en Google Play y no representan todas las reseñas."
+  },
+  "pt": {
+    "store-title": "Informações das lojas",
+    "ratings": "avaliações na loja",
+    "empty": "Ainda não é apresentada uma avaliação pública.",
+    "threshold": "Limiar público de transferências Android",
+    "checked": "Verificado em",
+    "region": "Loja dos EUA",
+    "store-link": "Ver a página e as opiniões",
+    "store-note": "As avaliações são apresentadas separadamente por loja e podem variar conforme o país e ao longo do tempo.",
+    "review-heading": "Excertos de opiniões do Google Play",
+    "review-note": "Estes excertos curtos são públicos no Google Play e não representam todas as opiniões."
+  }
+}

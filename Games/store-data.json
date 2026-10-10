@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "apps": {
+    "mochi": {
+      "name": "Mochi Plush Kawaii",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.plushKid&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Mochi Plush kawaii",
+          "rating": 3.8309860229492188,
+          "ratingCount": 2800,
+          "downloads": "1M+",
+          "reviews": [
+            {
+              "excerpt": "This game is incredible I am…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.plushKid&hl=en&gl=US",
+              "date": "October 30, 2020",
+              "rating": 5
+            },
+            {
+              "excerpt": "Yes, my awaited childhood dreams was…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.plushKid&hl=en&gl=US",
+              "date": "October 2, 2023",
+              "rating": 4
+            }
+          ]
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1463998446",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Mochi Plush kawaii",
+          "rating": 5.0,
+          "ratingCount": 1
+        }
+      }
+    },
+    "mahjong": {
+      "name": "Mahjong Castle",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.mahjongcastle&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Mahjong Castle: Solitaire",
+          "downloads": "50+",
+          "reviews": []
+        }
+      }
+    },
+    "zen": {
+      "name": "Zen Circle Spirit",
+      "stores": {
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id6756264679",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Zen Circle Spirit"
+        }
+      }
+    },
+    "somnifox": {
+      "name": "Somnifox",
+      "stores": {
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id6753948909",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Somnifox"
+        }
+      }
+    },
+    "celestwald": {
+      "name": "Celestwald Adventure",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.maxflo&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Celestwald – Adventure Game",
+          "rating": 2.9000000953674316,
+          "ratingCount": 250,
+          "downloads": "50K+",
+          "reviews": [
+            {
+              "excerpt": "I was enjoying this game for…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.maxflo&hl=en&gl=US",
+              "date": "November 11, 2023",
+              "rating": 3
+            },
+            {
+              "excerpt": "Forces you to pay $1.99 after…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.maxflo&hl=en&gl=US",
+              "date": "September 7, 2019",
+              "rating": 1
+            }
+          ]
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1402637610",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Celestwald adventure",
+          "rating": 4.8,
+          "ratingCount": 13
+        }
+      }
+    },
+    "celestwald2": {
+      "name": "Celestwald 2",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.maxflo2&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Celestwald 2 – Adventure Game",
+          "downloads": "50+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id6450318342",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Celestwald 2",
+          "rating": 3.7,
+          "ratingCount": 3
+        }
+      }
+    },
+    "cats": {
+      "name": "Cats in the Box Adventure",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.catsInTheBox&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Cats in the Box Adventure",
+          "rating": 4.400000095367432,
+          "ratingCount": 28,
+          "downloads": "1K+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1294610665",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Cats in the box adventures",
+          "rating": 3.0,
+          "ratingCount": 1
+        }
+      }
+    },
+    "fantasiant": {
+      "name": "Fantasiant · Tiny Hero",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.broken&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Fantasiant - Tiny Hero",
+          "downloads": "1K+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1492451515",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Fantasiant - Tiny Hero"
+        }
+      }
+    },
+    "lili": {
+      "name": "Lili’s Bedroom",
+      "stores": {
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id888100530",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Lili's bedroom",
+          "rating": 5.0,
+          "ratingCount": 2
+        }
+      }
+    },
+    "puzzles": {
+      "name": "Puzzles Mix",
+      "stores": {
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id852309712",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Puzzles Mix",
+          "rating": 5.0,
+          "ratingCount": 2
+        }
+      }
+    },
+    "mines": {
+      "name": "Little Minesweeper Guy",
+      "stores": {
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1048458452",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Little Minesweeper guy",
+          "rating": 3.0,
+          "ratingCount": 2
+        }
+      }
+    },
+    "tiny1": {
+      "name": "Tiny Story 1",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 1 Adventure",
+          "rating": 4.363636493682861,
+          "ratingCount": 19,
+          "downloads": "100+",
+          "reviews": [
+            {
+              "excerpt": "Great game. I love it and…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory&hl=en&gl=US",
+              "date": "January 1, 2021",
+              "rating": 5
+            },
+            {
+              "excerpt": "Thanks to the very prompt response…",
+              "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory&hl=en&gl=US",
+              "date": "September 14, 2021",
+              "rating": 5
+            }
+          ]
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1187225740",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 1 Adventure",
+          "rating": 4.0,
+          "ratingCount": 4
+        }
+      }
+    },
+    "tiny2": {
+      "name": "Tiny Story 2",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory2&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 2 Adventure",
+          "downloads": "100+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1231350477",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 2 Adventure",
+          "rating": 5.0,
+          "ratingCount": 1
+        }
+      }
+    },
+    "tiny3": {
+      "name": "Tiny Story 3",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory3&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 3 Adventure",
+          "downloads": "50+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1548105463",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 3 Adventure",
+          "rating": 3.7,
+          "ratingCount": 3
+        }
+      }
+    },
+    "tiny4": {
+      "name": "Tiny Story 4",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory4&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 4 Adventure",
+          "downloads": "50+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1550514708",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 4 Adventure",
+          "rating": 5.0,
+          "ratingCount": 1
+        }
+      }
+    },
+    "tiny5": {
+      "name": "Tiny Story 5",
+      "stores": {
+        "android": {
+          "store": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.amlcreation.tinyStory5&hl=en&gl=US",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 5 Adventure",
+          "downloads": "10+",
+          "reviews": []
+        },
+        "ios": {
+          "store": "App Store",
+          "url": "https://apps.apple.com/us/app/id1611747664",
+          "updatedAt": "2026-10-10T06:18:45+00:00",
+          "region": "US",
+          "language": "en",
+          "name": "Tiny Story 5 Adventure",
+          "rating": 5.0,
+          "ratingCount": 3
+        }
+      }
+    }
+  }
+}

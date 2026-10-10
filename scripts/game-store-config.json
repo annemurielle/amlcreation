@@ -1,0 +1,236 @@
+{
+  "mochi": {
+    "name": "Mochi Plush Kawaii",
+    "android": "com.amlcreation.plushKid",
+    "ios": "1463998446",
+    "pages": [
+      "mochi-plush-kawaii-en.html",
+      "mochi-plush-kawaii-fr.html",
+      "mochi-plush-kawaii-de.html",
+      "mochi-plush-kawaii-it.html",
+      "mochi-plush-kawaii-ja.html",
+      "mochi-plush-kawaii-ru.html",
+      "mochi-plush-kawaii-es.html",
+      "mochi-plush-kawaii-pt.html"
+    ]
+  },
+  "mahjong": {
+    "name": "Mahjong Castle",
+    "android": "com.amlcreation.mahjongcastle",
+    "pages": [
+      "mahjong-castle-en.html",
+      "mahjong-castle-fr.html",
+      "mahjong-castle-de.html",
+      "mahjong-castle-it.html",
+      "mahjong-castle-ja.html",
+      "mahjong-castle-ru.html",
+      "mahjong-castle-es.html",
+      "mahjong-castle-pt.html"
+    ]
+  },
+  "zen": {
+    "name": "Zen Circle Spirit",
+    "ios": "6756264679",
+    "pages": [
+      "zen-circle-spirit-en.html",
+      "zen-circle-spirit-fr.html",
+      "zen-circle-spirit-de.html",
+      "zen-circle-spirit-it.html",
+      "zen-circle-spirit-ja.html",
+      "zen-circle-spirit-ru.html",
+      "zen-circle-spirit-es.html",
+      "zen-circle-spirit-pt.html"
+    ]
+  },
+  "somnifox": {
+    "name": "Somnifox",
+    "ios": "6753948909",
+    "pages": [
+      "somnifox-en.html",
+      "somnifox-fr.html",
+      "somnifox-de.html",
+      "somnifox-it.html",
+      "somnifox-ja.html",
+      "somnifox-ru.html",
+      "somnifox-es.html",
+      "somnifox-pt.html"
+    ]
+  },
+  "celestwald": {
+    "name": "Celestwald Adventure",
+    "android": "com.amlcreation.maxflo",
+    "ios": "1402637610",
+    "pages": [
+      "Celestwald-en.html",
+      "Celestwald-fr.html",
+      "Celestwald-de.html",
+      "Celestwald-it.html",
+      "Celestwald-ja.html",
+      "Celestwald-ru.html",
+      "Celestwald-es.html",
+      "Celestwald-pt.html"
+    ]
+  },
+  "celestwald2": {
+    "name": "Celestwald 2",
+    "android": "com.amlcreation.maxflo2",
+    "ios": "6450318342",
+    "pages": [
+      "Celestwald2-en.html",
+      "Celestwald2-fr.html",
+      "Celestwald2-de.html",
+      "Celestwald2-it.html",
+      "Celestwald2-ja.html",
+      "Celestwald2-ru.html",
+      "Celestwald2-es.html",
+      "Celestwald2-pt.html"
+    ]
+  },
+  "cats": {
+    "name": "Cats in the Box Adventure",
+    "android": "com.amlcreation.catsInTheBox",
+    "ios": "1294610665",
+    "pages": [
+      "cats-in-the-box-en.html",
+      "cats-in-the-box-fr.html",
+      "cats-in-the-box-de.html",
+      "cats-in-the-box-it.html",
+      "cats-in-the-box-ja.html",
+      "cats-in-the-box-ru.html",
+      "cats-in-the-box-es.html",
+      "cats-in-the-box-pt.html"
+    ]
+  },
+  "fantasiant": {
+    "name": "Fantasiant · Tiny Hero",
+    "android": "com.amlcreation.broken",
+    "ios": "1492451515",
+    "pages": [
+      "fantasiant-adventure-puzzle-game-en.html",
+      "fantasiant-adventure-puzzle-game-fr.html",
+      "fantasiant-adventure-puzzle-game-de.html",
+      "fantasiant-adventure-puzzle-game-it.html",
+      "fantasiant-adventure-puzzle-game-ja.html",
+      "fantasiant-adventure-puzzle-game-ru.html",
+      "fantasiant-adventure-puzzle-game-es.html",
+      "fantasiant-adventure-puzzle-game-pt.html"
+    ]
+  },
+  "lili": {
+    "name": "Lili’s Bedroom",
+    "ios": "888100530",
+    "pages": [
+      "lili-bedroom-en.html",
+      "lili-bedroom-fr.html",
+      "lili-bedroom-de.html",
+      "lili-bedroom-it.html",
+      "lili-bedroom-ja.html",
+      "lili-bedroom-ru.html",
+      "lili-bedroom-es.html",
+      "lili-bedroom-pt.html"
+    ]
+  },
+  "puzzles": {
+    "name": "Puzzles Mix",
+    "ios": "852309712",
+    "pages": [
+      "puzzles-mix-en.html",
+      "puzzles-mix-fr.html",
+      "puzzles-mix-de.html",
+      "puzzles-mix-it.html",
+      "puzzles-mix-ja.html",
+      "puzzles-mix-ru.html",
+      "puzzles-mix-es.html",
+      "puzzles-mix-pt.html"
+    ]
+  },
+  "mines": {
+    "name": "Little Minesweeper Guy",
+    "ios": "1048458452",
+    "pages": [
+      "little-minesweeper-en.html",
+      "little-minesweeper-fr.html",
+      "little-minesweeper-de.html",
+      "little-minesweeper-it.html",
+      "little-minesweeper-ja.html",
+      "little-minesweeper-ru.html",
+      "little-minesweeper-es.html",
+      "little-minesweeper-pt.html"
+    ]
+  },
+  "tiny1": {
+    "name": "Tiny Story 1",
+    "android": "com.amlcreation.tinyStory",
+    "ios": "1187225740",
+    "pages": [
+      "Application-Point-and-Click-TinyStory-en.html",
+      "Application-Point-and-Click-TinyStory.html",
+      "Application-Point-and-Click-TinyStory-de.html",
+      "Application-Point-and-Click-TinyStory-it.html",
+      "Application-Point-and-Click-TinyStory-ja.html",
+      "Application-Point-and-Click-TinyStory-ru.html",
+      "Application-Point-and-Click-TinyStory-es.html",
+      "Application-Point-and-Click-TinyStory-pt.html"
+    ]
+  },
+  "tiny2": {
+    "name": "Tiny Story 2",
+    "android": "com.amlcreation.tinyStory2",
+    "ios": "1231350477",
+    "pages": [
+      "Application-Point-and-Click-TinyStory2-en.html",
+      "Application-Point-and-Click-TinyStory2.html",
+      "Application-Point-and-Click-TinyStory2-de.html",
+      "Application-Point-and-Click-TinyStory2-it.html",
+      "Application-Point-and-Click-TinyStory2-ja.html",
+      "Application-Point-and-Click-TinyStory2-ru.html",
+      "Application-Point-and-Click-TinyStory2-es.html",
+      "Application-Point-and-Click-TinyStory2-pt.html"
+    ]
+  },
+  "tiny3": {
+    "name": "Tiny Story 3",
+    "android": "com.amlcreation.tinyStory3",
+    "ios": "1548105463",
+    "pages": [
+      "Application-Point-and-Click-TinyStory3-en.html",
+      "Application-Point-and-Click-TinyStory3.html",
+      "Application-Point-and-Click-TinyStory3-de.html",
+      "Application-Point-and-Click-TinyStory3-it.html",
+      "Application-Point-and-Click-TinyStory3-ja.html",
+      "Application-Point-and-Click-TinyStory3-ru.html",
+      "Application-Point-and-Click-TinyStory3-es.html",
+      "Application-Point-and-Click-TinyStory3-pt.html"
+    ]
+  },
+  "tiny4": {
+    "name": "Tiny Story 4",
+    "android": "com.amlcreation.tinyStory4",
+    "ios": "1550514708",
+    "pages": [
+      "Application-Point-and-Click-TinyStory4-en.html",
+      "Application-Point-and-Click-TinyStory4.html",
+      "Application-Point-and-Click-TinyStory4-de.html",
+      "Application-Point-and-Click-TinyStory4-it.html",
+      "Application-Point-and-Click-TinyStory4-ja.html",
+      "Application-Point-and-Click-TinyStory4-ru.html",
+      "Application-Point-and-Click-TinyStory4-es.html",
+      "Application-Point-and-Click-TinyStory4-pt.html"
+    ]
+  },
+  "tiny5": {
+    "name": "Tiny Story 5",
+    "android": "com.amlcreation.tinyStory5",
+    "ios": "1611747664",
+    "pages": [
+      "Application-Point-and-Click-TinyStory5-en.html",
+      "Application-Point-and-Click-TinyStory5.html",
+      "Application-Point-and-Click-TinyStory5-de.html",
+      "Application-Point-and-Click-TinyStory5-it.html",
+      "Application-Point-and-Click-TinyStory5-ja.html",
+      "Application-Point-and-Click-TinyStory5-ru.html",
+      "Application-Point-and-Click-TinyStory5-es.html",
+      "Application-Point-and-Click-TinyStory5-pt.html"
+    ]
+  }
+}
