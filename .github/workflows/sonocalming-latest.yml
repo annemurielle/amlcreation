@@ -1,0 +1,55 @@
+name: SonoCalming latest 4 long videos
+
+on:
+  schedule:
+    # Every hour, at minute 23, UTC. GitHub may run scheduled jobs a little late.
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sonocalming-latest-long-videos
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the published site
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Read YouTube uploads and exclude Shorts
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 tools/update_sonocalming_latest.py
+
+      - name: Commit a changed feed only
+        id: changes
+        shell: bash
+        run: |
+          git add SonoCalming/latest-videos.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No new videos, no commit needed."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Auto-update SonoCalming latest long videos"
+            git push origin HEAD:"${GITHUB_REF_NAME}"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish the update to branch-based GitHub Pages
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # GITHUB_TOKEN pushes do not themselves trigger a Pages rebuild.
+          # This API call explicitly requests a build of the updated source branch.
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null
+          echo "A GitHub Pages rebuild has been requested."
