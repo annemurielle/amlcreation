@@ -2,23 +2,25 @@ name: SonoCalming latest 4 long videos
 
 on:
   schedule:
-    # Every hour, at minute 23, UTC. GitHub may run scheduled jobs a little late.
+    # Every hour, at minute 23 UTC. Scheduled workflows can run late.
     - cron: '23 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
+  actions: write
 
+# The site's existing deployment workflow uses the same group.
+# Avoid simultaneous commits and deployments when schedules overlap.
 concurrency:
-  group: sonocalming-latest-long-videos
+  group: aml-store-pages
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the published site
+      - name: Check out the site source
         uses: actions/checkout@v4
         with:
           persist-credentials: true
@@ -44,12 +46,15 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Publish the update to branch-based GitHub Pages
-        if: steps.changes.outputs.changed == 'true'
+      - name: Publish using existing Update game store information workflow
+        # A manual test also publishes even if the feed is unchanged.
+        if: steps.changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # GITHUB_TOKEN pushes do not themselves trigger a Pages rebuild.
-          # This API call explicitly requests a build of the updated source branch.
-          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null
-          echo "A GitHub Pages rebuild has been requested."
+          # This repository deploys via actions/deploy-pages, not branch-based Pages builds.
+          # A workflow_dispatch made using GITHUB_TOKEN may trigger another workflow.
+          gh workflow run update-game-stats.yml \
+            --ref "${GITHUB_REF_NAME}" \
+            --repo "${GITHUB_REPOSITORY}"
+          echo "Deployment workflow dispatched. Check 'Update game store information' in Actions."
