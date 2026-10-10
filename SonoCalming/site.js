@@ -16,7 +16,7 @@
   }
 
   // The YouTube iframe is loaded only when somebody explicitly presses Play.
-  // This makes the 321-thumbnail catalogue much faster and more private by default.
+  // This keeps the catalogue fast and private by default.
   document.querySelectorAll('.js-player').forEach(preview => {
     preview.addEventListener('click', () => {
       const video = preview.dataset.video;
@@ -54,7 +54,7 @@
       let visible = 0;
       for (const card of cards) {
         const matches = (!q || normalize(card.dataset.title).includes(q))
-          && (category.value === 'all' || card.dataset.cat === category.value)
+          && (category.value === 'all' || card.dataset.cat === category.value || (category.value === 'Blue Room' && card.dataset.blueRoom === 'true'))
           && (year.value === 'all' || card.dataset.year === year.value)
           && (type.value === 'all' || card.dataset.type === type.value);
         card.hidden = !matches;

@@ -112,7 +112,7 @@ def normalize_video(video: dict) -> dict | None:
     }
 
 
-def fetch_latest(api_key: str) -> list[dict]:
+def fetch_recent(api_key: str) -> list[dict]:
     selected: list[dict] = []
     seen: set[str] = set()
     next_page = ""
@@ -136,15 +136,14 @@ def fetch_latest(api_key: str) -> list[dict]:
             videos_data = youtube_api("videos", api_key, part="snippet,contentDetails,status", id=",".join(ids))
             selected.extend(filter(None, (normalize_video(v) for v in videos_data.get("items", []))))
             selected.sort(key=lambda v: v["publishedAt"], reverse=True)
-            if len(selected) >= MAX_RESULTS:
-                break
+            # Continue through recent uploads for catalogue catch-up after workflow delays.
         next_page = page.get("nextPageToken") or ""
         if not next_page:
             break
     # An error must not overwrite the previously working feed with zero videos.
     if len(selected) < MAX_RESULTS:
         raise RuntimeError(f"Found only {len(selected)} eligible public long videos among recent uploads; previous feed preserved")
-    return selected[:MAX_RESULTS]
+    return selected
 
 
 def main() -> int:
@@ -153,19 +152,39 @@ def main() -> int:
         print("Missing secret YOUTUBE_API_KEY: configure it in GitHub Actions secrets.", file=sys.stderr)
         return 2
     try:
-        videos = fetch_latest(api_key)
-    except RuntimeError as exc:
+        recent = fetch_recent(api_key)
+        videos = recent[:MAX_RESULTS]
+        payload = {"videos": videos}
+        data = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+        previous = OUTFILE.read_text(encoding="utf-8") if OUTFILE.exists() else None
+        if previous != data:
+            OUTFILE.parent.mkdir(parents=True, exist_ok=True)
+            OUTFILE.write_text(data, encoding="utf-8")
+            print("Updated latest-videos.json for IDs:", ", ".join(v["id"] for v in videos))
+        else:
+            print("No changes to the 4 latest long videos.")
+
+        # Blue Room is a real existing SonoCalming playlist. Membership in it
+        # adds a secondary Blue Room catalogue filter for legacy videos.
+        from update_sonocalming_catalogue import BLUE_PLAYLIST_ID, sync_catalogue
+        blue_ids = set()
+        token = ''
+        try:
+            for _ in range(4):
+                params = {"part":"contentDetails","playlistId":BLUE_PLAYLIST_ID,"maxResults":50}
+                if token: params["pageToken"] = token
+                page = youtube_api("playlistItems", api_key, **params)
+                blue_ids.update(x.get("contentDetails", {}).get("videoId")
+                                for x in page.get("items", []) if x.get("contentDetails", {}).get("videoId"))
+                token = page.get('nextPageToken', '')
+                if not token: break
+        except RuntimeError as exc:
+            # Never break homepage updates due to a playlist issue.
+            print("Blue Room playlist membership unavailable; title-based categorization retained:", exc)
+        sync_catalogue(recent, blue_ids)
+    except (RuntimeError, OSError, ValueError) as exc:
         print(str(exc), file=sys.stderr)
         return 1
-    payload = {"videos": videos}
-    data = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
-    previous = OUTFILE.read_text(encoding="utf-8") if OUTFILE.exists() else None
-    if previous == data:
-        print("No changes to the 4 latest long videos.")
-        return 0
-    OUTFILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTFILE.write_text(data, encoding="utf-8")
-    print("Updated latest-videos.json for IDs:", ", ".join(v["id"] for v in videos))
     return 0
 
 

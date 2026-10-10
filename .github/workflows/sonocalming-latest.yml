@@ -25,23 +25,25 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Read YouTube uploads and exclude Shorts
+      - name: Refresh latest videos, catalogue, pages and sitemaps
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 tools/update_sonocalming_latest.py
 
-      - name: Commit a changed feed only
+      - name: Commit only changed SonoCalming files
         id: changes
         shell: bash
         run: |
-          git add SonoCalming/latest-videos.json
+          git add SonoCalming/latest-videos.json SonoCalming/videos.html SonoCalming/videos.json \
+            SonoCalming/sitemap.xml SonoCalming/video-sitemap.xml SonoCalming/sitemap-index.xml \
+            SonoCalming/videos/
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No new videos, no commit needed."
+            echo "No changes, no commit needed."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Auto-update SonoCalming latest long videos"
+            git commit -m "Auto-update SonoCalming catalogue, pages and sitemaps"
             git push origin HEAD:"${GITHUB_REF_NAME}"
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
