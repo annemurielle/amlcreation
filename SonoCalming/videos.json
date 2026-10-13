@@ -729,7 +729,8 @@
     "date": "2026-02-02",
     "duration": "PT5H2M11S",
     "cat": "Noise & Household",
-    "short": false
+    "short": false,
+    "blueRoom": true
   },
   {
     "id": "C95n9J75VRA",
