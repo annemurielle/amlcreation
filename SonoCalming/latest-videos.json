@@ -1,6 +1,14 @@
 {
   "videos": [
     {
+      "id": "kdgkY14bEs4",
+      "title": "My Tinnitus Sound Experiment: Buzzing Sounds with Pulsing White Noise & Soft High-Frequency Tone",
+      "description": "I tried to recreate the sounds I hear every minute of every day because of my tinnitus. My tinnitus is a mixture of electrical buzzing, white noise resembling the static of an old television, a softer high-pitched ringing tone in the background, and subtle pulsations. At times, the buzzing reminds me of the electrical sounds near high-voltage power lines. I hear different sounds in each ear, with a stronger and more complex buzzing sensation in my left ear. Using Audacity,…",
+      "publishedAt": "2026-11-09T02:00:10Z",
+      "durationSeconds": 36001,
+      "durationLabel": "10 hr"
+    },
+    {
       "id": "g5D_C8LCHVc",
       "title": "Dark Ocean Waves at Night 🌊 Ocean Sounds for Deep Sleep | 10 Hours Dark Screen",
       "description": "🌊 Dark ocean waves at night, with 10 hours of continuous ocean sounds for deep sleep. Enjoy the gentle sound of rolling waves along a peaceful coastline, accompanied by dark screen visuals and subtle blue reflections on the water. These steady ocean wave sounds create a calm and natural background for sleeping, reading, studying or enjoying quiet moments throughout the night. The ocean footage was filmed on the coast of Carnac, Brittany, France, and carefully darkened to…",
@@ -23,14 +31,6 @@
       "publishedAt": "2026-11-03T02:00:06Z",
       "durationSeconds": 36001,
       "durationLabel": "10 hr"
-    },
-    {
-      "id": "f7knamP8d_Q",
-      "title": "Escape to a Rainy Rose Garden 🌹 | Relaxing Rain Sounds and Music (2K)",
-      "description": "Enjoy a beautiful escape in a rainy rose garden in 2K resolution, accompanied by relaxing rain sounds and music. 🌹🌧️ Colorful red roses, delicate rainfall, and peaceful piano melodies create a lovely atmosphere for reading, studying, relaxing, or enjoying a quiet moment. 🌹 Beautiful red roses in a painterly garden 🎨 Colorful floral scenery in 2K resolution 🌧️ Gentle rain sounds 🎹 Relaxing piano music by Kevin MacLeod 📖 A peaceful background for reading, studying, and quiet…",
-      "publishedAt": "2026-11-01T02:00:30Z",
-      "durationSeconds": 36121,
-      "durationLabel": "10 hr 2 min"
     }
   ]
 }
