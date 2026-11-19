@@ -612,13 +612,22 @@
       background:#151e31;padding:4px;
       border-bottom:1px solid var(--line);
     }
-    .more-games-preview img{
-      height:100%;width:100%;object-fit:cover;max-width:none;
+    .more-games-preview figure{
+      position:relative;margin:0;min-width:0;min-height:0;overflow:hidden;
       border-radius:8px;
     }
-    .more-games-preview img:first-child{object-position:50% 50%}
-    .more-games-preview img:nth-child(2){object-position:45% 50%}
-    .more-games-preview img:nth-child(3){object-position:55% 50%}
+    .more-games-preview figure img{
+      height:100%;width:100%;object-fit:cover;max-width:none;
+    }
+    .more-games-preview figure:nth-child(2) img{object-position:48% 50%}
+    .more-games-preview figcaption{
+      position:absolute;inset:auto 0 0;
+      padding:15px 3px 8px;
+      background:linear-gradient(transparent,rgba(4,8,18,.89));
+      color:#fff;text-align:center;font-size:clamp(.63rem,.85vw,.76rem);
+      font-weight:800;line-height:1.1;letter-spacing:-.025em;
+      text-shadow:0 1px 2px rgba(0,0,0,.7);
+    }
     .more-games .game-card-content h3{margin:0 0 7px;font-size:clamp(1.3rem,1.9vw,1.6rem)}
     .more-games .game-card-content p{margin:0}
     .game-tile:focus-visible,
@@ -781,14 +790,23 @@
 
           <a class="more-games game-tile" href="Games/index.html" aria-label="Explore the full AnneMu's Games collection">
             <div class="more-games-preview" aria-hidden="true">
-              <img src="lumenmine/assets/cover.jpg" alt="" loading="lazy" decoding="async">
-              <img src="MahjongCastle/Images/hero.jpg" alt="" loading="lazy" decoding="async">
-              <img src="ZenCircle/hero.jpg" alt="" loading="lazy" decoding="async">
+              <figure>
+                <img src="Games/Upload/optimized/02-9b61ec7.webp" alt="" loading="lazy" decoding="async" width="1334" height="750">
+                <figcaption>Minesweeper</figcaption>
+              </figure>
+              <figure>
+                <img src="Games/Upload/optimized/screenshoot-331fb4e.webp" alt="" loading="lazy" decoding="async" width="850" height="777">
+                <figcaption>Tiny Story</figcaption>
+              </figure>
+              <figure>
+                <img src="Games/Upload/appCelestwald/1024.png" alt="" loading="lazy" decoding="async" width="1024" height="1024">
+                <figcaption>Celestwald</figcaption>
+              </figure>
             </div>
             <div class="game-card-content">
               <div class="meta"><span class="pill">Game collection</span></div>
               <h3>AnneMu's Games</h3>
-              <p>Discover more indie games, puzzles and earlier projects.</p>
+              <p>Explore Little Minesweeper Guy, Tiny Story, Celestwald and more indie adventures.</p>
               <span class="card-action">Browse all games &#8594;</span>
             </div>
           </a>
