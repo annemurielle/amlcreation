@@ -115,7 +115,7 @@ def main() -> None:
             raise RuntimeError(f'No canonical pages found in {directory}')
         make_urlset(pages,directory+'/sitemap.xml')
         print(f'{directory}: {len(pages)} canonical HTML URLs')
-    for filename in ('SonoCalming/sitemap.xml','SonoCalming/video-sitemap.xml'):
+    for filename in ('SonoCalming/sitemap.xml','SonoCalming/video-sitemap.xml','SonoCalming/sitemap-languages.xml'):
         if not (ROOT/filename).is_file():
             raise RuntimeError(f'Missing essential video sitemap: {filename}')
     make_index('sitemap-sections.xml',[d+'/sitemap.xml' for d in GROUPS])
@@ -124,6 +124,7 @@ def main() -> None:
         *[d+'/sitemap.xml' for d in GROUPS],
         'SonoCalming/sitemap.xml',
         'SonoCalming/video-sitemap.xml',
+        'SonoCalming/sitemap-languages.xml',
     ])
     print('Root sitemap index and 8 localized homepage URLs: OK')
 

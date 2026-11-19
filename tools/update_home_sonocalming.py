@@ -67,7 +67,22 @@ def build_card(video: dict, lang: str = "en") -> str:
     duration = html.escape(str(video.get("durationLabel") or "Long-form ambience"), quote=True)
     prefix = "../" if lang != "en" else ""
     video_url = f"{prefix}SonoCalming/videos/{vid}.html"
-    home_url = prefix + "SonoCalming/"
+    home_url = prefix + ("SonoCalming/" if lang == "en" else f"SonoCalming/{lang}/")
+    if lang != "en":
+        # Detail pages remain in English. Link translated homepage cards to the
+        # correct translated gallery and its exact thumbnail instead.
+        from update_sonocalming_galleries import groups_for, preferred_category
+        catalogue_path = ROOT / "SonoCalming" / "videos.json"
+        entries = json.loads(catalogue_path.read_text(encoding="utf-8"))
+        record = next((item for item in entries if item.get("id") == vid), None)
+        if record is not None:
+            category_file = preferred_category(record)
+            if category_file in groups_for(record):
+                video_url = f"{prefix}SonoCalming/{lang}/{category_file}#video-{vid}"
+            else:
+                video_url = f"{prefix}SonoCalming/{lang}/#video-{vid}"
+        else:
+            video_url = f"{prefix}SonoCalming/{lang}/#video-{vid}"
     tagline, latest_label, action_label = (html.escape(s, quote=True) for s in LOCALE_TEXT[lang])
     if lang == "ja":
         date_label = f"{dt.year}年{dt.month}月{dt.day}日"

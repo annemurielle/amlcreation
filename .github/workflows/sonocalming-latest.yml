@@ -34,6 +34,9 @@ jobs:
       - name: Refresh SonoCalming on-site SEO (existing and new pages)
         run: python3 tools/update_sonocalming_seo.py
 
+      - name: Rebuild SonoCalming galleries in all 8 languages
+        run: python3 tools/update_sonocalming_galleries.py
+
       - name: Refresh AML Creation homepage latest SonoCalming card
         run: python3 tools/update_home_sonocalming.py
 
@@ -47,12 +50,7 @@ jobs:
           git add sitemap.xml sitemap-pages.xml sitemap-sections.xml Games/sitemap.xml lumenmine/sitemap.xml \
             Somnifox/sitemap.xml MahjongCastle/sitemap.xml ZenCircle/sitemap.xml \
             index.html fr/index.html de/index.html es/index.html it/index.html pt/index.html ru/index.html ja/index.html \
-            SonoCalming/latest-videos.json SonoCalming/videos.html SonoCalming/videos.json \
-            SonoCalming/sitemap.xml SonoCalming/video-sitemap.xml SonoCalming/sitemap-index.xml \
-            SonoCalming/videos/ SonoCalming/index.html SonoCalming/about.html \
-            SonoCalming/rain-sounds.html SonoCalming/black-screen.html SonoCalming/japanese-bedroom.html \
-            SonoCalming/music-nature.html SonoCalming/music.html SonoCalming/rain-piano.html \
-            SonoCalming/playlists.html
+            SonoCalming/ Games/ Somnifox/ MahjongCastle/ ZenCircle/ lumenmine/
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes, no commit needed."
