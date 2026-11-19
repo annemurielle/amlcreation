@@ -30,11 +30,14 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 tools/update_sonocalming_latest.py
 
+      - name: Refresh AML Creation homepage latest SonoCalming card
+        run: python3 tools/update_home_sonocalming.py
+
       - name: Commit only changed SonoCalming files
         id: changes
         shell: bash
         run: |
-          git add SonoCalming/latest-videos.json SonoCalming/videos.html SonoCalming/videos.json \
+          git add index.html SonoCalming/latest-videos.json SonoCalming/videos.html SonoCalming/videos.json \
             SonoCalming/sitemap.xml SonoCalming/video-sitemap.xml SonoCalming/sitemap-index.xml \
             SonoCalming/videos/
           if git diff --cached --quiet; then
