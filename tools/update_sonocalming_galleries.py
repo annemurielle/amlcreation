@@ -221,6 +221,7 @@ def gallery_section(file: str, lang: str, videos: list[dict]) -> str:
   <h2 id="gallery-title">{esc(title)}</h2>
   <p class="lead">{esc(description)}</p>
   <p class="sono-gallery-count">{len(relevant)} {esc(t['video'])}, {long_count} {esc(t['long'])}. {esc(t['intro'])}</p>
+  {library_shortcut(lang)}
   <div class="sono-video-grid">{grid}</div>
 </section>'''
 
@@ -235,13 +236,35 @@ def json_script(obj: dict) -> str:
     return '<script type="application/ld+json">'+json.dumps(obj,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+'</script>'
 
 
+SEARCH_LABEL = {
+    'en': 'Search all videos',
+    'fr': 'Toutes les vidéos',
+    'de': 'Alle Videos',
+    'es': 'Todos los vídeos',
+    'it': 'Tutti i video',
+    'pt': 'Todos os vídeos',
+    'ru': 'Все видео',
+    'ja': '全動画を検索',
+}
+
+
+def library_shortcut(lang: str) -> str:
+    """Visible direct access to the complete searchable library, including Shorts."""
+    title = esc(UI[lang]['all'])
+    return (f'<p class="sono-library-shortcut"><a class="btn" '
+            f'href="/SonoCalming/videos.html">🔎 {title}</a></p>')
+
+
 def header(lang: str, file: str) -> str:
     t=UI[lang]
     skip={'en':'Skip to content','fr':'Aller au contenu','de':'Zum Inhalt','es':'Ir al contenido','it':'Vai al contenuto','pt':'Ir para o conteúdo','ru':'К содержимому','ja':'本文へ'}[lang]
     menu={'en':'Menu','fr':'Menu','de':'Menü','es':'Menú','it':'Menu','pt':'Menu','ru':'Меню','ja':'メニュー'}[lang]
-    routes=[('rain-sounds.html',t['rain']),('japanese-bedroom.html',t['japanese']),('black-screen.html',t['black']),('cozy-ambience.html',t['cozy']),('music.html',t['music']),('nature-sounds.html',t['nature'])]
+    # Five featured categories plus the searchable full library. Other categories
+    # remain immediately accessible through the ten-category chooser below.
+    routes=[('rain-sounds.html',t['rain']),('japanese-bedroom.html',t['japanese']),('black-screen.html',t['black']),('cozy-ambience.html',t['cozy']),('music.html',t['music'])]
     prefix='/SonoCalming/' + ('' if lang=='en' else lang+'/')
     nav=''.join(f'<a href="{prefix}{f}">{esc(label)}</a>' for f,label in routes)
+    nav+=f'<a class="sono-search-nav" href="/SonoCalming/videos.html">🔎 {esc(SEARCH_LABEL[lang])}</a>'
     return f'''<a class="skip" href="#main">{esc(skip)}</a><header><div class="shell nav">
       <a class="brand" href="{prefix}"><span class="drop">●</span><span><b>SonoCalming</b><small>{esc(t['today'])}</small></span></a>
       <button type="button" aria-controls="links" aria-expanded="false" id="menu">{esc(menu)}</button>
@@ -293,7 +316,7 @@ def home_page(lang: str,videos: list[dict]) -> str:
     grid=''.join(card(v,lang) for v in recent)
     t=UI[lang]
     body=f'''<section class="page shell sono-gallery-hero"><p class="eyebrow">SonoCalming</p><h1>{esc(title)}</h1><p class="lead">{esc(desc)}</p></section>
-    <section class="section shell"><h2>{esc(t['more'])}</h2><p class="lead">{esc(t['intro'])}</p>{chooser(lang)}</section>
+    <section class="section shell"><h2>{esc(t['more'])}</h2><p class="lead">{esc(t['intro'])}</p>{library_shortcut(lang)}{chooser(lang)}</section>
     <section class="section shell"><h2>{esc(t['latest'])}</h2><div class="sono-video-grid">{grid}</div></section>'''
     schema={'@context':'https://schema.org','@type':'CollectionPage','name':title,'description':desc,'url':localized_url('index.html',lang)}
     return template('index.html',lang,body,desc,title,schema, recent[0]['id'] if recent else None)
@@ -329,8 +352,11 @@ def decorate_english(file: str,videos: list[dict]) -> bool:
     if '<details class="gallery-lang"' not in doc:
         doc=doc.replace('</nav>', '</nav>'+menu,1)
     if file == 'index.html':
-        doc=doc.replace('<a class="btn" href="videos.html">Browse all videos</a>', '<a class="btn" href="#galleries">Explore galleries</a>')
-        block=f'<section class="section shell sono-home-chooser" id="galleries"><p class="eyebrow">All sound collections</p><h2>Explore every video gallery</h2><p class="lead">Browse thumbnails by sound, play directly here and open each original YouTube video.</p>{chooser("en")}</section>'
+        # Undo the earlier accidental substitution of the full-library CTA.
+        # Keep an obvious search button even when galleries are featured.
+        doc=doc.replace('<a class="btn" href="#galleries">Explore galleries</a>',
+                        '<a class="btn" href="videos.html">🔎 All Videos &amp; Search</a>')
+        block=f'<section class="section shell sono-home-chooser" id="galleries"><p class="eyebrow">All sound collections</p><h2>Explore every video gallery</h2><p class="lead">Browse thumbnails by sound, play directly here and open each original YouTube video. The full searchable library also includes Shorts and other videos.</p>{library_shortcut("en")}{chooser("en")}</section>'
         if HOME_START in doc: doc=replace_marked(doc,HOME_START,HOME_END,block)
         else:
             idx=doc.find('<section class="section shell" id="families">')
