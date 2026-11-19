@@ -1,9 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.amlcreation.ch/Somnifox/</loc>
-  </url>
-  <url>
     <loc>https://www.amlcreation.ch/Somnifox/marketing_de.html</loc>
   </url>
   <url>
@@ -92,8 +89,5 @@
   </url>
   <url>
     <loc>https://www.amlcreation.ch/Somnifox/support_zh.html</loc>
-  </url>
-  <url>
-    <loc>https://www.amlcreation.ch/Somnifox/watch.html</loc>
   </url>
 </urlset>

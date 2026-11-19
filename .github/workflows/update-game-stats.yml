@@ -30,12 +30,16 @@ jobs:
           python-version: '3.12'
       - name: Refresh public store information
         run: python scripts/update_game_store_data.py
+      - name: Rebuild XML sitemaps from canonical site pages
+        run: python3 tools/update_sitemaps.py
       - name: Save refreshed information
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add Games/store-data.json Games/*.html
+          git add Games/store-data.json Games/*.html sitemap.xml sitemap-pages.xml sitemap-sections.xml \
+            Games/sitemap.xml lumenmine/sitemap.xml Somnifox/sitemap.xml \
+            MahjongCastle/sitemap.xml ZenCircle/sitemap.xml
           if ! git diff --cached --quiet; then
             git commit -m 'Update public game store information'
             git push

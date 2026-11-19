@@ -8,6 +8,15 @@
   <meta name="theme-color" content="#0b1020">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <link rel="canonical" href="https://www.amlcreation.ch/">
+  <link rel="alternate" hreflang="en" href="https://www.amlcreation.ch/">
+  <link rel="alternate" hreflang="fr" href="https://www.amlcreation.ch/fr/">
+  <link rel="alternate" hreflang="de" href="https://www.amlcreation.ch/de/">
+  <link rel="alternate" hreflang="es" href="https://www.amlcreation.ch/es/">
+  <link rel="alternate" hreflang="it" href="https://www.amlcreation.ch/it/">
+  <link rel="alternate" hreflang="pt" href="https://www.amlcreation.ch/pt/">
+  <link rel="alternate" hreflang="ru" href="https://www.amlcreation.ch/ru/">
+  <link rel="alternate" hreflang="ja" href="https://www.amlcreation.ch/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://www.amlcreation.ch/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AML Creation">
@@ -646,6 +655,26 @@
     @media(prefers-reduced-motion:reduce){
       .game-tile:hover,.illustration-card:hover{transform:none}
     }
+
+
+    /* AML home languages: accessible on desktop and mobile, no script required. */
+    .language-picker{position:relative;flex:none;z-index:30}
+    .language-picker summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+      padding:9px 13px;border:1px solid rgba(255,255,255,.18);border-radius:12px;
+      color:var(--text);background:#172137;font-size:.86rem;font-weight:700;white-space:nowrap}
+    .language-picker summary::-webkit-details-marker{display:none}
+    .language-picker summary::after{content:'▾';font-size:.74rem;color:var(--muted)}
+    .language-picker[open] summary::after{content:'▴'}
+    .language-picker .language-options{position:absolute;right:0;top:calc(100% + 7px);
+      display:grid;gap:2px;min-width:175px;padding:7px;border:1px solid rgba(255,255,255,.2);
+      border-radius:14px;background:#151f35;box-shadow:0 18px 45px rgba(0,0,0,.45);
+      max-height:min(65vh,400px);overflow-y:auto}
+    .language-picker .language-options a{padding:8px 11px;border-radius:8px;color:var(--text);
+      text-decoration:none;font-size:.89rem}
+    .language-picker .language-options a:hover,.language-picker .language-options a[aria-current="page"]{background:rgba(115,220,229,.17)}
+    .language-picker .language-options a:focus-visible,.language-picker summary:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+    @media(max-width:650px){.language-picker summary{max-width:145px;overflow:hidden;text-overflow:ellipsis;padding:8px 10px}
+      .topbar-inner{gap:9px}.brand{font-size:.83rem}}
   </style>
 
   <script type="application/ld+json">
@@ -668,6 +697,8 @@
         <a href="#games">Games</a>
         <a href="#art">Art &amp; Stories</a>
       </nav>
+      <details class="language-picker"><summary aria-label="Choose site language / Choisir la langue">🌐 English</summary>
+       <div class="language-options" role="group" aria-label="Languages"><a href="./" hreflang="en" lang="en" aria-current="page">English</a><a href="fr/" hreflang="fr" lang="fr">Français</a><a href="de/" hreflang="de" lang="de">Deutsch</a><a href="es/" hreflang="es" lang="es">Español</a><a href="it/" hreflang="it" lang="it">Italiano</a><a href="pt/" hreflang="pt" lang="pt">Português</a><a href="ru/" hreflang="ru" lang="ru">Русский</a><a href="ja/" hreflang="ja" lang="ja">日本語</a></div></details>
     </div>
   </header>
 
@@ -724,7 +755,7 @@
               <div class="latest-video">
                 <div class="latest-video-label">Latest long video <time datetime="2026-11-18">18 Nov 2026</time></div>
                 <a class="latest-video-title" href="SonoCalming/videos/nG3crg1iAXk.html">EXTREME THUNDERSTORM ⛈️ Heavy Rain &amp; Loud Thunder Sounds | 10 Hours Black Screen</a>
-                <a class="latest-video-action" href="SonoCalming/videos/nG3crg1iAXk.html">Explore this video &#8594;</a>
+                <a class="latest-video-action" href="SonoCalming/videos/nG3crg1iAXk.html">Explore this video →</a>
               </div>
             </div>
           </article>

@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AML Creation | Jogos indie, sons de chuva e ilustrações</title>
+<meta content="Descobre jogos independentes, sons de chuva relaxantes, aplicações para misturar sons e histórias ilustradas criadas na Suíça." name="description"/>
+<meta content="#0b1020" name="theme-color"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/>
+<link href="https://www.amlcreation.ch/pt/" rel="canonical"/>
+<link href="https://www.amlcreation.ch/" hreflang="en" rel="alternate"/>
+<link href="https://www.amlcreation.ch/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://www.amlcreation.ch/de/" hreflang="de" rel="alternate"/>
+<link href="https://www.amlcreation.ch/es/" hreflang="es" rel="alternate"/>
+<link href="https://www.amlcreation.ch/it/" hreflang="it" rel="alternate"/>
+<link href="https://www.amlcreation.ch/pt/" hreflang="pt" rel="alternate"/>
+<link href="https://www.amlcreation.ch/ru/" hreflang="ru" rel="alternate"/>
+<link href="https://www.amlcreation.ch/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://www.amlcreation.ch/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="AML Creation" property="og:site_name"/>
+<meta content="AML Creation | Jogos indie, sons de chuva e ilustrações" property="og:title"/>
+<meta content="Jogos independentes, longas ambiências de chuva, aplicações sonoras, banda desenhada e ilustrações da Suíça." property="og:description"/>
+<meta content="https://www.amlcreation.ch/pt/" property="og:url"/>
+<meta content="https://www.amlcreation.ch/MahjongCastle/Images/hero.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    :root{
+      --bg:#070b17;
+      --bg-soft:#0d1324;
+      --panel:#11192c;
+      --panel-2:#151f35;
+      --text:#f4f7fb;
+      --muted:#aab4c7;
+      --line:rgba(255,255,255,.09);
+      --cyan:#73dce5;
+      --green:#66dda1;
+      --violet:#a98df8;
+      --pink:#ff88aa;
+      --gold:#ffc35a;
+      --shadow:0 24px 70px rgba(0,0,0,.33);
+      --radius:28px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(93,108,255,.19), transparent 34rem),
+        radial-gradient(circle at 100% 25%, rgba(101,218,183,.10), transparent 28rem),
+        linear-gradient(180deg,#080b18 0%,#090f1c 55%,#070b15 100%);
+      font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .shell{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(16px);
+      background:rgba(7,11,23,.74);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      text-decoration:none;
+      font-weight:850;
+      letter-spacing:.12em;
+      font-size:.92rem;
+    }
+
+    .nav{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:.9rem;
+    }
+
+    .nav a:hover{color:var(--text)}
+
+    .hero{
+      padding:92px 0 64px;
+      text-align:center;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 13px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    .hero h1{
+      margin:22px auto 16px;
+      max-width:920px;
+      font-size:clamp(3rem,7vw,6.3rem);
+      line-height:.94;
+      letter-spacing:-.06em;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1.05rem,1.8vw,1.25rem);
+    }
+
+    .hero-links{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .button{
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:750;
+      border:1px solid var(--line);
+      transition:.2s ease;
+    }
+
+    .button:hover{transform:translateY(-2px)}
+    .button.primary{background:var(--text);color:#0a1020;border-color:transparent}
+    .button.ghost{background:rgba(255,255,255,.035)}
+
+    .section{padding:68px 0}
+    .section + .section{border-top:1px solid var(--line)}
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:end;
+      margin-bottom:28px;
+    }
+
+    .kicker{
+      margin:0 0 7px;
+      color:var(--cyan);
+      font-size:.75rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:clamp(2rem,4vw,3.2rem);
+      line-height:1.05;
+      letter-spacing:-.045em;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:470px;
+      color:var(--muted);
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .project-card{
+      position:relative;
+      min-height:430px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--panel);
+      box-shadow:var(--shadow);
+      text-decoration:none;
+      isolation:isolate;
+    }
+
+    .project-card .image{
+      position:absolute;
+      inset:0;
+      z-index:-2;
+    }
+
+    .project-card .image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .project-card:hover .image img{transform:scale(1.035)}
+
+    .project-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(180deg,rgba(5,8,16,.05) 10%,rgba(5,8,16,.28) 48%,rgba(5,8,16,.94) 100%);
+    }
+
+    .project-card-content{
+      position:absolute;
+      inset:auto 0 0;
+      padding:28px;
+    }
+
+    .project-card h3{
+      margin:0 0 7px;
+      font-size:clamp(1.65rem,3vw,2.35rem);
+      letter-spacing:-.035em;
+    }
+
+    .project-card p{
+      margin:0;
+      color:#d5dce7;
+      max-width:590px;
+    }
+
+    .project-card .meta{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:13px;
+    }
+
+    .pill{
+      padding:6px 9px;
+      border-radius:999px;
+      background:rgba(10,14,25,.66);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(10px);
+      font-size:.75rem;
+      color:#eef3fa;
+    }
+
+    .somnifox .image img{object-position:center 35%}
+    .sonocalming .image img{object-position:center}
+
+    .games-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .small-card{
+      min-height:360px;
+    }
+
+    .small-card .project-card-content{padding:22px}
+    .small-card h3{font-size:1.55rem}
+    .mahjong .image img{object-position:center}
+    .zen .image img{object-position:center 45%}
+
+    .more-games{
+      min-height:360px;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      text-decoration:none;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 10%,rgba(255,195,90,.18),transparent 15rem),
+        linear-gradient(160deg,#151d33,#0d1527);
+      box-shadow:var(--shadow);
+    }
+
+    .more-games:hover{border-color:rgba(255,195,90,.45)}
+
+    .more-games .icon{
+      width:64px;height:64px;border-radius:20px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      font-size:1.7rem;
+    }
+
+    .more-games h3{
+      margin:22px 0 8px;
+      font-size:1.7rem;
+      letter-spacing:-.035em;
+    }
+
+    .more-games p{margin:0;color:var(--muted)}
+
+    .arrow{
+      margin-top:24px;
+      font-weight:800;
+      color:var(--gold);
+    }
+
+    .art-card{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:30px;
+      align-items:center;
+      padding:34px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:
+        radial-gradient(circle at 90% 50%,rgba(255,136,170,.15),transparent 22rem),
+        radial-gradient(circle at 70% 20%,rgba(169,141,248,.15),transparent 22rem),
+        var(--panel);
+      box-shadow:var(--shadow);
+    }
+
+    .art-card h3{
+      margin:0 0 10px;
+      font-size:clamp(1.8rem,4vw,3rem);
+      letter-spacing:-.04em;
+    }
+
+    .art-card p{margin:0;color:var(--muted);max-width:680px}
+
+    .art-mark{
+      width:150px;
+      aspect-ratio:1;
+      border-radius:38px;
+      display:grid;
+      place-items:center;
+      font-size:4rem;
+      background:linear-gradient(145deg,rgba(255,136,170,.18),rgba(169,141,248,.16));
+      border:1px solid var(--line);
+    }
+
+    .footer{
+      padding:38px 0 32px;
+      color:#7f8aa0;
+      font-size:.85rem;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer a{color:inherit}
+    .footer a:hover{color:var(--text)}
+
+    @media (900px < width <= 1100px){.games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+    @media(max-width:900px){
+      .featured-grid,.games-grid{grid-template-columns:1fr}
+      .small-card,.more-games{min-height:390px}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+    }
+
+    @media(max-width:650px){
+      .shell{width:min(var(--max),calc(100% - 26px))}
+      .hero{padding:70px 0 48px}
+      .nav{display:none}
+      .project-card{min-height:390px}
+      .art-card{grid-template-columns:1fr}
+      .art-mark{width:100px;border-radius:28px}
+      .section{padding:52px 0}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
+    }
+
+    /* SonoCalming: thumbnail stays fully readable, descriptive text below it. */
+    .sonocalming{
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+      overflow:hidden;
+      background:linear-gradient(160deg,#142034,#0c1426);
+    }
+    .sonocalming::after{display:none}
+    .sonocalming .image{
+      position:relative;
+      inset:auto;
+      z-index:auto;
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      flex:none;
+      border-bottom:1px solid var(--line);
+    }
+    .sonocalming .image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+    .sonocalming .project-card-content{
+      position:relative;
+      inset:auto;
+      padding:19px 24px 22px;
+      flex:1;
+    }
+    .sonocalming-card-heading{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px 14px;
+    }
+    .sonocalming-card-heading h3{
+      margin:0;
+      font-size:clamp(1.4rem,2.5vw,1.85rem);
+      line-height:1.15;
+    }
+    .sonocalming-card-heading h3 a{text-decoration:none}
+    .sonocalming-card-heading h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+    .sonocalming-card-heading .pill{background:rgba(115,220,229,.10);color:#d8f9fc}
+    .sonocalming .sonocalming-tagline{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.45;
+    }
+    .sonocalming .latest-video{
+      margin-top:16px;
+      padding-top:13px;
+      border-top:1px solid rgba(255,255,255,.13);
+    }
+    .sonocalming .latest-video-label{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px 12px;
+      align-items:center;
+      font-size:.76rem;
+      color:#bfeef2;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .sonocalming .latest-video-label time{color:var(--muted);font-weight:500}
+    .sonocalming .latest-video-title{
+      display:block;
+      margin-top:7px;
+      font-size:1rem;
+      line-height:1.38;
+      color:var(--text);
+      font-weight:750;
+      text-decoration:none;
+      overflow-wrap:break-word;
+    }
+    .sonocalming .latest-video-title:hover{text-decoration:underline;text-underline-offset:3px}
+    .sonocalming .latest-video-action{
+      display:inline-block;
+      margin-top:11px;
+      color:var(--cyan);
+      font-size:.87rem;
+      font-weight:800;
+      text-decoration:none;
+    }
+    .sonocalming .latest-video-action:hover{text-decoration:underline;text-underline-offset:3px}
+    .sonocalming .image:focus-visible,
+    .sonocalming a:focus-visible{outline:3px solid var(--cyan);outline-offset:-3px}
+    .sound-links{
+      margin-top:22px;
+      display:flex;
+      gap:10px 16px;
+      flex-wrap:wrap;
+      align-items:center;
+      font-size:.88rem;
+    }
+    .sound-links span{color:var(--muted);font-weight:700}
+    .sound-links a{color:var(--cyan);text-underline-offset:3px}
+    .sound-links a:hover{color:var(--text)}
+    @media(max-width:650px){
+      .sonocalming{min-height:0}
+      .sonocalming .project-card-content{padding:18px 20px 22px}
+      .sonocalming .latest-video-title{font-size:.98rem}
+    }
+
+    /* Project cards use the same clear image-above, details-below design. */
+    .somnifox{
+      display:flex;
+      flex-direction:column;
+      min-height:0;
+      background:linear-gradient(160deg,#161a37,#101526);
+    }
+    .somnifox::after,
+    .game-tile::after{display:none}
+    .somnifox .image{
+      position:relative;
+      inset:auto;
+      z-index:auto;
+      display:block;
+      width:100%;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      flex:none;
+      border-bottom:1px solid var(--line);
+      background:#1a1350;
+    }
+    .somnifox .image::before{
+      content:"";position:absolute;inset:-16px;
+      background:url("../Somnifox/hero.jpg") center 41%/cover no-repeat;
+      filter:blur(18px) brightness(.65);
+    }
+    .somnifox .image img{
+      position:relative;width:100%;height:100%;
+      object-fit:contain;object-position:center;
+    }
+    .somnifox .project-card-content{
+      position:relative;
+      inset:auto;
+      padding:19px 24px 22px;
+      display:flex;flex-direction:column;
+      flex:1;
+    }
+    .somnifox-card-heading{
+      display:flex;flex-wrap:wrap;align-items:center;
+      justify-content:space-between;gap:8px 14px;
+    }
+    .somnifox-card-heading h3{
+      margin:0;font-size:clamp(1.4rem,2.5vw,1.85rem);line-height:1.15;
+    }
+    .somnifox-card-heading h3 a{text-decoration:none}
+    .somnifox-card-heading h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+    .somnifox-card-heading .pill{background:rgba(169,141,248,.12);color:#e7dcff}
+    .somnifox-type{
+      color:#c8adff!important;font-weight:700;font-size:.8rem;
+      letter-spacing:.025em;margin:10px 0 0!important;
+    }
+    .somnifox .somnifox-tagline{
+      color:var(--muted);font-size:.92rem;line-height:1.5;
+      margin:7px 0 0;
+    }
+    .somnifox-action{
+      display:block;color:#c8adff;margin-top:auto;padding-top:14px;
+      font-size:.87rem;font-weight:800;text-decoration:none;
+    }
+    .somnifox-action:hover{text-decoration:underline;text-underline-offset:3px}
+    .somnifox .image:focus-visible,
+    .somnifox a:focus-visible{outline:3px solid var(--cyan);outline-offset:-3px}
+
+    .games-grid{align-items:stretch}
+    .game-tile{
+      min-height:0;
+      display:flex;
+      flex-direction:column;
+      background:linear-gradient(165deg,#141d31,#101829);
+      transition:border-color .2s ease,transform .2s ease;
+    }
+    .game-tile:hover{
+      border-color:rgba(115,220,229,.40);
+      transform:translateY(-3px);
+    }
+    .game-tile .image{
+      position:relative;inset:auto;z-index:auto;
+      width:100%;aspect-ratio:16 / 10;flex:none;
+      overflow:hidden;background:#151f35;
+      border-bottom:1px solid var(--line);
+    }
+    .game-tile .image img{width:100%;height:100%;object-fit:cover}
+    .game-tile .image img{object-position:center}
+    .game-tile.zen .image img{object-position:center 37%}
+    .game-tile.mahjong .image img{object-position:center}
+    .game-card-content{
+      display:flex;flex-direction:column;align-items:start;
+      padding:18px 20px 21px;flex:1;
+    }
+    .game-card-content .meta{margin-bottom:10px}
+    .game-card-content .pill{
+      background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.13);
+    }
+    .game-card-content h3{
+      margin:0 0 7px;font-size:clamp(1.3rem,1.9vw,1.6rem);
+      line-height:1.2;letter-spacing:-.03em;
+    }
+    .game-card-content p{
+      margin:0;color:var(--muted);font-size:.89rem;line-height:1.5;
+    }
+    .card-action{
+      margin-top:auto;padding-top:17px;color:var(--cyan);
+      font-weight:800;font-size:.83rem;line-height:1.35;
+    }
+    .game-tile:hover .card-action{text-decoration:underline;text-underline-offset:3px}
+    .more-games{
+      padding:0;border-radius:var(--radius);box-shadow:var(--shadow);
+      justify-content:initial;min-height:0;
+    }
+    .more-games-preview{
+      position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:4px;aspect-ratio:16 / 10;overflow:hidden;
+      background:#151e31;padding:4px;
+      border-bottom:1px solid var(--line);
+    }
+    .more-games-preview figure{
+      position:relative;margin:0;min-width:0;min-height:0;overflow:hidden;
+      border-radius:8px;
+    }
+    .more-games-preview figure img{
+      height:100%;width:100%;object-fit:cover;max-width:none;
+    }
+    .more-games-preview figure:nth-child(2) img{object-position:48% 50%}
+    .more-games-preview figcaption{
+      position:absolute;inset:auto 0 0;
+      padding:15px 3px 8px;
+      background:linear-gradient(transparent,rgba(4,8,18,.89));
+      color:#fff;text-align:center;font-size:clamp(.63rem,.85vw,.76rem);
+      font-weight:800;line-height:1.1;letter-spacing:-.025em;
+      text-shadow:0 1px 2px rgba(0,0,0,.7);
+    }
+    .more-games .game-card-content h3{margin:0 0 7px;font-size:clamp(1.3rem,1.9vw,1.6rem)}
+    .more-games .game-card-content p{margin:0}
+    .game-tile:focus-visible,
+    .more-games:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+    .illustration-card{transition:border-color .2s ease,transform .2s ease}
+    .illustration-card:hover{transform:translateY(-3px);border-color:rgba(115,220,229,.30)}
+    @media(max-width:900px){
+      .games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .game-tile{min-height:0}
+    }
+    @media(max-width:600px){
+      .games-grid{grid-template-columns:1fr}
+      .game-tile .image,.more-games-preview{aspect-ratio:16 / 9}
+      .somnifox .project-card-content{padding:18px 20px 22px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .game-tile:hover,.illustration-card:hover{transform:none}
+    }
+
+
+    /* AML home languages: accessible on desktop and mobile, no script required. */
+    .language-picker{position:relative;flex:none;z-index:30}
+    .language-picker summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+      padding:9px 13px;border:1px solid rgba(255,255,255,.18);border-radius:12px;
+      color:var(--text);background:#172137;font-size:.86rem;font-weight:700;white-space:nowrap}
+    .language-picker summary::-webkit-details-marker{display:none}
+    .language-picker summary::after{content:'▾';font-size:.74rem;color:var(--muted)}
+    .language-picker[open] summary::after{content:'▴'}
+    .language-picker .language-options{position:absolute;right:0;top:calc(100% + 7px);
+      display:grid;gap:2px;min-width:175px;padding:7px;border:1px solid rgba(255,255,255,.2);
+      border-radius:14px;background:#151f35;box-shadow:0 18px 45px rgba(0,0,0,.45);
+      max-height:min(65vh,400px);overflow-y:auto}
+    .language-picker .language-options a{padding:8px 11px;border-radius:8px;color:var(--text);
+      text-decoration:none;font-size:.89rem}
+    .language-picker .language-options a:hover,.language-picker .language-options a[aria-current="page"]{background:rgba(115,220,229,.17)}
+    .language-picker .language-options a:focus-visible,.language-picker summary:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+    @media(max-width:650px){.language-picker summary{max-width:145px;overflow:hidden;text-overflow:ellipsis;padding:8px 10px}
+      .topbar-inner{gap:9px}.brand{font-size:.83rem}}
+  </style>
+<script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AML Creation",
+    "url":"https://www.amlcreation.ch/",
+    "description":"Independent Swiss projects featuring indie games, sound apps, relaxing rain and piano ambience, comics and illustration."
+  }
+  </script>
+<style>/* Illustrated worlds */ .illustration-card{min-height:0;display:flex;flex-direction:column}.illustration-card:after{display:none}.illustration-preview{height:290px;display:grid;place-items:center;background:#e8e5ec;overflow:hidden}.illustration-preview img{max-width:100%;width:auto;height:100%;object-fit:contain}.illustration-info{padding:26px}.illustration-info h3{margin:14px 0 4px;font-size:2rem}.illustration-info p{color:var(--muted);margin:0 0 14px}.illustration-author{font-size:.85rem;color:var(--cyan)!important}.illustration-link{display:block;color:var(--cyan);font-weight:700;margin-top:20px}.illustration-card:hover .illustration-link{text-decoration:underline}.brand{text-transform:none;letter-spacing:.04em}.kicker{text-transform:none}a:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}@media(max-width:640px){.illustration-preview{height:260px}.illustration-info{padding:22px}.topbar-inner{gap:12px}.nav{gap:12px}.hero h1{font-size:clamp(2.7rem,10vw,4rem)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AML Creation","url":"https://www.amlcreation.ch/pt/","description":"Jogos independentes, longas ambiências de chuva, aplicações sonoras, banda desenhada e ilustrações da Suíça.","inLanguage":"pt"}</script><meta content="pt_PT" property="og:locale"/></head>
+<body>
+<header class="topbar">
+<div class="shell topbar-inner">
+<a class="brand" href="./">AML Creation</a>
+<nav aria-label="Navegação principal" class="nav">
+<a href="#calm">Sons e ambientes</a>
+<a href="#games">Jogos</a>
+<a href="#art">Arte e histórias</a>
+</nav>
+<details class="language-picker"><summary aria-label="Choose site language / Choisir la langue">🌐 Português</summary>
+<div aria-label="Languages" class="language-options" role="group"><a href="../" hreflang="en" lang="en">English</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../de/" hreflang="de" lang="de">Deutsch</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../it/" hreflang="it" lang="it">Italiano</a><a aria-current="page" href="../pt/" hreflang="pt" lang="pt">Português</a><a href="../ru/" hreflang="ru" lang="ru">Русский</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a></div></details>
+</div>
+</header>
+<main>
+<section class="hero shell">
+<span class="hero-badge">Projetos independentes da Suíça</span>
+<h1>Aplicações indie, jogos acolhedores, sons tranquilos e mundos ilustrados.</h1>
+<p>Descobre projetos criados na Suíça: aplicações sonoras, jogos de lógica, vídeos longos de chuva, banda desenhada fantástica e histórias ilustradas.</p>
+<div class="hero-links">
+<a class="button primary" href="#calm">Explorar projetos</a>
+<a class="button ghost" href="../SonoCalming/">Descobrir SonoCalming</a>
+</div>
+</section>
+<section class="section" id="calm">
+<div class="shell">
+<div class="section-head">
+<div>
+<p class="kicker">Sons e ambientes</p>
+<h2>Sons para momentos tranquilos</h2>
+</div>
+<p>Com Somnifox, cria misturas de sons sem ligação à internet. No SonoCalming, encontra vídeos longos de chuva, ambientes acolhedores, ecrã preto e música suave no YouTube.</p>
+</div>
+<div class="featured-grid">
+<article aria-label="Somnifox, Misturador de sons offline" class="project-card somnifox">
+<a aria-label="Explorar projetos: Somnifox" class="image" href="../Somnifox/marketing_pt.html">
+<img alt="Purple sleeping fox, illustration for the Somnifox sound mixer" decoding="async" loading="lazy" src="../Somnifox/hero.jpg"/>
+</a>
+<div class="project-card-content">
+<div class="somnifox-card-heading">
+<h3><a href="../Somnifox/marketing_pt.html">Somnifox</a></h3>
+<span class="pill">iPhone &amp; iPad</span>
+</div>
+<p class="somnifox-type">Misturador de sons offline</p>
+<p class="somnifox-tagline">Cria misturas de chuva, oceano, floresta, lareira e sons suaves de fundo, mesmo sem internet.</p>
+<a class="somnifox-action" href="../Somnifox/marketing_pt.html">Descobrir a aplicação →</a>
+</div>
+</article>
+<!-- SONOCALMING_LATEST_START -->
+
+          <article class="project-card sonocalming" aria-label="SonoCalming latest long video">
+            <a class="image" href="../SonoCalming/videos/nG3crg1iAXk.html" aria-label="Watch the latest SonoCalming video: EXTREME THUNDERSTORM ⛈️ Heavy Rain &amp; Loud Thunder Sounds | 10 Hours Black Screen">
+              <img src="https://i.ytimg.com/vi/nG3crg1iAXk/maxresdefault.jpg"
+                   alt="Thumbnail of EXTREME THUNDERSTORM ⛈️ Heavy Rain &amp; Loud Thunder Sounds | 10 Hours Black Screen" loading="lazy" decoding="async" width="1280" height="720">
+            </a>
+            <div class="project-card-content">
+              <div class="sonocalming-card-heading">
+                <h3><a href="../SonoCalming/">SonoCalming</a></h3>
+                <span class="pill">10 hr</span>
+              </div>
+              <p class="sonocalming-tagline">Chuva, ambientes acolhedores, ecrã preto e piano suave.</p>
+              <div class="latest-video">
+                <div class="latest-video-label">Vídeo longo mais recente <time datetime="2026-11-18">18/11/2026</time></div>
+                <a class="latest-video-title" href="../SonoCalming/videos/nG3crg1iAXk.html">EXTREME THUNDERSTORM ⛈️ Heavy Rain &amp; Loud Thunder Sounds | 10 Hours Black Screen</a>
+                <a class="latest-video-action" href="../SonoCalming/videos/nG3crg1iAXk.html">Ver este vídeo →</a>
+              </div>
+            </div>
+          </article>
+          <!-- SONOCALMING_LATEST_END -->
+</div>
+<nav aria-label="Explorar sons SonoCalming" class="sound-links">
+<span>Explorar sons SonoCalming</span>
+<a href="../SonoCalming/">Início SonoCalming</a>
+<a href="../SonoCalming/rain-sounds.html">Sons de chuva</a>
+<a href="../SonoCalming/black-screen.html">Chuva com ecrã preto</a>
+<a href="../SonoCalming/japanese-bedroom.html">Chuva num quarto japonês</a>
+<a href="../SonoCalming/music.html">Música relaxante</a>
+</nav>
+</div>
+</section>
+<section class="section" id="games">
+<div class="shell">
+<div class="section-head">
+<div>
+<p class="kicker">Jogos</p>
+<h2>Mundos acolhedores para jogar ao teu ritmo</h2>
+</div>
+<p>Descobre jogos indie de lógica, aventuras ao estilo Minesweeper, mahjong solitário de fantasia e jogos de ritmo ilustrados.</p>
+</div>
+<div class="games-grid">
+<a aria-label="Explorar projetos: Lumen Mine" class="project-card game-tile lumen" href="../lumenmine/pt-pt/">
+<div class="image">
+<img alt="Lumen Mine puzzle game artwork with a tiny glowing light" decoding="async" height="630" loading="lazy" src="../lumenmine/assets/cover.jpg" width="1200"/>
+</div>
+<div class="game-card-content">
+<div class="meta"><span class="pill">Puzzle tipo Minesweeper</span></div>
+<h3>Lumen Mine</h3>
+<p>Encontra minas escondidas e guia uma pequena luz até à saída.</p>
+<span class="card-action">Descobrir Lumen Mine →</span>
+</div>
+</a>
+<a aria-label="Explorar projetos: Mahjong Castle" class="project-card game-tile mahjong" href="../MahjongCastle/marketing_en.html">
+<div class="image">
+<img alt="Colorful castle illustration from Mahjong Castle" decoding="async" loading="lazy" src="../MahjongCastle/Images/hero.jpg"/>
+</div>
+<div class="game-card-content">
+<div class="meta"><span class="pill">Mahjong solitário</span></div>
+<h3>Mahjong Castle</h3>
+<p>Combina peças, explora mundos mágicos e restaura um castelo de fantasia.</p>
+<span class="card-action">Descobrir Mahjong Castle →</span>
+</div>
+</a>
+<a aria-label="Explorar projetos: Zen Circle" class="project-card game-tile zen" href="../ZenCircle/marketing_en.html">
+<div class="image">
+<img alt="Glowing deer in a peaceful winter landscape from Zen Circle" decoding="async" loading="lazy" src="../ZenCircle/hero.jpg"/>
+</div>
+<div class="game-card-content">
+<div class="meta"><span class="pill">Jogo de ritmo</span></div>
+<h3>Zen Circle</h3>
+<p>Desfruta de ritmos suaves em mundos tranquilos e ilustrados.</p>
+<span class="card-action">Descobrir Zen Circle →</span>
+</div>
+</a>
+<a aria-label="Explorar projetos: AnneMu's Games" class="more-games game-tile" href="../Games/index-pt.html">
+<div aria-hidden="true" class="more-games-preview">
+<figure>
+<img alt="" decoding="async" height="750" loading="lazy" src="../Games/Upload/optimized/02-9b61ec7.webp" width="1334"/>
+<figcaption>Minesweeper</figcaption>
+</figure>
+<figure>
+<img alt="" decoding="async" height="777" loading="lazy" src="../Games/Upload/optimized/screenshoot-331fb4e.webp" width="850"/>
+<figcaption>Tiny Story</figcaption>
+</figure>
+<figure>
+<img alt="" decoding="async" height="1024" loading="lazy" src="../Games/Upload/appCelestwald/1024.png" width="1024"/>
+<figcaption>Celestwald</figcaption>
+</figure>
+</div>
+<div class="game-card-content">
+<div class="meta"><span class="pill">Coleção de jogos</span></div>
+<h3>AnneMu's Games</h3>
+<p>Explora Little Minesweeper Guy, Tiny Story, Celestwald e outras aventuras indie.</p>
+<span class="card-action">Ver todos os jogos →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="art"><div class="shell"><div class="section-head"><div><p class="kicker">Arte e histórias</p><h2>Duas artistas.<br/>Dois mundos ilustrados.</h2></div><p>Banda desenhada, manga e ilustrações originais. Descobre o meu trabalho como Namea e o mundo de fantasia criado pela minha amiga Sandrine.</p></div><div class="featured-grid"><a class="project-card illustration-card" href="https://samcreation.ch/Namea/index.html"><div class="illustration-preview"><img alt="Illustration by Anne-Murielle" decoding="async" height="506" loading="lazy" src="../home-assets/namea-illustration.webp" width="700"/></div><div class="illustration-info"><div class="meta"><span class="pill">Banda desenhada e livros ilustrados</span></div><h3>Namea</h3><p class="illustration-author">Anne</p><p>A minha banda desenhada de fantasia, livros infantis, aguarelas e ilustrações. Descobre Globus Cruciger, Azaël e muito mais.</p><span class="illustration-link">Descobrir Namea →</span></div></a><a class="project-card illustration-card" href="https://samcreation.ch/Aelysse/index.html"><div class="illustration-preview"><img alt="Illustration by Sandrine · Haudryane" decoding="async" height="550" loading="lazy" src="../home-assets/aelysse-illustration.webp" width="634"/></div><div class="illustration-info"><div class="meta"><span class="pill">Manga de fantasia e ilustração</span></div><h3>Aelysse</h3><p class="illustration-author">Sandrine · Haudryane</p><p>O manga da minha amiga Sandrine, Les Contes d’Aelysse. Lê a história e descobre as personagens, desenhos e pinturas.</p><span class="illustration-link">Descobrir Aelysse →</span></div></a></div></div></section></main>
+<footer class="footer">
+<div class="shell footer-inner">
+<span>© 2026 AML Creation</span>
+<span><a href="../Policy-Confidentiality_pt.html">Política geral de privacidade</a></span>
+</div>
+</footer>
+</body>
+</html>
