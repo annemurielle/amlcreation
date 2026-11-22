@@ -34,6 +34,11 @@ jobs:
       - name: Refresh SonoCalming on-site SEO (existing and new pages)
         run: python3 tools/update_sonocalming_seo.py
 
+      - name: Correct VideoObject uploadDate using YouTube publication times
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 tools/fix_video_upload_dates.py
+
       - name: Rebuild SonoCalming galleries in all 8 languages
         run: python3 tools/update_sonocalming_galleries.py
 
@@ -51,6 +56,7 @@ jobs:
             Somnifox/sitemap.xml MahjongCastle/sitemap.xml ZenCircle/sitemap.xml \
             index.html fr/index.html de/index.html es/index.html it/index.html pt/index.html ru/index.html ja/index.html \
             SonoCalming/ Games/ Somnifox/ MahjongCastle/ ZenCircle/ lumenmine/
+          git add SonoCalming/video-upload-dates.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes, no commit needed."

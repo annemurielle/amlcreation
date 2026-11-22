@@ -163,7 +163,7 @@ def make_page(v: dict, sample: str, catalogue: list[dict]) -> str:
                      f'<a class="textlink" href="{i}.html">Watch video →</a></div></article>')
     ld = {
         '@context':'https://schema.org','@type':'VideoObject','name':title,
-        'description':seo, 'thumbnailUrl':[thumb], 'uploadDate':v['date'],
+        'description':seo, 'thumbnailUrl':[thumb], 'uploadDate':v['publishedAt'],
         'duration':v['duration'], 'embedUrl':embed,'url':canonical,
         'potentialAction':{'@type':'WatchAction','target':youtube},
         'publisher':{'@type':'Organization','name':'SonoCalming',
@@ -341,7 +341,7 @@ def sync_catalogue(source: list[dict], blue_ids: set[str] | None = None) -> list
         sample = (ROOT/'videos'/f'{catalogue[0]["id"]}.html').read_text(encoding='utf-8')
         target.write_text(make_page(v, sample, catalogue), encoding='utf-8')
     if new:
-        new_records = [{k:v[k] for k in ('id','title','date','duration','cat','short')} for v in new]
+        new_records = [{k:v[k] for k in ('id','title','date','publishedAt','duration','cat','short')} for v in new]
         catalogue = new_records + catalogue
     # Secondary Blue Room membership for all existing catalogue entries. This
     # does not overwrite their original category or regenerate their pages.
