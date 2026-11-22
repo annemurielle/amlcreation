@@ -30,16 +30,26 @@ jobs:
           python-version: '3.12'
       - name: Refresh public store information
         run: python scripts/update_game_store_data.py
+      - name: Normalize software and game structured data without invented reviews
+        run: python3 tools/normalize_app_structured_data.py
+      - name: Verify Lumen Mine gameplay video metadata
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 tools/update_lumenmine_video_schema.py
       - name: Rebuild XML sitemaps from canonical site pages
         run: python3 tools/update_sitemaps.py
+      - name: Validate SEO metadata and local sitemaps before publishing
+        run: python3 tools/audit_site_seo.py
+
       - name: Save refreshed information
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add Games/store-data.json Games/*.html sitemap.xml sitemap-pages.xml sitemap-sections.xml \
-            Games/sitemap.xml lumenmine/sitemap.xml Somnifox/sitemap.xml \
+            Games/sitemap.xml lumenmine/ Somnifox/sitemap.xml \
             MahjongCastle/sitemap.xml ZenCircle/sitemap.xml
+          if [ -f lumenmine/video-metadata.json ]; then git add lumenmine/video-metadata.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Update public game store information'
             git push
@@ -50,7 +60,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p "$RUNNER_TEMP/aml-public-site"
-          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='Rapport_Games_Modern_SEO.md' --exclude='*.zip' ./ "$RUNNER_TEMP/aml-public-site/"
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='tools/' --exclude='*.pyc' --exclude='__pycache__/' --exclude='__MACOSX/' --exclude='.DS_Store' --exclude='Rapport_Games_Modern_SEO.md' --exclude='*.zip' ./ "$RUNNER_TEMP/aml-public-site/"
       - name: Upload complete static site
         uses: actions/upload-pages-artifact@v4
         with:

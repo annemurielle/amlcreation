@@ -24,6 +24,7 @@ ET.register_namespace('', SM_NS)
 ET.register_namespace('xhtml', XHTML_NS)
 GROUPS = ('Games', 'lumenmine', 'Somnifox', 'MahjongCastle', 'ZenCircle')
 LANGUAGES = ('en', 'fr', 'de', 'es', 'it', 'pt', 'ru', 'ja')
+PRIVACY_LANGUAGES = ('en','fr','de','es','it','pt','ru','ja','ko','nl','sv','no','tr','hi','zh')
 
 
 class Metadata(HTMLParser):
@@ -108,7 +109,33 @@ def main() -> None:
         metadata=Metadata(path.read_text(encoding='utf-8'))
         if urljoin(url,metadata.canonical or '') != url:
             raise RuntimeError(f'Noncanonical homepage, cannot build hreflang sitemap: {path}')
-    make_urlset(home,'sitemap-pages.xml',multilingual=True)
+    # The policy pages are indexable, localized legal documents. They are
+    # intentionally independent from the homepage hreflang cluster.
+    privacy = [SITE+'Policy-Confidentiality_'+lang+'.html' for lang in PRIVACY_LANGUAGES]
+    privacy.append(SITE+'confidentiality-all.html')
+    for url in privacy:
+        path = ROOT/url[len(SITE):]
+        metadata = Metadata(path.read_text(encoding='utf-8'))
+        if metadata.noindex or metadata.canonical != url:
+            raise RuntimeError(f'Noncanonical privacy page: {path}')
+    root = ET.Element(f'{{{SM_NS}}}urlset')
+    alternatives = {'en': SITE}
+    alternatives.update({lang: SITE+lang+'/' for lang in LANGUAGES if lang!='en'})
+    alternatives['x-default'] = SITE
+    for url in home:
+        item = ET.SubElement(root, f'{{{SM_NS}}}url')
+        child(item, 'loc', url)
+        for language, href in alternatives.items():
+            ET.SubElement(item, f'{{{XHTML_NS}}}link', {'rel':'alternate','hreflang':language,'href':href})
+    policy_alt = {lang:SITE+'Policy-Confidentiality_'+lang+'.html' for lang in PRIVACY_LANGUAGES}
+    policy_alt['x-default'] = policy_alt['en']
+    for url in privacy:
+        item = ET.SubElement(root, f'{{{SM_NS}}}url')
+        child(item, 'loc', url)
+        if url in policy_alt.values():
+            for language, href in policy_alt.items():
+                ET.SubElement(item, f'{{{XHTML_NS}}}link', {'rel':'alternate','hreflang':language,'href':href})
+    publish(root, 'sitemap-pages.xml')
     for directory in GROUPS:
         pages=canonical_pages(directory)
         if not pages:
@@ -126,7 +153,7 @@ def main() -> None:
         'SonoCalming/video-sitemap.xml',
         'SonoCalming/sitemap-languages.xml',
     ])
-    print('Root sitemap index and 8 localized homepage URLs: OK')
+    print('Root sitemap index, 8 localized homepages, 15 privacy languages: OK')
 
 
 if __name__ == '__main__':

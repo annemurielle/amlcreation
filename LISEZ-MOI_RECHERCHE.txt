@@ -1,0 +1,12 @@
+SonoCalming: retablissement de l acces visible a la recherche globale.
+
+Ce patch ne remplace pas SonoCalming/videos.html et ne modifie aucune URL.
+Il ajoute des boutons directs vers la bibliotheque complete dans les galeries
+multilingues et restaure le bouton principal de la page anglaise.
+
+Installation : fusionner ce ZIP avec la racine amlcreation, puis lancer :
+python3 tools/update_sonocalming_galleries.py
+python3 tools/check_sonocalming_galleries.py
+git diff --check
+
+La recherche existante est : /SonoCalming/videos.html

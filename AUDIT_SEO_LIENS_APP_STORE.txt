@@ -1,0 +1,80 @@
+AUDIT DES LIENS APP STORE / GOOGLE PLAY ET SEO TECHNIQUE
+Date: 19 novembre 2026
+Site: https://www.amlcreation.ch/
+
+PERIMETRE
+Archive du site fournie, sans traiter les sous-ZIP et fichiers temporaires macOS.
+Aucune URL de confidentialite, de support ou de marketing n'a ete renommee ou supprimee.
+Le contenu juridique des pages de confidentialite reste inchange.
+Le design, CSS, JavaScript, liens de telechargement et workflows GitHub sont conserves.
+
+VERIFICATIONS CONCRETES (FICHIERS FOURNIS)
+- Somnifox: 15 langues avec pages marketing et support existantes, toutes disposaient de titres/metadescriptions mais sans canonical ni hreflang. Ajoutes pour les 30 pages. Page /Somnifox/ conservee avec canonical vers la page marketing anglaise.
+- Zen Circle: 4 langues avec pages marketing et support, sans canonical ni hreflang. Ajoutes pour 8 pages.
+- Mahjong Castle: pages marketing, support et privacy en anglais, sans canonical absolu. Ajoutes a 3 pages. Pas de fausses traductions.
+- Games: 199 pages HTML, canoniques et hreflang deja presents, preserves.
+- Lumen Mine: 32 pages HTML, canoniques et hreflang deja presents, preserves.
+- SonoCalming: catalogue de 340 fiches videos et pages de categories, canonical existant, pas de doublon de URL produit cree.
+- Deux alias avec noms Unicode correctement encodes crees pour les anciens liens de confidentialite francais / allemand, sans deplacer les fichiers originaux.
+
+VERIFICATION PUBLIQUE APP STORE
+Somnifox: https://apps.apple.com/app/id6753948909
+  La fiche publique Apple pointe vers:
+  - Confidentialite: https://annemurielle.github.io/amlcreation/Policy-Confidentiality_en.html
+  - Site developpeur: https://annemurielle.github.io/amlcreation/Somnifox/marketing_en.html
+  Ces URLs correspondent a des chemins de fichiers presentes dans l'archive, mais leur accessibilite HTTP n'a pas pu etre certifiee.
+Zen Circle Spirit: https://apps.apple.com/app/6756264679
+  La fiche publique Apple pointe vers:
+  - Confidentialite: https://amlcreation.ch/Policy-Confidentiality_en.html
+  - Site developpeur: https://amlcreation.ch/ZenCircle/marketing_en.html
+  Ces fichiers existent dans l'archive.
+Little Minesweeper Guy: https://apps.apple.com/us/app/little-minesweeper-guy/id1048458452
+  La fiche publique Apple pointe vers:
+  - Confidentialite: https://www.samcreation.ch/ptitboutchoux/privay-policy-amlcreation-application.html
+  - Site developpeur: https://www.samcreation.ch/ptitboutchoux/little-minesweeper-game.html
+  Anciens liens externes a surveiller. L'accessibilite web exacte n'a pas pu etre confirmee par les outils de recherche.
+  Apple indique actuellement qu'aucun detail de confidentialite de l'app n'a ete fourni. Cela peut etre corrige dans App Store Connect lors de la mise a jour 3.0.
+
+LIENS DE TELECHARGEMENT VERIFIES/CONSERVES
+Somnifox: https://apps.apple.com/app/id6753948909
+Zen Circle Spirit: https://apps.apple.com/app/6756264679
+Little Minesweeper Guy: https://apps.apple.com/us/app/id1048458452
+Lumen Mine (Android): https://play.google.com/store/apps/details?id=com.amlcreation.lumenMine
+Mahjong Castle (Android): https://play.google.com/store/apps/details?id=com.amlcreation.mahjongcastle
+Fantasiant (Android): https://play.google.com/store/apps/details?id=com.amlcreation.broken (le slug etrange est pourtant la fiche officielle du jeu, ne pas modifier)
+
+LIENS APP STORE CONNECT A VERIFIER MANUELLEMENT
+Apple publie les liens de confidentialite et du site developpeur, mais le champ Support URL exact doit etre controle dans App Store Connect si sa destination n'est pas visible publiquement.
+Somnifox:
+  Marketing possible: https://www.amlcreation.ch/Somnifox/marketing_en.html
+  Support possible: https://www.amlcreation.ch/Somnifox/support_en.html
+  Confidentialite: garder l'URL deja configuree jusqu'a verification et eventuel changement volontaire dans App Store Connect.
+Zen Circle Spirit:
+  Marketing: https://www.amlcreation.ch/ZenCircle/marketing_en.html
+  Support: https://www.amlcreation.ch/ZenCircle/support_en.html
+  Confidentialite: ne pas modifier l'URL actuelle.
+Little Minesweeper Guy:
+  Lien de presentation modernise: https://www.amlcreation.ch/Games/little-minesweeper-en.html
+  Controles App Store Connect a realiser lors de la version 3.0, surtout Privacy Details.
+
+SURVEILLANCE DES PAGES LEGALES
+- Mahjong Castle: le texte de privacy_en.html parle encore d'une « current planned version », alors que le jeu est deja publie sur Android. Une relecture juridique et technique sera utile, aucune modification automatique faite.
+- Aucun remplacement automatique des noms de domaines, d'URL de confidentialite ou de liens boutique.
+- Toutes les URLs doivent etre verifiees une derniere fois sur le site en ligne apres deploiement.
+
+SEO ET MULTILINGUISME, PHASE SUIVANTE
+- L'accueil AML Creation et SonoCalming restent en anglais, pas de version localisee inventee.
+- Somnifox 15 langues, Zen Circle 4, Games 8, Lumen Mine 8: les versions existantes doivent etre exploitees avant de creer d'autres variantes.
+- Ne pas publier des traductions automatiques inexactes ou des langues dont le contenu principal reste en anglais.
+- Les balises canonical et hreflang aident au ciblage mais ne garantissent pas une hausse de trafic.
+
+SOURCES
+Apple Developer - Support URL, Marketing URL: https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/
+Google Search Central - Localized versions: https://developers.google.com/search/docs/specialty/international/localized-versions
+Google Search Central - Canonicalization: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+
+INSTALLATION SANS ECRASER LES DOSSIERS
+Decompresser le ZIP dans le depot local avec ditto -x -k, pas avec un remplacement complet des dossiers Finder.
+Consulter les pages, puis git add des seuls chemins contenus dans le ZIP.
+
+TOTAL: 44 fichiers produits/modifies.

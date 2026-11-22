@@ -30,6 +30,11 @@ def run():
     ids={v['id'] for v in catalog}
     original_pages=list((SONO/'videos').glob('*.html'))
     assert len(original_pages)>=300, 'Missing many English video detail pages'
+    # Never replace the original searchable catalogue with category galleries.
+    full_library=(SONO/'videos.html').read_text(encoding='utf-8')
+    for key in ('id="librarySearch"', 'id="libraryCategory"',
+                'id="libraryYear"', 'id="libraryType"', 'id="libraryGrid"'):
+        assert key in full_library, f'Missing searchable library control: {key}'
     count=0
     pages=('index.html',*[x+'.html' for x in CATS],'about.html','playlists.html')
     for lang in LANGS:
@@ -37,8 +42,11 @@ def run():
         for name in pages:
             p=prefix/name
             assert p.is_file(),f'Missing {p}'
-            tags=Tags(p.read_text(encoding='utf-8'))
+            page_content=p.read_text(encoding='utf-8')
+            tags=Tags(page_content)
             assert tags.lang==lang,(p,tags.lang)
+            assert ('href="videos.html"' in page_content or
+                    'href="/SonoCalming/videos.html"' in page_content), f'Full video search not accessible: {p}'
             expected=BASE+('' if lang=='en' else lang+'/')+('' if name=='index.html' else name)
             canon=[x.get('href') for x in tags.links if x.get('rel')=='canonical']
             assert canon==[expected],f'Wrong canonical: {p}: {canon}'

@@ -48,6 +48,9 @@ jobs:
       - name: Refresh global canonical and language sitemaps
         run: python3 tools/update_sitemaps.py
 
+      - name: Validate SEO metadata and local sitemaps before publishing
+        run: python3 tools/audit_site_seo.py
+
       - name: Commit only changed SonoCalming files
         id: changes
         shell: bash
