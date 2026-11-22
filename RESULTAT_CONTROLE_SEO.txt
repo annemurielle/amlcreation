@@ -1,8 +1,0 @@
-SEO AUDIT PASSED (offline structural checks).
-  breadcrumbs: 548
-  canonical_aliases: 7
-  canonical_indexable: 741
-  html_pages: 749
-  sitemap_unique_urls: 741
-  sitemaps_xml: 10
-  videos: 366
