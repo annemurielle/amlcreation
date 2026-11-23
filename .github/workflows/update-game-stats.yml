@@ -2,13 +2,22 @@ name: Update game store information
 
 on:
   workflow_dispatch:
+    inputs:
+      deploy_only:
+        description: 'Deploy current site without rerunning daily update scripts'
+        type: boolean
+        required: false
+        default: false
   schedule:
-    - cron: '23 5 * * *'
+    # Once daily at 06:45 Swiss local time, winter and summer.
+    - cron: '45 6 * * *'
+      timezone: 'Europe/Zurich'
   push:
     branches: [main, master]
 
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 
@@ -29,27 +38,33 @@ jobs:
         with:
           python-version: '3.12'
       - name: Refresh public store information
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         run: python scripts/update_game_store_data.py
       - name: Normalize software and game structured data without invented reviews
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         run: python3 tools/normalize_app_structured_data.py
       - name: Verify Lumen Mine gameplay video metadata
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 tools/update_lumenmine_video_schema.py
       - name: Rebuild XML sitemaps from canonical site pages
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         run: python3 tools/update_sitemaps.py
       - name: Validate SEO metadata and local sitemaps before publishing
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         run: python3 tools/audit_site_seo.py
 
       - name: Save refreshed information
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.deploy_only != true)
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add Games/store-data.json Games/*.html sitemap.xml sitemap-pages.xml sitemap-sections.xml \
+          git add --ignore-removal Games/store-data.json Games/*.html sitemap.xml sitemap-pages.xml sitemap-sections.xml \
             Games/sitemap.xml lumenmine/ Somnifox/sitemap.xml \
             MahjongCastle/sitemap.xml ZenCircle/sitemap.xml
-          if [ -f lumenmine/video-metadata.json ]; then git add lumenmine/video-metadata.json; fi
+          if [ -f lumenmine/video-metadata.json ]; then git add --ignore-removal lumenmine/video-metadata.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Update public game store information'
             git push
@@ -61,10 +76,36 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/aml-public-site"
           rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='tools/' --exclude='*.pyc' --exclude='__pycache__/' --exclude='__MACOSX/' --exclude='.DS_Store' --exclude='Rapport_Games_Modern_SEO.md' --exclude='*.zip' ./ "$RUNNER_TEMP/aml-public-site/"
+          test -s "$RUNNER_TEMP/aml-public-site/index.html" || { echo 'ERROR: Missing homepage in prepared Pages files.' >&2; exit 1; }
       - name: Upload complete static site
+        id: pages_artifact
         uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages
           path: ${{ runner.temp }}/aml-public-site
+      - name: Verify Pages artifact is available for deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_ARTIFACT_ID: ${{ steps.pages_artifact.outputs.artifact_id }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$PAGES_ARTIFACT_ID" ]]; then
+            echo 'ERROR: The Pages upload action returned no artifact ID.' >&2
+            exit 1
+          fi
+          for attempt in {1..12}; do
+            if ids=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" --jq '.artifacts[] | select(.name == "github-pages" and .expired == false) | .id'); then
+              if grep -Fxq "$PAGES_ARTIFACT_ID" <<< "$ids"; then
+                echo "Pages artifact $PAGES_ARTIFACT_ID is visible in run $GITHUB_RUN_ID."
+                exit 0
+              fi
+            fi
+            echo "Pages artifact not visible yet (attempt $attempt/12)."
+            sleep 5
+          done
+          echo "ERROR: Pages artifact $PAGES_ARTIFACT_ID was uploaded but is not visible to this workflow run." >&2
+          exit 1
       - name: Publish complete static site
         id: deployment
         uses: actions/deploy-pages@v4

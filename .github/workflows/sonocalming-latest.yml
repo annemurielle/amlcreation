@@ -2,9 +2,10 @@ name: SonoCalming latest 4 long videos
 
 on:
   schedule:
-    # Once daily at 04:23 UTC (05:23 Swiss winter, 06:23 Swiss summer).
-    # Separate from the game-store workflow at 05:23 UTC.
-    - cron: '23 4 * * *'
+    # Once daily at 06:15 Swiss local time, winter and summer.
+    # The game-store daily refresh runs later at 06:45 Swiss local time.
+    - cron: '15 6 * * *'
+      timezone: 'Europe/Zurich'
   workflow_dispatch:
 
 permissions:
@@ -55,11 +56,11 @@ jobs:
         id: changes
         shell: bash
         run: |
-          git add sitemap.xml sitemap-pages.xml sitemap-sections.xml Games/sitemap.xml lumenmine/sitemap.xml \
+          git add --ignore-removal sitemap.xml sitemap-pages.xml sitemap-sections.xml Games/sitemap.xml lumenmine/sitemap.xml \
             Somnifox/sitemap.xml MahjongCastle/sitemap.xml ZenCircle/sitemap.xml \
             index.html fr/index.html de/index.html es/index.html it/index.html pt/index.html ru/index.html ja/index.html \
             SonoCalming/ Games/ Somnifox/ MahjongCastle/ ZenCircle/ lumenmine/
-          git add SonoCalming/video-upload-dates.json
+          git add --ignore-removal SonoCalming/video-upload-dates.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes, no commit needed."
@@ -78,8 +79,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # This repository deploys via actions/deploy-pages, not branch-based Pages builds.
-          # A workflow_dispatch made using GITHUB_TOKEN may trigger another workflow.
+          # This deploy-only dispatch does not rerun daily Python update scripts.
           gh workflow run update-game-stats.yml \
             --ref "${GITHUB_REF_NAME}" \
-            --repo "${GITHUB_REPOSITORY}"
+            --repo "${GITHUB_REPOSITORY}" \
+            --raw-field deploy_only=true
           echo "Deployment workflow dispatched. Check 'Update game store information' in Actions."
