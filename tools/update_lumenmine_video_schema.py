@@ -24,7 +24,7 @@ SCRIPT = re.compile(r'(<script\s+type=["\']application/ld\+json["\']\s*>)(.*?)(<
 VIDEO_INFO = {
     '@type':'VideoObject',
     'name':'Lumen Mine gameplay Short',
-    'description':'Short gameplay preview of Lumen Mine, a minesweeper puzzle adventure on Android.',
+    'description':'Short gameplay preview of Lumen Mine, a minesweeper puzzle adventure on Android and iOS.',
     'thumbnailUrl':'https://i.ytimg.com/vi/52k9xFLSzbw/hqdefault.jpg',
     'embedUrl':'https://www.youtube-nocookie.com/embed/52k9xFLSzbw',
     'url':'https://www.youtube.com/shorts/52k9xFLSzbw',

@@ -232,5 +232,11 @@
       "Application-Point-and-Click-TinyStory5-es.html",
       "Application-Point-and-Click-TinyStory5-pt.html"
     ]
+  },
+  "lumen": {
+    "name": "Lumen Mine",
+    "android": "com.amlcreation.lumenMine",
+    "ios": "6829168590",
+    "pages": []
   }
 }
