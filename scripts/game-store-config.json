@@ -238,5 +238,20 @@
     "android": "com.amlcreation.lumenMine",
     "ios": "6829168590",
     "pages": []
+  },
+  "miniFunny": {
+    "name": "Mini Funny Puzzles",
+    "ios": "865289718",
+    "android": "com.amlcreation.miniFunnyPuzzles",
+    "pages": [
+      "mini-funny-puzzles-en.html",
+      "mini-funny-puzzles-fr.html",
+      "mini-funny-puzzles-de.html",
+      "mini-funny-puzzles-es.html",
+      "mini-funny-puzzles-it.html",
+      "mini-funny-puzzles-ja.html",
+      "mini-funny-puzzles-pt.html",
+      "mini-funny-puzzles-ru.html"
+    ]
   }
 }
